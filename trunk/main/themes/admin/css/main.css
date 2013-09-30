@@ -1,0 +1,119 @@
+body{
+background: url('../img/bg-main.png') repeat;
+font-family:'Lato',"Microsoft Yahei","SimHei",Sans-serif;
+}
+
+li{
+margin: 5px 0px;
+}
+#container{
+width: 1280px;
+}
+#header{
+height: 100px;
+margin-top: -5px;
+border:2px solid #aaaaaa;
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+}
+#header h1{
+padding: 20px;
+font-weight: 200;
+}
+#navMenu{
+margin-left:-30px;
+margin-top: 20px;
+width: 220px;
+float: left;
+border-radius: 10px;
+border: 2px solid #aaaaaa;
+}
+#maincontent{
+margin-top: 20px;
+margin-left: 220px;
+padding: 15px;
+padding-top: 8px;
+border: 2px solid #aaaaaa;
+border-right: none;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+background-color: #ecf0f1;
+}
+#menuHeader{
+padding-top: 10px;
+padding-left: 45px;
+padding-bottom: 14px;
+border-bottom: 1px solid rgba(102,100,102,0.3);
+font-weight: 400;
+}
+#menuBodyer{
+color: #333333;
+padding: 5px;
+font-size: 15px;
+font-weight: 400;
+margin-top: 0px;
+}
+
+#menuBodyer li>span{
+display:block;
+height:30px;
+line-height: 30px;
+letter-spacing: 2px;
+font-size: 16px;
+font-weight: 900;
+cursor: pointer;
+}
+#menuBodyer li>ul>li>span{
+display: block;
+height: 20px;
+line-height: 20px;
+cursor: pointer;
+}
+#maincontent h1{
+line-height: 50px;
+background-color: #34495e;
+color: white;
+font-size: 20px;
+padding-left: 20px;	
+height: 50px;
+border-radius: 5px;
+}
+#maincontent h2{
+margin: 10px 0;
+line-height: 40px;
+
+background-color: #95a5a6;
+color: white;
+font-size: 15px;
+padding-left: 20px;	
+height: 40px;
+border-radius: 3px;
+}
+.menuItem{
+padding: 2px 12px;
+padding-left: 15px;
+background-color: #34495E;
+border-radius: 3px;
+}
+.explode{
+padding: 2px 12px;
+padding-left: 15px;
+background-color: #1abc9c;
+border-radius: 3px;
+}
+.collapse{
+padding: 2px 12px;
+padding-left: 15px;
+background-color: #1abc9c;
+border-radius: 3px;
+}
+span.collapse:hover{
+background-color: #48c9b0;
+}
+span.explode:hover{
+background-color: #48c9b0;
+}
+.menuItem:hover{
+background-color: #95A5A6;
+}
+

@@ -1,0 +1,975 @@
+<h1 id="preface">Preface</h1>
+<ul>
+<li>any word with * in prefix is not a table, so do the highest level of table list.</li>
+<li>[this is comment] stores comment.</li>
+</ul>
+<h1 id="brief-view-of-the-database-structure">Brief view of the database structure</h1>
+<ul>
+<li>
+<p>item  <code>Stores the item information</code></p>
+<ul>
+<li>
+<p>item  <code>stores common attributes</code>  </p>
+<ul>
+<li>item_attributes</li>
+<li>item_attachments</li>
+<li>item_prices</li>
+<li>item_sections</li>
+</ul>
+</li>
+<li>
+<p>places    <code>places secondary page setup, linked with attachment</code></p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>primary id, auto increment</td>
+<td></td>
+</tr>
+<tr>
+<td>admin_user</td>
+<td>integer</td>
+<td>the admin user's id</td>
+<td></td>
+</tr>
+<tr>
+<td>location</td>
+<td>integer</td>
+<td>the location id which came from location table</td>
+<td></td>
+</tr>
+<tr>
+<td>keyword</td>
+<td>char(255)</td>
+<td>use to enhance search result</td>
+<td></td>
+</tr>
+<tr>
+<td>create_time</td>
+<td>integer</td>
+<td>system default</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>item_attachment  `this table use 'type' column to distinguish different type of products, like item and article</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>primary id, auto increment</td>
+<td></td>
+</tr>
+<tr>
+<td>filetype</td>
+<td>char(20)</td>
+<td>doc\image</td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>char(20)</td>
+<td>item\article\places</td>
+<td></td>
+</tr>
+<tr>
+<td>product_id</td>
+<td>integer</td>
+<td>item\article\places id</td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td>char(255)</td>
+<td>the file's path</td>
+<td></td>
+</tr>
+<tr>
+<td>title</td>
+<td>char(255)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>desc</td>
+<td>text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>link</td>
+<td>char(255)</td>
+<td>where the image will be linked to</td>
+<td></td>
+</tr>
+<tr>
+<td>create_time</td>
+<td>integer</td>
+<td>system default</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>promotions</p>
+</li>
+<li>
+<p>location  <code>continents, countries &amp; cities</code></p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>primary id, auto increment</td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td>char(255)</td>
+<td>location name, english by default</td>
+<td></td>
+</tr>
+<tr>
+<td>zh_CN</td>
+<td>char(255)</td>
+<td>the chinese version of location</td>
+<td></td>
+</tr>
+<tr>
+<td>keyword</td>
+<td>char(255)</td>
+<td>use to enhance search result</td>
+<td></td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>char(255)</td>
+<td>parent location id</td>
+<td></td>
+</tr>
+<tr>
+<td>create_time</td>
+<td>integer</td>
+<td>system default</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+<li>
+<p>system    <code>system configuration</code></p>
+<ul>
+<li>
+<p>config</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>smallint(5)</td>
+<td>primary id, auto increment</td>
+<td></td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>smallint(5)</td>
+<td>parent_configuration</td>
+<td></td>
+</tr>
+<tr>
+<td>code</td>
+<td>char(255)</td>
+<td>this configuration item's code name</td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>char(10)</td>
+<td>text</td>
+<td>radio</td>
+</tr>
+<tr>
+<td>options</td>
+<td>text</td>
+<td>stores default value and options</td>
+<td>one line per value, name:value</td>
+</tr>
+<tr>
+<td>store_range</td>
+<td>char(255)</td>
+<td>parent location id</td>
+<td></td>
+</tr>
+<tr>
+<td>store_dir</td>
+<td>char(255)</td>
+<td>parent location id</td>
+<td></td>
+</tr>
+<tr>
+<td>value</td>
+<td>text</td>
+<td>parent location id</td>
+<td></td>
+</tr>
+<tr>
+<td>create_time</td>
+<td>integer</td>
+<td>system default</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+<li>
+<p>comment   <code>user's comment of item, article &amp; so on</code></p>
+<ul>
+<li>
+<p>comment</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>primary id, auto increment</td>
+<td></td>
+</tr>
+<tr>
+<td>user</td>
+<td>integer</td>
+<td>the user's id, if visitor then null</td>
+<td></td>
+</tr>
+<tr>
+<td>ip</td>
+<td>char(255)</td>
+<td>the user's ip address, record for future usage</td>
+<td></td>
+</tr>
+<tr>
+<td>comment</td>
+<td>text</td>
+<td>comment content</td>
+<td></td>
+</tr>
+<tr>
+<td>session_id</td>
+<td>char(255)</td>
+<td>record session id when user leave a comment</td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>char(20)</td>
+<td>article / item</td>
+<td></td>
+</tr>
+<tr>
+<td>product_id</td>
+<td>char(20)</td>
+<td>article / item  id</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+<li>
+<p>log&amp;statistics</p>
+<ul>
+<li>error_log <code>record error information which happened both in frontend and backend</code></li>
+<li>
+<p>stats     <code>user's information</code>
+        |     name      | type        |                     description                  |                  comment           |
+        | ---------- -- | ----------- | -------------------------------------------------| ---------------------------------- |
+        |      id       | integer     | primary id, auto increment                       |                                    |
+        |  ip_address   | varchar(30) | total days,calculated from counting itemplan TB  |                                    |
+        | visit_times   | smallint(5) | counting                                         |                                    |
+        |  browser      | varchar(60) | detect the header of browser                     |                                    |
+        |  system       | varchar(20) | detect the header of system                      |                                    |
+        |  language     | varchar(60) | detect the header of language                    |                                    |
+        |  referer      | varchar(255)| refererence url                                  |                                    |
+        |  access_url   | varchar(200)|  which page has been visited                     |                                    |
+        | create_time   | integer     | system default                                   |                                    |</p>
+</li>
+<li>
+<p>admin_log     <code>administrator's operation log</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>order</p>
+<ul>
+<li>
+<p>order</p>
+<ul>
+<li>
+<p>order_item</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>primary id, auto increment</td>
+<td></td>
+</tr>
+<tr>
+<td>order_id</td>
+<td>integer</td>
+<td>linked to main order_info record</td>
+<td></td>
+</tr>
+<tr>
+<td>item_id</td>
+<td>integer</td>
+<td>product's id</td>
+<td></td>
+</tr>
+<tr>
+<td>item_name</td>
+<td>char(255)</td>
+<td>came from item table</td>
+<td></td>
+</tr>
+<tr>
+<td>item_price</td>
+<td>decimal(10,2)</td>
+<td>came from calculated price acd. to price table</td>
+<td></td>
+</tr>
+<tr>
+<td>send_number</td>
+<td>tinyint(2)</td>
+<td>0/negative   1/sent</td>
+<td></td>
+</tr>
+<tr>
+<td>item_amount</td>
+<td>smallint(5)</td>
+<td>how many items were bought</td>
+<td></td>
+</tr>
+<tr>
+<td>raw_info</td>
+<td>text</td>
+<td>serialize the user's input input array</td>
+<td></td>
+</tr>
+<tr>
+<td>create_time</td>
+<td>integer</td>
+<td>system default</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>order_plan</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>primary id, auto increment</td>
+<td></td>
+</tr>
+<tr>
+<td>duration</td>
+<td>integer</td>
+<td>total days,calculated from counting itemplan TB</td>
+<td></td>
+</tr>
+<tr>
+<td>start_timestamp</td>
+<td>integer</td>
+<td>total days,calculated from counting itemplan TB</td>
+<td></td>
+</tr>
+<tr>
+<td>end_timestamp</td>
+<td>integer</td>
+<td>total days,calculated from counting itemplan TB</td>
+<td></td>
+</tr>
+<tr>
+<td>create_time</td>
+<td>integer</td>
+<td>system default</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>order_plan_item</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>primary id, auto increment</td>
+<td></td>
+</tr>
+<tr>
+<td>order_plan_id</td>
+<td>integer</td>
+<td>linked to main order_plan record</td>
+<td></td>
+</tr>
+<tr>
+<td>order_item_id</td>
+<td>integer</td>
+<td>linked to order_item's id</td>
+<td></td>
+</tr>
+<tr>
+<td>start_offset</td>
+<td>integer</td>
+<td>this item's position in schedule</td>
+<td></td>
+</tr>
+<tr>
+<td>end_offset</td>
+<td>integer</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>create_time</td>
+<td>integer</td>
+<td>system default</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>order_info</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>primary id, auto increment</td>
+<td></td>
+</tr>
+<tr>
+<td>order_sn</td>
+<td>char(255)</td>
+<td>automatic generatator, unique</td>
+<td></td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>integer</td>
+<td>the user who invoked this order</td>
+<td></td>
+</tr>
+<tr>
+<td>order_status</td>
+<td>tinyint(2)</td>
+<td>0/unconfirm 1/confirm 2/cancel 3/return</td>
+<td></td>
+</tr>
+<tr>
+<td>pay_status</td>
+<td>tinyint(2)</td>
+<td>0/unpay 1/paying 2/paid</td>
+<td></td>
+</tr>
+<tr>
+<td>address_id</td>
+<td>integer</td>
+<td>use the address in address table</td>
+<td></td>
+</tr>
+<tr>
+<td>notes</td>
+<td>char(255)</td>
+<td>note leave by user who have additional request</td>
+<td></td>
+</tr>
+<tr>
+<td>pay_id</td>
+<td>tinyint(2)</td>
+<td>0/alipay 1/chinapay TD:should be replaced by TB</td>
+<td></td>
+</tr>
+<tr>
+<td>confirm_time</td>
+<td>int(10)</td>
+<td>timestamp format, when order was confirm</td>
+<td></td>
+</tr>
+<tr>
+<td>pay_time</td>
+<td>int(10)</td>
+<td>timestamp format, when order was paid</td>
+<td></td>
+</tr>
+<tr>
+<td>to_buyer</td>
+<td>char(255)</td>
+<td>the seller's note to customer</td>
+<td></td>
+</tr>
+<tr>
+<td>order_plan_id</td>
+<td>integer</td>
+<td>linked to main order_plan record</td>
+<td></td>
+</tr>
+<tr>
+<td>create_time</td>
+<td>integer</td>
+<td>system default</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>order_action</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>primary id, auto increment</td>
+<td></td>
+</tr>
+<tr>
+<td>order_id</td>
+<td>integer</td>
+<td>linked to order_info</td>
+<td></td>
+</tr>
+<tr>
+<td>action_user</td>
+<td>integer</td>
+<td>the user who invoked this action</td>
+<td></td>
+</tr>
+<tr>
+<td>order_status</td>
+<td>tinyint(2)</td>
+<td>0/unconfirm 1/confirm 2/cancel 3/return</td>
+<td></td>
+</tr>
+<tr>
+<td>pay_status</td>
+<td>tinyint(2)</td>
+<td>0/unpay 1/paying 2/paid</td>
+<td></td>
+</tr>
+<tr>
+<td>shipping_status</td>
+<td>tinyint(2)</td>
+<td>0/unshipped 1/on shipping  2/shipped</td>
+<td></td>
+</tr>
+<tr>
+<td>action_note</td>
+<td>char(255)</td>
+<td>note leave by user who have additional request</td>
+<td></td>
+</tr>
+<tr>
+<td>create_time</td>
+<td>integer</td>
+<td>system default</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+<li>
+<p>cart</p>
+<ul>
+<li>cart_item</li>
+<li>cart_plan</li>
+</ul>
+</li>
+<li>
+<p>payment</p>
+<ul>
+<li>
+<p>pay_log</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>primary id, auto increment</td>
+<td></td>
+</tr>
+<tr>
+<td>order_id</td>
+<td>integer</td>
+<td>linked to order_info</td>
+<td></td>
+</tr>
+<tr>
+<td>order_amount</td>
+<td>integer</td>
+<td>the user who invoked this action</td>
+<td></td>
+</tr>
+<tr>
+<td>order_status</td>
+<td>decimal(10,2)</td>
+<td>the order's amount</td>
+<td></td>
+</tr>
+<tr>
+<td>order_type</td>
+<td>tinyint(2)</td>
+<td>0/alipay 1/chinapay 2/using balance</td>
+<td></td>
+</tr>
+<tr>
+<td>is_paid</td>
+<td>tinyint(1)</td>
+<td>0/unpay 1/paid</td>
+<td></td>
+</tr>
+<tr>
+<td>create_time</td>
+<td>integer</td>
+<td>system default</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>pay_method</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>primary id, auto increment</td>
+<td></td>
+</tr>
+<tr>
+<td>pay_code</td>
+<td>char(255)</td>
+<td>short code for recognize</td>
+<td></td>
+</tr>
+<tr>
+<td>pay_name</td>
+<td>char(255)</td>
+<td>Payment method's name</td>
+<td></td>
+</tr>
+<tr>
+<td>pay_fee</td>
+<td>var_char(20)</td>
+<td>Charge-fee while using this method to pay</td>
+<td></td>
+</tr>
+<tr>
+<td>pay_config</td>
+<td>text</td>
+<td>payment's configuration</td>
+<td></td>
+</tr>
+<tr>
+<td>pay_desc</td>
+<td>text</td>
+<td>payment's description</td>
+<td></td>
+</tr>
+<tr>
+<td>enabled</td>
+<td>tinyint(1)</td>
+<td>0/false 1/true</td>
+<td></td>
+</tr>
+<tr>
+<td>create_time</td>
+<td>integer</td>
+<td>system default</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+<li>
+<p>return_order</p>
+</li>
+</ul>
+</li>
+<li>
+<p>vendor</p>
+<ul>
+<li>vendor_agency</li>
+<li>vendor_action</li>
+</ul>
+</li>
+<li>
+<p>advertisement</p>
+<ul>
+<li>
+<p>ad</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>primary id, auto increment</td>
+<td></td>
+</tr>
+<tr>
+<td>ad_type</td>
+<td>char(20)</td>
+<td>gallery/image/text</td>
+<td></td>
+</tr>
+<tr>
+<td>position_id</td>
+<td>integer</td>
+<td>item\article\places</td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td>char(255)</td>
+<td>the file's path</td>
+<td></td>
+</tr>
+<tr>
+<td>title</td>
+<td>char(255)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>desc</td>
+<td>text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>link</td>
+<td>char(255)</td>
+<td>where the image will be linked to</td>
+<td></td>
+</tr>
+<tr>
+<td>create_time</td>
+<td>integer</td>
+<td>system default</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>ad_position</p>
+</li>
+</ul>
+</li>
+<li>
+<p>page</p>
+<ul>
+<li>page_category</li>
+<li>page</li>
+</ul>
+</li>
+<li>
+<p>automatic</p>
+<ul>
+<li>cronjob</li>
+<li>auto_manage</li>
+</ul>
+</li>
+<li>
+<p>message</p>
+<ul>
+<li>
+<p>message</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>primary id, auto increment</td>
+<td></td>
+</tr>
+<tr>
+<td>from_user</td>
+<td>char(255)</td>
+<td>who had sent this message</td>
+<td></td>
+</tr>
+<tr>
+<td>to_user</td>
+<td>char(255)</td>
+<td>who will receive this message</td>
+<td></td>
+</tr>
+<tr>
+<td>message</td>
+<td>char(255)</td>
+<td>message content</td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td>char(255)</td>
+<td>the file's path</td>
+<td></td>
+</tr>
+<tr>
+<td>create_time</td>
+<td>integer</td>
+<td>system default</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>archived_message</p>
+</li>
+<li>feedback</li>
+</ul>
+</li>
+<li>
+<p>user</p>
+<ul>
+<li>user</li>
+<li>address</li>
+<li>profile</li>
+</ul>
+</li>
+</ul>
