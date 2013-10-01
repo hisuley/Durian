@@ -1,4 +1,4 @@
 Durian
 ======
 
-The Durian Project is the starter of Jinmi Tourism
+The Durian Project is the first High-prior project of Jinmi Tourism
