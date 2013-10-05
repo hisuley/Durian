@@ -1,0 +1,832 @@
+2013/09/26 09:58:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in /home/suley/projects/Sep/trunk/framework/web/CController.php:483
+Stack trace:
+#0 /home/suley/projects/Sep/trunk/framework/web/CController.php(270): CController->missingAction('view')
+#1 /home/suley/projects/Sep/trunk/framework/web/CWebApplication.php(282): CController->run('view')
+#2 /home/suley/projects/Sep/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('item/view')
+#3 /home/suley/projects/Sep/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /home/suley/projects/Sep/trunk/jinmi/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/jinmi/item/2
+---
+2013/09/26 09:58:36 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/suley/projects/Sep/trunk/framework/web/CController.php:336
+Stack trace:
+#0 /home/suley/projects/Sep/trunk/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/suley/projects/Sep/trunk/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /home/suley/projects/Sep/trunk/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /home/suley/projects/Sep/trunk/framework/web/CWebApplication.php(282): CController->run('index')
+#4 /home/suley/projects/Sep/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('item/index')
+#5 /home/suley/projects/Sep/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /home/suley/projects/Sep/trunk/jinmi/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/jinmi/item/index
+---
+2013/09/26 09:58:39 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/suley/projects/Sep/trunk/framework/web/CController.php:336
+Stack trace:
+#0 /home/suley/projects/Sep/trunk/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/suley/projects/Sep/trunk/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /home/suley/projects/Sep/trunk/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /home/suley/projects/Sep/trunk/framework/web/CWebApplication.php(282): CController->run('index')
+#4 /home/suley/projects/Sep/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('item/index')
+#5 /home/suley/projects/Sep/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /home/suley/projects/Sep/trunk/jinmi/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/jinmi/item/index
+---
+2013/09/26 09:58:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in /home/suley/projects/Sep/trunk/framework/web/CController.php:483
+Stack trace:
+#0 /home/suley/projects/Sep/trunk/framework/web/CController.php(270): CController->missingAction('view')
+#1 /home/suley/projects/Sep/trunk/framework/web/CWebApplication.php(282): CController->run('view')
+#2 /home/suley/projects/Sep/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('item/view')
+#3 /home/suley/projects/Sep/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /home/suley/projects/Sep/trunk/jinmi/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/jinmi/item/2
+---
+2013/09/26 10:10:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "test".' in /home/suley/projects/Sep/trunk/framework/web/CController.php:483
+Stack trace:
+#0 /home/suley/projects/Sep/trunk/framework/web/CController.php(270): CController->missingAction('test')
+#1 /home/suley/projects/Sep/trunk/framework/web/CWebApplication.php(282): CController->run('test')
+#2 /home/suley/projects/Sep/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('site/test/testg...')
+#3 /home/suley/projects/Sep/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /home/suley/projects/Sep/trunk/jinmi/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/jinmi/site/test/testget
+---
+2013/09/26 10:10:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "test".' in /home/suley/projects/Sep/trunk/framework/web/CController.php:483
+Stack trace:
+#0 /home/suley/projects/Sep/trunk/framework/web/CController.php(270): CController->missingAction('test')
+#1 /home/suley/projects/Sep/trunk/framework/web/CWebApplication.php(282): CController->run('test')
+#2 /home/suley/projects/Sep/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('site/test/testG...')
+#3 /home/suley/projects/Sep/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /home/suley/projects/Sep/trunk/jinmi/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/jinmi/site/test/testGet
+---
+2013/09/26 10:10:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "test".' in /home/suley/projects/Sep/trunk/framework/web/CController.php:483
+Stack trace:
+#0 /home/suley/projects/Sep/trunk/framework/web/CController.php(270): CController->missingAction('test')
+#1 /home/suley/projects/Sep/trunk/framework/web/CWebApplication.php(282): CController->run('test')
+#2 /home/suley/projects/Sep/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('site/test/testG...')
+#3 /home/suley/projects/Sep/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /home/suley/projects/Sep/trunk/jinmi/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/jinmi/site/test/testGet
+---
+2013/09/26 10:10:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "test".' in /home/suley/projects/Sep/trunk/framework/web/CController.php:483
+Stack trace:
+#0 /home/suley/projects/Sep/trunk/framework/web/CController.php(270): CController->missingAction('test')
+#1 /home/suley/projects/Sep/trunk/framework/web/CWebApplication.php(282): CController->run('test')
+#2 /home/suley/projects/Sep/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('site/test/TestG...')
+#3 /home/suley/projects/Sep/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /home/suley/projects/Sep/trunk/jinmi/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/jinmi/site/test/TestGet
+---
+2013/09/26 10:11:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "testget&test=23985392".' in /home/suley/projects/Sep/trunk/framework/web/CController.php:483
+Stack trace:
+#0 /home/suley/projects/Sep/trunk/framework/web/CController.php(270): CController->missingAction('testget&test=23...')
+#1 /home/suley/projects/Sep/trunk/framework/web/CWebApplication.php(282): CController->run('testget&test=23...')
+#2 /home/suley/projects/Sep/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('test/testget&te...')
+#3 /home/suley/projects/Sep/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /home/suley/projects/Sep/trunk/jinmi/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/jinmi/test/testget&test=23985392
+---
+2013/09/26 12:52:12 [error] [exception.CException] exception 'CException' with message 'TestController cannot find the requested view "testtheme".' in /home/suley/projects/Sep/trunk/framework/web/CController.php:877
+Stack trace:
+#0 /home/suley/projects/Sep/trunk/framework/web/CController.php(781): CController->renderPartial('testtheme', NULL, true)
+#1 /home/suley/projects/Sep/trunk/jinmi/protected/controllers/TestController.php(8): CController->render('testtheme')
+#2 /home/suley/projects/Sep/trunk/framework/web/actions/CInlineAction.php(49): TestController->actionThemeTest()
+#3 /home/suley/projects/Sep/trunk/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/suley/projects/Sep/trunk/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/suley/projects/Sep/trunk/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/suley/projects/Sep/trunk/framework/web/CWebApplication.php(282): CController->run('themetest')
+#7 /home/suley/projects/Sep/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('test/themetest')
+#8 /home/suley/projects/Sep/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /home/suley/projects/Sep/trunk/jinmi/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/jinmi/test/themetest
+---
+2013/10/04 09:58:21 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/Users/suley/Code/Durian/trunk/jinmi/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/Users/suley/Co...')
+#1 /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(462): CAssetManager->publish('/Users/suley/Co...')
+#3 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(499): CClientScript->getCoreScriptUrl()
+#4 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(315): CClientScript->getPackageBaseUrl('jquery')
+#5 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(208): CClientScript->renderCoreScripts()
+#6 /Users/suley/Code/Durian/trunk/framework/web/CController.php(351): CClientScript->render('<!DOCTYPE html ...')
+#7 /Users/suley/Code/Durian/trunk/framework/web/CController.php(787): CController->processOutput('<!DOCTYPE html ...')
+#8 /Users/suley/Code/Durian/trunk/jinmi/protected/controllers/SiteController.php(72): CController->render('contact', Array)
+#9 /Users/suley/Code/Durian/trunk/framework/web/actions/CInlineAction.php(49): SiteController->actionContact()
+#10 /Users/suley/Code/Durian/trunk/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/suley/Code/Durian/trunk/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/suley/Code/Durian/trunk/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(282): CController->run('contact')
+#14 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('site/contact')
+#15 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/jinmi/site/contact
+HTTP_REFERER=http://localhost/jinmi/site/page?view=about
+---
+2013/10/04 09:58:54 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/Users/suley/Code/Durian/trunk/jinmi/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/Users/suley/Co...')
+#1 /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(462): CAssetManager->publish('/Users/suley/Co...')
+#3 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(499): CClientScript->getCoreScriptUrl()
+#4 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(315): CClientScript->getPackageBaseUrl('jquery')
+#5 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(208): CClientScript->renderCoreScripts()
+#6 /Users/suley/Code/Durian/trunk/framework/web/CController.php(351): CClientScript->render('<!DOCTYPE html ...')
+#7 /Users/suley/Code/Durian/trunk/framework/web/CController.php(787): CController->processOutput('<!DOCTYPE html ...')
+#8 /Users/suley/Code/Durian/trunk/jinmi/protected/controllers/SiteController.php(72): CController->render('contact', Array)
+#9 /Users/suley/Code/Durian/trunk/framework/web/actions/CInlineAction.php(49): SiteController->actionContact()
+#10 /Users/suley/Code/Durian/trunk/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/suley/Code/Durian/trunk/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/suley/Code/Durian/trunk/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(282): CController->run('contact')
+#14 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('site/contact')
+#15 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/jinmi/site/contact
+HTTP_REFERER=http://localhost/jinmi/site/page?view=about
+---
+2013/10/04 09:59:18 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/Users/suley/Code/Durian/trunk/jinmi/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/Users/suley/Co...')
+#1 /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(462): CAssetManager->publish('/Users/suley/Co...')
+#3 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(499): CClientScript->getCoreScriptUrl()
+#4 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(315): CClientScript->getPackageBaseUrl('jquery')
+#5 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(208): CClientScript->renderCoreScripts()
+#6 /Users/suley/Code/Durian/trunk/framework/web/CController.php(351): CClientScript->render('<!DOCTYPE html ...')
+#7 /Users/suley/Code/Durian/trunk/framework/web/CController.php(787): CController->processOutput('<!DOCTYPE html ...')
+#8 /Users/suley/Code/Durian/trunk/jinmi/protected/controllers/SiteController.php(72): CController->render('contact', Array)
+#9 /Users/suley/Code/Durian/trunk/framework/web/actions/CInlineAction.php(49): SiteController->actionContact()
+#10 /Users/suley/Code/Durian/trunk/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/suley/Code/Durian/trunk/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/suley/Code/Durian/trunk/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(282): CController->run('contact')
+#14 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('site/contact')
+#15 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/jinmi/site/contact
+HTTP_REFERER=http://localhost/jinmi/site/page?view=about
+---
+2013/10/04 09:59:20 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/Users/suley/Code/Durian/trunk/jinmi/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/Users/suley/Co...')
+#1 /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(462): CAssetManager->publish('/Users/suley/Co...')
+#3 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(499): CClientScript->getCoreScriptUrl()
+#4 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(315): CClientScript->getPackageBaseUrl('jquery')
+#5 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(208): CClientScript->renderCoreScripts()
+#6 /Users/suley/Code/Durian/trunk/framework/web/CController.php(351): CClientScript->render('<!DOCTYPE html ...')
+#7 /Users/suley/Code/Durian/trunk/framework/web/CController.php(787): CController->processOutput('<!DOCTYPE html ...')
+#8 /Users/suley/Code/Durian/trunk/jinmi/protected/controllers/SiteController.php(72): CController->render('contact', Array)
+#9 /Users/suley/Code/Durian/trunk/framework/web/actions/CInlineAction.php(49): SiteController->actionContact()
+#10 /Users/suley/Code/Durian/trunk/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/suley/Code/Durian/trunk/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/suley/Code/Durian/trunk/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(282): CController->run('contact')
+#14 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('site/contact')
+#15 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/jinmi/site/contact
+HTTP_REFERER=http://localhost/jinmi/site/page?view=about
+---
+2013/10/04 10:03:04 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/Users/suley/Code/Durian/trunk/jinmi/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/Users/suley/Co...')
+#1 /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(462): CAssetManager->publish('/Users/suley/Co...')
+#3 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(499): CClientScript->getCoreScriptUrl()
+#4 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(315): CClientScript->getPackageBaseUrl('jquery')
+#5 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(208): CClientScript->renderCoreScripts()
+#6 /Users/suley/Code/Durian/trunk/framework/web/CController.php(351): CClientScript->render('<!DOCTYPE html ...')
+#7 /Users/suley/Code/Durian/trunk/framework/web/CController.php(787): CController->processOutput('<!DOCTYPE html ...')
+#8 /Users/suley/Code/Durian/trunk/jinmi/protected/controllers/SiteController.php(72): CController->render('contact', Array)
+#9 /Users/suley/Code/Durian/trunk/framework/web/actions/CInlineAction.php(49): SiteController->actionContact()
+#10 /Users/suley/Code/Durian/trunk/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/suley/Code/Durian/trunk/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/suley/Code/Durian/trunk/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(282): CController->run('contact')
+#14 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('site/contact')
+#15 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/jinmi/site/contact
+HTTP_REFERER=http://localhost/jinmi/
+---
+2013/10/04 10:03:08 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/Users/suley/Code/Durian/trunk/jinmi/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/Users/suley/Co...')
+#1 /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(462): CAssetManager->publish('/Users/suley/Co...')
+#3 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(499): CClientScript->getCoreScriptUrl()
+#4 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(315): CClientScript->getPackageBaseUrl('jquery')
+#5 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(208): CClientScript->renderCoreScripts()
+#6 /Users/suley/Code/Durian/trunk/framework/web/CController.php(351): CClientScript->render('<!DOCTYPE html ...')
+#7 /Users/suley/Code/Durian/trunk/framework/web/CController.php(787): CController->processOutput('<!DOCTYPE html ...')
+#8 /Users/suley/Code/Durian/trunk/jinmi/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /Users/suley/Code/Durian/trunk/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#10 /Users/suley/Code/Durian/trunk/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/suley/Code/Durian/trunk/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/suley/Code/Durian/trunk/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(282): CController->run('login')
+#14 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/jinmi/site/login
+HTTP_REFERER=http://localhost/jinmi/site/page?view=about
+---
+2013/10/04 10:03:22 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/Users/suley/Code/Durian/trunk/jinmi/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/Users/suley/Co...')
+#1 /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(462): CAssetManager->publish('/Users/suley/Co...')
+#3 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(499): CClientScript->getCoreScriptUrl()
+#4 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(315): CClientScript->getPackageBaseUrl('jquery')
+#5 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(208): CClientScript->renderCoreScripts()
+#6 /Users/suley/Code/Durian/trunk/framework/web/CController.php(351): CClientScript->render('<!DOCTYPE html ...')
+#7 /Users/suley/Code/Durian/trunk/framework/web/CController.php(787): CController->processOutput('<!DOCTYPE html ...')
+#8 /Users/suley/Code/Durian/trunk/jinmi/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /Users/suley/Code/Durian/trunk/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#10 /Users/suley/Code/Durian/trunk/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/suley/Code/Durian/trunk/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/suley/Code/Durian/trunk/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(282): CController->run('login')
+#14 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/jinmi/site/login
+HTTP_REFERER=http://localhost/jinmi/site/page?view=about
+---
+2013/10/04 10:03:24 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/Users/suley/Code/Durian/trunk/jinmi/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/Users/suley/Co...')
+#1 /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(462): CAssetManager->publish('/Users/suley/Co...')
+#3 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(499): CClientScript->getCoreScriptUrl()
+#4 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(315): CClientScript->getPackageBaseUrl('jquery')
+#5 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(208): CClientScript->renderCoreScripts()
+#6 /Users/suley/Code/Durian/trunk/framework/web/CController.php(351): CClientScript->render('<!DOCTYPE html ...')
+#7 /Users/suley/Code/Durian/trunk/framework/web/CController.php(787): CController->processOutput('<!DOCTYPE html ...')
+#8 /Users/suley/Code/Durian/trunk/jinmi/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /Users/suley/Code/Durian/trunk/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#10 /Users/suley/Code/Durian/trunk/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/suley/Code/Durian/trunk/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/suley/Code/Durian/trunk/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(282): CController->run('login')
+#14 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/jinmi/site/login
+HTTP_REFERER=http://localhost/jinmi/site/page?view=about
+---
+2013/10/04 10:03:26 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/Users/suley/Code/Durian/trunk/jinmi/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/Users/suley/Co...')
+#1 /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(462): CAssetManager->publish('/Users/suley/Co...')
+#3 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(499): CClientScript->getCoreScriptUrl()
+#4 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(315): CClientScript->getPackageBaseUrl('jquery')
+#5 /Users/suley/Code/Durian/trunk/framework/web/CClientScript.php(208): CClientScript->renderCoreScripts()
+#6 /Users/suley/Code/Durian/trunk/framework/web/CController.php(351): CClientScript->render('<!DOCTYPE html ...')
+#7 /Users/suley/Code/Durian/trunk/framework/web/CController.php(787): CController->processOutput('<!DOCTYPE html ...')
+#8 /Users/suley/Code/Durian/trunk/jinmi/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /Users/suley/Code/Durian/trunk/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#10 /Users/suley/Code/Durian/trunk/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/suley/Code/Durian/trunk/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/suley/Code/Durian/trunk/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(282): CController->run('login')
+#14 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/jinmi/site/login
+HTTP_REFERER=http://localhost/jinmi/site/page?view=about
+---
+2013/10/05 16:18:20 [error] [exception.CException] exception 'CException' with message 'The asset "/Users/suley/Code/Durian/trunk/framework/gii/assets" to be published does not exist.' in /Users/suley/Code/Durian/trunk/framework/web/CAssetManager.php:257
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/gii/GiiModule.php(142): CAssetManager->publish('/Users/suley/Co...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CComponent.php(111): GiiModule->getAssetsUrl()
+#2 /Users/suley/Code/Durian/trunk/framework/base/CModule.php(105): CComponent->__get('assetsUrl')
+#3 /Users/suley/Code/Durian/trunk/framework/gii/views/layouts/main.php(5): CModule->__get('assetsUrl')
+#4 /Users/suley/Code/Durian/trunk/framework/web/CBaseController.php(126): require('/Users/suley/Co...')
+#5 /Users/suley/Code/Durian/trunk/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/suley/Co...', Array, true)
+#6 /Users/suley/Code/Durian/trunk/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/Users/suley/Co...', Array, true)
+#7 /Users/suley/Code/Durian/trunk/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div class="con...')
+#8 /Users/suley/Code/Durian/trunk/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div class="con...')
+#9 /Users/suley/Code/Durian/trunk/framework/web/CBaseController.php(206): COutputProcessor->run()
+#10 /Users/suley/Code/Durian/trunk/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 /Users/suley/Code/Durian/trunk/framework/gii/views/layouts/column1.php(7): CBaseController->endContent()
+#12 /Users/suley/Code/Durian/trunk/framework/web/CBaseController.php(126): require('/Users/suley/Co...')
+#13 /Users/suley/Code/Durian/trunk/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/suley/Co...', Array, true)
+#14 /Users/suley/Code/Durian/trunk/framework/web/CController.php(783): CBaseController->renderFile('/Users/suley/Co...', Array, true)
+#15 /Users/suley/Code/Durian/trunk/framework/gii/controllers/DefaultController.php(47): CController->render('login', Array)
+#16 /Users/suley/Code/Durian/trunk/framework/web/actions/CInlineAction.php(49): DefaultController->actionLogin()
+#17 /Users/suley/Code/Durian/trunk/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /Users/suley/Code/Durian/trunk/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#19 /Users/suley/Code/Durian/trunk/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(282): CController->run('login')
+#21 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/default/log...')
+#22 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/jinmi/gii/default/login
+---
+2013/10/05 16:20:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.pack.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.pack.js
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 16:20:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/jquery.tooltip-1.2.6.min.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/jquery.tooltip-1.2.6.min.js
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 16:20:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.css
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 16:20:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/main.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/main.js
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 16:20:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/screen.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/screen.css
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 16:20:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/main.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/main.css
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 16:20:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/images/logo.png".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/i...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/images/logo.png
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 16:20:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/print.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/print.css
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 16:20:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/screen.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/screen.css
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 16:20:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/main.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/main.css
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 16:20:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/main.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/main.js
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 16:20:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.pack.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.pack.js
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 16:20:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.css
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 16:20:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/jquery.tooltip-1.2.6.min.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/jquery.tooltip-1.2.6.min.js
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 16:20:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/images/logo.png".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/i...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/images/logo.png
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 16:20:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/print.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/print.css
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 16:20:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/screen.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/screen.css
+HTTP_REFERER=http://localhost/jinmi/gii/default/index
+---
+2013/10/05 16:20:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/main.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/main.css
+HTTP_REFERER=http://localhost/jinmi/gii/default/index
+---
+2013/10/05 16:20:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/jquery.tooltip-1.2.6.min.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/jquery.tooltip-1.2.6.min.js
+HTTP_REFERER=http://localhost/jinmi/gii/default/index
+---
+2013/10/05 16:20:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.pack.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.pack.js
+HTTP_REFERER=http://localhost/jinmi/gii/default/index
+---
+2013/10/05 16:20:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/main.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/main.js
+HTTP_REFERER=http://localhost/jinmi/gii/default/index
+---
+2013/10/05 16:20:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.css
+HTTP_REFERER=http://localhost/jinmi/gii/default/index
+---
+2013/10/05 16:20:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/images/logo.png".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/i...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/images/logo.png
+HTTP_REFERER=http://localhost/jinmi/gii/default/index
+---
+2013/10/05 16:20:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/print.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/print.css
+HTTP_REFERER=http://localhost/jinmi/gii/default/index
+---
+2013/10/05 16:20:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/screen.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/screen.css
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:20:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/main.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/main.css
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:20:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.pack.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.pack.js
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:20:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.css
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:20:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/main.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/main.js
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:20:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/jquery.tooltip-1.2.6.min.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/jquery.tooltip-1.2.6.min.js
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:20:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/images/logo.png".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/i...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/images/logo.png
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:20:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/print.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/print.css
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:21:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/main.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/main.css
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:21:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/screen.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/screen.css
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:21:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/jquery.tooltip-1.2.6.min.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/jquery.tooltip-1.2.6.min.js
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:21:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/main.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/main.js
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:21:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.pack.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.pack.js
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:21:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.css
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:21:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/images/logo.png".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/i...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/images/logo.png
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:21:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/print.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/print.css
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:21:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.css
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:21:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/main.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/main.css
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:21:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/main.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/main.js
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:21:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.pack.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.pack.js
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:21:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/jquery.tooltip-1.2.6.min.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/jquery.tooltip-1.2.6.min.js
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:21:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/screen.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/screen.css
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:21:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/images/logo.png".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/i...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/images/logo.png
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:21:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/print.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/print.css
+HTTP_REFERER=http://localhost/jinmi/gii/module
+---
+2013/10/05 16:22:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Users/suley/Code/Durian/trunk/framework/web/CController.php:483
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CController.php(270): CController->missingAction('')
+#1 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('admin')
+#3 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/jinmi/admin
+---
+2013/10/05 16:23:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Users/suley/Code/Durian/trunk/framework/web/CController.php:483
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CController.php(270): CController->missingAction('')
+#1 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('admin')
+#3 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/jinmi/admin
+---
+2013/10/05 16:23:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "default".' in /Users/suley/Code/Durian/trunk/framework/web/CController.php:483
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CController.php(270): CController->missingAction('default')
+#1 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(282): CController->run('default')
+#2 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#3 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/jinmi/admin/default/index
+---
+2013/10/05 16:24:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "default".' in /Users/suley/Code/Durian/trunk/framework/web/CController.php:483
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CController.php(270): CController->missingAction('default')
+#1 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(282): CController->run('default')
+#2 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#3 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/jinmi/admin/default/index
+---
+2013/10/05 16:25:28 [error] [exception.CException] exception 'CException' with message 'Alias "Admin.models.*" is invalid. Make sure it points to an existing directory or file.' in /Users/suley/Code/Durian/trunk/framework/YiiBase.php:341
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/base/CModule.php(226): YiiBase::import('Admin.models.*')
+#1 /Users/suley/Code/Durian/trunk/jinmi/protected/modules/admin/AdminModule.php(14): CModule->setImport(Array)
+#2 /Users/suley/Code/Durian/trunk/framework/base/CModule.php(90): AdminModule->init()
+#3 /Users/suley/Code/Durian/trunk/framework/YiiBase.php(206): CModule->__construct('admin', NULL, Array)
+#4 /Users/suley/Code/Durian/trunk/framework/base/CModule.php(282): YiiBase::createComponent('admin.AdminModu...', 'admin', NULL, Array)
+#5 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(337): CModule->getModule('admin')
+#6 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(276): CWebApplication->createController('admin/default/i...')
+#7 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/default/i...')
+#8 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/jinmi/admin/default/index
+---

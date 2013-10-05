@@ -28,7 +28,28 @@ class Item extends CActiveRecord{
 			'price' => array(self::HAS_MANY, 'ItemPrice', 'item_id')
 			);
 	}
+	/**
+	 *  insert
+	 * */
 	
+	public function insertItem($data){
+		switch($data['ItemForm']['type']){
+			default:
+				break;
+		}
+		$itemInstance = new Item();
+		$itemInstance->attribute = $data['ItemForm'];
+		if($itemInstance->save()){
+			$itemAttachment = new ItemAttachment();
+			$itemAttachment->batchInsert($data);
+			$itemAttribute = new ItemAttribute();
+			$itemAttribute->batchInsert($data);
+			$itemItinerary = new ItemItinerary();
+			$itemItinerary->batchInsert($data);
+			$itemPrice = new ItemPrice();
+			$itemPrice->batchInsert($data);
+		}
+	}
 
 }
 ?>

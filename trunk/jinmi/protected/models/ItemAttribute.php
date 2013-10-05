@@ -24,5 +24,6 @@ class ItemAttribute extends CActiveRecord{
 			'item' => array(self::BELONGS_TO, 'Item', 'item_id')
 			);
 	}
+	
 }
 ?>
