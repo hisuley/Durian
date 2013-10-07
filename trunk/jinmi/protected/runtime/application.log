@@ -830,3 +830,129 @@ Stack trace:
 #10 {main}
 REQUEST_URI=/jinmi/admin/default/index
 ---
+2013/10/05 18:52:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.pack.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.pack.js
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 18:52:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/main.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/main.css
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 18:52:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/jquery.tooltip-1.2.6.min.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/jquery.tooltip-1.2.6.min.js
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 18:52:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.css
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 18:52:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/main.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/main.js
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 18:52:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/screen.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/screen.css
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 18:52:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.pack.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.pack.js
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 18:52:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/jquery.tooltip-1.2.6.min.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/jquery.tooltip-1.2.6.min.js
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 18:52:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/main.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/main.css
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 18:52:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/main.js".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/main.js
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 18:52:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/j...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/js/fancybox/jquery.fancybox-1.3.1.css
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 18:52:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/screen.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/screen.css
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 18:52:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/images/logo.png".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/i...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/images/logo.png
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
+2013/10/05 18:52:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/42c2cb/css/print.css".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/42c2cb/c...')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/assets/42c2cb/css/print.css
+HTTP_REFERER=http://localhost/jinmi/gii/default/login
+---
