@@ -9,8 +9,8 @@ class User extends CActiveRecord{
 	public static function model($className = __CLASS){
 		return parent::model($className);
 	}
-	public function hashPassword($password, $salt = 0){
-		if(isset($salt))
+	public static function hashPassword($password, $salt = 0){
+		if(empty($salt))
 			$salt = $this->salt;
 		return md5($password.$salt);
 	}
