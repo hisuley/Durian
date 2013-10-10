@@ -12,6 +12,8 @@ class PortalModule extends CWebModule
 			'portal.models.*',
 			'portal.components.*',
 		));
+		$this->layoutPath = Yii::getPathofAlias('portal.views.layouts');
+		$this->layout = 'main';
 	}
 
 	public function beforeControllerAction($controller, $action)

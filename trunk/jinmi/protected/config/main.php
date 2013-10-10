@@ -48,8 +48,8 @@ return array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-				'http://<module:\w+>.jmlvyou.com/'=>'<module>/default/index',
-                'http://<module:\w+>.jmlvyou.com/<controller:\w+>/<action:\w+>'=>'<module>/<controller>/<action>',
+				//'http://<module:\w+>.jmlvyou.com/'=>'<module>/default/index',
+                //'http://<module:\w+>.jmlvyou.com/<controller:\w+>/<action:\w+>'=>'<module>/<controller>/<action>',
 			),
 		),
 		
