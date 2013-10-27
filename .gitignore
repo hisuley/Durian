@@ -1,3 +1,5 @@
+protected/upload/
+.DS_Store
 assets/
 protected/runtime/
 themes/classic/views/.DS_Store

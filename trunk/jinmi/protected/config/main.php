@@ -62,7 +62,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=jinmi',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => 'yanslwangss',
 			'charset' => 'utf8',
 		),
 		
@@ -75,9 +75,9 @@ return array(
 			'routes'=>array(
 				array(
 					'class'=>'CFileLogRoute',
-					'levels'=>'error, warning',
+					'levels'=>'trace, profile, info, error, warning',
 				),
-				// uncomment the following to show log messages on web pages
+				//uncomment the following to show log messages on web pages
 				/*
 				array(
 					'class'=>'CWebLogRoute',

@@ -8,6 +8,7 @@
  */
 class VisaOrderVerify extends CWidget{
 	public function run(){
+        $progress = isset($progress) ? $progress : 'unknown';
 		switch($progress){
 			case 'operate_verify':
 				$this->render('operate_verify');

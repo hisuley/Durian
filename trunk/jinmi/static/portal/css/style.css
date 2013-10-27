@@ -1,0 +1,35 @@
+
+.portal-container{
+	margin-top:40px;
+}
+/** Footer **/
+.portal-footer{
+	padding-top: 40px;
+	padding-bottom: 30px;
+	margin-top: 100px;
+	color: #777;
+	text-align: center;
+	border-top: 1px solid #e5e5e5;
+}
+.navbar-inverse{
+	background-color:#0ca3d2;
+	border-color:#0ca3d2;
+	color:white;
+}
+.navbar-inverse .container a,.navbar-inverse .navbar-nav>li>a{
+	color:white;
+}
+.navbar-inverse .navbar-nav>.dropdown>a .caret{
+	color:white;
+	border-top-color: white;
+border-bottom-color: white;
+}
+.navbar-inverse .dropdown-menu>li>a{
+	color:black;
+}
+.navbar-inverse .dropdown-menu>li:hover>a{
+	color:white;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus{
+	background-color: rgba(0, 0, 0, 0.0784314);
+}

@@ -57,7 +57,7 @@ div.order-info div.row{
                 x: -20 //center
             },
             subtitle: {
-                text: 'Source: 金米旅游',
+                text: '来源: 金米旅游数据中心',
                 x: -20
             },
             xAxis: {
