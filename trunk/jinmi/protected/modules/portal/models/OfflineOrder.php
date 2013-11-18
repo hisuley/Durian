@@ -10,6 +10,13 @@
 class OfflineOrder extends CActiveRecord{
     public $pay_status, $status;
     public $create_time;
+    const STATUS_SUCCESS = 'order_success';
+    const STATUS_OPERATE_VERIFY = 'operate_verify';
+    const STATUS_FINANCE_VERIFY = 'finance_verify';
+    const STATUS_SEND_VISA = 'send_visa';
+    const STATUS_VISA_RESULT = 'visa_result';
+    const STATUS_VISA_RETURN = 'visa_return';
+    const STATUS_COMPLETE = 'complete';
     public static function model($className = __CLASS__){
         return parent::model($className);
     }
@@ -26,5 +33,25 @@ class OfflineOrder extends CActiveRecord{
         return array(
           array('name, type, amount, total_price, pay_status, status, user_id, create_time', 'safe')
         );
+    }
+
+    public static function setStatus($id, $status){
+
+    }
+    public static function getListByRole($role){
+        /**
+        switch($role){
+            case User::ROLE_VISA_ADMIN:
+                $result = self::model()->findAll();
+                break;
+            case User::ROLE_VISA_COURIER:
+                $result = self::model()->findAllByAttributes(array('status'=>self::STATUS_FINANCE_VERIFY));
+                break;
+            case User::ROLE_VISA_OPERATE;
+                $result = self::model()->findAll();
+        }
+         **/
+        $result = self::model()->findAll();
+        return $result;
     }
 }

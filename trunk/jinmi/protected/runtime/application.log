@@ -5325,3 +5325,235 @@ in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
 2013/10/27 10:30:32 [trace] [system.CModule] Loading "clientScript" application component
 in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (33)
 in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:43:28 [trace] [system.CModule] Loading "log" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:43:28 [trace] [system.CModule] Loading "request" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:43:28 [trace] [system.CModule] Loading "urlManager" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:43:28 [trace] [system.base.CModule] Loading "portal" module
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:43:28 [trace] [system.CModule] Loading "coreMessages" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:43:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "portal/login".' in /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/suley/Code/Durian/trunk/framework/web/CWebApplication.php(141): CWebApplication->runController('portal/login')
+#1 /Users/suley/Code/Durian/trunk/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/suley/Code/Durian/trunk/jinmi/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jinmi/portal/login
+---
+2013/11/18 10:43:28 [trace] [system.CModule] Loading "errorHandler" application component
+2013/11/18 10:43:28 [trace] [system.CModule] Loading "themeManager" application component
+in /Users/suley/Code/Durian/trunk/jinmi/protected/controllers/SiteController.php (45)
+2013/11/18 10:43:28 [trace] [system.CModule] Loading "widgetFactory" application component
+in /Users/suley/Code/Durian/trunk/jinmi/protected/views/layouts/column1.php (2)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/controllers/SiteController.php (45)
+2013/11/18 10:43:28 [trace] [system.CModule] Loading "user" application component
+in /Users/suley/Code/Durian/trunk/jinmi/protected/views/layouts/main.php (35)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/views/layouts/column1.php (6)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/controllers/SiteController.php (45)
+2013/11/18 10:43:28 [trace] [system.CModule] Loading "session" application component
+in /Users/suley/Code/Durian/trunk/jinmi/protected/views/layouts/main.php (35)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/views/layouts/column1.php (6)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/controllers/SiteController.php (45)
+2013/11/18 10:43:28 [trace] [system.CModule] Loading "clientScript" application component
+in /Users/suley/Code/Durian/trunk/jinmi/protected/controllers/SiteController.php (45)
+2013/11/18 10:43:36 [trace] [system.CModule] Loading "log" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:43:36 [trace] [system.CModule] Loading "request" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:43:36 [trace] [system.CModule] Loading "urlManager" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:43:36 [trace] [system.base.CModule] Loading "portal" module
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:43:36 [trace] [system.CModule] Loading "themeManager" application component
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/DefaultController.php (7)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:43:36 [trace] [system.CModule] Loading "clientScript" application component
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/DefaultController.php (7)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:44:44 [trace] [system.CModule] Loading "log" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:44:44 [trace] [system.CModule] Loading "request" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:44:44 [trace] [system.CModule] Loading "urlManager" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:44:44 [trace] [system.base.CModule] Loading "portal" module
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:44:45 [trace] [system.CModule] Loading "themeManager" application component
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/DefaultController.php (7)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:44:45 [trace] [system.CModule] Loading "clientScript" application component
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/DefaultController.php (7)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:46:44 [trace] [system.CModule] Loading "log" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:46:44 [trace] [system.CModule] Loading "request" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:46:44 [trace] [system.CModule] Loading "urlManager" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:46:44 [trace] [system.base.CModule] Loading "portal" module
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:46:44 [trace] [system.CModule] Loading "themeManager" application component
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (33)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:46:44 [trace] [system.CModule] Loading "clientScript" application component
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (33)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:09 [trace] [system.CModule] Loading "log" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:09 [trace] [system.CModule] Loading "request" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:09 [trace] [system.CModule] Loading "urlManager" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:09 [trace] [system.base.CModule] Loading "portal" module
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:10 [trace] [system.CModule] Loading "db" application component
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/models/OfflineOrder.php (14)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (36)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:10 [trace] [system.db.CDbConnection] Opening DB connection
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/models/OfflineOrder.php (14)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (36)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `offline_order`
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/models/OfflineOrder.php (14)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (36)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `offline_order`
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/models/OfflineOrder.php (14)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (36)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:11 [trace] [system.db.ar.CActiveRecord] OfflineOrder.findAll()
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (36)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `offline_order` `t`
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (36)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:11 [trace] [system.CModule] Loading "themeManager" application component
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (37)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:11 [trace] [system.db.ar.CActiveRecord] lazy loading OfflineOrder.attributes
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/views/visa/list.php (25)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (37)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `offline_order_attributes`
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/views/visa/list.php (25)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (37)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `offline_order_attributes`
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/views/visa/list.php (25)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (37)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT `attributes`.`id` AS `t1_c0`, `attributes`.`attr_name` AS `t1_c1`, `attributes`.`value` AS `t1_c2`, `attributes`.`extend` AS `t1_c3`, `attributes`.`create_time` AS `t1_c4`, `attributes`.`offline_order_id` AS `t1_c5` FROM `offline_order_attributes` `attributes`  WHERE (`attributes`.`offline_order_id`=:ypl0)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/views/visa/list.php (25)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (37)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:11 [trace] [system.db.ar.CActiveRecord] lazy loading OfflineOrder.attributes
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/views/visa/list.php (25)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (37)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT `attributes`.`id` AS `t1_c0`, `attributes`.`attr_name` AS `t1_c1`, `attributes`.`value` AS `t1_c2`, `attributes`.`extend` AS `t1_c3`, `attributes`.`create_time` AS `t1_c4`, `attributes`.`offline_order_id` AS `t1_c5` FROM `offline_order_attributes` `attributes`  WHERE (`attributes`.`offline_order_id`=:ypl0)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/views/visa/list.php (25)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (37)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:11 [trace] [system.db.ar.CActiveRecord] lazy loading OfflineOrder.attributes
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/views/visa/list.php (25)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (37)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT `attributes`.`id` AS `t1_c0`, `attributes`.`attr_name` AS `t1_c1`, `attributes`.`value` AS `t1_c2`, `attributes`.`extend` AS `t1_c3`, `attributes`.`create_time` AS `t1_c4`, `attributes`.`offline_order_id` AS `t1_c5` FROM `offline_order_attributes` `attributes`  WHERE (`attributes`.`offline_order_id`=:ypl0)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/views/visa/list.php (25)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (37)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:11 [trace] [system.db.ar.CActiveRecord] lazy loading OfflineOrder.attributes
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/views/visa/list.php (25)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (37)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT `attributes`.`id` AS `t1_c0`, `attributes`.`attr_name` AS `t1_c1`, `attributes`.`value` AS `t1_c2`, `attributes`.`extend` AS `t1_c3`, `attributes`.`create_time` AS `t1_c4`, `attributes`.`offline_order_id` AS `t1_c5` FROM `offline_order_attributes` `attributes`  WHERE (`attributes`.`offline_order_id`=:ypl0)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/views/visa/list.php (25)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (37)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:11 [trace] [system.CModule] Loading "clientScript" application component
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (37)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:21 [trace] [system.CModule] Loading "log" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:21 [trace] [system.CModule] Loading "request" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:21 [trace] [system.CModule] Loading "urlManager" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:21 [trace] [system.base.CModule] Loading "portal" module
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:21 [trace] [system.CModule] Loading "db" application component
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/models/OfflineOrder.php (14)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (41)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:21 [trace] [system.db.CDbConnection] Opening DB connection
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/models/OfflineOrder.php (14)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (41)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:22 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `offline_order`
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/models/OfflineOrder.php (14)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (41)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:22 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `offline_order`
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/models/OfflineOrder.php (14)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (41)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:22 [trace] [system.db.ar.CActiveRecord] OfflineOrder.find()
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (41)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:22 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `offline_order` `t` WHERE id = :id LIMIT 1
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (41)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:22 [trace] [system.CModule] Loading "themeManager" application component
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (42)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:22 [trace] [system.db.ar.CActiveRecord] lazy loading OfflineOrder.attributes
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/views/visa/view.php (96)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (42)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:22 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `offline_order_attributes`
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/views/visa/view.php (96)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (42)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:22 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `offline_order_attributes`
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/views/visa/view.php (96)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (42)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:22 [trace] [system.db.CDbCommand] Querying SQL: SELECT `attributes`.`id` AS `t1_c0`, `attributes`.`attr_name` AS `t1_c1`, `attributes`.`value` AS `t1_c2`, `attributes`.`extend` AS `t1_c3`, `attributes`.`create_time` AS `t1_c4`, `attributes`.`offline_order_id` AS `t1_c5` FROM `offline_order_attributes` `attributes`  WHERE (`attributes`.`offline_order_id`=:ypl0)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/views/visa/view.php (96)
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (42)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 10:47:22 [trace] [system.CModule] Loading "clientScript" application component
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (42)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 11:07:35 [trace] [system.CModule] Loading "log" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 11:07:35 [trace] [system.CModule] Loading "request" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 11:07:35 [trace] [system.CModule] Loading "urlManager" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 11:07:35 [trace] [system.base.CModule] Loading "portal" module
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 11:07:35 [trace] [system.CModule] Loading "themeManager" application component
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (33)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 11:07:35 [trace] [system.CModule] Loading "clientScript" application component
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/VisaController.php (33)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 11:48:34 [trace] [system.CModule] Loading "log" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 11:48:34 [trace] [system.CModule] Loading "request" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 11:48:34 [trace] [system.CModule] Loading "urlManager" application component
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 11:48:34 [trace] [system.base.CModule] Loading "portal" module
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 11:48:34 [trace] [system.CModule] Loading "themeManager" application component
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/DefaultController.php (7)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)
+2013/11/18 11:48:34 [trace] [system.CModule] Loading "clientScript" application component
+in /Users/suley/Code/Durian/trunk/jinmi/protected/modules/portal/controllers/DefaultController.php (7)
+in /Users/suley/Code/Durian/trunk/jinmi/index.php (13)

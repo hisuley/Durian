@@ -12,9 +12,6 @@ class VisaController extends CController{
             if($orderModel->save()){
                 foreach($_POST['OfflineOrderAttribute'] as $orderAttribute){
                     $orderAttributeModel = new OfflineOrderAttribute();
-                    if(is_array($orderAttribute['value'])){
-                        $orderAttribute['value'] = implode(',', $orderAttribute['value']);
-                    }
                     $orderAttribute['offline_order_id'] = $orderModel->id;
                     $orderAttributeModel->attributes = $orderAttribute;
                     $orderAttributeModel->save();
@@ -26,14 +23,47 @@ class VisaController extends CController{
                     $orderReviewHistoryModel->attributes = $orderReviewHistory;
                     $orderReviewHistoryModel->save();
                 }
+                Yii::log('Save visa order success, id'.$orderModel->id.'. Process time:'.((strtotime('now')-$startTime))." Seconds", 'info', 'portal');
                 $this->redirect('list');
-//                Yii::log('Save visa order, id'.$orderModel->id.'. Process time:'.((strtotime('now')-$startTime))." Seconds", 'info', 'portal');
             }
 		}
 		$this->render('visa_form');
 	}
+    public function actionEdit($id){
+        $result = OfflineOrder::model()->findByPk($id);
+        if(empty($result))
+            throw new CHttpException(404, '签证不存在');
+        if(isset($_POST['OfflineOrder']['type'])){
+            $result->attributes = $_POST['OfflineOrder'];
+            if($result->save() && OfflineOrderAttribute::model()->deleteAllByAttributes(array('offline_order_id'=>$id)) && OfflineOrderReviewHistory::model()->deleteAllByAttributes(array('offline_order_id'=>$id))){
+                foreach($_POST['OfflineOrderAttribute'] as $orderAttribute){
+                    $orderAttributeModel = new OfflineOrderAttribute();
+                    $orderAttribute['offline_order_id'] = $id;
+                    $orderAttributeModel->attributes = $orderAttribute;
+                    $orderAttributeModel->save();
+                }
+                foreach($_POST['OfflineOrderReviewHistory'] as $orderReviewHistory){
+                    $orderReviewHistory['user_id'] = $result->user_id;
+                    $orderReviewHistoryModel = new OfflineOrderReviewHistory();
+                    $orderReviewHistory['offline_order_id'] = $id;
+                    $orderReviewHistoryModel->attributes = $orderReviewHistory;
+                    $orderReviewHistoryModel->save();
+                }
+                Yii::log('Edit & update visa order success, id:'.$id.' Seconds', 'info', 'portal');
+                $this->redirect('list');
+            }
+        }else{
+            $this->render('visa_form', array('result', $result));
+        }
+    }
+    public function actionSearch($id){
+       if(count(OfflineOrder::model()->findByPk($id)) == 0){
+           throw new CHttpException(404, '签证不存在');
+       }
+       $this->redirect(array('view', 'id'=>$id));
+    }
 	public function actionList(){
-        $result = OfflineOrder::model()->findAll();
+        $result = OfflineOrder::getListByRole(Yii::app()->user->role);
 		$this->render('list', array('result' => $result));
 	}
 	public function actionView($id = 0){
