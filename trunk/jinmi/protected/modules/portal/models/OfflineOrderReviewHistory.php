@@ -8,6 +8,22 @@
  **/
 
 class OfflineOrderReviewHistory extends CActiveRecord{
+    const TYPE_SUCCESS = 'order_success';
+    const TYPE_OPERATE_VERIFY = 'operate_verify';
+    const TYPE_FINANCE_VERIFY = 'finance_verify';
+    const TYPE_SEND_VISA = 'send_visa';
+    const TYPE_VISA_RESULT = 'visa_result';
+    const TYPE_VISA_RETURN = 'visa_return';
+    const TYPE_COMPLETE = 'complete';
+    public static $typeIntl = array(
+        self::TYPE_SUCCESS => '下单成功',
+        self::TYPE_OPERATE_VERIFY => '操作审核',
+        self::TYPE_FINANCE_VERIFY => '财务审核',
+        self::TYPE_SEND_VISA => '送签',
+        self::TYPE_VISA_RESULT => '出结果',
+        self::TYPE_VISA_RETURN => '发回',
+        self::TYPE_COMPLETE => '完成'
+    );
     public $user_id, $type, $opinion, $memo, $response, $create_time, $offline_order_id;
     public static function model($className = __CLASS__){
         return parent::model($className);
@@ -20,10 +36,30 @@ class OfflineOrderReviewHistory extends CActiveRecord{
           'OfflineOrder' => array(self::BELONGS_TO, 'OfflineOrder', array('offline_order_id'=>'id'))
         );
     }
+    public static function translateType($type){
+        return self::$typeIntl[$type];
+    }
     public function rules(){
         return array(
           array('user_id,type,opinion,memo,response,create_time,offline_order_id', 'safe')
         );
+    }
+    public static function getReviewData($id, $type = self::TYPE_SUCCESS){
+        if(!empty($id)){
+            $result = self::model()->findByAttributes(array('type'=>$type, 'offline_order_id'=>$id));
+            if(!empty($result))
+                return $result;
+            else
+                return false;
+        }
+        return false;
+    }
+    public static function getAllReviewData($id){
+        $reviewList = array();
+        foreach(self::$typeIntl as $key=>$value){
+            $reviewList[$key] = self::getReviewData($id, $key);
+        }
+        return $reviewList;
     }
 
 }

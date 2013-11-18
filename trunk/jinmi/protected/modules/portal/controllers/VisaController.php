@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Class VisaController
+ * use to handle the visa related business.
+ */
 class VisaController extends CController{
 	public function actionNew(){
 		if(isset($_POST['OfflineOrder'])){
@@ -63,7 +66,7 @@ class VisaController extends CController{
        $this->redirect(array('view', 'id'=>$id));
     }
 	public function actionList(){
-        $result = OfflineOrder::getListByRole(Yii::app()->user->role);
+        $result = OfflineOrder::getListByRole();
 		$this->render('list', array('result' => $result));
 	}
 	public function actionView($id = 0){
@@ -74,6 +77,15 @@ class VisaController extends CController{
 	}
     public function actionReview($id = 0){
         if(isset($id) && Yii::app()->request->isAjaxRequest){
+            $review = new OfflineOrderReviewHistory();
+            $review->offline_order_id = $id;
+            $review->attributes = $_POST['OfflineOrderReviewHistory'];
+            if($review->save()){
+                echo "saved";
+            }else{
+                echo "save failed";
+            }
+        }else{
             $review = new OfflineOrderReviewHistory();
             $review->offline_order_id = $id;
             $review->attributes = $_POST['OfflineOrderReviewHistory'];

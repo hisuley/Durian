@@ -11,12 +11,22 @@ class OfflineOrder extends CActiveRecord{
     public $pay_status, $status;
     public $create_time;
     const STATUS_SUCCESS = 'order_success';
-    const STATUS_OPERATE_VERIFY = 'operate_verify';
-    const STATUS_FINANCE_VERIFY = 'finance_verify';
-    const STATUS_SEND_VISA = 'send_visa';
-    const STATUS_VISA_RESULT = 'visa_result';
-    const STATUS_VISA_RETURN = 'visa_return';
+    const STATUS_PROFILE_RECEIVED = 'profile_received';
+    const STATUS_VERIFYING = 'verifying';
+    const STATUS_REJECT = 'reject';
+    const STATUS_PROFILE_INCOMPLETE = 'profile_incomplete';
+    const STATUS_SEND_BACK = 'send_back';
     const STATUS_COMPLETE = 'complete';
+    private static $statusIntl = array(
+        self::STATUS_COMPLETE => '完结',
+        self::STATUS_PROFILE_INCOMPLETE => '资料不全，退回',
+        self::STATUS_PROFILE_RECEIVED => '收到资料',
+        self::STATUS_REJECT => '拒签',
+        self::STATUS_SEND_BACK => '已寄回',
+        self::STATUS_SUCCESS => '下单成功',
+        self::STATUS_VERIFYING => '资料审核'
+    );
+
     public static function model($className = __CLASS__){
         return parent::model($className);
     }
@@ -38,7 +48,7 @@ class OfflineOrder extends CActiveRecord{
     public static function setStatus($id, $status){
 
     }
-    public static function getListByRole($role){
+    public static function getListByRole($role = ''){
         /**
         switch($role){
             case User::ROLE_VISA_ADMIN:
@@ -53,5 +63,8 @@ class OfflineOrder extends CActiveRecord{
          **/
         $result = self::model()->findAll();
         return $result;
+    }
+    public static function translateStatus($status){
+        return self::$statusIntl[$status];
     }
 }

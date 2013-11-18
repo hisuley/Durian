@@ -2,29 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74b6f384-8cb4-4801-86d7-b859aeaa5c85" name="Default" comment="Portal Verify component and function code.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/default/error.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/DefaultController.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/PortalModule.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/PortalModule.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrder.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderReviewHistory.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderReviewHistory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/components/OrderHelper.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/components/OrderHelper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/models/User.php" afterPath="$PROJECT_DIR$/jinmi/protected/models/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/VisaController.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/VisaController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/runtime/application.log" afterPath="$PROJECT_DIR$/jinmi/protected/runtime/application.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/layouts/main.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/layouts/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/view.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/view.php" />
     </list>
     <ignored path="trunk.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384742682026" ignored="false" />
     <file path="/VisaOrderVerify.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381417971204" ignored="false" />
-    <file path="/VisaController.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384747331703" ignored="false" />
+    <file path="/VisaController.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384754126678" ignored="false" />
     <file path="/Visa.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381424460691" ignored="false" />
-    <file path="/main.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381425264109" ignored="false" />
+    <file path="/main.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384753227560" ignored="false" />
     <file path="/a.coffee" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381425332791" ignored="false" />
     <file path="/a.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381425381214" ignored="false" />
-    <file path="/OfflineOrder.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384746496160" ignored="false" />
+    <file path="/OfflineOrder.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384755203942" ignored="false" />
     <file path="/OfflineOrderAttribute.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384744716229" ignored="false" />
-    <file path="/OfflineOrderReviewHistory.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381893823217" ignored="false" />
+    <file path="/OfflineOrderReviewHistory.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384759482186" ignored="false" />
     <file path="/visa_form.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381463325540" ignored="false" />
     <file path="/dummy.xml" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384752787050" ignored="false" />
     <file path="/list.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381465731482" ignored="false" />
     <file path="/OrderHelper.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381892136550" ignored="false" />
-    <file path="/view.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381892090738" ignored="false" />
+    <file path="/view.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384759639619" ignored="false" />
     <file path="/review.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381892272391" ignored="false" />
     <file path="$PROJECT_DIR$/../../oa/oa/oa/protected/controllers/ManhourController.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381709173527" ignored="false" />
     <file path="/ManhourController.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381709172805" ignored="false" />
@@ -34,7 +38,7 @@
     <file path="$PROJECT_DIR$/../../oa/oa/db.sql" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381692204724" ignored="false" />
     <file path="/db.sql" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381692119809" ignored="false" />
     <file path="$PROJECT_DIR$/../../oa/oa/oa/protected/models/User.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381692541602" ignored="false" />
-    <file path="/User.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384747434616" ignored="false" />
+    <file path="/User.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384759359340" ignored="false" />
     <file path="$PROJECT_DIR$/../../oa/oa/oa/protected/models/Leave.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381709288553" ignored="false" />
     <file path="/Leave.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381709285454" ignored="false" />
     <file path="$PROJECT_DIR$/../../oa/oa/oa/protected/models/Excercise.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381709380459" ignored="false" />
@@ -60,7 +64,7 @@
     <file path="/UserIdentity.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1382062136804" ignored="false" />
     <file path="$PROJECT_DIR$/../../oa/oa/oa/js/main.js" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1382084787054" ignored="false" />
     <file path="/main.js" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1382084218441" ignored="false" />
-    <file path="/DefaultController.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384752820527" ignored="false" />
+    <file path="/DefaultController.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384753170302" ignored="false" />
     <file path="/PortalModule.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384751485941" ignored="false" />
     <file path="/error.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384752883829" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -82,10 +86,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="VisaController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/VisaController.php">
+      <file leaf-file-name="OrderHelper.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/components/OrderHelper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="9" selection-start="3668" selection-end="3668" vertical-scroll-proportion="-14.375">
+            <state line="27" column="0" selection-start="812" selection-end="812" vertical-scroll-proportion="-13.125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/default/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="38" selection-start="269" selection-end="269" vertical-scroll-proportion="-0.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="174" column="59" selection-start="6742" selection-end="6742" vertical-scroll-proportion="0.60280377">
+              <folding>
+                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <marker date="1384759640000" expanded="true" signature="6115:6634" placeholder="..." />
+                <marker date="1384759640000" expanded="true" signature="6679:6722" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jinmi/protected/models/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="21" selection-start="735" selection-end="735" vertical-scroll-proportion="-14.375">
               <folding />
             </state>
           </provider>
@@ -94,25 +132,16 @@
       <file leaf-file-name="OfflineOrder.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="43" selection-start="1750" selection-end="1750" vertical-scroll-proportion="-21.666666">
+            <state line="27" column="6" selection-start="898" selection-end="898" vertical-scroll-proportion="-13.125">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/models/User.php">
+      <file leaf-file-name="list.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="5" selection-start="576" selection-end="576" vertical-scroll-proportion="-11.875">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OfflineOrderAttribute.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderAttribute.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="21" selection-start="1419" selection-end="1419" vertical-scroll-proportion="-26.875">
+            <state line="68" column="26" selection-start="975" selection-end="1389" vertical-scroll-proportion="-21.25">
               <folding />
             </state>
           </provider>
@@ -121,43 +150,36 @@
       <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="9" selection-start="976" selection-end="976" vertical-scroll-proportion="-22.5">
+            <state line="31" column="34" selection-start="847" selection-end="847" vertical-scroll-proportion="-19.375">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SiteController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/controllers/SiteController.php">
+      <file leaf-file-name="OfflineOrderReviewHistory.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderReviewHistory.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="9" selection-start="924" selection-end="1088" vertical-scroll-proportion="-6.875">
+            <state line="24" column="35" selection-start="813" selection-end="813" vertical-scroll-proportion="-3.2">
+              <folding>
+                <element signature="e#6#129#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Visa.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/Visa.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/default/login.php">
+      <file leaf-file-name="OfflineOrderAttribute.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderAttribute.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="17" selection-start="1013" selection-end="1013" vertical-scroll-proportion="-12.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/default/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="14" selection-start="345" selection-end="345" vertical-scroll-proportion="0.32061067">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PortalModule.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/PortalModule.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="9" selection-start="777" selection-end="777" vertical-scroll-proportion="-16.875">
+            <state line="39" column="9" selection-start="1158" selection-end="1158" vertical-scroll-proportion="-11.041667">
               <folding />
             </state>
           </provider>
@@ -183,22 +205,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/components/VisaOrderVerify.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/models/Visa.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/config/main.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/visa_form.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/list.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/view.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/components/OrderHelper.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/components/views/review.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderReviewHistory.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderAttribute.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrder.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/VisaController.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/models/User.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/PortalModule.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/DefaultController.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/views/default/error.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/DefaultController.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/components/OrderHelper.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/VisaController.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrder.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/models/User.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderReviewHistory.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/view.php" />
       </list>
     </option>
   </component>
@@ -663,6 +685,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -824,107 +868,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/components/views/review.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="6" selection-start="2558" selection-end="2558" vertical-scroll-proportion="-33.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderReviewHistory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="32" selection-start="499" selection-end="499" vertical-scroll-proportion="-6.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="32" selection-start="3690" selection-end="3690" vertical-scroll-proportion="-6.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/visa_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="43" selection-start="387" selection-end="399" vertical-scroll-proportion="-3.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/yiilite.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7688" column="44" selection-start="222320" selection-end="222320" vertical-scroll-proportion="-10.5">
-          <folding>
-            <marker date="1380714294000" expanded="true" signature="-1:-1" placeholder="/*...*/" />
-            <marker date="1380714294000" expanded="true" signature="-1:-1" placeholder="/*...*/" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="5" selection-start="576" selection-end="576" vertical-scroll-proportion="-11.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="43" selection-start="1750" selection-end="1750" vertical-scroll-proportion="-21.666666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderAttribute.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="21" selection-start="1419" selection-end="1419" vertical-scroll-proportion="-26.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/PortalModule.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="9" selection-start="777" selection-end="777" vertical-scroll-proportion="-16.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/default/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="17" selection-start="1013" selection-end="1013" vertical-scroll-proportion="-12.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/views/site/error.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="190" selection-end="190" vertical-scroll-proportion="0.26107594">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/VisaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="9" selection-start="3668" selection-end="3668" vertical-scroll-proportion="-14.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="9" selection-start="976" selection-end="976" vertical-scroll-proportion="-22.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/controllers/SiteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="9" selection-start="924" selection-end="1088" vertical-scroll-proportion="-6.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/default/error.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="44" selection-start="300" selection-end="300" vertical-scroll-proportion="0.3085443">
@@ -934,10 +877,117 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="35" selection-start="1165" selection-end="1165" vertical-scroll-proportion="-18.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="65" selection-start="2700" selection-end="2700" vertical-scroll-proportion="-13.916667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/components/UserIdentity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="10" selection-start="661" selection-end="661" vertical-scroll-proportion="-14.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/components/views/review.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="24" selection-start="917" selection-end="917" vertical-scroll-proportion="-12.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/VisaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="40" selection-start="3765" selection-end="3765" vertical-scroll-proportion="-17.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/default/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="14" selection-start="345" selection-end="345" vertical-scroll-proportion="0.32061067">
+        <state line="10" column="38" selection-start="269" selection-end="269" vertical-scroll-proportion="-0.625">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="26" selection-start="975" selection-end="1389" vertical-scroll-proportion="-21.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="34" selection-start="847" selection-end="847" vertical-scroll-proportion="-19.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/Visa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/components/OrderHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="812" selection-end="812" vertical-scroll-proportion="-13.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderAttribute.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="9" selection-start="1158" selection-end="1158" vertical-scroll-proportion="-11.041667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="6" selection-start="898" selection-end="898" vertical-scroll-proportion="-13.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="21" selection-start="735" selection-end="735" vertical-scroll-proportion="-14.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderReviewHistory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="35" selection-start="813" selection-end="813" vertical-scroll-proportion="-3.2">
+          <folding>
+            <element signature="e#6#129#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="174" column="59" selection-start="6742" selection-end="6742" vertical-scroll-proportion="0.60280377">
+          <folding>
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <marker date="1384759640000" expanded="true" signature="6115:6634" placeholder="..." />
+            <marker date="1384759640000" expanded="true" signature="6679:6722" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

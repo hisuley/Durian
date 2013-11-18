@@ -10,7 +10,7 @@ class User extends CActiveRecord{
 	public function tableName(){
 		return 'user';
 	}
-	public static function model($className = __CLASS){
+	public static function model($className = __CLASS__){
 		return parent::model($className);
 	}
 	public static function hashPassword($password, $salt = 0){
@@ -18,5 +18,10 @@ class User extends CActiveRecord{
 			$salt = self::$salt;
 		return md5($password.$salt);
 	}
+    public static function getUserRealname($id){
+//        $result = self::model()->findByPk($id);
+//        return $result->realname;
+        return '周丽萍';
+    }
 }
 ?>

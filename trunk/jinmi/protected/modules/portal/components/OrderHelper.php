@@ -20,7 +20,7 @@ class OrderHelper extends CWidget{
     }
     public static function findMaterial($attributes){
         $result = self::findAttr('material', $attributes);
-        return explode(',', $result);
+        return $result;
     }
     public function review($progress = 0, $params){
         if(isset($progress)){

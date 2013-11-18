@@ -117,21 +117,7 @@
 			<div class="panel-body">
 			<label for="" class="control-label col-md-3" style="margin-top:7px;">当前操作：
                 <?php
-                if($result->status == 'order_success')
-                    echo "操作审核";
-                elseif($result->status == 'operate_verify')
-                    echo "财务审核";
-                elseif($result->status == 'finance_verify')
-                    echo "送签";
-                elseif($result->status == 'send_visa')
-                    echo "出结果";
-                elseif($result->status == 'visa_result')
-                    echo "送回";
-                elseif($result->status == 'visa_return')
-                    echo "确认收到";
-                elseif($result->status == 'complete')
-                    echo "订单完结，无需操作";
-
+                OfflineOrder::translateStatus($result->status);
                 ?>
 
             </label>
@@ -144,15 +130,14 @@
 			</div>
 		</div>
 
-
-
+    <!--
 		<div class="panel panel-success review-panel" style="margin-top:40px;">
 			<div class="panel-heading">
 				<h3 class="panel-title"><span class="glyphicon glyphicon-ok-circle"></span> 下单 <span class="label label-success">下单成功</span><span class="pull-right ">操作员：<strong>沐文生</strong>  <small>2013-07-23 12:30</small></span></h3>
 			</div>
 			<div class="panel-body">
 				<div class="col-md-5">
-					备注：客户要求加急特快，2天内出签。
+					备注：<?php echo empty($review[OfflineOrderReviewHistory::TYPE_SUCCESS]) ? '':$review[OfflineOrderReviewHistory::TYPE_SUCCESS]->memo; ?>
 				</div>
 				<div class="col-md-7">
 					<div class="col-md-3">
@@ -172,40 +157,31 @@
 
 			</div>
 		</div>
-		<div class="panel panel-success">
-			<div class="panel-heading">
-				<h3 class="panel-title"><span class="glyphicon glyphicon-ok-circle"></span> 操作审核  <span class="label label-success">审核成功</span><span class="pull-right ">操作员：<strong>周丽萍</strong>  <small>2013-07-23 12:30</small></span></h3>
-			</div>
-			<div class="panel-body">
-				已确认收到客户资料。
-				<br />
-				材料清单：
-				<span class="glyphicon glyphicon-check"></span>户口本 <span class="glyphicon glyphicon-check"></span>护照 <span class="glyphicon glyphicon-check"></span>照片 <span class="glyphicon glyphicon-check"></span>财力证明
-			</div>
-		</div>
-		<div class="panel panel-warning">
-			<div class="panel-heading">
-				<h3 class="panel-title"><span class="glyphicon glyphicon-dashboard"></span>财务审核 <span class="label label-info">审核中</span></h3>
-			</div>
-			<div class="panel-body"></div>
-		</div>
-		<div class="panel panel-warning">
-			<div class="panel-heading">
-				<h3 class="panel-title"><span class="glyphicon glyphicon-remove"></span>送签 <span class="label label-warning">未送签</span></h3>
-
-			</div>
-			<div class="panel-body"></div>
-		</div>
-		<div class="panel panel-warning">
-			<div class="panel-heading">
-				<h3 class="panel-title"><span class="glyphicon glyphicon-remove"></span>出结果 <span class="label label-warning"></span></h3>
-			</div>
-			<div class="panel-body"></div>
-		</div>
-		<div class="panel panel-warning">
-			<div class="panel-heading">
-				<h3 class="panel-title"><span class="glyphicon glyphicon-remove"></span>送回</h3>
-			</div>
-			<div class="panel-body"></div>
-		</div>
+		-->
+        <?php
+        $review = OfflineOrderReviewHistory::getAllReviewData($result->id);
+        $reviewSwitch = false;
+        foreach(OfflineOrderReviewHistory::$typeIntl as $key=>$value){
+            echo '<div class="panel ';
+            echo empty($review[$key]) ? 'panel-warning' : 'panel-success';
+            echo '">';
+            echo '<div class="panel-heading">'.
+				 '<h3 class="panel-title"><span class="glyphicon glyphicon-ok-circle"></span>'.$value.'<span class="label ';
+            echo empty($review[$key]) ? (!$reviewSwitch) ? ('label-info">审核中' && $reviewSwitch = true): '' : 'label-success">审核成功';
+            echo '</span>';
+            echo !empty($review[$key]) ? '<span class="pull-right ">操作员：<strong> '.User::getUserRealname($review[$key]->user_id).' </strong>  <small>'.date('Y-m-d H:i:s', $review[$key]->create_time).'</small></span></h3>' : '';
+			echo '</div>';
+            echo '<div class="panel-body">';
+            echo empty($review[$key]) ? '':$review[$key]->memo;
+            echo "<br />";
+            if($key == OfflineOrderReviewHistory::TYPE_SUCCESS){
+                echo '材料清单：';
+                $data = OrderHelper::findAttr(OfflineOrderAttribute::ATTR_MATERIAL, $result->attributes);
+                foreach($data as $item){
+                    echo '<span class="glyphicon glyphicon-check"></span>'.$item." ";
+                }
+            }
+            echo '</div></div>';
+        }
+        ?>
 

@@ -22,7 +22,9 @@ class DefaultController extends CController
 		$this->renderPartial('login');
 	}
 	public function actionLogout(){
-		$this->render('logout');
+        Yii::app()->user->logout();
+        Yii::app()->user->setFlash('failed', '已经退出，请重新登录。');
+		$this->redirect('login');
 	}
 	public function actionRegister(){
 		$this->render('register');
