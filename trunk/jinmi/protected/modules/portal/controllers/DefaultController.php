@@ -3,6 +3,12 @@
 class DefaultController extends CController
 {
 
+    public function beforeAction(){
+        if(Yii::app()->user->isGuest && $this->action->id != 'login'){
+            $this->redirect(array('portal/default/login'));
+        }
+        return true;
+    }
 	public function actionIndex()
 	{
 		$this->render('index');

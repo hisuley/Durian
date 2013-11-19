@@ -4,6 +4,12 @@
  * use to handle the visa related business.
  */
 class VisaController extends CController{
+    public function beforeAction(){
+        if(Yii::app()->user->isGuest && $this->action->id != 'login'){
+            $this->redirect(array('default/login'));
+        }
+        return true;
+    }
 	public function actionNew(){
 		if(isset($_POST['OfflineOrder'])){
             $startTime = strtotime('now');

@@ -16,7 +16,7 @@
         <div class="col-md-2">
             <input type="hidden" name="OfflineOrderAttribute[0][attr_name]" value="country"/>
             <select name="OfflineOrderAttribute[0][value]" id="inputContinent" class="form-control input-sm">
-                <option value="1">泰国</option>
+                <option value="泰国">泰国</option>
             </select>
         </div>
         <label for="inputType" class="col-md-1 control-label">类型：</label>

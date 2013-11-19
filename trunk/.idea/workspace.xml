@@ -2,25 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74b6f384-8cb4-4801-86d7-b859aeaa5c85" name="Default" comment="Portal Verify component and function code.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/PortalLogin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/DefaultController.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrder.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderAttribute.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderAttribute.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderReviewHistory.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderReviewHistory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/components/UserIdentity.php" afterPath="$PROJECT_DIR$/jinmi/protected/components/UserIdentity.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/VisaController.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/VisaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/runtime/application.log" afterPath="$PROJECT_DIR$/jinmi/protected/runtime/application.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/list.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/layouts/main.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/layouts/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/components/views/review.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/components/views/review.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/view.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/visa_form.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/visa_form.php" />
     </list>
     <ignored path="trunk.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384742682026" ignored="false" />
     <file path="/VisaOrderVerify.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381417971204" ignored="false" />
-    <file path="/VisaController.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384784018396" ignored="false" />
+    <file path="/VisaController.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384826486053" ignored="false" />
     <file path="/Visa.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381424460691" ignored="false" />
     <file path="/main.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384783604677" ignored="false" />
     <file path="/a.coffee" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381425332791" ignored="false" />
@@ -30,7 +21,7 @@
     <file path="/OfflineOrderReviewHistory.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384782556367" ignored="false" />
     <file path="/visa_form.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381463325540" ignored="false" />
     <file path="/dummy.xml" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384778022942" ignored="false" />
-    <file path="/list.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381465731482" ignored="false" />
+    <file path="/list.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384826541660" ignored="false" />
     <file path="/OrderHelper.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381892136550" ignored="false" />
     <file path="/view.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384781571485" ignored="false" />
     <file path="/review.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384784225846" ignored="false" />
@@ -68,7 +59,7 @@
     <file path="/UserIdentity.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1382062136804" ignored="false" />
     <file path="$PROJECT_DIR$/../../oa/oa/oa/js/main.js" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1382084787054" ignored="false" />
     <file path="/main.js" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1382084218441" ignored="false" />
-    <file path="/DefaultController.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384753170302" ignored="false" />
+    <file path="/DefaultController.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384826474927" ignored="false" />
     <file path="/PortalModule.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384751485941" ignored="false" />
     <file path="/error.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384752883829" ignored="false" />
     <file path="/PortalLogin.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384783382361" ignored="false" />
@@ -94,7 +85,16 @@
       <file leaf-file-name="VisaController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/VisaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="33" selection-start="4064" selection-end="4064" vertical-scroll-proportion="-7.5">
+            <state line="1" column="3" selection-start="9" selection-end="9" vertical-scroll-proportion="-0.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/list.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="62" selection-start="986" selection-end="986" vertical-scroll-proportion="0.70229006">
               <folding />
             </state>
           </provider>
@@ -109,10 +109,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="review.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="review.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/components/views/review.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="149" column="0" selection-start="6994" selection-end="6994" vertical-scroll-proportion="0.24878837">
+            <state line="17" column="32" selection-start="296" selection-end="296" vertical-scroll-proportion="-10.625">
               <folding>
                 <element signature="e#6#128#0" expanded="true" />
               </folding>
@@ -120,10 +120,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginForm.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/models/LoginForm.php">
+      <file leaf-file-name="visa_form.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/visa_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="0" selection-start="0" selection-end="1779" vertical-scroll-proportion="-13.125">
+            <state line="8" column="24" selection-start="481" selection-end="481" vertical-scroll-proportion="-5.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jinmi/protected/config/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="55" column="22" selection-start="1524" selection-end="1524" vertical-scroll-proportion="-6.25">
               <folding />
             </state>
           </provider>
@@ -138,19 +147,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/controllers/AdminController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="29" selection-start="178" selection-end="178" vertical-scroll-proportion="-6.25">
+            <state line="7" column="58" selection-start="219" selection-end="219" vertical-scroll-proportion="-4.375">
               <folding />
             </state>
           </provider>
@@ -169,15 +169,6 @@
         <entry file="file://$PROJECT_DIR$/jinmi/protected/controllers/SiteController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="96" column="33" selection-start="1950" selection-end="2446" vertical-scroll-proportion="-16.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OfflineOrder.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="39" selection-start="2156" selection-end="2156" vertical-scroll-proportion="-14.25">
               <folding />
             </state>
           </provider>
@@ -203,22 +194,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/visa_form.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/PortalModule.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/views/default/error.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/models/User.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/components/OrderHelper.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/list.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/view.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderReviewHistory.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderAttribute.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrder.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/components/UserIdentity.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/models/PortalLogin.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/DefaultController.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/views/layouts/main.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/VisaController.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/components/views/review.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/visa_form.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/DefaultController.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/VisaController.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/list.php" />
       </list>
     </option>
   </component>
@@ -701,6 +692,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -866,27 +879,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/visa_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="43" selection-start="387" selection-end="399" vertical-scroll-proportion="-1.8367347">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="23" selection-start="112" selection-end="112" vertical-scroll-proportion="-5.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/components/OrderHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="12" selection-start="263" selection-end="263" vertical-scroll-proportion="-3.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="88" column="26" selection-start="2783" selection-end="2783" vertical-scroll-proportion="38.875">
@@ -950,13 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="29" selection-start="178" selection-end="178" vertical-scroll-proportion="-6.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="38" selection-start="2559" selection-end="2559" vertical-scroll-proportion="-6.7916665">
@@ -971,19 +956,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/VisaController.php">
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/components/views/review.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="33" selection-start="4064" selection-end="4064" vertical-scroll-proportion="-7.5">
+        <state line="17" column="32" selection-start="296" selection-end="296" vertical-scroll-proportion="-10.625">
+          <folding>
+            <element signature="e#6#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="22" selection-start="1524" selection-end="1524" vertical-scroll-proportion="-6.25">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/components/views/review.php">
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/visa_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="0" selection-start="6994" selection-end="6994" vertical-scroll-proportion="0.24878837">
-          <folding>
-            <element signature="e#6#128#0" expanded="true" />
-          </folding>
+        <state line="8" column="24" selection-start="481" selection-end="481" vertical-scroll-proportion="-5.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="58" selection-start="219" selection-end="219" vertical-scroll-proportion="-4.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/VisaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="3" selection-start="9" selection-end="9" vertical-scroll-proportion="-0.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="62" selection-start="986" selection-end="986" vertical-scroll-proportion="0.70229006">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -42,32 +42,7 @@
 				}
 			echo "</td>";
 			echo "<td>";
-			switch($order->status){
-				case 'order_success':
-					echo "下单成功";
-					break;
-				case 'profile_receive':
-					echo "收到资料";
-					break;
-				case 'verifing':
-					echo "资料审核";
-					break;
-				case 'reject':
-					echo "拒签";
-					break;
-				case 'profile_incomplete':
-					echo "资料不全，退回";
-					break;
-				case 'send_back':
-					echo "已寄回";
-					break;
-				case 'complete':
-					echo "完结";
-					break;
-				default:
-					echo "状态未知";
-					break;
-			};
+            echo OfflineOrder::translateStatus($order->status);
 			echo "</td>";
 			echo "<td><a href='".$this->createUrl('visa/view', array('id'=>$order['id']))."'>查看</a></td>";
 			echo "</tr>";
