@@ -1,5 +1,6 @@
 trunk/protected/upload/*
 .DS_Store
+trunk/composer.json
 trunk/protected/assets/*
 protected/runtime/*
 application.log*
