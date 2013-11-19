@@ -54,7 +54,7 @@
 	          <li><a href="#">个人资料</a></li>
 	        </ul>
 	      </li>
-	       <li><a href="<?php echo $this->createUrl('logout'); ?>">退出</a></li>
+	       <li><a href="<?php echo $this->createUrl('default/logout'); ?>">退出</a></li>
 	    </ul>
       <form class="navbar-form navbar-right" role="search" type="GET" action="<?php echo $this->createUrl('visa/search'); ?>">
 	      <div class="form-group">
