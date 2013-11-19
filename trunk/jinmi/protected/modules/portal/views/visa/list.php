@@ -22,10 +22,10 @@
 		foreach($result as $order){
 			echo "<tr>";
 			echo "<td>".$order->id."</td>";
-			echo "<td>".OrderHelper::findAttr('country', $order->attributes)."</td>";
-			echo "<td>".OrderHelper::findAttr('customers', $order->attributes)."</td>";
-			echo "<td>".OrderHelper::findAttr('source', $order->attributes)."</td>";
-			echo "<td>".OrderHelper::findAttr('user_id', $order->attributes)."</td>";
+			echo "<td>".OrderHelper::findAttr('country', $order->attrs)."</td>";
+			echo "<td>".OrderHelper::findAttr('customers', $order->attrs)."</td>";
+			echo "<td>".OrderHelper::findAttr('source', $order->attrs)."</td>";
+			echo "<td>".OrderHelper::findAttr('user_id', $order->attrs)."</td>";
 			echo "<td>".$order->amount."</td>";
 			echo "<td>".$order->total_price."</td>";
 			echo "<td>";

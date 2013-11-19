@@ -28,6 +28,12 @@ class OfflineOrderReviewHistory extends CActiveRecord{
     public static function model($className = __CLASS__){
         return parent::model($className);
     }
+    public function beforeSave(){
+        if($this->isNewRecord){
+            $this->create_time = strtotime('now');
+        }
+        return true;
+    }
     public function tableName(){
         return 'offline_order_review_history';
     }

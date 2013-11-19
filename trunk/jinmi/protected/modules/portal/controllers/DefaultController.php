@@ -8,6 +8,19 @@ class DefaultController extends CController
 		$this->render('index');
 	}
 	public function actionLogin(){
+        $model=new LoginForm;
+
+        // collect user input data
+        if(isset($_POST['LoginForm']))
+        {
+            $model->attributes=$_POST['LoginForm'];
+            // validate user input and redirect to the previous page if valid
+            if($model->validate() && $model->login())
+                $this->redirect('index');
+        }
+        // display the login form
+
+        /*
 		if(isset($_POST['LoginForm'])){
 			$result = User::model()->find('username = :username AND password = :password', array(
 				':username' => trim($_POST['LoginForm']['username']),
@@ -18,7 +31,7 @@ class DefaultController extends CController
 			}else{
 				Yii::app()->user->setFlash('failed', '登陆失败，请检查用户名和密码');
 			}
-		}
+		}*/
 		$this->renderPartial('login');
 	}
 	public function actionLogout(){

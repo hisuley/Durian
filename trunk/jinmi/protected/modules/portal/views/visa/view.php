@@ -79,12 +79,12 @@
 	</style>
 	<div class="row">
 		<div class="col-md-2">
-			<h4 style="margin:0px;"><span class="label label-info">财务审核中</span></h4>
+			<h4 style="margin:0px;"><span class="label label-info"><?php echo OfflineOrder::translateStatus($result->status); ?></span></h4>
 			</div>
 			<div class="col-md-10">
 				<div class="progress  progress-striped">
-					<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;">
-						<span class="sr-only">60% complete</span>
+					<div class="progress-bar" role="progressbar" aria-valuenow="<?php echo OfflineOrder::getProgress($result->status); ?>" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo OfflineOrder::getProgress($result->status); ?>%;">
+						<span class="sr-only"><?php echo OfflineOrder::getProgress($result->status); ?>% complete</span>
 
 					</div>
 				</div>
@@ -93,24 +93,24 @@
 		</div>
 
 		<table cellspacing="0">
-			<tr><th>国家</th><td><?php echo OrderHelper::findAttr('country', $result->attributes); ?></td><th>签证类型</th><td><?php echo OrderHelper::findAttr('type', $result->attributes); ?></td><th>订单号</th><td>Y1309231400526708</td></tr>
-			<tr><th>姓名</th><td><?php echo OrderHelper::findAttr('contact_name', $result->attributes); ?></td><th>人数</th><td><?php echo $result->amount; ?></td><th>签证费单价</th><td>￥<?php echo intval($result->total_price/$result->amount); ?></td></tr>
-			<tr><th>预计出发日期</th> <td><?php echo OrderHelper::findAttr('start_time', $result->attributes); ?></td> <th>支付状态</th> <td><?php if($result->pay_status == 'paid'){echo "支付"; }else{echo "未支付";} ?></td> <th>订单总额</th> <td>￥<?php echo $result->total_price; ?></td></tr>
+			<tr><th>国家</th><td><?php echo OrderHelper::findAttr('country', $result->attrs); ?></td><th>签证类型</th><td><?php echo OrderHelper::findAttr('type', $result->attrs); ?></td><th>订单号</th><td>Y1309231400526708</td></tr>
+			<tr><th>姓名</th><td><?php echo OrderHelper::findAttr('contact_name', $result->attrs); ?></td><th>人数</th><td><?php echo $result->amount; ?></td><th>签证费单价</th><td>￥<?php echo intval($result->total_price/$result->amount); ?></td></tr>
+			<tr><th>预计出发日期</th> <td><?php echo OrderHelper::findAttr('start_time', $result->attrs); ?></td> <th>支付状态</th> <td><?php if($result->pay_status == 'paid'){echo "支付"; }else{echo "未支付";} ?></td> <th>订单总额</th> <td>￥<?php echo $result->total_price; ?></td></tr>
 			<tr>
 				<th>地址</th>
-				<td colspan="5">名字：<?php echo OrderHelper::findAttr('contact_name', $result->attributes); ?>|电话：<?php echo OrderHelper::findAttr('contact_phone', $result->attributes); ?>|地址：<?php echo OrderHelper::findAttr('contact_address', $result->attributes); ?></td>
+				<td colspan="5">名字：<?php echo OrderHelper::findAttr('customers', $result->attrs); ?>|电话：<?php echo OrderHelper::findAttr('contact_phone', $result->attrs); ?>|地址：<?php echo OrderHelper::findAttr('contact_address', $result->attrs); ?></td>
 			</tr>
 			<tr>
 				<th>材料清单</th>
 				<td colspan="5">
                     <?php
-                    $materials = OrderHelper::findMaterial($result->attributes);
+                    $materials = OrderHelper::findMaterial($result->attrs);
                     foreach($materials as $material){
                                 echo '<span class="glyphicon glyphicon-check"></span> '.$material;
                     }
 					?>
 				</td>
-			</tr>	
+			</tr>
 
 		</table>
 		<div class="panel panel-danger"  style="margin-top:20px; ">
@@ -150,7 +150,7 @@
 						<div><a href="<?php echo Yii::app()->request->baseUrl; ?>/upload/portal/visa_demo.jpg" class="thumbnail">
 							<img  style="height:120px;" src="<?php echo Yii::app()->request->baseUrl; ?>/upload/portal/visa_demo.jpg" alt="...">
 						</a></div>
-						
+
 					</div>
 
 				</div>
@@ -172,11 +172,11 @@
             echo !empty($review[$key]) ? '<span class="pull-right ">操作员：<strong> '.User::getUserRealname($review[$key]->user_id).' </strong>  <small>'.date('Y-m-d H:i:s', $review[$key]->create_time).'</small></span></h3>' : '';
 			echo '</div>';
             echo '<div class="panel-body">';
-            echo empty($review[$key]) ? '':$review[$key]->memo;
+            echo empty($review[$key]->memo) ? '':$review[$key]->memo;
             echo "<br />";
             if($key == OfflineOrderReviewHistory::TYPE_SUCCESS){
                 echo '材料清单：';
-                $data = OrderHelper::findAttr(OfflineOrderAttribute::ATTR_MATERIAL, $result->attributes);
+                $data = OrderHelper::findAttr(OfflineOrderAttribute::ATTR_MATERIAL, $result->attrs);
                 foreach($data as $item){
                     echo '<span class="glyphicon glyphicon-check"></span>'.$item." ";
                 }

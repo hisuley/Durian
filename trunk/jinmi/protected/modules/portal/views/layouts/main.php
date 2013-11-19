@@ -48,7 +48,7 @@
        <ul class="nav navbar-nav navbar-right">
 	     
 	      <li class="dropdown">
-	        <a href="#" class="dropdown-toggle" data-toggle="dropdown">沐文生 <b class="caret"></b></a>
+	        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo Yii::app()->user->id; ?> <b class="caret"></b></a>
 	        <ul class="dropdown-menu">
 	          <li><a href="#">修改密码</a></li>
 	          <li><a href="#">个人资料</a></li>
@@ -56,9 +56,9 @@
 	      </li>
 	       <li><a href="<?php echo $this->createUrl('logout'); ?>">退出</a></li>
 	    </ul>
-      <form class="navbar-form navbar-right" role="search">
+      <form class="navbar-form navbar-right" role="search" type="GET" action="<?php echo $this->createUrl('visa/search'); ?>">
 	      <div class="form-group">
-	        <input type="text" class="form-control" placeholder="输入订单号搜索">
+	        <input type="text" name="id" class="form-control" placeholder="输入订单号搜索">
 	      </div>
 	      <button type="submit" class="btn btn-default">搜索</button>
   	  </form>

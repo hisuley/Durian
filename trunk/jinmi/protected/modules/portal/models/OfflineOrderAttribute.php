@@ -44,6 +44,9 @@ class OfflineOrderAttribute extends CActiveRecord{
         if($this->attr_name == self::ATTR_MATERIAL){
             $this->value = implode(',', $this->value);
         }
+        if($this->isNewRecord){
+            $this->create_time = strtotime('now');
+        }
         return true;
     }
     public function relations(){
