@@ -1,5 +1,7 @@
-protected/upload/
+protected/upload/*
 .DS_Store
-assets/
-protected/runtime/
-themes/classic/views/.DS_Store
+assets/*
+protected/runtime/*
+application.log*
+*/.DS_Store
+
