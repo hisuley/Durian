@@ -1,6 +1,6 @@
-protected/upload/*
+trunk/protected/upload/*
 .DS_Store
-assets/*
+trunk/protected/assets/*
 protected/runtime/*
 application.log*
 */.DS_Store
