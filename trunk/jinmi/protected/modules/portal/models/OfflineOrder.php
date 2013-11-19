@@ -88,7 +88,7 @@ class OfflineOrder extends CActiveRecord{
     public static function getProgress($status){
         $progress = array(self::STATUS_SUCCESS, self::STATUS_OPERATE_VERIFY, self::STATUS_FINANCE_VERIFY, self::STATUS_SEND_VISA, self::STATUS_ACCEPT, self::STATUS_VISA_RETURN, self::STATUS_COMPLETE);
         if(in_array($status, $progress))
-            $pos = array_search($status, $progress);
+            $pos = array_search($status, $progress)+1;
         else
             $pos = count($progress);
         $percent = floatval(intval($pos)/intval(count($progress)))*100;
