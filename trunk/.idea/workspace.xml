@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74b6f384-8cb4-4801-86d7-b859aeaa5c85" name="Default" comment="Portal Verify component and function code.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/layouts/main.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/layouts/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="74b6f384-8cb4-4801-86d7-b859aeaa5c85" name="Default" comment="Portal Verify component and function code." />
     <ignored path="trunk.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384860474589" ignored="false" />
@@ -12,8 +9,8 @@
     <file path="/VisaController.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384826486053" ignored="false" />
     <file path="/Visa.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381424460691" ignored="false" />
     <file path="/main.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384783604677" ignored="false" />
-    <file path="/a.coffee" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381425332791" ignored="false" />
-    <file path="/a.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1381425381214" ignored="false" />
+    <file path="/a.coffee" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384860692556" ignored="false" />
+    <file path="/a.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384860682704" ignored="false" />
     <file path="/OfflineOrder.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384782965469" ignored="false" />
     <file path="/OfflineOrderAttribute.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384782579284" ignored="false" />
     <file path="/OfflineOrderReviewHistory.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384782556367" ignored="false" />
@@ -61,6 +58,8 @@
     <file path="/PortalModule.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384751485941" ignored="false" />
     <file path="/error.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384752883829" ignored="false" />
     <file path="/PortalLogin.php" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384783382361" ignored="false" />
+    <file path="/a.js" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384860696467" ignored="false" />
+    <file path="/a.html" changelist="74b6f384-8cb4-4801-86d7-b859aeaa5c85" time="1384860703529" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -790,7 +789,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
