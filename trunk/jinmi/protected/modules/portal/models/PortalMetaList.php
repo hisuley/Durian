@@ -24,6 +24,15 @@ class PortalMetaList extends CActiveRecord{
 		}
 		return true;
 	}
-	
+	/**
+	 * Insert new record
+	 * @param array $data = array('id'=>'', 'name'=>'', 'description'=>'', 'default_value'=>'', 'type'=>'')
+	 **/
+	public function insertNew($data){
+		$this->attributes = $data;
+		if($this->save())
+			return true;
+		return false;
+	}
 }
 ?>

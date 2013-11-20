@@ -24,6 +24,8 @@ class OfflineOrderReviewHistory extends CActiveRecord{
         self::TYPE_VISA_RETURN => '发回',
         self::TYPE_COMPLETE => '完成'
     );
+    const OPINION_ACCEPT = 'accept';
+    const OPINION_REFUSE = 'refuse';
     public $user_id, $type, $opinion, $memo, $response, $create_time, $offline_order_id;
     public static function model($className = __CLASS__){
         return parent::model($className);

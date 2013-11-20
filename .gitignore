@@ -1,5 +1,5 @@
 trunk/protected/upload/*
-.DS_Store
+*.DS_Store*
 trunk/composer.json
 trunk/protected/assets/*
 trunk/jinmi/assets/
