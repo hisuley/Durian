@@ -2,6 +2,7 @@ trunk/protected/upload/*
 .DS_Store
 trunk/composer.json
 trunk/protected/assets/*
+trunk/jinmi/assets/
 protected/runtime/*
 application.log*
 */.DS_Store
