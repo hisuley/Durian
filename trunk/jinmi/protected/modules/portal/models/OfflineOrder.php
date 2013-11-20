@@ -87,7 +87,7 @@ class OfflineOrder extends CActiveRecord{
     public function beforeSave(){
         if($this->isNewRecord){
             $this->create_time = strtotime('now');
-            $this->status = self::STATUS_SUCCESS;
+            $this->status = self::STATUS_NEW;
             $this->pay_status = self::PAY_NO;
             switch($this->type){
                 case self::TYPE_VISA:
@@ -152,10 +152,16 @@ class OfflineOrder extends CActiveRecord{
                     self::SUBSTATUS_VISA_SENDER_CONFIRM => array('true' => self::SUBSTATUS_VISA_ISSUE_VISA, 'false' => self::SUBSTATUS_VISA_REJECT),
                     self::SUBSTATUS_VISA_ISSUE_VISA => array('true' => self::SUBSTATUS_VISA_VISA_SENT, 'fasle'=> self::SUBSTATUS_VISA_REJECT),
                     self::SUBSTATUS_VISA_VISA_SENT => array('true'=> self::SUBSTATUS_VISA_VISA_RECEIVED, 'fasle'=> self::SUBSTATUS_VISA_REJECT),
-                    self::SUBSTATUS_VISA_VISA_RECEIVED => array('true' => sefl::SUBSTATUS_VISA_COMPLETE, 'fasle'=> self::SUBSTATUS_VISA_REJECT)             
+                    self::SUBSTATUS_VISA_VISA_RECEIVED => array('true' => self::SUBSTATUS_VISA_COMPLETE, 'fasle'=> self::SUBSTATUS_VISA_REJECT),
+                    self::SUBSTATUS_VISA_COMPLETE => array('true'=> self::STATUS_COMPLETE, 'false' => self::SUBSTATUS_VISA_REJECT)             
                     );
                 break;
         }
+    }
+    public static function getFinishStatus($type){
+        $workflow = self::workflow($type);
+        $status = key(array_slice($workflow, -1, 1, true));
+        return $status;
     }
     /**
      * Get the next operation of current status
@@ -170,13 +176,13 @@ class OfflineOrder extends CActiveRecord{
     }
     /**
      * Main function
-     * @param array $reviewData = array('type'=>'', 'opinion'=> '', 'memo'=> '', 'response'=> '', 'offline_order_id'=> '')
+     * @param array $reviewData = array('type'=> '', 'opinion'=> '', 'memo'=> '', 'response'=> '', 'offline_order_id'=> '')
      * @return bool
      **/
     public static function execOperation($reviewData){
         if(isset($reviewData['offline_order_id']))
             $offlineOrder = self::model()->findByPk($reviewData['offline_order_id']);
-        $workflow = self::workflow($reviewData['type']);
+        $workflow = self::workflow($offlineOrder->type);
         if(empty($workflow)){
             Yii::log('Executing the operation on specific order failed. workflow is empty.'.print_r($reviewData, true), 'error', 'portal');
             throw new CHttpException(500, '无法执行操作，找不到该订单类型的工作流信息。');
@@ -199,8 +205,12 @@ class OfflineOrder extends CActiveRecord{
         }
         $review->attributes = $reviewData;
         if($review->save()){
-            return true;
+            $offlineOrder->sub_status = $review->type;
+            if($offlineOrder->save())
+                self::detectFinish($review->id);
+                return true;
         }
+        return false;
     }
     /**
      * Get the current progress of workflow
@@ -234,6 +244,7 @@ class OfflineOrder extends CActiveRecord{
             $review->opinion = OfflineOrderReviewHistory::OPINION_ACCEPT;
             $review->response = $reviewData['response'];
             if($review->save()){
+                self::detectFinish($review->id);
                 return true;
             }else{
                 return false;
@@ -242,5 +253,50 @@ class OfflineOrder extends CActiveRecord{
             self::model()->updateByPk($reviewData['offline_order_id'], array('status'=>self::STATUS_ABORT));
         }
         return true;
+    }
+    public static function detectFinish($reviewId){
+        $review = OfflineOrderReviewHistory::model()->findByPk($reviewId);
+        $offlineOrder = OfflineOrder::model()->findByPk($review->offline_order_id);
+        $finalStatus = self::getFinishStatus($offlineOrder->type);
+        if($review->type == $finalStatus && $review->opinion == OfflineOrderReviewHistory::OPINION_ACCEPT && $offlineOrder->pay_status == self::PAY_OK){
+            self::finishOrder($offlineOrder->id);
+            return true;
+        }
+        return false;
+    }
+    /**
+     * Complete the order
+     * @param int $orderId the order's id
+     **/
+    public static function finishOrder($orderId){
+        $offlineOrder = self::model()->findByPk($orderId);
+        if($offlineOrder->status != self::STATUS_ONGOING){
+            Yii::log('Order status is not "Ongoing".'.print_r($orderId, true), 'error', 'portal');
+            //throw new CHttpException(500, '订单的状态不是在进行中，无法结束订单。');
+            return false;
+        }
+        if($offlineOrder->sub_status == self::getFinishStatus($offlineOrder['type'])){
+            if($offlineOrder->pay_status == self::PAY_OK){
+                $offlineOrder->status = self::STATUS_COMPLETE;
+                if($offlineOrder->save()){
+                    return true;
+                }else
+                    Yii::log('Order could not be saved.'.print_r($orderId, true), 'error', 'portal');
+            }else{
+                Yii::log('Order pay-status is not the paid state.'.print_r($orderId, true), 'error', 'portal');
+            }
+        }else{
+            Yii::log('Order sub-status is not the finish state.'.print_r($orderId, true), 'error', 'portal');
+            
+        }
+        return false;
+    }
+    /**
+     * 
+     * Payment Confirm
+     * @param int $orderId the order's 
+     **/
+    public static function setPaid($orderId){
+        return self::model()->updateByPk($orderId, array('pay_status'=>self::PAY_OK));
     }
 }

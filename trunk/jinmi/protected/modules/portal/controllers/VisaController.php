@@ -79,38 +79,20 @@ class VisaController extends CController{
 		}
 	}
     public function actionReview($id){
-        Yii::log($id, 'info', 'portal');
         if(isset($id) && Yii::app()->request->isAjaxRequest){
-            $review = OfflineOrderReviewHistory::model()->findByAttributes(array('type'=>$_POST['OfflineOrderReviewHistory']['type'], 'offline_order_id'=>$id));
-            if(empty($review))
-                $review = new OfflineOrderReviewHistory();
-            $review->attributes = $_POST['OfflineOrderReviewHistory'];
-            $review->user_id = 1;
-            $review->offline_order_id = $id;
-            if($review->type == 'visa_return' && $review->isNewRecord)
-                $review->memo = "快递号：".$review->memo;
-            if($review->type == OfflineOrderReviewHistory::TYPE_SEND_VISA && $review->isNewRecord)
-                $review->memo = '已经送签，等待大使馆回复';
-            if($review->type == OfflineOrderReviewHistory::TYPE_COMPLETE && $review->isNewRecord)
-                $review->memo = '订单已经结束，谢谢使用';
-            Yii::log('attributes:'.print_r($review->attributes, true), 'info', 'portal');
-            if($review->save()){
-                $type = $review->type;
-                if($review->type == 'visa_result'){
-                    $type = ($review->opinion == 'agree') ? OfflineOrder::STATUS_ACCEPT : OfflineOrder::STATUS_REJECT;
-                }
-                OfflineOrder::model()->updateByPk($id, array('status'=>$type));
+            $reviewData = $_POST['OfflineOrderReviewHistory'];
+            $reviewData['offline_order_id'] = $id;
+            $review = OfflineOrder::model()->execOperation($reviewData);
+            if($review){
                 echo "saved";
             }else{
                 echo "save failed";
             }
         }else{
-            $review = OfflineOrderReviewHistory::model()->findByAttributes(array('type'=>$_POST['OfflineOrderReviewHistory']['type']));
-            if(empty($review))
-                $review = new OfflineOrderReviewHistory();
-            $review->offline_order_id = $id;
-            $review->attributes = $_POST['OfflineOrderReviewHistory'];
-            if($review->save()){
+            $reviewData = $_POST['OfflineOrderReviewHistory'];
+            $reviewData['offline_order_id'] = $id;
+            $review = OfflineOrder::model()->execOperation($reviewData);
+            if($review){
                 echo "saved";
             }else{
                 echo "save failed";
