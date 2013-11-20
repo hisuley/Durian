@@ -13,6 +13,11 @@ class User extends CActiveRecord{
 	public static function model($className = __CLASS__){
 		return parent::model($className);
 	}
+	public function relations(){
+		return array(
+			'role' => array(self::HAS_MANY, 'UserRole', 'user_id')
+			);
+	}
 	public static function hashPassword($password, $salt = 0){
 		if(empty($salt))
 			$salt = self::$salt;
