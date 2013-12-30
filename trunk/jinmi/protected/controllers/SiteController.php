@@ -27,9 +27,22 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
+		$message = array('result'=>false, 'content'=>'');
+		/*
+		if(!empty($_POST['email'])){
+			$pattern = "/^\w+\@\w+\.\w+/i";
+			if(preg_match_all($pattern, $_POST['email'], $matches)){
+				Message::recordBetaTester($_POST['email']);
+				$message = array('result'=>'success', 'content'=>Yii::t('betaLaunch', '记录成功，请耐心等待。'));
+			}else{
+				$message = array('result'=>'invalid-email', 'content'=>Yii::t('betaLaunch', 'Email地址不正确。'));
+			}
+		}
+		*/
+		$this->renderPartial('launchsoon', array('message'=>$message));
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		//$this->render('index');
 	}
 
 	/**
