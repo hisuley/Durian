@@ -1,1 +1,1 @@
-create table address(id int auto_increment primary key not null, name varchar(255) not null, notes text not null, create_time int not null);
+create table address(id int auto_increment primary key not null, name varchar(255) not null, notes text not null, is_enabled tinyint(1) not null, create_time int not null);
