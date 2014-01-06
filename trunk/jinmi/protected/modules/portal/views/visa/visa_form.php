@@ -154,7 +154,7 @@
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/datepicker.css"/>
 <script type="text/javascript">
     $(document).ready(function () {
-        $('.date input').datepicker({format: 'yyyy-mm-dd'});
+        $('.date input').datepicker({format: 'yyyy-mm-dd', language: "zh-CN"});
         /**
          $('input[name="VisaForm[pickup]"]').click(function(){
 			if($('input[name="VisaForm[pickup]"]:checked').prop('value') == 0){
