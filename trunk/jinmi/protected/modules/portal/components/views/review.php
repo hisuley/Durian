@@ -9,13 +9,17 @@
 
 ?>
 
-<?php
 
-if ($progress == 'order_success') {
-    ?>
-    <div class="row">
+<div class="row">
         <form class="review-form form-inline" role="form"
               action="<?php echo Yii::app()->createUrl('portal/visa/review', array('id' => $params->id)); ?>" style="">
+<?php
+
+// sales submit a visa
+
+if ($progress == OfflineOrder::SUBSTATUS_VISA_NEW) {
+    ?>
+    
             <div class="form-group memo-box" style="margin-left:10px;">
                 <input type="text" name="OfflineOrderReviewHistory[memo]" class="form-control input-sm"
                        placeholder="请输入备注">
@@ -36,15 +40,12 @@ if ($progress == 'order_success') {
                        placeholder="请输入拒绝原因">
             </div>
             <button type="submit" class="btn btn-default btn-primary" style="margin-left:20px;">确定</button>
-        </form>
-    </div>
-
 <?
-} elseif ($progress == 'operate_verify') {
+
+// Operator had accept this order, waiting for sender to send the visa
+
+} elseif ($progress == OfflineOrder::SUBSTATUS_VISA_OPERATE_CONFIRM) {
     ?>
-    <div class="row">
-        <form class="review-form form-inline" role="form"
-              action="<?php echo Yii::app()->createUrl('portal/visa/review', array('id' => $params->id)); ?>" style="">
             <div class="form-group memo-box" style="margin-left:10px;">
                 <input type="text" name="OfflineOrderReviewHistory[memo]" class="form-control input-sm"
                        placeholder="请输入备注">
@@ -65,15 +66,12 @@ if ($progress == 'order_success') {
                        placeholder="请输入拒绝原因">
             </div>
             <button type="submit" class="btn btn-default btn-primary" style="margin-left:20px;">确定</button>
-        </form>
-    </div>
+
 
 <?
-} elseif ($progress == 'finance_verify') {
+} elseif ($progress == OfflineOrder::SUBSTATUS_VISA_SENDER_CONFIRM) {
     ?>
-    <div class="row">
-        <form class="review-form form-inline" role="form"
-              action="<?php echo Yii::app()->createUrl('portal/visa/review', array('id' => $params->id)); ?>" style="">
+
             <div class="radio">
                 <label for="" class="radio-inline">
                     <input type="hidden" name="OfflineOrderReviewHistory[type]"
@@ -91,15 +89,11 @@ if ($progress == 'order_success') {
                        placeholder="请输入退回原因">
             </div>
             <button type="submit" class="btn btn-default btn-primary" style="margin-left:20px;">确定</button>
-        </form>
-    </div>
+
 <?php
-} elseif ($progress == 'send_visa') {
+} elseif ($progress == OfflineOrder::SUBSTATUS_VISA_ISSUE_VISA) {
 
     ?>
-    <div class="row">
-        <form class="review-form form-inline" role="form"
-              action="<?php echo Yii::app()->createUrl('portal/visa/review', array('id' => $params->id)); ?>" style="">
             <div class="form-group memo-box" style="margin-left:10px;">
                 <input type="text" name="OfflineOrderReviewHistory[memo]" class="form-control input-sm"
                        placeholder="请输入备注">
@@ -121,18 +115,13 @@ if ($progress == 'order_success') {
                        placeholder="请输入拒签原因">
             </div>
             <button type="submit" class="btn btn-default btn-primary" style="margin-left:20px;">确定</button>
-        </form>
-    </div>
 
 <?php
 
 
-} elseif ($progress == OfflineOrder::STATUS_ACCEPT) {
+} elseif ($progress == OfflineOrder::SUBSTATUS_VISA_SENDER_ISSUE_CONFIRM) {
 
     ?>
-    <div class="row">
-        <form class="review-form form-inline" role="form"
-              action="<?php echo Yii::app()->createUrl('portal/visa/review', array('id' => $params->id)); ?>" style="">
             <div class="form-group memo-box" style="margin-left:10px;">
                 <input type="text" name="OfflineOrderReviewHistory[memo]" value="" class="form-control input-sm"
                        placeholder="请输入快递号">
@@ -145,15 +134,10 @@ if ($progress == 'order_success') {
                 </label>
             </div>
             <button type="submit" class="btn btn-default btn-primary" style="margin-left:20px;">确定</button>
-        </form>
-    </div>
-
 <?php
 } elseif ($progress == OfflineOrder::STATUS_VISA_RETURN) {
     ?>
-    <div class="row">
-        <form class="review-form form-inline" role="form"
-              action="<?php echo Yii::app()->createUrl('portal/visa/review', array('id' => $params->id)); ?>" style="">
+
 
             <div class="radio">
                 <label for="" class="radio-inline">
@@ -163,8 +147,6 @@ if ($progress == 'order_success') {
                 </label>
             </div>
             <button type="submit" class="btn btn-default btn-primary" style="margin-left:20px;">确定</button>
-        </form>
-    </div>
 
 <?php
 

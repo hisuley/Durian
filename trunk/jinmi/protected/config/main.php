@@ -61,8 +61,8 @@ return array(
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=jinmi',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '123123',
+			'username' => 'jinmi',
+			'password' => 'yanslwangss',
 			'charset' => 'utf8',
 		),
 		
@@ -85,12 +85,15 @@ return array(
 				*/
 			),
 		),
+		'simpleImage'=>array(
+                        'class' => 'application.extensions.simpleImage.CSimpleImage',
+        ),
 	),
 
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'adminEmail'=>'dearsuley@gmail.com',
 	),
 );

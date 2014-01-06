@@ -27,4 +27,7 @@ class OrderHelper extends CWidget{
             $this->render('review', array('progress'=>$progress, 'params'=>$params));
         }
     }
+    public function generateOperateButtons($item){
+       
+    }
 }

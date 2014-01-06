@@ -10,6 +10,13 @@ class VisaController extends CController{
         }
         return true;
     }
+    public function accessRules(){
+        return array(
+            UserRole::ROLE_VISA_ADMIN => array(
+                'new', 'edit', 'search', 'list', 'view', 'review', 'pay'
+                )
+            );
+    }
 	public function actionNew(){
 		if(isset($_POST['OfflineOrder'])){
             $startTime = strtotime('now');
@@ -97,6 +104,30 @@ class VisaController extends CController{
             }else{
                 echo "save failed";
             }
+        }
+    }
+    public function actionPay($id){
+        if(!empty($id)){
+            $result = OfflineOrder::setPaid($id);
+            $message = array('error_code'=>1, 'message'=>'');
+            if(!$result){
+                $message['error_code'] = OfflineOrder::ERROR_EXECUTION_FAILED;
+                $message['message'] = Yii::t('visa', 'Save order state failed.');
+                Yii::log('Set paid failed. Request id:'.$id." And container information:".print_r($result, true), 'info', 'portal');
+            }
+            echo json_encode($message);
+        }
+    }
+    public function actionClose($id){
+        if(!empty($id)){
+            $result = OfflineOrder::finishOrder($id);
+            $message = array('error_code'=>1, 'message'=>'');
+            if($result !== true){
+                $message['error_code'] = $result;
+                $message['message'] = Yii::t('visa', 'Close order failed.');
+                Yii::log('Close order failed. Request id:'.$id." And container information:".print_r($result, true), 'info', 'portal');
+            }
+            echo json_encode($message);
         }
     }
 }

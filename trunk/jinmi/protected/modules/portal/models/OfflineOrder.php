@@ -12,6 +12,12 @@ class OfflineOrder extends CActiveRecord{
     public $create_time;
     
     /**
+     * Define Const error code
+     **/
+    const ERROR_EXECUTION_FAILED = '2';
+    const ERROR_ORDER_STATUS_IS_NOT_ONGOING = '3';
+
+    /**
      * Define order's type
      **/
     const TYPE_VISA = 'visa';
@@ -273,7 +279,7 @@ class OfflineOrder extends CActiveRecord{
         if($offlineOrder->status != self::STATUS_ONGOING){
             Yii::log('Order status is not "Ongoing".'.print_r($orderId, true), 'error', 'portal');
             //throw new CHttpException(500, '订单的状态不是在进行中，无法结束订单。');
-            return false;
+            return SELF::ERROR_ORDER_STATUS_IS_NOT_ONGOING;
         }
         if($offlineOrder->sub_status == self::getFinishStatus($offlineOrder['type'])){
             if($offlineOrder->pay_status == self::PAY_OK){

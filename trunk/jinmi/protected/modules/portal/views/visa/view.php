@@ -111,6 +111,12 @@
 					?>
 				</td>
 			</tr>
+			<tr>
+				<th><?php echo Yii::t('portal', 'Finance Operation'); ?></th>
+				<td colspan="5">
+
+				</td>
+			</tr>
 
 		</table>
 		<div class="panel panel-danger"  style="margin-top:20px; ">

@@ -7,5 +7,8 @@ class TestController extends Controller{
 	public function actionThemeTest(){
 		$this->render('testTheme');
 	}
+	public function actionTestImg(){
+		$this->render('img');
+	}
 }
 ?>
