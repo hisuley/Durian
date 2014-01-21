@@ -2,6 +2,11 @@
 
 class DefaultController extends PanelController
 {
+    public $label = "默认";
+    public function getLabel($labelName){
+        $label = array('index'=>'首页', 'login'=>'登录', 'logout'=>'注销');
+        return $label[$labelName];
+    }
 
     public function actionUpload()
     {
@@ -27,16 +32,16 @@ class DefaultController extends PanelController
 	}
 	public function actionLogin(){
         $this->layout = 'login';
-        /*$model=new LoginForm;
 
         // collect user input data
         if(isset($_POST['LoginForm']))
         {
+            $model=new LoginForm;
             $model->attributes=$_POST['LoginForm'];
             // validate user input and redirect to the previous page if valid
             if($model->validate() && $model->login())
-                $this->redirect('index');
-        }*/
+                $this->redirect(array('visa/list'));
+        }
 
 		$this->render('login');
 	}

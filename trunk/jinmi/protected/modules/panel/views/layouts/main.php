@@ -6,6 +6,7 @@
     <title><?php echo CHtml::encode($this->pageTitle); ?></title>
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/static/panel/css/style.css">
     <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/static/portal/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/static/panel/js/common.js"></script>
 </head>
 <body>
@@ -22,6 +23,13 @@
                 )
             ));?>
         </div>
+        <div class="header-user-info">
+            <?php
+                echo Yii::app()->user->username;
+                echo CHtml::link('注销', array('default/logout'));
+            ?>
+        </div>
+        <div class="clearfix"></div>
     </div>
     <div class="wrapper">
         <?php $this->widget('zii.widgets.CBreadcrumbs', array('links'=>$this->breadcrumbs,)); ?>

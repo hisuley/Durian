@@ -11,22 +11,22 @@ class PanelController extends CController{
     public $subMenu;
     public $breadcrumbs;
     public function beforeAction(){
-        /*if(Yii::app()->user->isGuest && $this->action->id != 'login'){
-            $this->redirect(array('panel/default/login'));
-        }*/
+        if(Yii::app()->user->isGuest && $this->action->id != 'login'){
+            $this->redirect(array('default/login'));
+        }
         $this->menu=array(
             array(
                 'label'=>'签证',
-                'url'=> 'panel/visa/list', 'items'=>array(
-                    array('label'=>'订单列表', 'url'=>array('panel/visa/list')),
-                    array('label'=>'下单', 'url'=>array('panel/visa/new')),
-                    array('label'=>'订单统计', 'url'=>array('panel/visa/stats'))
+                'url'=> array('visa/list'), 'items'=>array(
+                    array('label'=>'订单列表', 'url'=>array('visa/list')),
+                    array('label'=>'下单', 'url'=>array('visa/new')),
+                    array('label'=>'订单统计', 'url'=>array('visa/stat'))
                 )
             )
         );
         $this->breadcrumbs = array(
-            $this->id=>array('panel/'.$this->id),
-            $this->action->id
+            $this->label=>array($this->id."/list"),
+            $this->getLabel($this->action->id)
         );
         return true;
     }

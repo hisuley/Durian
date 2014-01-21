@@ -1,7 +1,7 @@
 <?php
 
 class User extends CActiveRecord{
-	public $username, $password;
+	public $username, $password, $realname;
     const ROLE_VISA_ADMIN = 'visa_admin';
     const ROLE_VISA_FINANCE = 'visa_finance';
     const ROLE_VISA_OPERATE = 'visa_operate';
@@ -24,9 +24,16 @@ class User extends CActiveRecord{
 		return md5($password.$salt);
 	}
     public static function getUserRealname($id){
-//        $result = self::model()->findByPk($id);
-//        return $result->realname;
-        return '周丽萍';
+        $result = self::model()->findByPk($id);
+        if(!empty($result)){
+            if(!empty($result->realname))
+                return $result->realname;
+            else
+                return $result->username;
+        }else{
+            return '无该用户';
+        }
+
     }
 }
 ?>
