@@ -4,6 +4,14 @@
  * use to handle the visa related business.
  */
 class VisaController extends CController{
+
+    public function subMenu(){
+        return array(
+             array('id'=>'newOrder', 'is_countable'=>false, 'label'=> Yii::t('portal','New Order'), 'link'=> Yii::app()->createUrl('portal/visa/new'),'actions'=>array('new')),
+             array('id'=>'orderList', 'is_countable'=>false, 'label'=> Yii::t('portal', 'Order List'), 'link'=> Yii::app()->createUrl('portal/visa/list'),'actions'=>array('list')),
+             array('id'=>'myTask', 'is_countable'=>true, 'label' => Yii::t('portal', 'My Task'), 'link'=> Yii::app()->createUrl('portal/visa/mytask'),'actions'=>array('review'))
+        );
+    }
     public function beforeAction(){
         if(Yii::app()->user->isGuest && $this->action->id != 'login'){
             $this->redirect(array('default/login'));
@@ -17,6 +25,7 @@ class VisaController extends CController{
                 )
             );
     }
+
 	public function actionNew(){
 		if(isset($_POST['OfflineOrder'])){
             $startTime = strtotime('now');
@@ -40,7 +49,8 @@ class VisaController extends CController{
                 $this->redirect('list');
             }
 		}
-		$this->render('visa_form');
+        $placeList = Address::getAddrList();
+		$this->render('visa_form', array('places'=>$placeList));
 	}
     public function actionEdit($id){
         $result = OfflineOrder::model()->findByPk($id);

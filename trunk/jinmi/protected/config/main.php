@@ -8,7 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'金米旅游',
-
+    'language' => 'zh_CN',
 	'theme' => 'frontv1',
 
 	// preloading 'log' component
@@ -18,6 +18,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.extensions.EAjaxUpload.*',
 	),
 
 	'modules'=>array(
@@ -30,7 +31,8 @@ return array(
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
 		'admin',
-		'portal'
+		'portal',
+        'panel'
 	),
 
 	// application components

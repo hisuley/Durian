@@ -43,7 +43,7 @@ class Address extends CActiveRecord{
     		$tempRecord['notes'] = $value->notes;
     		$tempRecord['id'] = $value->id;
     		$tempRecord = self::getSubResult($tempRecord);
-    		array_push($resultArray, $tempRecord);
+    		$resultArray[$value->id] = $tempRecord;
     	}
     	return $resultArray;
     }
@@ -57,7 +57,7 @@ class Address extends CActiveRecord{
     				$subTempRecord['notes'] = $subValue->notes;
     				$subTempRecord['id'] = $subValue->id;
     				$subTempRecord = self::getSubResult($subTempRecord);
-    				array_push($data['children'], $subTempRecord);
+    				$data['children'][$subValue->id] = $subTempRecord;
     			}
     		}
     	}

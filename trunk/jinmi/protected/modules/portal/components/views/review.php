@@ -135,7 +135,7 @@ if ($progress == OfflineOrder::SUBSTATUS_VISA_NEW) {
             </div>
             <button type="submit" class="btn btn-default btn-primary" style="margin-left:20px;">确定</button>
 <?php
-} elseif ($progress == OfflineOrder::STATUS_VISA_RETURN) {
+} elseif ($progress == OfflineOrder::SUBSTATUS_VISA_VISA_RECEIVED) {
     ?>
 
 
@@ -151,13 +151,13 @@ if ($progress == OfflineOrder::SUBSTATUS_VISA_NEW) {
 <?php
 
 
-} elseif ($progress == OfflineOrder::STATUS_REJECT) {
+} elseif ($progress == OfflineOrder::SUBSTATUS_VISA_REJECT) {
     ?>
     <div class="alert alert-danger">
         该项目已经被拒签
     </div>
 <?php
-}elseif ($progress == OfflineOrder::STATUS_COMPLETE) {
+}elseif ($progress == OfflineOrder::SUBSTATUS_VISA_COMPLETE) {
 ?>
 <div class="alert alert-success">
     已经出签

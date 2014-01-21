@@ -66,9 +66,13 @@ class OfflineOrder extends CActiveRecord{
     public static $roleAccess = array(
         self::TYPE_VISA => array(
             User::ROLE_VISA_ADMIN => array(self::SUBSTATUS_VISA_NEW , self::SUBSTATUS_VISA_OPERATE_CONFIRM , self::SUBSTATUS_VISA_SENDER_CONFIRM , self::SUBSTATUS_VISA_ISSUE_VISA, self::SUBSTATUS_VISA_SENDER_ISSUE_CONFIRM, self::SUBSTATUS_VISA_VISA_SENT, self::SUBSTATUS_VISA_VISA_RECEIVED, self::SUBSTATUS_VISA_COMPLETE),
-            User::ROLE_VISA_OPERATE => array(self::SUBSTATUS_VISA_NEW, self::SUBSTATUS)
+            User::ROLE_VISA_OPERATE => array(self::SUBSTATUS_VISA_NEW, self::SUBSTATUS_VISA_NEW)
             )
         );
+
+    public static function operationList(){
+
+    }
     public static function model($className = __CLASS__){
         return parent::model($className);
     }
@@ -142,7 +146,10 @@ class OfflineOrder extends CActiveRecord{
         return $result;
     }
     public static function translateStatus($status){
-        return self::$statusIntl[$status];
+        if(isset(self::$statusIntl[$status]))
+            return self::$statusIntl[$status];
+        else
+            return '';
     }
     /**
      * Get the workflow of specific type order.

@@ -72,18 +72,19 @@
 	      </div>
 	      <button type="submit" class="btn btn-default">搜索</button>
   	  </form>
-  	 
     </div>
   </div>
  </div>
 <div class="container portal-container">
+    <?php
+        //TODO implement a universal navigation panel
+    ?>
 	<div class="row">
 		<div class="col-md-2">
-			<ul class="nav nav-pills nav-stacked">
-  				<li><a href="<?php echo $this->createUrl('visa/new'); ?>">添加订单</a></li>
-  				<li><a href="<?php echo $this->createUrl('visa/list', array('review'=>1)); ?>">审核订单<span class="badge">2</span></a></li>
-  				<li><a href="<?php echo $this->createUrl('visa/list'); ?>">订单列表</a></li>
-			</ul>
+            <?php
+                if(method_exists($this, 'subMenu'))
+                    echo CommonHelper::makeLeftMenu($this->subMenu(), $this->action->id);
+            ?>
 		</div>
 		<div class="col-md-10">
       <?php

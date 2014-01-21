@@ -31,6 +31,7 @@ class OfflineOrderAttribute extends CActiveRecord{
         return 'offline_order_attributes';
     }
 
+
     /**
      * After this model executes the search, do some tricks
      */
@@ -51,7 +52,8 @@ class OfflineOrderAttribute extends CActiveRecord{
     }
     public function relations(){
         return array(
-            'OfflineOrder' => array(self::BELONGS_TO, 'OfflineOrder', 'offline_order_id')
+            'OfflineOrder' => array(self::BELONGS_TO, 'OfflineOrder', 'offline_order_id'),
+            'AttrInfo' => array(self::BELONGS_TO, 'PreDefinedAttribute', 'attr_name')
         );
     }
     public function rules(){

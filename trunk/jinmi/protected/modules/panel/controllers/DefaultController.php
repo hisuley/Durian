@@ -1,20 +1,14 @@
 <?php
 
-class DefaultController extends CController
+class DefaultController extends PanelController
 {
 
-    public function beforeAction(){
-        if(Yii::app()->user->isGuest && $this->action->id != 'login'){
-            $this->redirect(array('portal/default/login'));
-        }
-        return true;
-    }
     public function actionUpload()
     {
      
             Yii::import("application.extensions.EAjaxUpload.qqFileUploader");
      
-            $folder=Yii::getPathOfAlias('webroot').'/upload/portal/';// folder for uploaded files
+            $folder=Yii::getPathOfAlias('webroot').'/upload/panel/';// folder for uploaded files
             $allowedExtensions = array("jpg","jpeg","gif","png","bmp");//array("jpg","jpeg","gif","exe","mov" and etc...
             $sizeLimit = 100 * 1024 * 1024;// maximum file size in bytes
             $uploader = new qqFileUploader($allowedExtensions, $sizeLimit);
@@ -32,7 +26,8 @@ class DefaultController extends CController
 		$this->render('index');
 	}
 	public function actionLogin(){
-        $model=new LoginForm;
+        $this->layout = 'login';
+        /*$model=new LoginForm;
 
         // collect user input data
         if(isset($_POST['LoginForm']))
@@ -41,22 +36,9 @@ class DefaultController extends CController
             // validate user input and redirect to the previous page if valid
             if($model->validate() && $model->login())
                 $this->redirect('index');
-        }
-        // display the login form
+        }*/
 
-        /*
-		if(isset($_POST['LoginForm'])){
-			$result = User::model()->find('username = :username AND password = :password', array(
-				':username' => trim($_POST['LoginForm']['username']),
-				':password' => User::hashPassword($_POST['LoginForm']['password'])
-				));
-			if(isset($result)){
-				$this->redirect('default/index');
-			}else{
-				Yii::app()->user->setFlash('failed', '登陆失败，请检查用户名和密码');
-			}
-		}*/
-		$this->renderPartial('login');
+		$this->render('login');
 	}
 	public function actionLogout(){
         Yii::app()->user->logout();

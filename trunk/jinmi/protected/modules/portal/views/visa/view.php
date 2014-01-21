@@ -83,8 +83,8 @@
 			</div>
 			<div class="col-md-10">
 				<div class="progress  progress-striped">
-					<div class="progress-bar" role="progressbar" aria-valuenow="<?php echo OfflineOrder::getProgress($result->status); ?>" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo OfflineOrder::getProgress($result->status); ?>%;">
-						<span class="sr-only"><?php echo OfflineOrder::getProgress($result->status); ?>% complete</span>
+					<div class="progress-bar" role="progressbar" aria-valuenow="<?php echo OfflineOrder::getProgress($result->type, $result->status); ?>" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo OfflineOrder::getProgress($result->type, $result->status); ?>%;">
+						<span class="sr-only"><?php echo OfflineOrder::getProgress($result->type, $result->status); ?>% complete</span>
 
 					</div>
 				</div>
@@ -113,13 +113,62 @@
 			</tr>
 			<tr>
 				<th><?php echo Yii::t('portal', 'Finance Operation'); ?></th>
-				<td colspan="5">
-
-				</td>
+					<?php if($result->pay_status == OfflineOrder::PAY_NO){
+						$postUrl = 'js:function(id, fileName, responseJSON){$.ajax({ type: "POST", url: ';
+						$postUrl .= Yii::app()->createUrl('portal/visa/addcert', array('id'=>$result->id));
+						$postUrl .= ", data: { name: fileName }}).done(function( msg ) {}); }";
+						echo "<td colspan='4'>";
+						$this->widget('application.extensions.EAjaxUpload.EAjaxUpload',
+						array(
+						        'id'=>'uploadFile',
+						        'config'=>array(
+						               'action'=>Yii::app()->createUrl('portal/default/upload'),
+						               'allowedExtensions'=>array("jpg","jpeg","gif","png","bmp","txt","doc","pdf","xls","3gp","php","ini","avi","rar","zip","png"),//array("jpg","jpeg","gif","exe","mov" and etc...
+						               'sizeLimit'=>1000*1024*1024,// maximum file size in bytes
+						               'minSizeLimit'=>1*1024,
+						               'auto'=>true,
+						               'multiple' => true,
+						               'onComplete'=> $postUrl,
+						               'messages'=>array(
+						                                 'typeError'=>"{file} has invalid extension. Only {extensions} are allowed.",
+						                                'sizeError'=>"{file} is too large, maximum file size is {sizeLimit}.",
+						                                'minSizeError'=>"{file} is too small, minimum file size is {minSizeLimit}.",
+						                                'emptyError'=>"{file} is empty, please select files again without it.",
+						                                'onLeave'=>"The files are being uploaded, if you leave now the upload will be cancelled."
+						                               ),
+						               'showMessage'=>"js:function(message){ alert(message); }"
+						               )
+						 
+						               ));
+						echo "</td><td>";
+						echo '<a href="javascript:void();" class="btn btn-primary">'.Yii::t('portal', 'Set Paid')."</a>";
+						echo "</td>";
+					}else{
+						echo "<td colspan='4'>";
+						echo Yii::t('portal', 'it\'s been paid, to view the certification, please click the image. ');
+						echo "</td>";
+					} ?>
+					<?php if($result->pay_status == OfflineOrder::PAY_OK){
+						echo "<td>";
+						$img = OrderHelper::findAttr(OfflineOrderAttribute::ATTR_PAY_CERT, $result->attrs);
+						if(!empty($img)){ 
+							$this->beginWidget('application.extensions.thumbnailer.Thumbnailer', array(
+							        'thumbsDir' => 'images/thumbs',
+							        'thumbWidth' => 50,// Optional
+							    )
+							); ?>
+							 
+							<img src="<?php echo $img; ?>" />
+							 
+							<?php $this->endWidget();
+						}
+						echo "</td>";
+					}
+					?>
 			</tr>
 
 		</table>
-		<div class="panel panel-danger"  style="margin-top:20px; ">
+		<div class="panel panel-danger"  style="margin-top:20px;padding:10px; ">
 			<div class="panel-body">
 			<label for="" class="control-label col-md-3" style="margin-top:7px;">当前操作：
                 <?php

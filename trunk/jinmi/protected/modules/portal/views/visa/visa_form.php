@@ -7,16 +7,24 @@
     <input type="hidden" name="OfflineOrder[pay_status]" value="paid"/>
     <div class="form-group">
         <label for="inputCountry" class="col-md-2 control-label">国家：</label>
-
         <div class="col-md-2">
             <select id="inputContinent" class="form-control input-sm">
-                <option value="1">亚洲</option>
+                <?php foreach($places as $place){ ?>
+                     <option value="<?php echo $place['id']; ?>"><?php echo $place['name']; ?></option>
+                <?php } ?>
             </select>
         </div>
         <div class="col-md-2">
             <input type="hidden" name="OfflineOrderAttribute[0][attr_name]" value="country"/>
-            <select name="OfflineOrderAttribute[0][value]" id="inputContinent" class="form-control input-sm">
-                <option value="泰国">泰国</option>
+            <select name="OfflineOrderAttribute[0][value]" id="inputCountry" class="form-control input-sm">
+                <?php
+                $firstNode = reset($places);
+                if(!empty($firstNode['children'])){
+                    foreach($firstNode['children'] as $country){
+                        echo "<option value='".$country['id']."'>".$country['name']."</option>";
+                    }
+                }
+                ?>
             </select>
         </div>
         <label for="inputType" class="col-md-1 control-label">类型：</label>
@@ -164,9 +172,21 @@
 			}
 		});
          **/
+        var placesData = eval('(<?php echo json_encode($places); ?>)');
+        $('#inputContinent').change(function(){
+            var tempPlace = placesData[$(this).val()];
+            var optionString = '';
+            if(typeof(tempPlace['children']) != "undefined"){
+                for(i in tempPlace['children']){
+                    optionString += "<option value='"+tempPlace['children'][i]['id']+"'>"+tempPlace['children'][i]['name']+"</option>";
+                 }
+            }
+            $('#inputCountry').html(optionString);
+
+        });
+
     });
 </script>
 <style>
-    .pickup-address {
-    }
+.pickup-address {}
 </style>

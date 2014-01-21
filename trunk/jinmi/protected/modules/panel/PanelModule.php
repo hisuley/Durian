@@ -1,6 +1,6 @@
 <?php
 
-class PortalModule extends CWebModule
+class PanelModule extends CWebModule
 {
 	public function init()
 	{
@@ -9,11 +9,11 @@ class PortalModule extends CWebModule
 
 		// import the module-level models and components
 		$this->setImport(array(
-			'portal.models.*',
-			'portal.components.*',
+			'panel.models.*',
+			'panel.components.*',
 			'application.extensions.EAjaxUpload.*',
 		));
-		$this->layoutPath = Yii::getPathofAlias('portal.views.layouts');
+		$this->layoutPath = Yii::getPathofAlias('panel.views.layouts');
 		$this->layout = 'main';
 	}
 
@@ -24,7 +24,7 @@ class PortalModule extends CWebModule
 		{
 			// this method is called before any module controller action is performed
 			// you may place customized code here
-            Yii::app()->errorHandler->errorAction = 'portal/default/error';
+            Yii::app()->errorHandler->errorAction = 'panel/default/error';
 			return true;
 		}
 		else
