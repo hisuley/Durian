@@ -1,7 +1,7 @@
 <?php
-echo CHtml::link('添加',$this->createUrl('address/new'), array('class'=>'alink-btn', 'style'=>'margin-bottom:-30px;'));
+echo CHtml::link('添加',$this->createUrl('orderSource/new'), array('class'=>'alink-btn', 'style'=>'margin-bottom:-30px;'));
 $this->widget('zii.widgets.grid.CGridView', array(
-    'dataProvider' => Address::allLists(),
+    'dataProvider' => OrderSource::allLists(),
     'pager' => array(
         'maxButtonCount' => '7',
     ),
@@ -14,18 +14,16 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'value' => $model->id,
         ),
         'id',
-        array(
-            'name'=>'name',
-            'header'=>'名字',
-            'value'=>$model->name
-        ),
-        array(
+        'name',
+        'contact_name',
+        'contact_phone',
+        'contact_address',
+        /*array(
             'name'=>'parent_id',
             'header'=>'上级',
             'type'=>'raw',
-            'value'=> 'Address::getCountryName($data->parent_id)'
-
-        ),
+            'value'=> $model->parent->name
+        ),*/
         array(
             'name'=>'is_enabled',
             'header'=>'启用',

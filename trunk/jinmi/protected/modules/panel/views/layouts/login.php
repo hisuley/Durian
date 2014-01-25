@@ -1,21 +1,31 @@
-<html>
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo CHtml::encode($this->pageTitle); ?></title>
-    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/static/panel/css/login.css">
-    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/static/panel/js/login.js"></script>
+    <title><?php echo CHtml::encode($this->pageTitle)."-".Yii::app()->name; ?></title>
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/portal-login.css">
+    <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
-<div class="container">
-    <div class="header">
-        <h1>Kimi Tourism Business Support System</h1>
+<section class="container">
+    <div class="login">
+        <h1>金米旅游后台系统</h1>
+        <?php
+        foreach(Yii::app()->user->getFlashes() as $key => $message){
+            echo "<p class='alert-".$key."'>".$message."</p>";
+        }
+        ?>
+        <?php echo $content; ?>
+
     </div>
-    <div class="wrapper">
-      <?php echo $content; ?>
+
+    <div class="login-help">
+        <p>忘记密码? <a href="index.html">进入重置密码页面</a>.</p>
     </div>
-</div>
+</section>
 </body>
 </html>

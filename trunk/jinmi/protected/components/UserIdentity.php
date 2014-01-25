@@ -7,7 +7,7 @@
  */
 class UserIdentity extends CUserIdentity
 {
-	private $_id, $_username, $_realname;
+	private $_id, $_username, $_realname, $_role;
 	/**
 	 * Authenticates a user.
 	 */
@@ -23,8 +23,10 @@ class UserIdentity extends CUserIdentity
         $this->_id = $record->id; //add this
         $this->_username = $record->username; //add this
         $this->_realname = $record->realname; //add this
+        $this->_role = $record->role; //add this
         $this->setState('username',$record->username);
         $this->setState('realname',$record->realname);
+        $this->setState('role',$record->role);
 		return !$this->errorCode;
 	}
     public function getId(){
@@ -35,5 +37,8 @@ class UserIdentity extends CUserIdentity
     }
     public function getRealname(){
         return $this->_realname;
+    }
+    public function getRole(){
+        return $this->_role;
     }
 }

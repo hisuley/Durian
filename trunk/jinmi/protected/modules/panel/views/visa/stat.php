@@ -33,6 +33,11 @@ $this->widget('zii.widgets.CDetailView', array(
             'label'=>'待送签订单',
             'type'=>'raw',
             'value'=>$model['not_sent'],
+        ),
+        array(
+            'label'=>'待出签订单',
+            'type'=>'raw',
+            'value'=>$model['wait_for_issue'],
         )
     ),
 ));

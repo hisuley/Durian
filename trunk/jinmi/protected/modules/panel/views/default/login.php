@@ -1,17 +1,11 @@
-<form action="<?php echo Yii::app()->createUrl('panel/default/login'); ?>" method="post">
-    <table>
-        <tr>
-            <td><label for="username">用户名：</label></td>
-            <td><input type="text" id="username" name="LoginForm[username]"/></td>
-        </tr>
-        <tr>
-            <td><label for="password">密码：</label></td>
-            <td><input type="password" id="password" name="LoginForm[password]"/></td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <input type="submit" value="登录"/>
-            </td>
-        </tr>
-    </table>
+<form method="post" action="<?php echo $this->createUrl('default/login'); ?>">
+    <p><input type="text" name="LoginForm[username]" value="" placeholder="输入您的用户名"></p>
+    <p><input type="password" name="LoginForm[password]" value="" placeholder="密码"></p>
+    <p class="remember_me">
+        <label>
+            <input type="checkbox" name="LoginForm[remember_me]" id="remember_me">
+            30天内有效
+        </label>
+    </p>
+    <p class="submit"><input type="submit" name="commit" value="登陆"></p>
 </form>

@@ -42,12 +42,13 @@ $this->widget('zii.widgets.CDetailView', array(
             'name'=>'predict_date',
             'label'=>'预计出签',
             'type'=>'raw',
-            'value'=>date('Y-m-d', strtotime(date('Y-m-d', $model->create_time)." +".$model->predict_date." days"))
+            'value'=>dateWrapper('Y-m-d', strtotime(dateWrapper('Y-m-d', $model->create_time)." +".$model->predict_date." days"))
         ),
         array(
             'name'=>'type',
             'label'=>'类型',
-            'type'=>'raw'
+            'type'=>'raw',
+            'value'=> VisaType::getTypeName($model->type)
         ),
         array(
             'name'=>'amount',
@@ -62,13 +63,14 @@ $this->widget('zii.widgets.CDetailView', array(
         array(
             'name'=>'source',
             'label'=>'来源',
-            'type'=>'raw'
+            'type'=>'raw',
+            'value'=> OrderSource::getSourceName($model->source)
         ),
         array(
             'name'=>'customer',
             'label'=>'客户',
             'type'=>'raw',
-            'value'=> implode('\n', array_map(function($v){
+            'value'=> implode('<br />', array_map(function($v){
                        return "姓名：".$v->name."  护照号：".$v->passport;
                 }, $model->customer))
         ),
@@ -100,5 +102,61 @@ $this->widget('zii.widgets.CDetailView', array(
                 return "<span class='ok'>".VisaOrder::translateMaterial($material)."</span>";
             }, $model->material))
         ),
+        array(
+            'name'=>'op_id',
+            'label'=>'操作员',
+            'type'=>'raw',
+            'value'=> User::getUserRealname($model->op_id)."[审核时间：".dateWrapper('Y-m-d', $model->op_time)."]"
+        ),
+        array(
+            'name'=>'op_comment',
+            'label'=>'操作备注',
+            'type'=>'raw',
+            'value'=> $model->op_comment
+        ),
+        array(
+            'name'=>'sent_id',
+            'label'=>'送签人',
+            'type'=>'raw',
+            'value'=> User::getUserRealname($model->sent_id)."[送签时间：".dateWrapper('Y-m-d', $model->sent_time)."]"
+        ),
+        array(
+            'name'=>'sent_comment',
+            'label'=>'送签备注',
+            'type'=>'raw',
+            'value'=> $model->sent_comment
+        ),
+        array(
+            'name'=>'issue_id',
+            'label'=>'取签人',
+            'type'=>'raw',
+            'value'=> User::getUserRealname($model->issue_id)."[出签时间：".dateWrapper('Y-m-d', $model->issue_time)."]"
+        ),
+        array(
+            'name'=>'issue_comment',
+            'label'=>'出签备注',
+            'type'=>'raw',
+            'value'=> $model->issue_comment
+        ),
+        array(
+            'name'=>'back_id',
+            'label'=>'物流操作',
+            'type'=>'raw',
+            'value'=> User::getUserRealname($model->back_id)."[物流时间：".dateWrapper('Y-m-d', $model->back_time)."]"
+        ),
+        array(
+            'name'=>'back_comment',
+            'label'=>'物流信息',
+            'type'=>'raw',
+            'value'=> $model->back_comment
+        )
     ),
 ));
+
+function dateWrapper($format, $date){
+    if(!empty($date)){
+        return date($format, $date);
+    }else{
+        return '';
+    }
+}

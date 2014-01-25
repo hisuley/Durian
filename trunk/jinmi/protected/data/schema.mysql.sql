@@ -66,15 +66,20 @@ CREATE TABLE visa_order(
    pay_cert char(255) not null,
    op_id int not null,
    op_comment text not null,
-   sender_id int not null,
+   op_time int not null,
+   sent_id int not null,
+   sent_comment text not null,
    sent_time int not null,
    issue_id int not null,
+   issue_comment text not null,
    issue_time int not null,
    back_id int not null,
    back_comment int not null,
+   back_time int not null,
    user_id int not null,
    create_time int not null
 )
+
 CREATE TABLE visa_order_customer(
   id int primary key auto_increment,
   name char(255) not null,
@@ -92,3 +97,29 @@ CREATE TABLE address(
   create_time int not null
 
 )
+
+
+CREATE TABLE order_source(
+  id int primary key auto_increment,
+  name char(255) not null,
+  notes text not null,
+  parent_id int not null,
+  is_enabled tinyint(1) not null,
+  create_time int not null
+
+)
+
+
+CREATE TABLE visa_type(
+  id int primary key auto_increment,
+  name char(255) not null,
+  notes text not null,
+  material text not null,
+  country_id int not null,
+  predict_date tinyint(2) not null,
+  price decimal(10,2) not null,
+  is_enabled tinyint(1) not null,
+  create_time int not null
+)
+
+alter table order_source add(contact_name varchar(255) not null, contact_phone varchar(255) not null, contact_address varchar(255) not null);

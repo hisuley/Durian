@@ -20,6 +20,12 @@ class Address extends CActiveRecord{
           array('name, notes, parent_id, is_enabled', 'safe')
         );
     }
+
+    public function relations(){
+        return array(
+            'type'=>array(self::HAS_MANY, 'VisaType', 'country_id')
+        );
+    }
     /**
      * Some useful action before saving the data 
      * 
@@ -63,6 +69,7 @@ class Address extends CActiveRecord{
     	}
     	return $data;
     }
+
     public static function addNewAddr($data, $parent_id = 0){
     	$model = new Address;
     	$model->attributes = $data;
@@ -78,7 +85,24 @@ class Address extends CActiveRecord{
         if(!empty($result)){
             return $result->name;
         }else{
-            return '无法识别';
+            return '';
         }
+    }
+    public static function allLists(){
+        //$criteria = new CDbCriteria;
+        return new CActiveDataProvider('Address', array());
+    }
+
+    public static function findCountry(){
+        $criteria = new CDbCriteria;
+        $criteria->addCondition('is_enabled = 1', 'AND');
+        $criteria->addCondition('(parent_id IS NULL OR parent_id = 0)', 'AND');
+        $result = self::model()->findAll($criteria);
+        $resultArray = array();
+        foreach($result as $value){
+           $tempResult = CHtml::listData(self::model()->findAllByAttributes(array('parent_id'=>$value->id)), 'id', 'name');
+           $resultArray = $resultArray + $tempResult;
+        }
+        return $resultArray;
     }
 }

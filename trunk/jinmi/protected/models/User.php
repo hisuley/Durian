@@ -18,6 +18,12 @@ class User extends CActiveRecord{
 			'role' => array(self::HAS_MANY, 'UserRole', 'user_id')
 			);
 	}
+    public function afterFind(){
+        if(empty($this->realname)){
+            $this->realname = $this->username;
+        }
+        return parent::afterFind();
+    }
 	public static function hashPassword($password, $salt = 0){
 		if(empty($salt))
 			$salt = self::$salt;
@@ -31,9 +37,16 @@ class User extends CActiveRecord{
             else
                 return $result->username;
         }else{
-            return '无该用户';
+            return '';
         }
 
+    }
+    public function attributeLabels(){
+        return array(
+            'username' => '用户名',
+            'password' => '密码',
+            'role' => '角色'
+        );
     }
 }
 ?>
