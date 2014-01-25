@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="FrameworkRootSettings" id="Yii" />
+  <component name="FrameworkRootSettings" id="Yii">
+    <option name="typedPaths">
+      <list>
+        <element elementPath="$PROJECT_DIR$/jinmi/assets" typeId="assets_directory" />
+        <element elementPath="$PROJECT_DIR$/jinmi/protected" typeId="protected_directory" />
+        <element elementPath="$PROJECT_DIR$/jinmi/protected/controllers" typeId="protected_controllers_directory" />
+        <element elementPath="$PROJECT_DIR$/jinmi/protected/extensions" typeId="protected_extensions_directory" />
+        <element elementPath="$PROJECT_DIR$/jinmi/protected/models" typeId="protected_models_directory" />
+        <element elementPath="$PROJECT_DIR$/jinmi/protected/runtime" typeId="protected_runtime_directory" />
+        <element elementPath="$PROJECT_DIR$/jinmi/protected/views" typeId="protected_views_directory" />
+        <element elementPath="$PROJECT_DIR$/jinmi/protected/views/layouts" typeId="protected_views_layouts_directory" />
+        <element elementPath="$PROJECT_DIR$/jinmi/themes" typeId="themes_directory" />
+      </list>
+    </option>
+  </component>
 </project>
 
