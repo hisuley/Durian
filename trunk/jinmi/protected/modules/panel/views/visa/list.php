@@ -66,35 +66,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'type'=>'raw',
             'filter'=> ''
         ),
-        array(
-            'name'=>'depart_date',
-            'header'=>'出发时间',
-            'value'=> function($model){
-                    if(is_numeric($model->depart_date)){
-                        return date('Y-m-d', $model->depart_date);
-                    }else{
-                        return $model->depart_date;
-                    }
-            },
-            'filter'=> $this->widget('zii.widgets.jui.CJuiDatePicker', array(
-                    'model'=>$model,
-                    'attribute'=>'depart_date',
-                    'language' => 'zh-cn',
-                    'htmlOptions' => array(
-                        'id' => 'datepicker_for_depart_date',
-                        'size' => '10',
-                    ),
-                    'defaultOptions' => array(  // (#3)
-                        'showOn' => 'focus',
-                        'dateFormat' => 'yy-mm-dd',
-                        'showOtherMonths' => true,
-                        'selectOtherMonths' => true,
-                        'changeMonth' => true,
-                        'changeYear' => true,
-                        'showButtonPanel' => true,
-                    )
-                ), true), // (#4)
-        ),
+
         array(
             'name'=>'create_time',
             'header'=>'下单时间',
@@ -142,15 +114,6 @@ $this->widget('zii.widgets.grid.CGridView', array(
                     )
                 ), true), // (#4)
         ),*/
-        array(
-            'name'=>'create_time',
-            'header'=>'剩余出发时间',
-            'value'=> function($model){
-                    //return $model->create_time;
-                    return round((strtotime($model->depart_date) - strtotime('now'))/86400);
-            },
-            'filter' => false
-        ),
         array(
             'class' => 'CButtonColumn',
             'header' => '操作',
