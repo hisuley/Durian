@@ -59,6 +59,8 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'value'=> 'VisaOrder::translateStatus($data->status)',
             'filter' => VisaOrder::$statusIntl
         ),
+        'amount',
+        'price',
         array(
             'name'=>'customer',
             'header'=>'客户',
