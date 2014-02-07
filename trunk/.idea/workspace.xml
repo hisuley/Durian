@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74b6f384-8cb4-4801-86d7-b859aeaa5c85" name="Default" comment="Portal Verify component and function code.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/frameworkRootSettings.xml" afterPath="$PROJECT_DIR$/.idea/frameworkRootSettings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/list.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/list.php" />
     </list>
     <ignored path="trunk.iws" />
@@ -45,15 +43,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/default/login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="27" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="240">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -66,7 +55,16 @@
       <file leaf-file-name="list.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="50" selection-start="2693" selection-end="2693" vertical-scroll-proportion="0.73953485" vertical-offset="867" max-vertical-offset="1980">
+            <state line="62" column="16" selection-start="1800" selection-end="1800" vertical-scroll-proportion="0.6511628" vertical-offset="575" max-vertical-offset="2010">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schema.mysql.sql" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jinmi/protected/data/schema.mysql.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="116" column="25" selection-start="2804" selection-end="2804" vertical-scroll-proportion="-20.22" vertical-offset="729" max-vertical-offset="1950">
               <folding />
             </state>
           </provider>
@@ -102,7 +100,7 @@
       <file leaf-file-name="PanelUser.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/PanelUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1320">
+            <state line="69" column="10" selection-start="3002" selection-end="3002" vertical-scroll-proportion="-8.75" vertical-offset="825" max-vertical-offset="1320">
               <folding />
             </state>
           </provider>
@@ -444,6 +442,44 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="visa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -506,6 +542,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -808,11 +866,6 @@
         <state line="18" column="2" selection-start="384" selection-end="384" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="456" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/data/schema.mysql.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="25" selection-start="2804" selection-end="2804" vertical-scroll-proportion="0.0" vertical-offset="1605" max-vertical-offset="2470" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/orderSource/new.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="8" selection-start="444" selection-end="444" vertical-scroll-proportion="-8.142858" vertical-offset="0" max-vertical-offset="874" />
@@ -952,13 +1005,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/PanelUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1320">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/form/new.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="460" column="29" selection-start="20795" selection-end="20795" vertical-scroll-proportion="0.0" vertical-offset="6900" max-vertical-offset="7935">
@@ -987,9 +1033,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/PanelUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="10" selection-start="3002" selection-end="3002" vertical-scroll-proportion="-8.75" vertical-offset="825" max-vertical-offset="1320">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/data/schema.mysql.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="25" selection-start="2804" selection-end="2804" vertical-scroll-proportion="-20.22" vertical-offset="729" max-vertical-offset="1950">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="50" selection-start="2693" selection-end="2693" vertical-scroll-proportion="0.73953485" vertical-offset="867" max-vertical-offset="1980">
+        <state line="62" column="16" selection-start="1800" selection-end="1800" vertical-scroll-proportion="0.6511628" vertical-offset="575" max-vertical-offset="2010">
           <folding />
         </state>
       </provider>
