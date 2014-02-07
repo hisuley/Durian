@@ -7,4 +7,4 @@ trunk/jinmi/assets/
 protected/runtime/*
 application.log*
 */.DS_Store
-
+trunk/.idea
