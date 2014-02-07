@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="Aliyun" uploadOnCheckin="c1a7c5e0-f200-4dd7-906b-bc2993e7bd55">
-    <serverData>
-      <paths name="Aliyun">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/jinmi" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-    </serverData>
-    <option name="myUploadOnCheckinName" value="Aliyun" />
-  </component>
+  <component name="PublishConfigData" serverName="Aliyun" persistUploadOnCheckin="false" />
 </project>
 

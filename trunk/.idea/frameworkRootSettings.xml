@@ -3,7 +3,6 @@
   <component name="FrameworkRootSettings" id="Yii">
     <option name="typedPaths">
       <list>
-        <element elementPath="$PROJECT_DIR$/jinmi/assets" typeId="assets_directory" />
         <element elementPath="$PROJECT_DIR$/jinmi/protected" typeId="protected_directory" />
         <element elementPath="$PROJECT_DIR$/jinmi/protected/controllers" typeId="protected_controllers_directory" />
         <element elementPath="$PROJECT_DIR$/jinmi/protected/extensions" typeId="protected_extensions_directory" />
