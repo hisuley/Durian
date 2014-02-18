@@ -64,7 +64,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
         array(
             'name'=>'customer',
             'header'=>'客户',
-            'value'=> 'VisaOrder::joinCustomer($data->customer)',
+            'value'=> 'VisaOrder::getFirstCustomer($data->customer)',
             'type'=>'raw',
             'filter'=> ''
         ),
@@ -119,7 +119,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
         array(
             'class' => 'CButtonColumn',
             'header' => '操作',
-            'deleteConfirmation' => '确定删除？',
+            'template'=>'{view}{update}',
         ),
     )
 ));

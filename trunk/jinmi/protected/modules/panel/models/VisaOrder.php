@@ -113,12 +113,6 @@ class VisaOrder extends CActiveRecord{
         $criteria->compare('is_pay', $this->is_pay);
         $criteria->compare('status', $this->status);
         $criteria->compare('user_id', $this->user_id);
-        if(!is_numeric($this->depart_date)){
-            $depart_date = strtotime($this->depart_date);
-        }else{
-            $depart_date = $this->depart_date;
-        }
-        $criteria->compare('depart_date'," >= ".$depart_date);
         $criteria->addBetweenCondition('create_time', strtotime($this->create_time), strtotime($this->create_time." +1 days"));
         $criteria->addBetweenCondition('issue_time', strtotime($this->issue_time), strtotime($this->issue_time." +1 days"));
         return new CActiveDataProvider('VisaOrder', array(
@@ -171,5 +165,21 @@ class VisaOrder extends CActiveRecord{
             array_push($cutomer, $v->name."(".$v->passport.")");
         }
         return implode('<br />', $cutomer);
+    }
+    public static function getFirstCustomer($data){
+        $customer = array();
+        foreach($data as $v){
+            array_push($customer, $v->name);
+        }
+        $firstCustomer = '';
+        if(isset($customer[0])){
+            if(count($customer) > 1){
+                $firstCustomer = $customer[0]."等";
+            }else{
+                $firstCustomer = $customer[0];
+            }
+
+        }
+        return $firstCustomer;
     }
 }
