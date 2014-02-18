@@ -25,7 +25,10 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'selectableRows' => 2,
             'value' => $model->id,
         ),
-        'id',
+        array(
+          'name'=>'id',
+          'filterHtmlOptions'=>array('width'=>'70px')
+        ),
 
         array(
             'name'=>'country',
@@ -59,14 +62,20 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'value'=> 'VisaOrder::translateStatus($data->status)',
             'filter' => VisaOrder::$statusIntl
         ),
-        'amount',
-        'price',
         array(
-            'name'=>'customer',
-            'header'=>'客户',
-            'value'=> 'VisaOrder::getFirstCustomer($data->customer)',
+            'name'=>'amount',
+            'filterHtmlOptions'=>array('width'=>'50px')
+        ),
+        array(
+            'name'=>'price',
+            'filterHtmlOptions'=>array('width'=>'70px')
+        ),
+        array(
+            'name'=>'source',
+            'header'=>'订单来源',
+            'value'=> '$data->order_source->name',
             'type'=>'raw',
-            'filter'=> ''
+            'filter'=> CHtml::listData(OrderSource::model()->findAll(), 'id', 'name')
         ),
 
         array(

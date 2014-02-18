@@ -113,6 +113,7 @@ class VisaOrder extends CActiveRecord{
         $criteria->compare('is_pay', $this->is_pay);
         $criteria->compare('status', $this->status);
         $criteria->compare('user_id', $this->user_id);
+        $criteria->compare('source', $this->source);
         $criteria->addBetweenCondition('create_time', strtotime($this->create_time), strtotime($this->create_time." +1 days"));
         $criteria->addBetweenCondition('issue_time', strtotime($this->issue_time), strtotime($this->issue_time." +1 days"));
         return new CActiveDataProvider('VisaOrder', array(
