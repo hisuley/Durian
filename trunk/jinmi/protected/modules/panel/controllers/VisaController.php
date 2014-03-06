@@ -56,6 +56,9 @@ class VisaController extends PanelController{
             if(empty($postData['pay_cert']))
                 unset($postData['pay_cert']);
             $model->attributes = $postData;
+            if(!empty($postData['memo'])){
+                $model->memo = User::getUserRealname(Yii::app()->user->id)."于".date("Y-m-d H:i")."说：".$postData['memo'];
+            }
             Yii::log('[VisaOrder]Saving Model Attributes:\n'.print_r($model->attributes, true));
             if($model->save()){
                 $errFlag = false;
@@ -92,7 +95,16 @@ class VisaController extends PanelController{
             $postData = $_POST['VisaOrder'];
             if(empty($postData['pay_cert']))
                 unset($postData['pay_cert']);
+            if(!empty($postData['memo'])){
+                $memoStr = $model->memo."\n".User::getUserRealname(Yii::app()->user->id)."于".date("Y-m-d H:i")."说：".$postData['memo'];
+
+            }
             $model->attributes = $postData;
+            if(!empty($postData['memo'])){
+                $model->memo = $memoStr;
+            }
+
+
             if($model->save()){
                 $errFlag = false;
                 $saveIds = array();
@@ -134,6 +146,10 @@ class VisaController extends PanelController{
     }
 
     public function actionDelete($id){
+        $model = VisaOrder::model()->findByPk($id);
+        if(!empty($_POST['VisaOrder'])){
+
+        }
         if(VisaOrder::deleteVisaRecord($id)){
             if(Yii::app()->request->isAjaxRequest){
                 echo 'ok';

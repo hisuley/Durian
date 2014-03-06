@@ -311,12 +311,10 @@ $form=$this->beginWidget('CActiveForm', array(
             <td><?php echo $form->labelEx($model,'memo'); ?></td>
             <td colspan="5">
                 <?php
-                if(PanelUser::checkAttributesAccess('memo', $model)){
-                    echo $model->memo;
-                }else{
-                    echo $form->textArea($model, 'memo', array('rows'=>7, 'cols'=>70, 'readonly'=> PanelUser::checkAttributesAccess('memo', $model)));
+
+                    echo str_replace("\n", '<br />', $model->memo)."<br />";
+                    echo $form->textArea($model, 'memo', array('rows'=>7, 'cols'=>70, 'value'=>''));
                     echo $form->error($model,'memo');
-                }
                 ?>
             </td>
         </tr>

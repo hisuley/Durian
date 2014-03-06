@@ -16,6 +16,7 @@ class VisaOrder extends CActiveRecord{
     const STATUS_SENTBACK = 'visa_back';
     const STATUS_RECEIVED = 'received';
     const STATUS_COMPLETE = 'complete';
+    const STATUS_DELETE = 'delete';
     public static $statusIntl = array(
         self::STATUS_SALES_ORDER => '操作待确认',
         self::STATUS_OP_CONFIRM => '待送签',
@@ -23,7 +24,8 @@ class VisaOrder extends CActiveRecord{
         self::STAUTS_ISSUE_VISA => '已出签',
         self::STATUS_SENTBACK => '已寄回',
         self::STATUS_RECEIVED => '已接受',
-        self::STATUS_COMPLETE => '订单完结'
+        self::STATUS_COMPLETE => '订单完结',
+        self::STATUS_DELETE => '订单已删除'
     );
     public function attributeLabels(){
         return array(
@@ -107,6 +109,51 @@ class VisaOrder extends CActiveRecord{
             'criteria' => $criteria,
         ));
     }
+
+    public function getSearchCriteria()
+    {
+        $criteria=new CDbCriteria;
+
+        $criteria->alias = 'order';
+        $criteria->compare('order.id', $this->id);
+        $criteria->compare('country', $this->country);
+        $criteria->compare('is_pay', $this->is_pay);
+        $criteria->compare('status', $this->status);
+        $criteria->compare('user_id', $this->user_id);
+        $criteria->compare('source', $this->source);
+        if(!empty($_GET['customer_name'])){
+            $this->search_customer = trim($_GET['customer_name']);
+            $criteria->compare('customer.name', $this->search_customer, true);
+            $criteria->with = array('customer'=>array('select'=>'customer.name','together'=>true));
+            //$criteria->join = 'visa_order_customer';
+        }
+        $criteria->addBetweenCondition('order.create_time', strtotime($this->create_time), strtotime($this->create_time." +1 days"));
+        $criteria->addBetweenCondition('order.issue_time', strtotime($this->issue_time), strtotime($this->issue_time." +1 days"));
+
+        return $criteria;
+    }
+
+    public function getTotals()
+    {
+        $criteria = $this->getSearchCriteria();
+        $criteria->select = "SUM(amount*price)";
+        return $this->commandBuilder->createFindCommand($this->getTableSchema(),$criteria)->queryScalar();
+    }
+
+    public function getCountryTotals()
+    {
+        $criteria = $this->getSearchCriteria();
+        $criteria->select = "SUM(amount*price)";
+        return $this->commandBuilder->createFindCommand($this->getTableSchema(),$criteria)->queryScalar();
+    }
+
+    public function getAmountTotals()
+    {
+        $criteria = $this->getSearchCriteria();
+        $criteria->select = "SUM(amount)";
+        return $this->commandBuilder->createFindCommand($this->getTableSchema(),$criteria)->queryScalar();
+    }
+
     public function search(){
         $criteria = new CDbCriteria;
 

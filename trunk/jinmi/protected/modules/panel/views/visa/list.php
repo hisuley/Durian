@@ -28,7 +28,8 @@ $this->widget('zii.widgets.grid.CGridView', array(
         ),
         array(
           'name'=>'id',
-          'filterHtmlOptions'=>array('width'=>'70px')
+          'filterHtmlOptions'=>array('width'=>'70px'),
+          'footer'=>'总计'
         ),
 
         array(
@@ -65,11 +66,13 @@ $this->widget('zii.widgets.grid.CGridView', array(
         ),
         array(
             'name'=>'amount',
-            'filterHtmlOptions'=>array('width'=>'50px')
+            'filterHtmlOptions'=>array('width'=>'50px'),
+            'footer'=>$model->getAmountTotals()
         ),
         array(
             'name'=>'price',
-            'filterHtmlOptions'=>array('width'=>'70px')
+            'filterHtmlOptions'=>array('width'=>'70px'),
+            'footer'=>$model->getTotals()
         ),
         array(
             'name'=>'source',
@@ -135,6 +138,14 @@ $this->widget('zii.widgets.grid.CGridView', array(
             ),
             'updateButtonOptions'=> array(
                 'target'=>'__blank'
+            ),
+            'deleteButtonOptions'=>array(
+                'url'=>'Yii::app()->createUrl("panel/visa/delete", array("id"=>$model->id))'
+            ),
+            'buttons'=>array(
+              'delete'=>array(
+                  'url'=>'Yii::app()->createUrl("panel/visa/delete", array("id"=>$data->id))'
+              )
             ),
             'deleteConfirmation' => '您确定要删除该订单？'
         ),
