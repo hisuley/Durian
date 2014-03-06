@@ -45,19 +45,22 @@ class OrderSourceController extends PanelController
         if(!empty($_POST['OrderSource'])){
             $postData = $_POST['OrderSource'];
             $model->attributes = $postData;
+            $model->type = OrderSource::TYPE_SOURCE;
             if($model->save()){
                 Yii::app()->user->setFlash('success', Yii::t('panel', '修改成功！'));
                 $this->redirect($this->createUrl('orderSource/list'));
             }
         }else{
-            $parentList = OrderSource::model()->findAll('parent_id IS NULL OR parent_id = 0', array());
+            $parentList = OrderSource::model()->findAll('type = 2 AND (parent_id IS NULL OR parent_id = 0) AND id != :id', array(':id'=>$id));
             $this->render('new', array('parentList'=>$parentList, 'model'=>$model));
         }
     }
     public function actionNew(){
         $model = new OrderSource;
         if(!empty($_POST['OrderSource'])){
+            $_POST['OrderSource']['type'] = OrderSource::TYPE_SOURCE;
             if(isset($_POST['OrderSource']['parent_id']) && ($_POST['OrderSource']['parent_id'] != 0)){
+
                 if(OrderSource::addNewSource($_POST['OrderSource'], $_POST['OrderSource']['parent_id'])){
                     Yii::app()->user->setFlash('success', Yii::t('panel', '添加成功！'));
                     $this->redirect($this->createUrl('orderSource/list'));
@@ -69,7 +72,7 @@ class OrderSourceController extends PanelController
                 }
             }
         }else{
-            $parentList = OrderSource::model()->findAll('parent_id IS NULL OR parent_id = 0', array());
+            $parentList = OrderSource::model()->findAll('type = 1 and (parent_id IS NULL OR parent_id = 0)', array());
             $this->render('new', array('parentList'=>$parentList, 'model'=>$model));
         }
     }

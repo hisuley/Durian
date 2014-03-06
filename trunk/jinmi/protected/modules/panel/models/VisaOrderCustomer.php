@@ -7,6 +7,9 @@
  */
 
 class VisaOrderCustomer extends CActiveRecord{
+    const STATUS_DEFAULT = 0;
+    const STATUS_ISSUED = 2;
+    const STATUS_REJECT = 3;
     public static function model($className = __CLASS__){
         return parent::model($className);
     }
@@ -20,7 +23,7 @@ class VisaOrderCustomer extends CActiveRecord{
     }
     public function rules(){
         return array(
-            array('name, passport, create_date, visa_order_id', 'safe')
+            array('name, passport, create_date, status, visa_order_id', 'safe')
         );
     }
 }

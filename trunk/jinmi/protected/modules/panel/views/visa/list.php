@@ -7,7 +7,7 @@
  */
 
 ?>
-<?php echo CHtml::link('添加订单', $this->createUrl('visa/new'), array('class'=>'alink-btn', 'style'=>'margin-bottom:-30px;')); ?>
+<?php echo CHtml::link('添加订单', $this->createUrl('visa/new'), array('class'=>'alink-btn')); ?>
 <?php
 $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider' => $model->search(),
@@ -16,6 +16,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
     'afterAjaxUpdate' => 'reinstallDatePicker', // (#1)
     'pager' => array(
         'maxButtonCount' => '7',
+        'pageSize' => 25,
     ),
     'summaryText' => '显示第{start}条至{end}条记录|共{count}条记录',
     'template' => '{pager}{summary}{items}{pager}',
@@ -75,7 +76,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'header'=>'订单来源',
             'value'=> '$data->order_source->name',
             'type'=>'raw',
-            'filter'=> CHtml::listData(OrderSource::model()->findAll(), 'id', 'name')
+            'filter'=> CHtml::listData(OrderSource::model()->findAll('type = '.OrderSource::TYPE_SOURCE), 'id', 'name')
         ),
 
         array(
@@ -128,7 +129,14 @@ $this->widget('zii.widgets.grid.CGridView', array(
         array(
             'class' => 'CButtonColumn',
             'header' => '操作',
-            'template'=>'{view}{update}',
+            'template'=> PanelUser::getListOp(),
+            'viewButtonOptions'=> array(
+                'target'=>'__blank'
+            ),
+            'updateButtonOptions'=> array(
+                'target'=>'__blank'
+            ),
+            'deleteConfirmation' => '您确定要删除该订单？'
         ),
     )
 ));

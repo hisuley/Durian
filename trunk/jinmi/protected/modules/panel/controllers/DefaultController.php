@@ -72,7 +72,7 @@ class DefaultController extends PanelController
             $model=new LoginForm;
             $model->attributes=$_POST['LoginForm'];
             // validate user input and redirect to the previous page if valid
-            if($model->validate() && $model->login())
+            if($model->login())
                 $this->redirect(array('visa/list'));
             else{
                 Yii::app()->user->setFlash('error', '登录失败，请检查用户名密码。');

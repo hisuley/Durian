@@ -40,7 +40,15 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+            'autoRenewCookie' => true,
 		),
+        'session' => array(
+            'class' => 'CDbHttpSession',
+            'cookieParams' => array('domain' => '.jmlvyou.com'),
+            'timeout' => 3600,
+            'connectionID' => 'db',
+            'sessionName' => 'session',
+        ),
 		// uncomment the following to enable URLs in path-format
 		
 		'urlManager'=>array(

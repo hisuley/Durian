@@ -20,8 +20,15 @@ $form = $this->beginWidget('CActiveForm', array(
                 <?php echo User::getUserRealname(Yii::app()->user->id); ?>
             </td>
         </tr>
+        <?php if($inputName == 'sent_comment'){
+           echo "<tr><td><label>送签旅行社：</label></td><td>";
+           echo $form->dropDownList(VisaOrder::model()->findByPk(CHttpRequest::getParam('id')), 'sent_agency_source',
+                    CHtml::listData(OrderSource::model()->findAll('type = :type', array(':type'=>OrderSource::TYPE_AGENCY)), 'id', 'name'), array('readonly'=> PanelUser::checkAttributesAccess('sent_agency_source', $model))
+                );
+           echo "</td></tr>";
+        }?>
         <tr>
-            <td><label>操作时间：</label></td>
+            <td><label><?php if($inputName == 'sent_comment'){ echo "送签"; } ?>时间：</label></td>
             <td>
                 <?php
                 if($inputName == 'op_comment'){

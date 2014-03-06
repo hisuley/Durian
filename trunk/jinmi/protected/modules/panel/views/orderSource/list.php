@@ -1,5 +1,5 @@
 <?php
-echo CHtml::link('添加',$this->createUrl('orderSource/new'), array('class'=>'alink-btn', 'style'=>'margin-bottom:-30px;'));
+echo CHtml::link('添加',$this->createUrl('orderSource/new'), array('class'=>'alink-btn'));
 $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider' => OrderSource::allLists(),
     'pager' => array(

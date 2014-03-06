@@ -67,6 +67,12 @@ $this->widget('zii.widgets.CDetailView', array(
             'value'=> OrderSource::getSourceName($model->source)
         ),
         array(
+            'name'=>'sent_agency_source',
+            'label'=>'送签旅行社',
+            'type'=>'raw',
+            'value'=> OrderSource::getSourceName($model->sent_agency_source)
+        ),
+        array(
             'name'=>'customer',
             'label'=>'客户',
             'type'=>'raw',

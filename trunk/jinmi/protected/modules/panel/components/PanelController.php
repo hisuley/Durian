@@ -39,7 +39,16 @@ class PanelController extends CController{
                 array('label'=>'来源列表', 'url'=>array('orderSource/list'), 'linkOptions'=>array('class'=>''))
                 ),
                 'linkOptions' => array('class'=>'dropdown-toggle', 'data-toggle'=>"dropdown")
+            ),
+            array(
+                'label'=>'送签<b class="caret"></b>',
+                'url'=> array('orderSource/list'), 'items'=>array(
+                array('label'=>'新增送签旅行社', 'url'=>array('agency/new'), 'linkOptions'=>array('class'=>'')),
+                array('label'=>'送签旅行社列表', 'url'=>array('agency/list'), 'linkOptions'=>array('class'=>''))
+            ),
+                'linkOptions' => array('class'=>'dropdown-toggle', 'data-toggle'=>"dropdown")
             )
+
         );
         $this->breadcrumbs = array(
             $this->label=>array($this->id."/list"),

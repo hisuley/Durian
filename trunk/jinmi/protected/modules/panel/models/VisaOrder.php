@@ -7,7 +7,7 @@
  */
 
 class VisaOrder extends CActiveRecord{
-    public $id,$status,$country,$predict_date, $type,$amount,$price,$depart_date,$source,$contact_name,$contact_phone,$contact_address,$memo,$material,$is_pay,$create_time, $user_id,$accountant_id ,$pay_cert,$op_id ,$op_comment ,$op_time ,$sent_id ,$sent_comment ,$sent_time ,$issue_id ,$issue_comment,$issue_time,$back_id,$back_comment,$back_time;
+    public $id,$status,$country,$predict_date, $type,$amount,$price,$depart_date,$source,$contact_name,$contact_phone,$contact_address,$memo,$material,$is_pay,$create_time, $user_id,$accountant_id ,$pay_cert,$op_id ,$op_comment ,$op_time ,$sent_id ,$sent_comment ,$sent_time ,$issue_id ,$issue_comment,$issue_time,$back_id,$back_comment,$back_time, $sent_agency_source, $search_customer;
     
     const STATUS_SALES_ORDER = 'sales_ordered';
     const STATUS_OP_CONFIRM = 'op_confirm';
@@ -29,7 +29,7 @@ class VisaOrder extends CActiveRecord{
         return array(
             'status' => '状态',
             'country' => '国家',
-            'predict_date' => '预测出签', 'type' => '类型','amount' => '人数','price' => '价格','depart_date' => '出发日期','source' => '订单来源','contact_name' => '联系人姓名','contact_phone' => '电话','contact_address' => '地址','memo' => '备注','material' => '材料','is_pay' => '支付状态','create_time' => '下单时间', 'user_id' => '下单人','accountant_id' => '财务审核人','pay_cert' => '支付凭证','op_id' => '操作人','op_comment' => '操作备注','op_time' => '操作时间','sent_id' => '送签人','sent_comment' => '送签备注','sent_time' => '送签时间','issue_id' => '出签人','issue_comment' => '出签备注','issue_time' => '出签时间','back_id' => '物流操作','back_comment' => '物流信息','back_time'=>'物流时间','customer'=>'客户信息', 'order_type'=>'订单信息'
+            'predict_date' => '预测出签', 'type' => '类型','amount' => '人数','price' => '价格','depart_date' => '出发日期','source' => '订单来源','contact_name' => '联系人姓名','contact_phone' => '电话','contact_address' => '地址','memo' => '备注','material' => '材料','is_pay' => '支付状态','create_time' => '下单时间', 'user_id' => '下单人','accountant_id' => '财务审核','pay_cert' => '支付凭证','op_id' => '操作人','op_comment' => '操作备注','op_time' => '操作时间','sent_id' => '送签人','sent_comment' => '送签备注','sent_time' => '送签时间','issue_id' => '出签人','issue_comment' => '出签备注','issue_time' => '出签时间','back_id' => '物流操作','back_comment' => '物流信息','back_time'=>'物流时间','customer'=>'客户信息', 'order_type'=>'订单信息','sent_agency_source'=>'送签旅行社'
         );
     }
     public static function model($className = __CLASS__){
@@ -73,13 +73,14 @@ class VisaOrder extends CActiveRecord{
             'customer'=>array(self::HAS_MANY, 'VisaOrderCustomer','visa_order_id'),
             'order_source' => array(self::BELONGS_TO, 'OrderSource', 'source'),
             'order_type' => array(self::BELONGS_TO, 'VisaType', 'type'),
-            'country_source' => array(self::BELONGS_TO, 'Address', 'country')
+            'country_source' => array(self::BELONGS_TO, 'Address', 'country'),
+            'agency_source' => array(self::BELONGS_TO, 'OrderSource', 'sent_agency_source')
         );
     }
     public function rules(){
         return array(
             //array('id, status,country,predict_date,type,amount,price,depart_date,source,contact_name,contact_phone,contact_address,memo,material,is_pay,create_time, user_id,accountant_id ,pay_cert,op_id ,op_comment ,op_time ,sent_id ,sent_comment ,sent_time ,issue_id ,issue_comment,issue_time,back_id,back_comment,back_time','safe',),
-            array('id, status,depart_date,memo,create_time, user_id,accountant_id ,pay_cert,op_id ,op_comment ,op_time ,sent_id ,sent_comment ,sent_time ,issue_id ,issue_comment,issue_time,back_id,back_comment,back_time,is_pay','safe'),
+            array('id, status,depart_date,memo,create_time, user_id,accountant_id ,pay_cert,op_id ,op_comment ,op_time ,sent_id ,sent_comment ,sent_time ,issue_id ,issue_comment,issue_time,back_id,back_comment,back_time,is_pay,sent_agency_source','safe'),
             array('price,country,predict_date,type,amount,price,source,contact_name,contact_phone,material,amount', 'required'),
             array('country', 'numerical'),
             array('predict_date', 'numerical'),
@@ -108,21 +109,86 @@ class VisaOrder extends CActiveRecord{
     }
     public function search(){
         $criteria = new CDbCriteria;
-        $criteria->compare('id', $this->id);
+
+        $criteria->alias = 'order';
+        $criteria->compare('order.id', $this->id);
         $criteria->compare('country', $this->country);
         $criteria->compare('is_pay', $this->is_pay);
         $criteria->compare('status', $this->status);
         $criteria->compare('user_id', $this->user_id);
         $criteria->compare('source', $this->source);
-        $criteria->addBetweenCondition('create_time', strtotime($this->create_time), strtotime($this->create_time." +1 days"));
-        $criteria->addBetweenCondition('issue_time', strtotime($this->issue_time), strtotime($this->issue_time." +1 days"));
+        if(!empty($_GET['customer_name'])){
+            $this->search_customer = trim($_GET['customer_name']);
+            $criteria->compare('customer.name', $this->search_customer, true);
+            $criteria->with = array('customer'=>array('select'=>'customer.name','together'=>true));
+            //$criteria->join = 'visa_order_customer';
+        }
+        $criteria->addBetweenCondition('order.create_time', strtotime($this->create_time), strtotime($this->create_time." +1 days"));
+        $criteria->addBetweenCondition('order.issue_time', strtotime($this->issue_time), strtotime($this->issue_time." +1 days"));
         return new CActiveDataProvider('VisaOrder', array(
             'criteria' => $criteria,
+            'sort' => array(
+                'defaultOrder'=>'order.create_time DESC'
+            ),
+            'pagination' => array (
+                'pageSize' => '25'
+              )
         ));
     }
+
+    public function searchForReport($returnType = 'DataProvider'){
+        if(!empty($_POST['start_date'])){
+            $startTime = strtotime($_POST['start_date']);
+            $endTime = strtotime($_POST['start_date']." + 1 days");
+
+        }else{
+            $startTime = strtotime('now - 1 years');
+            $endTime = strtotime("now + 1 years");
+        }
+        $data = VisaOrder::model()->findAll('status = :status AND sent_time BETWEEN :start_time AND :end_time ', array(':status'=>VisaOrder::STATUS_SENTOUT,':start_time'=>$startTime, ':end_time'=>$endTime));
+
+        $compareDuplicate = array();
+        foreach($data as $key=>&$records){
+            $tempKey = "country".$records->country."sent_agency_source".$records->sent_agency_source."type";
+            if(array_key_exists($tempKey, $compareDuplicate)){
+                $compareDuplicate[$tempKey]['amount'] += $records->amount;
+                $compareDuplicate[$tempKey]['customers'] = array_merge($compareDuplicate[$tempKey]['customers'], (array)$records->customer);
+            }else{
+                $compareDuplicate[$tempKey]['key'] = $records->id;
+                $compareDuplicate[$tempKey]['amount'] = $records->amount;
+                $compareDuplicate[$tempKey]['customers'] = (array)$records->customer;
+            }
+        }
+
+        foreach($data as $key=>&$records){
+            $tempKey = "country".$records->country."sent_agency_source".$records->sent_agency_source."type";
+            if(array_key_exists($tempKey, $compareDuplicate) && $compareDuplicate[$tempKey]['key'] != $records->id){
+               unset($records);
+            }else{
+                $records->amount = $compareDuplicate[$tempKey]['amount'];
+                $records->customer = (object)$compareDuplicate[$tempKey]['customers'];
+            }
+        }
+        if($returnType == 'DataProvider'){
+            $data = new CArrayDataProvider($data, array(
+                'pagination'=>array(
+                    'pageSize' => 10000
+                )
+            ));
+        }
+
+        return $data;
+    }
+
+    public function afterDelete(){
+        parent::afterDelete();
+        VisaOrderCustomer::model()->deleteAllByAttributes(array('visa_order_id'=>$this->id));
+        return true;
+    }
+
     public static function deleteVisaRecord($id){
         self::model()->deleteByPk($id);
-        VisaOrderCustomer::model()->deleteAllByAttributes(array('visa_order_id'=>$id));
+
         return true;
     }
     public static function translateMaterial($material){
@@ -146,6 +212,11 @@ class VisaOrder extends CActiveRecord{
                 break;
         }
         return $status;
+    }
+
+    public static function findOutCurrentStatus($id){
+
+
     }
 
     public static function stat(){

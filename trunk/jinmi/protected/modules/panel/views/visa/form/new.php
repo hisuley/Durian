@@ -208,7 +208,7 @@ $form=$this->beginWidget('CActiveForm', array(
                 ?>
             </td>
             <td><?php echo $form->labelEx($model,'source'); ?></td>
-            <td>
+            <td colspan="3">
                 <?php
                 if(PanelUser::checkAttributesAccess('source', $model)){
                     echo $model->order_source->name;
@@ -220,21 +220,17 @@ $form=$this->beginWidget('CActiveForm', array(
                 }
 
                 ?>
+                <?php echo $form->error($model,'contact_name'); ?>
 
             </td>
-            <td><?php echo $form->error($model,'contact_name'); ?></td>
+
 
         </tr>
         <tr>
-            <td><?php echo $form->labelEx($model,'customer'); ?></td>
-            <td colspan="5">
-                <?php
-                if(!PanelUser::checkAttributesAccess('customer', $model)){
-                    echo ' <a href="#" class="btn btn-default btn-xs add-visa-person">添加</a>';
-                }
-                ?>
-               </td>
+            <td colspan="6"><?php echo $form->labelEx($model,'customer'); ?></td>
+
         </tr>
+
         <?php
             if(isset($model->customer)){
                 if(PanelUser::checkAttributesAccess('customer', $model)){
@@ -252,11 +248,18 @@ $form=$this->beginWidget('CActiveForm', array(
                             echo ' readonly=readonly ';
                         }
                         echo 'value="'.$v->passport.'"></td>';
-                        if(!PanelUser::checkAttributesAccess('material', $model)){
+                        if(!PanelUser::checkAttributesAccess('customer', $model)){
                             echo '<td><a href="#" class="btn btn-default btn-xs btn-danger deleteThis">删除</a></td>';
+                            if($v->status == VisaOrderCustomer::STATUS_DEFAULT){
+                                echo '<td><a href="#" data-customer-id="'.$v->id.'" class="btn btn-default btn-xs btn-info confirmIssued">出签</a></td>';
+                            }else{
+                                echo '<td>已出签</td>';
+                            }
+
                         }else{
                             echo "<td></td>";
                         }
+                        echo '<input type="hidden" name="VisaOrderCustomer[id][]" value="'.$v->id.'"/>';
                         echo "</tr>";
                     }
                 }
@@ -264,6 +267,15 @@ $form=$this->beginWidget('CActiveForm', array(
             }
         ?>
         <tr class="add-visa-before">
+            <td colspan="6">
+                <?php
+                if(!PanelUser::checkAttributesAccess('customer', $model)){
+                    echo ' <a href="#" class="btn btn-default btn-xs add-visa-person">添加</a>';
+                }
+                ?>
+            </td>
+        </tr>
+        <tr>
            <td><?php echo $form->labelEx($model,'contact_name'); ?></td>
             <td><?php
                 if(PanelUser::checkAttributesAccess('contact_name', $model)){
@@ -367,6 +379,7 @@ $form=$this->beginWidget('CActiveForm', array(
             <td><?php echo $form->labelEx($model,'sent_comment'); ?></td>
             <td colspan="3" id="sent_container">
                 <?php echo !empty($model->sent_comment) ? $model->sent_comment : ''; ?>
+                <?php echo !empty($model->agency_source) ? "<br />送签旅行社：".$model->agency_source->name : ''; ?>
             </td>
         </tr>
         <tr>
@@ -471,6 +484,20 @@ $form=$this->beginWidget('CActiveForm', array(
                 return false;
             });
         <?php } ?>
+
+        $('.confirmIssued').click(function(){
+           var customerId = $(this).data('customer-id');
+           var thisObj = $(this);
+            $.ajax({
+                type : "POST",
+                url : '<?php echo $this->createUrl('visa/confirmCustomerIssued'); ?>',
+                data : {id:customerId}
+            }).done(function(msg){
+                console.log(msg);
+                thisObj.parent().text('已出签');
+            });
+            return false;
+        });
 
 
     });

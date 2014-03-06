@@ -3,7 +3,7 @@
     <p><input type="password" name="LoginForm[password]" value="" placeholder="密码"></p>
     <p class="remember_me">
         <label>
-            <input type="checkbox" name="LoginForm[remember_me]" id="remember_me">
+            <input type="checkbox" name="LoginForm[rememberMe]" id="rememberMe" checked="checked" value="true">
             30天内有效
         </label>
     </p>

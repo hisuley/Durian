@@ -62,8 +62,8 @@ class PanelUser extends User{
            'operate'=> array('op_id','op_comment','op_time'),
            'finance'=> array('is_pay','accountant_id','pay_cert'),
            'sales'=> array('id','status','country','predict_date','type','amount','price','depart_date','source','contact_name','contact_phone','contact_address','memo','material','create_time','user_id', 'customer'),
-           'admin'=>array('id','status','country','predict_date','type','amount','price','depart_date','source','contact_name','contact_phone','contact_address','memo','material','is_pay','create_time','user_id','accountant_id','pay_cert','op_id','op_comment','op_time','sent_id','sent_comment','sent_time','issue_id','issue_comment','issue_time','back_id','back_comment','back_time', 'customer'),
-           'owner'=> array('id','status','country','predict_date','type','amount','price','depart_date','source','contact_name','contact_phone','contact_address','memo','material','create_time','user_id', 'customer'),
+           'admin'=>array('id','status','country','predict_date','type','amount','price','depart_date','source','contact_name','contact_phone','contact_address','memo','material','is_pay','create_time','user_id','accountant_id','pay_cert','op_id','op_comment','op_time','sent_id','sent_comment','sent_time','issue_id','issue_comment','issue_time','back_id','back_comment','back_time', 'customer','sent_agency_source'),
+           'owner'=> array('id','status','country','predict_date','type','amount','price','depart_date','source','contact_name','contact_phone','contact_address','memo','material','create_time','user_id', 'customer','sent_agency_source'),
            'courier_sent'=> array('sent_id','sent_comment','sent_time'),
            'courier_issue'=> array('issue_id','issue_comment','issue_time'),
            'courier_back'=> array('back_id','back_comment','back_time')
@@ -78,6 +78,14 @@ class PanelUser extends User{
 
         }
         return true;
+    }
+
+    public static function getListOp(){
+        if(in_array('admin', explode(',',Yii::app()->user->role))){
+            return '{view}{update}{delete}';
+        }else{
+            return '{view}{update}';
+        }
     }
 }
 ?>

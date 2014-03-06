@@ -9,6 +9,7 @@
     <title><?php echo CHtml::encode($this->pageTitle)."-".Yii::app()->name; ?></title>
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/static/panel/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/static/panel/css/style.css">
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/static/panel/css/print.css" type="text/css" media="print" />
     <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/static/panel/js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -22,7 +23,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="<?php echo $this->createUrl('default/index'); ?>" class="navbar-brand">Kimi Tourism</a>
+                <a href="<?php echo $this->createUrl('visa/list'); ?>" class="navbar-brand">Kimi Tourism</a>
             </div>
             <div class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
                 <?php
@@ -47,14 +48,13 @@
                     </li>
                     <li><a href="<?php echo $this->createUrl('default/logout'); ?>">退出</a></li>
                 </ul>
-                <!--
-                <form class="navbar-form navbar-right" role="search" type="GET" action="<?php echo $this->createUrl('visa/search'); ?>">
+
+                <form class="navbar-form navbar-right" role="search" type="GET" action="<?php echo $this->createUrl('visa/list'); ?>">
                     <div class="form-group">
-                        <input type="text" name="id" class="form-control" placeholder="输入订单号搜索">
+                        <input type="text" name="customer_name" class="form-control" placeholder="输入客人姓名搜索">
                     </div>
                     <button type="submit" class="btn btn-default">搜索</button>
                 </form>
-                -->
             </div>
         </div>
     </div>
