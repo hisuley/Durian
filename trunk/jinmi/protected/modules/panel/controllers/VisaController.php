@@ -110,6 +110,7 @@ class VisaController extends PanelController{
                         }
                     }
                     $criteria = new CDbCriteria;
+                    $criteria->compare('visa_order_id', $model->id, 'AND');
                     $criteria->addNotInCondition('id', $saveIds);
                     VisaOrderCustomer::model()->deleteAll($criteria);
                 }

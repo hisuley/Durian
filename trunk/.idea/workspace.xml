@@ -1,481 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74b6f384-8cb4-4801-86d7-b859aeaa5c85" name="Default" comment="Portal Verify component and function code.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/upload/panel/2014-01-12-163255.jpg" afterPath="$PROJECT_DIR$/jinmi/upload/panel/2014-01-12-163255.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/upload/panel/thumbs/2014-01-12-163255.jpg" afterPath="$PROJECT_DIR$/jinmi/upload/panel/thumbs/2014-01-12-163255.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/upload/panel/Screenshot from 2014-01-11 12:55:26.png" afterPath="$PROJECT_DIR$/jinmi/upload/panel/Screenshot from 2014-01-11 12:55:26.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/upload/panel/Screenshot from 2014-01-11 12:55:2612.png" afterPath="$PROJECT_DIR$/jinmi/upload/panel/Screenshot from 2014-01-11 12:55:2612.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/upload/panel/thumbs/Screenshot from 2014-01-11 12:55:2612.png" afterPath="$PROJECT_DIR$/jinmi/upload/panel/thumbs/Screenshot from 2014-01-11 12:55:2612.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/images/thumbs/Screenshot from 2014-01-11 12:55:2629.png" afterPath="$PROJECT_DIR$/jinmi/images/thumbs/Screenshot from 2014-01-11 12:55:2629.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/upload/panel/Screenshot from 2014-01-11 12:55:2629.png" afterPath="$PROJECT_DIR$/jinmi/upload/panel/Screenshot from 2014-01-11 12:55:2629.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/upload/panel/thumbs/Screenshot from 2014-01-11 12:55:2629.png" afterPath="$PROJECT_DIR$/jinmi/upload/panel/thumbs/Screenshot from 2014-01-11 12:55:2629.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/font/SourceCodePro-Black.otf" afterPath="$PROJECT_DIR$/jinmi/font/SourceCodePro-Black.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/font/SourceCodePro-Bold.otf" afterPath="$PROJECT_DIR$/jinmi/font/SourceCodePro-Bold.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/font/SourceCodePro-ExtraLight.otf" afterPath="$PROJECT_DIR$/jinmi/font/SourceCodePro-ExtraLight.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/font/SourceCodePro-Light.otf" afterPath="$PROJECT_DIR$/jinmi/font/SourceCodePro-Light.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/font/SourceCodePro-Regular.otf" afterPath="$PROJECT_DIR$/jinmi/font/SourceCodePro-Regular.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/font/SourceCodePro-Semibold.otf" afterPath="$PROJECT_DIR$/jinmi/font/SourceCodePro-Semibold.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/font/SourceSansPro-Black.otf" afterPath="$PROJECT_DIR$/jinmi/font/SourceSansPro-Black.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/font/SourceSansPro-BlackIt.otf" afterPath="$PROJECT_DIR$/jinmi/font/SourceSansPro-BlackIt.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/font/SourceSansPro-Bold.otf" afterPath="$PROJECT_DIR$/jinmi/font/SourceSansPro-Bold.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/font/SourceSansPro-BoldIt.otf" afterPath="$PROJECT_DIR$/jinmi/font/SourceSansPro-BoldIt.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/font/SourceSansPro-ExtraLight.otf" afterPath="$PROJECT_DIR$/jinmi/font/SourceSansPro-ExtraLight.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/font/SourceSansPro-ExtraLightIt.otf" afterPath="$PROJECT_DIR$/jinmi/font/SourceSansPro-ExtraLightIt.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/font/SourceSansPro-It.otf" afterPath="$PROJECT_DIR$/jinmi/font/SourceSansPro-It.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/font/SourceSansPro-Light.otf" afterPath="$PROJECT_DIR$/jinmi/font/SourceSansPro-Light.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/font/SourceSansPro-LightIt.otf" afterPath="$PROJECT_DIR$/jinmi/font/SourceSansPro-LightIt.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/font/SourceSansPro-Regular.otf" afterPath="$PROJECT_DIR$/jinmi/font/SourceSansPro-Regular.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/font/SourceSansPro-Semibold.otf" afterPath="$PROJECT_DIR$/jinmi/font/SourceSansPro-Semibold.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/font/SourceSansPro-SemiboldIt.otf" afterPath="$PROJECT_DIR$/jinmi/font/SourceSansPro-SemiboldIt.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/images/animated-overlay.gif" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/images/animated-overlay.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/animated-overlay.gif" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/animated-overlay.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/images/thumbs/archlogo.png" afterPath="$PROJECT_DIR$/jinmi/images/thumbs/archlogo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/upload/portal/archlogo.png" afterPath="$PROJECT_DIR$/jinmi/upload/portal/archlogo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/upload/portal/archlogo95.png" afterPath="$PROJECT_DIR$/jinmi/upload/portal/archlogo95.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/avatar.png" afterPath="$PROJECT_DIR$/jinmi/img/avatar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/zii/widgets/assets/gridview/bg.gif" afterPath="$PROJECT_DIR$/framework/zii/widgets/assets/gridview/bg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/bg_dark.png" afterPath="$PROJECT_DIR$/jinmi/img/bg_dark.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/breadcrumb.png" afterPath="$PROJECT_DIR$/jinmi/img/breadcrumb.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/checkbox_checked.png" afterPath="$PROJECT_DIR$/jinmi/img/checkbox_checked.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/checkbox_checked_dark.png" afterPath="$PROJECT_DIR$/jinmi/img/checkbox_checked_dark.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/checkbox_unchecked.png" afterPath="$PROJECT_DIR$/jinmi/img/checkbox_unchecked.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/checkbox_unchecked_dark.png" afterPath="$PROJECT_DIR$/jinmi/img/checkbox_unchecked_dark.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/dark-combo-box-bg.png" afterPath="$PROJECT_DIR$/jinmi/img/dark-combo-box-bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/dark-combo-box-bg2x.png" afterPath="$PROJECT_DIR$/jinmi/img/dark-combo-box-bg2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/dark-grips.png" afterPath="$PROJECT_DIR$/jinmi/img/dark-grips.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/dark-sprites2x.png" afterPath="$PROJECT_DIR$/jinmi/img/dark-sprites2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../architect/database_eer.mwb.bak" afterPath="$PROJECT_DIR$/../architect/database_eer.mwb.bak" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../architect/database_eer.mwb" afterPath="$PROJECT_DIR$/../architect/database_eer.mwb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/zii/widgets/assets/gridview/delete.png" afterPath="$PROJECT_DIR$/framework/zii/widgets/assets/gridview/delete.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/dialog-zone-bg.png" afterPath="$PROJECT_DIR$/jinmi/img/dialog-zone-bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/zii/widgets/assets/gridview/down.gif" afterPath="$PROJECT_DIR$/framework/zii/widgets/assets/gridview/down.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/zii/widgets/assets/listview/down.gif" afterPath="$PROJECT_DIR$/framework/zii/widgets/assets/listview/down.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/drop-down-triangle-dark.png" afterPath="$PROJECT_DIR$/jinmi/img/drop-down-triangle-dark.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/drop-down-triangle.png" afterPath="$PROJECT_DIR$/jinmi/img/drop-down-triangle.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/light-combo-box-bg.png" afterPath="$PROJECT_DIR$/jinmi/img/light-combo-box-bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/light-combo-box-bg2x.png" afterPath="$PROJECT_DIR$/jinmi/img/light-combo-box-bg2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/light-grips.png" afterPath="$PROJECT_DIR$/jinmi/img/light-grips.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/light-sprites2x.png" afterPath="$PROJECT_DIR$/jinmi/img/light-sprites2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/zii/widgets/assets/gridview/loading.gif" afterPath="$PROJECT_DIR$/framework/zii/widgets/assets/gridview/loading.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/zii/widgets/assets/listview/loading.gif" afterPath="$PROJECT_DIR$/framework/zii/widgets/assets/listview/loading.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/pop-up-triangle-dark.png" afterPath="$PROJECT_DIR$/jinmi/img/pop-up-triangle-dark.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/pop-up-triangle.png" afterPath="$PROJECT_DIR$/jinmi/img/pop-up-triangle.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/css/.sass-cache/9e19108afb7c148b15bdc282cb38fd886deb8c48/portal-login.scssc" afterPath="$PROJECT_DIR$/jinmi/css/.sass-cache/9e19108afb7c148b15bdc282cb38fd886deb8c48/portal-login.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/search-bg.png" afterPath="$PROJECT_DIR$/jinmi/img/search-bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/search-bg2x.png" afterPath="$PROJECT_DIR$/jinmi/img/search-bg2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/spinner.png" afterPath="$PROJECT_DIR$/jinmi/img/spinner.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/spinner2x.png" afterPath="$PROJECT_DIR$/jinmi/img/spinner2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-bg_flat_0_aaaaaa_40x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-bg_flat_75_ffffff_40x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-bg_flat_75_ffffff_40x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-bg_glass_55_fbf9ee_1x400.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-bg_glass_55_fbf9ee_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-bg_glass_65_ffffff_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-bg_glass_65_ffffff_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-bg_glass_75_dadada_1x400.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-bg_glass_75_dadada_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-bg_glass_75_dadada_1x400.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-bg_glass_75_dadada_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-bg_glass_75_e6e6e6_1x400.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-bg_glass_75_e6e6e6_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-bg_glass_95_fef1ec_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-bg_highlight-soft_75_cccccc_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-icons_222222_256x240.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-icons_222222_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-icons_222222_256x240.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-icons_222222_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-icons_2e83ff_256x240.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-icons_2e83ff_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-icons_2e83ff_256x240.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-icons_2e83ff_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-icons_454545_256x240.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-icons_454545_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-icons_454545_256x240.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-icons_454545_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-icons_888888_256x240.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-icons_888888_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-icons_888888_256x240.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-icons_888888_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-icons_cd0a0a_256x240.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/images/ui-icons_cd0a0a_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-icons_cd0a0a_256x240.png" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/images/ui-icons_cd0a0a_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/zii/widgets/assets/gridview/up.gif" afterPath="$PROJECT_DIR$/framework/zii/widgets/assets/gridview/up.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/zii/widgets/assets/listview/up.gif" afterPath="$PROJECT_DIR$/framework/zii/widgets/assets/listview/up.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/zii/widgets/assets/gridview/update.png" afterPath="$PROJECT_DIR$/framework/zii/widgets/assets/gridview/update.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/zii/widgets/assets/gridview/view.png" afterPath="$PROJECT_DIR$/framework/zii/widgets/assets/gridview/view.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.arcconfig" afterPath="$PROJECT_DIR$/../.arcconfig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.gitignore" afterPath="$PROJECT_DIR$/../.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/.jshintrc" afterPath="$PROJECT_DIR$/jinmi/static/ui/.jshintrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/admin/controllers/ActivityController.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/admin/controllers/ActivityController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/models/Address.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/models/Address.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/Address.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/Address.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/AddressController.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/AddressController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/AddressController.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/AddressController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/admin/AdminModule.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/admin/AdminModule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/components/BreadCrumb.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/components/BreadCrumb.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/components/CommonHelper.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/components/CommonHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/admin/controllers/DefaultController.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/admin/controllers/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/DefaultController.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/DefaultController.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/Finance.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/Finance.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/FinanceRecord.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/FinanceRecord.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/font/LICENSE.txt" afterPath="$PROJECT_DIR$/jinmi/font/LICENSE.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/MetaController.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/MetaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrder.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderAttribute.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderAttribute.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderReviewHistory.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderReviewHistory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/components/OrderHelper.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/components/OrderHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/models/OrderSource.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/models/OrderSource.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/OrderSourceController.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/OrderSourceController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/components/PanelBreadCrumb.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/components/PanelBreadCrumb.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/components/PanelController.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/components/PanelController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/PanelModule.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/PanelModule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/models/PanelOrder.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/models/PanelOrder.php" />
+    <list default="true" id="74b6f384-8cb4-4801-86d7-b859aeaa5c85" name="Default" comment="F">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/models/PanelUser.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/models/PanelUser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/PortalLogin.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/PortalLogin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/PortalMeta.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/PortalMeta.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/PortalMetaList.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/PortalMetaList.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/PortalModule.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/PortalModule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/PreDefinedAttribute.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/PreDefinedAttribute.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/PreDefinedAttributeValue.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/PreDefinedAttributeValue.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/models/User.php" afterPath="$PROJECT_DIR$/jinmi/protected/models/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/models/UserRole.php" afterPath="$PROJECT_DIR$/jinmi/protected/models/UserRole.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/Visa.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/models/Visa.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/VisaController.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/VisaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/VisaController.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/VisaController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/models/VisaOrder.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/models/VisaOrder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/models/VisaOrderCustomer.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/models/VisaOrderCustomer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/components/VisaOrderVerify.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/components/VisaOrderVerify.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/models/VisaType.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/models/VisaType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/components/WebUser.php" afterPath="$PROJECT_DIR$/jinmi/protected/components/WebUser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/runtime/application.log" afterPath="$PROJECT_DIR$/jinmi/protected/runtime/application.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/css/bootstrap.css" afterPath="$PROJECT_DIR$/jinmi/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/jinmi/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/components/views/breadCrumb.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/components/views/breadCrumb.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/default/changepass.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/default/changepass.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changes.sql" afterPath="$PROJECT_DIR$/changes.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/checkmark_bw.svg" afterPath="$PROJECT_DIR$/jinmi/img/checkmark_bw.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/deployment.xml" afterPath="$PROJECT_DIR$/../.idea/deployment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/default/error.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/default/error.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/default/error.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/default/error.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/js/exporting.js" afterPath="$PROJECT_DIR$/jinmi/js/exporting.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/default/forget.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/default/forget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/default/forgot.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/default/forgot.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/frameworkRootSettings.xml" afterPath="$PROJECT_DIR$/.idea/frameworkRootSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/hamburger_bw.svg" afterPath="$PROJECT_DIR$/jinmi/img/hamburger_bw.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/hamburger_dark.svg" afterPath="$PROJECT_DIR$/jinmi/img/hamburger_dark.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/hamburger_light.svg" afterPath="$PROJECT_DIR$/jinmi/img/hamburger_light.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/js/highcharts.js" afterPath="$PROJECT_DIR$/jinmi/js/highcharts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/views/test/img.php" afterPath="$PROJECT_DIR$/jinmi/protected/views/test/img.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/admin/views/default/index.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/admin/views/default/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/default/index.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/default/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/js/jquery-1.9.1.js" afterPath="$PROJECT_DIR$/jinmi/js/jquery-1.9.1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery-ui-i18n.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery-ui-i18n.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery-ui-i18n.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery-ui-i18n.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/jquery-ui.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/jquery-ui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery-ui.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery-ui.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery-ui.min.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery-ui.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery-ui.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery-ui.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.accordion.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.accordion.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.accordion.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.accordion.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.accordion.min.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.accordion.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.accordion.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.accordion.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.all.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.all.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.autocomplete.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.autocomplete.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.autocomplete.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.autocomplete.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.autocomplete.min.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.autocomplete.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.autocomplete.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.autocomplete.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.base.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.base.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.button.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.button.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.button.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.button.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.button.min.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.button.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.button.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.button.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.core.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.core.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.core.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.core.min.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.core.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.core.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.core.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-af.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-af.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-af.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-af.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ar-DZ.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ar-DZ.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ar-DZ.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ar-DZ.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ar.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ar.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ar.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-az.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-az.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-az.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-az.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-be.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-be.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-be.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-be.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-bg.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-bg.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-bg.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-bg.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-bs.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-bs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-bs.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-bs.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ca.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ca.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ca.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ca.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-cs.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-cs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-cs.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-cs.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-cy-GB.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-cy-GB.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-cy-GB.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-cy-GB.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-da.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-da.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-da.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-da.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-de.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-de.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-de.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-de.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-el.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-el.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-el.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-el.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-en-AU.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-en-AU.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-en-AU.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-en-AU.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-en-GB.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-en-GB.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-en-GB.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-en-GB.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-en-NZ.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-en-NZ.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-en-NZ.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-en-NZ.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-eo.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-eo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-eo.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-eo.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-es.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-es.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-es.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-es.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-et.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-et.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-et.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-et.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-eu.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-eu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-eu.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-eu.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-fa.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-fa.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-fa.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-fa.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-fi.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-fi.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-fi.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-fi.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-fo.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-fo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-fo.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-fo.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-fr-CA.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-fr-CA.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-fr-CA.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-fr-CA.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-fr-CH.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-fr-CH.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-fr-CH.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-fr-CH.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-fr.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-fr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-fr.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-fr.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-gl.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-gl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-gl.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-gl.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-he.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-he.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-he.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-he.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-hi.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-hi.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-hi.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-hi.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-hr.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-hr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-hr.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-hr.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-hu.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-hu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-hu.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-hu.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-hy.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-hy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-hy.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-hy.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-id.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-id.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-id.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-id.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-is.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-is.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-is.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-is.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-it.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-it.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-it.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-it.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ja.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ja.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ja.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ja.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ka.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ka.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ka.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ka.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-kk.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-kk.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-kk.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-kk.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-km.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-km.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-km.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-km.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ko.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ko.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ko.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ko.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ky.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ky.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ky.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ky.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-lb.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-lb.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-lb.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-lb.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-lt.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-lt.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-lt.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-lt.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-lv.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-lv.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-lv.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-lv.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-mk.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-mk.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-mk.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-mk.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ml.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ml.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ml.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ml.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ms.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ms.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ms.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ms.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-nb.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-nb.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-nb.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-nb.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-nl-BE.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-nl-BE.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-nl-BE.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-nl-BE.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-nl.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-nl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-nl.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-nl.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-nn.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-nn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-nn.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-nn.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-no.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-no.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-no.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-no.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-pl.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-pl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-pl.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-pl.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-pt-BR.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-pt-BR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-pt-BR.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-pt-BR.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-pt.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-pt.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-pt.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-pt.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-rm.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-rm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-rm.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-rm.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ro.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ro.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ro.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ro.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ru.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ru.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ru.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ru.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-sk.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-sk.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-sk.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-sk.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-sl.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-sl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-sl.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-sl.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-sq.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-sq.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-sq.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-sq.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-sr-SR.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-sr-SR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-sr-SR.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-sr-SR.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-sr.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-sr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-sr.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-sr.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-sv.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-sv.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-sv.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-sv.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ta.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-ta.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ta.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-ta.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-th.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-th.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-th.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-th.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-tj.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-tj.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-tj.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-tj.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-tr.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-tr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-tr.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-tr.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-uk.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-uk.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-uk.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-uk.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-vi.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-vi.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-vi.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-vi.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-zh-CN.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-zh-CN.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-zh-CN.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-zh-CN.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-zh-HK.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-zh-HK.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-zh-HK.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-zh-HK.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-zh-TW.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/i18n/jquery.ui.datepicker-zh-TW.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-zh-TW.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/i18n/jquery.ui.datepicker-zh-TW.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.datepicker.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.datepicker.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.datepicker.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.datepicker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.datepicker.min.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.datepicker.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.datepicker.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.datepicker.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.dialog.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.dialog.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.dialog.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.dialog.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.dialog.min.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.dialog.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.dialog.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.dialog.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.draggable.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.draggable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.draggable.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.draggable.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.droppable.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.droppable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.droppable.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.droppable.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-blind.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-blind.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-blind.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-blind.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-bounce.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-bounce.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-bounce.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-bounce.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-clip.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-clip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-clip.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-clip.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-drop.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-drop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-drop.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-drop.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-explode.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-explode.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-explode.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-explode.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-fade.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-fade.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-fade.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-fade.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-fold.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-fold.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-fold.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-fold.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-highlight.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-highlight.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-highlight.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-highlight.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-pulsate.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-pulsate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-pulsate.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-pulsate.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-scale.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-scale.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-scale.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-scale.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-shake.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-shake.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-shake.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-shake.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-slide.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-slide.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-slide.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-slide.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-transfer.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect-transfer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-transfer.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect-transfer.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.effect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.effect.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.menu.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.menu.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.menu.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.menu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.menu.min.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.menu.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.menu.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.menu.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.mouse.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.mouse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.mouse.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.mouse.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.position.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.position.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.position.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.position.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.progressbar.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.progressbar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.progressbar.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.progressbar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.progressbar.min.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.progressbar.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.progressbar.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.progressbar.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.resizable.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.resizable.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.resizable.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.resizable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.resizable.min.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.resizable.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.resizable.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.resizable.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.selectable.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.selectable.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.selectable.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.selectable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.selectable.min.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.selectable.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.selectable.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.selectable.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.slider.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.slider.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.slider.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.slider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.slider.min.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.slider.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.slider.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.slider.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.sortable.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.sortable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.sortable.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.sortable.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.spinner.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.spinner.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.spinner.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.spinner.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.spinner.min.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.spinner.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.spinner.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.spinner.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.tabs.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.tabs.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.tabs.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.tabs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.tabs.min.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.tabs.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.tabs.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.tabs.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.theme.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.theme.min.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.theme.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.tooltip.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/jquery.ui.tooltip.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.tooltip.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.tooltip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.tooltip.min.css" afterPath="$PROJECT_DIR$/jinmi/static/themes/base/minified/jquery.ui.tooltip.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.tooltip.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.tooltip.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.widget.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/jquery.ui.widget.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.widget.min.js" afterPath="$PROJECT_DIR$/jinmi/static/ui/minified/jquery.ui.widget.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/zii/widgets/assets/gridview/jquery.yiigridview.js" afterPath="$PROJECT_DIR$/framework/zii/widgets/assets/gridview/jquery.yiigridview.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/zii/widgets/assets/listview/jquery.yiilistview.js" afterPath="$PROJECT_DIR$/framework/zii/widgets/assets/listview/jquery.yiilistview.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/views/site/launchsoon.php" afterPath="$PROJECT_DIR$/jinmi/protected/views/site/launchsoon.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/address/list.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/address/list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/orderSource/list.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/orderSource/list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/list.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/address/list.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/address/list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/list.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/default/login.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/default/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/layouts/login.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/layouts/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/default/login.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/default/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/admin/views/layouts/main.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/admin/views/layouts/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/layouts/main.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/layouts/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/layouts/main.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/layouts/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/mms.php" afterPath="$PROJECT_DIR$/jinmi/mms.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/address/new.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/address/new.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/address/visatype/new.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/address/visatype/new.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/orderSource/new.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/orderSource/new.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/form/new.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/form/new.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/address/new.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/address/new.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/view/new.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/view/new.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/css/portal-login.css" afterPath="$PROJECT_DIR$/jinmi/css/portal-login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/css/portal-login.scss" afterPath="$PROJECT_DIR$/jinmi/css/portal-login.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/messages/zh_CN/portal.php" afterPath="$PROJECT_DIR$/jinmi/protected/messages/zh_CN/portal.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/components/views/review.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/components/views/review.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/search.svg" afterPath="$PROJECT_DIR$/jinmi/img/search.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/search_bw.svg" afterPath="$PROJECT_DIR$/jinmi/img/search_bw.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/search_dark.svg" afterPath="$PROJECT_DIR$/jinmi/img/search_dark.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/img/search_light.svg" afterPath="$PROJECT_DIR$/jinmi/img/search_light.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/stat.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/stat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/panel/css/style.css" afterPath="$PROJECT_DIR$/jinmi/static/panel/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/portal/css/style.css" afterPath="$PROJECT_DIR$/jinmi/static/portal/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/zii/widgets/assets/detailview/styles.css" afterPath="$PROJECT_DIR$/framework/zii/widgets/assets/detailview/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/zii/widgets/assets/gridview/styles.css" afterPath="$PROJECT_DIR$/framework/zii/widgets/assets/gridview/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/zii/widgets/assets/listview/styles.css" afterPath="$PROJECT_DIR$/framework/zii/widgets/assets/listview/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/suley.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/suley.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/css/topcoat-desktop-dark.css" afterPath="$PROJECT_DIR$/jinmi/css/topcoat-desktop-dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/css/topcoat-desktop-dark.min.css" afterPath="$PROJECT_DIR$/jinmi/css/topcoat-desktop-dark.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/css/topcoat-desktop-light.css" afterPath="$PROJECT_DIR$/jinmi/css/topcoat-desktop-light.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/css/topcoat-desktop-light.min.css" afterPath="$PROJECT_DIR$/jinmi/css/topcoat-desktop-light.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/css/topcoat-mobile-dark.css" afterPath="$PROJECT_DIR$/jinmi/css/topcoat-mobile-dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/css/topcoat-mobile-dark.min.css" afterPath="$PROJECT_DIR$/jinmi/css/topcoat-mobile-dark.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/css/topcoat-mobile-light.css" afterPath="$PROJECT_DIR$/jinmi/css/topcoat-mobile-light.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/css/topcoat-mobile-light.min.css" afterPath="$PROJECT_DIR$/jinmi/css/topcoat-mobile-light.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/js/tree.js" afterPath="$PROJECT_DIR$/jinmi/js/tree.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/trunk.iml" afterPath="$PROJECT_DIR$/.idea/trunk.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vagrant.xml" afterPath="$PROJECT_DIR$/.idea/vagrant.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/form/verify.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/form/verify.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/view.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/view.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/view/view.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/view/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/visa_form.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/visa_form.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="trunk.iws" />
@@ -502,16 +33,16 @@
       <file leaf-file-name="new.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/form/new.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="460" column="29" selection-start="20795" selection-end="20795" vertical-scroll-proportion="0.0" vertical-offset="8740" max-vertical-offset="10051">
+            <state line="201" column="26" selection-start="8723" selection-end="8723" vertical-scroll-proportion="-4.75" vertical-offset="3591" max-vertical-offset="10355">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/DefaultController.php">
+      <file leaf-file-name="view.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="67" selection-start="980" selection-end="980" vertical-scroll-proportion="0.0" vertical-offset="608" max-vertical-offset="2071">
+            <state line="71" column="26" selection-start="1894" selection-end="1894" vertical-scroll-proportion="0.5966981" vertical-offset="748" max-vertical-offset="3192">
               <folding />
             </state>
           </provider>
@@ -526,10 +57,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="list.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="61" selection-start="2465" selection-end="2465" vertical-scroll-proportion="0.3275862" vertical-offset="1140" max-vertical-offset="2546">
+            <state line="49" column="10" selection-start="1462" selection-end="1462" vertical-scroll-proportion="-7.464286" vertical-offset="627" max-vertical-offset="2717">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="m140218_030547_add_sent_visa_travel_agency_column.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jinmi/protected/migrations/m140218_030547_add_sent_visa_travel_agency_column.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="58" selection-start="151" selection-end="169" vertical-scroll-proportion="-4.071429" vertical-offset="0" max-vertical-offset="570">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CDbConnection.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/db/CDbConnection.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="377" column="13" selection-start="14160" selection-end="14160" vertical-scroll-proportion="-8.035714" vertical-offset="6805" max-vertical-offset="15390">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jinmi/protected/config/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="68" column="10" selection-start="1753" selection-end="1943" vertical-scroll-proportion="-11.535714" vertical-offset="969" max-vertical-offset="2128">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jinmi/protected/config/console.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="13" selection-start="529" selection-end="529" vertical-scroll-proportion="-11.535714" vertical-offset="0" max-vertical-offset="874">
               <folding />
             </state>
           </provider>
@@ -538,37 +105,10 @@
       <file leaf-file-name="VisaOrder.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/VisaOrder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="11" selection-start="5888" selection-end="5888" vertical-scroll-proportion="3.392857" vertical-offset="2261" max-vertical-offset="3629">
+            <state line="80" column="21" selection-start="3689" selection-end="3689" vertical-scroll-proportion="-1.5090909" vertical-offset="1342" max-vertical-offset="3705">
               <folding>
-                <marker date="1391755192066" expanded="true" signature="7485:7542" placeholder="SELECT sum(p..." />
+                <marker date="1392696464703" expanded="true" signature="7701:7758" placeholder="SELECT sum(p..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/layouts/login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="25" selection-start="760" selection-end="760" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="684">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="changepass.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/default/changepass.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="3" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="1007">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/models/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="41" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="1083">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -576,16 +116,7 @@
       <file leaf-file-name="PanelUser.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/PanelUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="1672">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PanelController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/components/PanelController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="14" selection-start="1442" selection-end="1442" vertical-scroll-proportion="0.0" vertical-offset="627" max-vertical-offset="1045">
+            <state line="70" column="33" selection-start="3078" selection-end="3078" vertical-scroll-proportion="-15.357142" vertical-offset="900" max-vertical-offset="1748">
               <folding />
             </state>
           </provider>
@@ -599,6 +130,11 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Suley&lt;dearsuley@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="SYNC_SETTING" value="DONT" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -611,8 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/PortalModule.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/views/default/error.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/components/OrderHelper.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/view.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderReviewHistory.php" />
@@ -647,7 +181,6 @@
         <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/components/PanelController.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/address/list.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/orderSource/list.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/view.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/address/new.php" />
         <option value="$PROJECT_DIR$/jinmi/static/panel/css/style.css" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/VisaController.php" />
@@ -657,11 +190,14 @@
         <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/layouts/login.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/default/changepass.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/DefaultController.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/models/PanelUser.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/form/new.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/migrations/m140218_030547_add_sent_visa_travel_agency_column.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/config/console.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/list.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/models/VisaOrder.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/models/PanelUser.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/form/new.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/view.php" />
       </list>
     </option>
   </component>
@@ -752,6 +288,262 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="visa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="visa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -782,6 +574,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1160" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="SearchEverywhereHistory" value="fi" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -842,7 +635,19 @@
       <created>1390624344846</created>
       <updated>1390624344846</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Create database migrations files&#10;">
+      <created>1392693238635</created>
+      <updated>1392693238635</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Change console db configuration files">
+      <created>1392694662293</created>
+      <updated>1392694662293</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fix visa order list style&#10;Add search filter order source">
+      <created>1392696220121</created>
+      <updated>1392696220121</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -852,21 +657,21 @@
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28864864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13258786" sideWeight="0.7413793" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.122068234" sideWeight="0.67098165" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.32901832" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913843" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.32901832" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913843" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17750533" sideWeight="0.67098165" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286638" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -904,38 +709,24 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Portal Verify component and function code." />
     <MESSAGE value="Finish panel system bootstrap stage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish panel system bootstrap stage" />
+    <MESSAGE value="Database upgrade to support &quot;sent-visa travel agency method&quot;" />
+    <MESSAGE value="Create database migrations files&#10;" />
+    <MESSAGE value="Change console db configuration files" />
+    <MESSAGE value="Fix visa order list style&#10;Add search filter order source" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix visa order list style&#10;Add search filter order source" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jinmi/js/tree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="3" selection-start="727" selection-end="728" vertical-scroll-proportion="0.250497" vertical-offset="0" max-vertical-offset="1006" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/visa_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="14" selection-start="856" selection-end="856" vertical-scroll-proportion="0.27579162" vertical-offset="0" max-vertical-offset="3546" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/AddressController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="29" selection-start="0" selection-end="1551" vertical-scroll-proportion="-14.0" vertical-offset="0" max-vertical-offset="900" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/PortalMeta.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1006" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/MetaController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="14" selection-start="1878" selection-end="1878" vertical-scroll-proportion="-26.925926" vertical-offset="101" max-vertical-offset="1080" />
@@ -1096,11 +887,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="879" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="10" selection-start="3598" selection-end="3598" vertical-scroll-proportion="-5.428571" vertical-offset="2166" max-vertical-offset="3078" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/default/error.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="879" />
@@ -1142,20 +928,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/PanelUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="1672">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/form/new.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="460" column="29" selection-start="20795" selection-end="20795" vertical-scroll-proportion="0.0" vertical-offset="8740" max-vertical-offset="10051">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/default/changepass.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="3" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="1007">
@@ -1177,18 +949,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/VisaOrder.php">
+    <entry file="file://$PROJECT_DIR$/framework/db/CDbConnection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="11" selection-start="5888" selection-end="5888" vertical-scroll-proportion="3.392857" vertical-offset="2261" max-vertical-offset="3629">
-          <folding>
-            <marker date="1391755192066" expanded="true" signature="7485:7542" placeholder="SELECT sum(p..." />
-          </folding>
+        <state line="377" column="13" selection-start="14160" selection-end="14160" vertical-scroll-proportion="-8.035714" vertical-offset="6805" max-vertical-offset="15390">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="10" selection-start="1753" selection-end="1943" vertical-scroll-proportion="-11.535714" vertical-offset="969" max-vertical-offset="2128">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/config/console.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="13" selection-start="529" selection-end="529" vertical-scroll-proportion="-11.535714" vertical-offset="0" max-vertical-offset="874">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="61" selection-start="2465" selection-end="2465" vertical-scroll-proportion="0.3275862" vertical-offset="1140" max-vertical-offset="2546">
+        <state line="49" column="10" selection-start="1462" selection-end="1462" vertical-scroll-proportion="-7.464286" vertical-offset="627" max-vertical-offset="2717">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/VisaOrder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="21" selection-start="3689" selection-end="3689" vertical-scroll-proportion="-1.5090909" vertical-offset="1342" max-vertical-offset="3705">
+          <folding>
+            <marker date="1392696464703" expanded="true" signature="7701:7758" placeholder="SELECT sum(p..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/PanelUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="33" selection-start="3078" selection-end="3078" vertical-scroll-proportion="-15.357142" vertical-offset="900" max-vertical-offset="1748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/form/new.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="201" column="26" selection-start="8723" selection-end="8723" vertical-scroll-proportion="-4.75" vertical-offset="3591" max-vertical-offset="10355">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/migrations/m140218_030547_add_sent_visa_travel_agency_column.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="58" selection-start="151" selection-end="169" vertical-scroll-proportion="-4.071429" vertical-offset="0" max-vertical-offset="570">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="26" selection-start="1894" selection-end="1894" vertical-scroll-proportion="0.5966981" vertical-offset="748" max-vertical-offset="3192">
           <folding />
         </state>
       </provider>
