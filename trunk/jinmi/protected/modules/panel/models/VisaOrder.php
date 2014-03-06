@@ -7,7 +7,7 @@
  */
 
 class VisaOrder extends CActiveRecord{
-    public $id,$status,$country,$predict_date, $type,$amount,$price,$depart_date,$source,$contact_name,$contact_phone,$contact_address,$memo,$material,$is_pay,$create_time, $user_id,$accountant_id ,$pay_cert,$op_id ,$op_comment ,$op_time ,$sent_id ,$sent_comment ,$sent_time ,$issue_id ,$issue_comment,$issue_time,$back_id,$back_comment,$back_time, $sent_agency_source, $search_customer;
+    public $id,$status,$country,$predict_date, $type,$amount,$price,$depart_date,$source,$contact_name,$contact_phone,$contact_address,$memo,$material,$is_pay,$create_time, $user_id,$accountant_id ,$pay_cert,$op_id ,$op_comment ,$op_time ,$sent_id ,$sent_comment ,$sent_time ,$issue_id ,$issue_comment,$issue_time,$back_id,$back_comment,$back_time, $sent_agency_source, $search_customer, $delete_time, $delete_id, $delete_comment;
     
     const STATUS_SALES_ORDER = 'sales_ordered';
     const STATUS_OP_CONFIRM = 'op_confirm';
@@ -31,7 +31,7 @@ class VisaOrder extends CActiveRecord{
         return array(
             'status' => '状态',
             'country' => '国家',
-            'predict_date' => '预测出签', 'type' => '类型','amount' => '人数','price' => '价格','depart_date' => '出发日期','source' => '订单来源','contact_name' => '联系人姓名','contact_phone' => '电话','contact_address' => '地址','memo' => '备注','material' => '材料','is_pay' => '支付状态','create_time' => '下单时间', 'user_id' => '下单人','accountant_id' => '财务审核','pay_cert' => '支付凭证','op_id' => '操作人','op_comment' => '操作备注','op_time' => '操作时间','sent_id' => '送签人','sent_comment' => '送签备注','sent_time' => '送签时间','issue_id' => '出签人','issue_comment' => '出签备注','issue_time' => '出签时间','back_id' => '物流操作','back_comment' => '物流信息','back_time'=>'物流时间','customer'=>'客户信息', 'order_type'=>'订单信息','sent_agency_source'=>'送签旅行社'
+            'predict_date' => '预测出签', 'type' => '类型','amount' => '人数','price' => '价格','depart_date' => '出发日期','source' => '订单来源','contact_name' => '联系人姓名','contact_phone' => '电话','contact_address' => '地址','memo' => '备注','material' => '材料','is_pay' => '支付状态','create_time' => '下单时间', 'user_id' => '下单人','accountant_id' => '财务审核','pay_cert' => '支付凭证','op_id' => '操作人','op_comment' => '操作备注','op_time' => '操作时间','sent_id' => '送签人','sent_comment' => '送签备注','sent_time' => '送签时间','issue_id' => '出签人','issue_comment' => '出签备注','issue_time' => '出签时间','back_id' => '物流操作','back_comment' => '物流信息','back_time'=>'物流时间','customer'=>'客户信息', 'order_type'=>'订单信息','sent_agency_source'=>'送签旅行社','delete_id'=>'删除人员', 'delete_comment'=>'删除理由', 'delete_time'=>'删除时间'
         );
     }
     public static function model($className = __CLASS__){
@@ -82,7 +82,7 @@ class VisaOrder extends CActiveRecord{
     public function rules(){
         return array(
             //array('id, status,country,predict_date,type,amount,price,depart_date,source,contact_name,contact_phone,contact_address,memo,material,is_pay,create_time, user_id,accountant_id ,pay_cert,op_id ,op_comment ,op_time ,sent_id ,sent_comment ,sent_time ,issue_id ,issue_comment,issue_time,back_id,back_comment,back_time','safe',),
-            array('id, status,depart_date,memo,create_time, user_id,accountant_id ,pay_cert,op_id ,op_comment ,op_time ,sent_id ,sent_comment ,sent_time ,issue_id ,issue_comment,issue_time,back_id,back_comment,back_time,is_pay,sent_agency_source','safe'),
+            array('id, status,depart_date,memo,create_time, user_id,accountant_id ,pay_cert,op_id ,op_comment ,op_time ,sent_id ,sent_comment ,sent_time ,issue_id ,issue_comment,issue_time,back_id,back_comment,back_time,is_pay,sent_agency_source, delete_id, delete_comment, delete_time','safe'),
             array('price,country,predict_date,type,amount,price,source,contact_name,contact_phone,material,amount', 'required'),
             array('country', 'numerical'),
             array('predict_date', 'numerical'),

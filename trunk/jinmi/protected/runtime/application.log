@@ -11381,3 +11381,4 @@ in /home/suley/Code/Durian/trunk/jinmi/index.php (13)
 2014/01/25 12:30:55 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `visa_type` `t` WHERE `t`.`country_id`=:yp0
 in /home/suley/Code/Durian/trunk/jinmi/protected/modules/panel/controllers/AddressController.php (111)
 in /home/suley/Code/Durian/trunk/jinmi/index.php (13)
+2014/03/06 18:07:34 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jinmi.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.

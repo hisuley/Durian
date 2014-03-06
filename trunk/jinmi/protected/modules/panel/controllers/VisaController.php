@@ -148,17 +148,16 @@ class VisaController extends PanelController{
     public function actionDelete($id){
         $model = VisaOrder::model()->findByPk($id);
         if(!empty($_POST['VisaOrder'])){
-
-        }
-        if(VisaOrder::deleteVisaRecord($id)){
-            if(Yii::app()->request->isAjaxRequest){
-                echo 'ok';
-            }else{
+            $model->status = VisaOrder::STATUS_DELETE;
+            $model->delete_comment = $_POST['VisaOrder']['delete_comment'];
+            $model->delete_id = Yii::app()->user->id;
+            $model->delete_time = strtotime('now');
+            if($model->save()){
                 Yii::app()->user->setFlash('success', '删除成功，编号为'.$id."的订单已经被删除。");
                 $this->redirect(array('visa/list'));
             }
-
         }
+        $this->render('form/delete');
     }
 
     public function actionVerify($id, $type){
