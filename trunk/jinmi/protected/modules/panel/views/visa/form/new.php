@@ -8,16 +8,28 @@
 
 $form=$this->beginWidget('CActiveForm', array(
     'id'=>'order-form',
-    'enableClientValidation' => true
+    'enableClientValidation' => true,
+    'clientOptions'=> array('validateOnSubmit'=>true,
+        'afterValidate'=>'js:function(form, data, hasError)
+                                        {
+                                            if(hasError){
+                                                return false;
+                                            }else{
+                                                return true;
+                                            }
+
+                                        }'
+    ),
+    'htmlOptions' => array('enctype' => 'multipart/form-data'),
 ));
 ?>
 <?php echo $form->errorSummary($model); ?>
-<form method="post">
     <table class="table table-bordered">
         <tbody>
         <tr>
             <td><?php echo $form->labelEx($model,'user_id'); ?></td>
-            <td><?php echo Yii::app()->user->username; ?></td>
+            <td><?php
+                echo empty($model->user_id) ? Yii::app()->user->username : User::getUserRealname($model->user_id); ?></td>
             <td><?php echo $form->labelEx($model,'status'); ?></td>
             <td>
                 <?php if(!empty($model->status)){
@@ -153,9 +165,8 @@ $form=$this->beginWidget('CActiveForm', array(
                 if(PanelUser::checkAttributesAccess('amount', $model)){
                     echo $model->amount;
                 }else{
-                    echo $form->textfield($model, 'amount', array('readonly'=> PanelUser::checkAttributesAccess('amount', $model, true)));
+                    echo $form->textfield($model, 'amount', array('readonly'=> true));
                     echo $form->error($model,'amount');
-                    echo '<input type="checkbox" class="unlock-amount" />解锁';
                 }
                 ?>
 
@@ -434,12 +445,11 @@ $form=$this->beginWidget('CActiveForm', array(
         </tr>
         </tbody>
     </table>
-</form>
 <script type="text/javascript">
     $(document).ready(function(){
         $('.add-visa-person').click(function(){
             var personCount = $('.visa-person-item').length+1;
-            var visaHtml = '<tr class="visa-person-item"><td><label>客人'+personCount+'姓名：</label></td><td><input type="text" name="VisaOrderCustomer[name][]"></td><td><label>护照号：</label></td><td><input type="text"  name="VisaOrderCustomer[passport][]"></td><td><a href="#" class="btn btn-default btn-xs btn-danger deleteThis">删除</a></td></tr>';
+            var visaHtml = '<tr class="visa-person-item"><td><label>客人'+personCount+'姓名：</label></td><td><input type="text" name="VisaOrderCustomer[name][]"></td><td><label>护照号：</label></td><td><input type="text"  name="VisaOrderCustomer[passport][]"></td><td><a href="#" class="btn btn-default btn-xs btn-danger deleteThis">删除</a><input type="hidden" name="VisaOrderCustomer[id][]" value="0"/></td></tr>';
             $('.add-visa-before').before(visaHtml);
             $('#VisaOrder_amount').val(personCount);
             return false;

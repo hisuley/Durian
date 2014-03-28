@@ -8,16 +8,18 @@
 
 ?>
 <?php echo CHtml::link('添加订单', $this->createUrl('visa/new'), array('class'=>'alink-btn')); ?>
+<?php echo CHtml::link('导出数据', $this->createUrl('visa/export'), array('class'=>'alink-btn', 'id'=>'export-button')); ?>
 <?php
 $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider' => $model->search(),
     'filter'=> $model,
-    'ajaxUpdate' => true,
+    'ajaxUpdate' => false,
     'afterAjaxUpdate' => 'reinstallDatePicker', // (#1)
     'pager' => array(
         'maxButtonCount' => '7',
         'pageSize' => 25,
     ),
+    'enableHistory'=>true,
     'summaryText' => '显示第{start}条至{end}条记录|共{count}条记录',
     'template' => '{pager}{summary}{items}{pager}',
     'columns' => array(
@@ -88,7 +90,8 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'value'=> 'date("Y-m-d H:i", $data->create_time)',
             'filter'=> $this->widget('zii.widgets.jui.CJuiDatePicker', array(
                     'model'=>$model,
-                    'attribute'=>'create_time',
+                    'attribute'=>'start_time',
+                    'value' => $model->start_time,
                     'language' => 'zh-cn',
                     'htmlOptions' => array(
                         'id' => 'datepicker_for_create_time',
@@ -103,7 +106,26 @@ $this->widget('zii.widgets.grid.CGridView', array(
                         'changeYear' => true,
                         'showButtonPanel' => true,
                     )
-                ), true), // (#4)
+                ), true). '<br> To <br> ' . $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+            'model'=>$model,
+             'attribute'=>'end_time',
+            'name' => 'end_time',
+            'language' => 'zh-cn',
+            'value' => $model->end_time,
+            // additional javascript options for the date picker plugin
+            'options'=>array(
+                'showOn' => 'focus',
+                'showAnim'=>'fold',
+                'dateFormat'=>'yy-mm-dd',
+                'changeMonth' => 'true',
+                'changeYear'=>'true',
+                'constrainInput' => 'false',
+            ),
+            'htmlOptions'=>array(
+                'style'=>'height:20px;width:130px',
+            ),
+// DONT FORGET TO ADD TRUE this will create the datepicker return as string
+        ),true),
         ),
         /*array(
             'name'=>'issue_time',
@@ -137,10 +159,11 @@ $this->widget('zii.widgets.grid.CGridView', array(
                 'target'=>'__blank'
             ),
             'updateButtonOptions'=> array(
-                'target'=>'__blank'
+                'target'=>'__blank',
             ),
             'deleteButtonOptions'=>array(
-                'url'=>'Yii::app()->createUrl("panel/visa/delete", array("id"=>$model->id))'
+                'url'=>'Yii::app()->createUrl("panel/visa/delete", array("id"=>$model->id))',
+                'visible'=>'$data->status != VisaOrder::STATUS_DELETE'
             ),
             'buttons'=>array(
               'delete'=>array(
@@ -154,9 +177,17 @@ $this->widget('zii.widgets.grid.CGridView', array(
 // (#5)
 Yii::app()->clientScript->registerScript('re-install-date-picker', "
 function reinstallDatePicker(id, data) {
-    $('#datepicker_for_issue_time').datepicker();
-    $('#datepicker_for_depart_date').datepicker();
+    $('#end_time').datepicker();
     $('#datepicker_for_create_time').datepicker();
 }
 ");
 ?>
+<script type="text/javascript">
+    $('#export-button').on('click',function() {
+        var url = $('div.keys').attr('title');
+        url = url.replace('list','export');
+        console.log(url);
+        window.location = url;
+        return false;
+    });
+</script>

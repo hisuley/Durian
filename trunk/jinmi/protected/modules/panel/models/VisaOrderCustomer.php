@@ -26,4 +26,9 @@ class VisaOrderCustomer extends CActiveRecord{
             array('name, passport, create_date, status, visa_order_id', 'safe')
         );
     }
+    public function attributeLabels(){
+        return array(
+          'name'=>'姓名', 'passport'=>'护照'
+        );
+    }
 }

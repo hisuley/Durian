@@ -8,7 +8,9 @@
 
 class VisaOrder extends CActiveRecord{
     public $id,$status,$country,$predict_date, $type,$amount,$price,$depart_date,$source,$contact_name,$contact_phone,$contact_address,$memo,$material,$is_pay,$create_time, $user_id,$accountant_id ,$pay_cert,$op_id ,$op_comment ,$op_time ,$sent_id ,$sent_comment ,$sent_time ,$issue_id ,$issue_comment,$issue_time,$back_id,$back_comment,$back_time, $sent_agency_source, $search_customer, $delete_time, $delete_id, $delete_comment;
-    
+
+    public $start_time, $end_time;
+    public $pagination = array('pageSize'=>25);
     const STATUS_SALES_ORDER = 'sales_ordered';
     const STATUS_OP_CONFIRM = 'op_confirm';
     const STATUS_SENTOUT = 'visa_sent';
@@ -82,7 +84,7 @@ class VisaOrder extends CActiveRecord{
     public function rules(){
         return array(
             //array('id, status,country,predict_date,type,amount,price,depart_date,source,contact_name,contact_phone,contact_address,memo,material,is_pay,create_time, user_id,accountant_id ,pay_cert,op_id ,op_comment ,op_time ,sent_id ,sent_comment ,sent_time ,issue_id ,issue_comment,issue_time,back_id,back_comment,back_time','safe',),
-            array('id, status,depart_date,memo,create_time, user_id,accountant_id ,pay_cert,op_id ,op_comment ,op_time ,sent_id ,sent_comment ,sent_time ,issue_id ,issue_comment,issue_time,back_id,back_comment,back_time,is_pay,sent_agency_source, delete_id, delete_comment, delete_time','safe'),
+            array('id, status,depart_date,memo,create_time, user_id,accountant_id ,pay_cert,op_id ,op_comment ,op_time ,sent_id ,sent_comment ,sent_time ,issue_id ,issue_comment,issue_time,back_id,back_comment,back_time,is_pay,sent_agency_source, delete_id, delete_comment, delete_time, start_time, end_time','safe'),
             array('price,country,predict_date,type,amount,price,source,contact_name,contact_phone,material,amount', 'required'),
             array('country', 'numerical'),
             array('predict_date', 'numerical'),
@@ -118,17 +120,18 @@ class VisaOrder extends CActiveRecord{
         $criteria->compare('order.id', $this->id);
         $criteria->compare('country', $this->country);
         $criteria->compare('is_pay', $this->is_pay);
-        $criteria->compare('status', $this->status);
         $criteria->compare('user_id', $this->user_id);
         $criteria->compare('source', $this->source);
-        if(!empty($_GET['customer_name'])){
-            $this->search_customer = trim($_GET['customer_name']);
-            $criteria->compare('customer.name', $this->search_customer, true);
-            $criteria->with = array('customer'=>array('select'=>'customer.name','together'=>true));
-            //$criteria->join = 'visa_order_customer';
+        $criteria->compare('amount', $this->amount);
+        if(empty($this->status)){
+            $criteria->compare('order.status !', VisaOrder::STATUS_DELETE);
+        }else{
+            $criteria->compare('order.status', $this->status);
         }
-        $criteria->addBetweenCondition('order.create_time', strtotime($this->create_time), strtotime($this->create_time." +1 days"));
-        $criteria->addBetweenCondition('order.issue_time', strtotime($this->issue_time), strtotime($this->issue_time." +1 days"));
+
+        if(!empty($this->start_time) && !empty($this->end_time)){
+            $criteria->addBetweenCondition('create_time', strtotime($this->start_time), strtotime($this->end_time." +1 days"));
+        }
 
         return $criteria;
     }
@@ -154,32 +157,39 @@ class VisaOrder extends CActiveRecord{
         return $this->commandBuilder->createFindCommand($this->getTableSchema(),$criteria)->queryScalar();
     }
 
-    public function search(){
+    public function search($params = array('order'=>'order.create_time DESC', 'pagination'=>array('pageSize'=>'25'))){
         $criteria = new CDbCriteria;
 
         $criteria->alias = 'order';
         $criteria->compare('order.id', $this->id);
         $criteria->compare('country', $this->country);
         $criteria->compare('is_pay', $this->is_pay);
-        $criteria->compare('status', $this->status);
+        $criteria->compare('amount', $this->amount);
         $criteria->compare('user_id', $this->user_id);
         $criteria->compare('source', $this->source);
+        if(empty($this->status)){
+            $criteria->compare('order.status !', VisaOrder::STATUS_DELETE);
+        }else{
+            $criteria->compare('order.status', $this->status);
+        }
+        if(!empty($this->start_time) && !empty($this->end_time)){
+            $criteria->addBetweenCondition('order.create_time', strtotime($this->start_time), strtotime($this->end_time." +1 days"));
+        }
+
+
         if(!empty($_GET['customer_name'])){
             $this->search_customer = trim($_GET['customer_name']);
             $criteria->compare('customer.name', $this->search_customer, true);
             $criteria->with = array('customer'=>array('select'=>'customer.name','together'=>true));
             //$criteria->join = 'visa_order_customer';
         }
-        $criteria->addBetweenCondition('order.create_time', strtotime($this->create_time), strtotime($this->create_time." +1 days"));
-        $criteria->addBetweenCondition('order.issue_time', strtotime($this->issue_time), strtotime($this->issue_time." +1 days"));
+
         return new CActiveDataProvider('VisaOrder', array(
             'criteria' => $criteria,
             'sort' => array(
-                'defaultOrder'=>'order.create_time DESC'
+                'defaultOrder'=>$params['order']
             ),
-            'pagination' => array (
-                'pageSize' => '25'
-              )
+            'pagination' => $params['pagination']
         ));
     }
 
@@ -225,6 +235,14 @@ class VisaOrder extends CActiveRecord{
         }
 
         return $data;
+    }
+
+    public function beforeDelete(){
+        $name = Yii::app()->user->name;
+        $id = Yii::app()->user->id;
+        
+        parent::beforeDelete();
+        return true;
     }
 
     public function afterDelete(){

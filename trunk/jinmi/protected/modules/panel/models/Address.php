@@ -105,4 +105,10 @@ class Address extends CActiveRecord{
         }
         return $resultArray;
     }
+
+    public function attributeLabels(){
+        return array(
+            'name'=>'国家'
+        );
+    }
 }

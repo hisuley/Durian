@@ -98,6 +98,7 @@ $this->widget('zii.widgets.CDetailView', array(
         array(
             'name'=>'memo',
             'label'=>'备注',
+            'value'=> str_replace("\n", '<br />', $model->memo),
             'type'=>'raw'
         ),
         array(
@@ -155,6 +156,18 @@ $this->widget('zii.widgets.CDetailView', array(
             'label'=>'物流信息',
             'type'=>'raw',
             'value'=> $model->back_comment
+        ),
+        array(
+            'name'=>'delete_id',
+            'label'=>'删除操作',
+            'type'=>'raw',
+            'value'=> User::getUserRealname($model->delete_id)."[删除时间：".dateWrapper('Y-m-d', $model->delete_time)."]"
+        ),
+        array(
+            'name'=>'delete_comment',
+            'label'=>'删除理由',
+            'type'=>'raw',
+            'value'=> $model->delete_comment
         )
     ),
 ));
