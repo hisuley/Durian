@@ -1,30 +1,7 @@
 <?php
 
-class DefaultController extends PanelController
+class DefaultController extends YutongController
 {
-    public $label = "默认";
-    public function getLabel($labelName){
-        $label = array('index'=>'首页', 'login'=>'登录', 'logout'=>'注销', 'upload'=>'上传', 'changepass'=>'修改密码');
-        return $label[$labelName];
-    }
-    public $subMenu;
-    public function beforeAction(){
-        $this->subMenu = $this->getSubMenu();
-        return parent::beforeAction();
-    }
-
-    private function getSubMenu(){
-        return array(
-            array(
-                'label'=>'退出',
-                'url'=> array('default/logout')
-            ),
-            array(
-                'label'=>'修改密码',
-                'url'=> array('default/changepass')
-            )
-        );
-    }
 
     public function actionChangepass(){
         $this->pageTitle = "修改密码";
@@ -60,6 +37,7 @@ class DefaultController extends PanelController
     }
 	public function actionIndex()
 	{
+        $this->pageTitle = "欢迎使用宇通签证系统";
 		$this->render('index');
 	}
 	public function actionLogin(){

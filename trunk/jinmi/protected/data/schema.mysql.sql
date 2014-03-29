@@ -123,3 +123,26 @@ CREATE TABLE visa_type(
 )
 
 alter table order_source add(contact_name varchar(255) not null, contact_phone varchar(255) not null, contact_address varchar(255) not null);
+
+CREATE TABLE yutong_visa_goods(
+  id int primary key auto_increment,
+  country_id int not null,
+  type_id int not null,
+  workdays smallint not null,
+  market_price decimal(10,2) not null,
+  price decimal(10,2) not null,
+  valid_period char(80) not null,
+  stay_period char(255) not null,
+  entry_times smallint not null,
+  create_time int not null,
+);
+
+CREATE TABLE yutong_visa_order_info(
+  id int primary key auto_increment,
+  goods_id int not null,
+  amount smallint not null,
+  price decimal(10,2) not null,
+  comment char(255) not null,
+  user_id int not null,
+  create_time int not null,
+);

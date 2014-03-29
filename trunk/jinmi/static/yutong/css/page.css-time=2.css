@@ -1,0 +1,36 @@
+.page
+{
+    margin: 10px 0 10px 10px;
+}
+.page label
+{
+    clear:both;
+    *padding:2px 5px 2px 5px;
+    display:inline-block;
+    border:1px solid #91b3e6;
+    font-size: 12px;
+    margin-right:3px;
+    position:relative;
+    *top:-2px;
+    padding:4px 5px 2px 5px;
+}
+
+.page .selectedpage
+{
+    clear:both;
+    color:Black;
+    position:relative;
+    *top:-1px;
+    *padding:2px 5px 1px 5px;
+    margin-right:-3px;
+    margin-left:-6px;
+}
+.page a
+{
+    clear:both;
+    padding:3px 5px 3px 5px;
+    display:inline-block;
+    border:1px solid #91b3e6;
+    font-size: 12px;
+    margin-right:3px;
+}

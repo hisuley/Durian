@@ -1,6 +1,6 @@
 <?php
 
-class PanelModule extends CWebModule
+class YutongModule extends CWebModule
 {
 	public function init()
 	{
@@ -9,11 +9,11 @@ class PanelModule extends CWebModule
 
 		// import the module-level models and components
 		$this->setImport(array(
-			'panel.models.*',
-			'panel.components.*',
+			'yutong.models.*',
+			'yutong.components.*',
 			'application.extensions.EAjaxUpload.*',
 		));
-		$this->layoutPath = Yii::getPathofAlias('panel.views.layouts');
+		$this->layoutPath = Yii::getPathofAlias('yutong.views.layouts');
 		$this->layout = 'main';
 	}
 
@@ -24,7 +24,7 @@ class PanelModule extends CWebModule
 		{
 			// this method is called before any module controller action is performed
 			// you may place customized code here
-            Yii::app()->errorHandler->errorAction = 'panel/default/error';
+            Yii::app()->errorHandler->errorAction = 'yutong/default/error';
 			return true;
 		}
 		else

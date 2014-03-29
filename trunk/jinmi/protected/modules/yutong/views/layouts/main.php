@@ -1,87 +1,1273 @@
 <?php
-    Yii::app()->clientScript->registerCoreScript('jquery');
+Yii::app()->clientScript->registerCoreScript('jquery');
 ?>
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo CHtml::encode($this->pageTitle)."-".Yii::app()->name; ?></title>
-    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/static/panel/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/static/panel/css/style.css">
-    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/static/panel/css/print.css" type="text/css" media="print" />
-    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/static/panel/js/bootstrap.min.js"></script>
+    <title><?php echo CHtml::encode($this->pageTitle) . " - 宇通签证网"; ?></title>
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/static/yutong/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/static/yutong/css/style.css">
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/static/yutong/css/print.css"
+          type="text/css" media="print"/>
+    <script type="text/javascript"
+            src="<?php echo Yii::app()->request->baseUrl; ?>/yutong/panel/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container-wrapper">
-    <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-                    <span class="sr-only">转换导航</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="<?php echo $this->createUrl('visa/list'); ?>" class="navbar-brand">Kimi Tourism</a>
-            </div>
-            <div class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-                <?php
-                $this->widget('zii.widgets.CMenu', array(
-                    'items' => $this->menu,
-                    'encodeLabel' => false,
-                    'htmlOptions' => array(
-                        'class' => 'nav navbar-nav', //You can customize this for your application
-                    ),
-                    'itemCssClass' => 'dropdown',
-                    'submenuHtmlOptions' => array(
-                        'class' => 'dropdown-menu'
-                    )
-                ));?>
-                <ul class="nav navbar-nav navbar-right">
+<script type="text/javascript">
+var isAuth = 'False' == 'True';
 
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo Yii::app()->user->username; ?> <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="<?php echo $this->createUrl('default/changepass'); ?>">修改密码</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="<?php echo $this->createUrl('default/logout'); ?>">退出</a></li>
-                </ul>
+/*显示顶部弹出层*/
+function showTpopup(ct, pt, negativeTop, iseb) {
+    var cte = $(ct);
+    var pte = $(pt);
 
-                <form class="navbar-form navbar-right" role="search" type="GET" action="<?php echo $this->createUrl('visa/list'); ?>">
-                    <div class="form-group">
-                        <input type="text" name="customer_name" class="form-control" placeholder="输入客人姓名搜索">
-                    </div>
-                    <button type="submit" class="btn btn-default">搜索</button>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="wrapper">
-        <?php $this->widget('zii.widgets.CBreadcrumbs', array('links'=>$this->breadcrumbs, 'homeLink'=>CHtml::link('首页', $this->createUrl('visa/list')))); ?>
-        <div class="left-column">
-            <?php
-                if(!empty($this->subMenu)){
-                    $this->widget('zii.widgets.CMenu', array(
-                        'items' => $this->subMenu,
-                        'encodeLabel' => false,
-                        'htmlOptions' => array(
-                            'class' => 'sub-menu' //You can customize this for your application
-                        )
-                    ));
-                }
-            ?>
-        </div>
-        <div class="right-column">
-            <?php
-            foreach(Yii::app()->user->getFlashes() as $key => $message) {
-                echo '<div class="alert alert-' . $key . '">' . $message . "</div>";
+    if (iseb != "N")
+        cte.css({ "background-color": "white", color: "Black", "border-left": "1px solid black" });
+
+    var tl = cte.offset().left;
+    var tt = cte.offset().top + 31 - $(document).scrollTop();
+
+    if (negativeTop != undefined) {
+        tt = tt - negativeTop;
+    }
+
+    pte.css({ top: tt, left: tl }).show();
+}
+
+/*隐藏顶部弹出层*/
+function hideTpopup(ct, pt) {
+    $(ct).hide();
+    $(pt).css({ "background-color": "black", color: "white" });
+}
+
+/*隐藏所有头部弹出层*/
+function hideAllTpopup() {
+    hideTpopup("#ulMyHy", "#liMyHy");
+    hideTpopup("#ulMyMessage", "#liMyMessage");
+    hideTpopup("#ulMyService", "#liMyService");
+    $("#ulActive").hide();
+    $("#ulVisaEntrance").hide();
+}
+
+/*加载客服层*/
+function loadFloatLayer() {
+
+    var url = "/Home/FloatService";
+    $.ajax({
+        url: url,
+        dataType: "json",
+        success: function (data, status) {
+
+            var li0Txt = "客服：" + data.Name;
+            var li1Txt = "电话：" + data.Phone;
+            /*var li2Txt = "Q&nbsp;&nbsp;Q：<a href='http://wpa.qq.com/msgrd?v=3&uin=%22+data.QQ+%22&site=qq&menu=yes' target='_blank'><img style='border: 0px; height: 20px; position: relative; top: 5px;' src='http://wpa.qq.com/pa?p=2:"+data.QQ+":41'alt='点击这里给我发消息' title='点击这里给我发消息'>&nbsp; </a>";*/
+            var li2Txt = "Q&nbsp;&nbsp;Q：" + data.QQ;
+            $("#ulMyService>li").eq(0).html(li0Txt);
+            $("#ulMyService>li").eq(1).html(li1Txt);
+            $("#ulMyService>li").eq(2).html(li2Txt);
+
+            $("#lisvName").html(li0Txt);
+            $("#lisvPhone").html(li1Txt);
+            $("#lisvQQ").html(li2Txt);
+
+        }, error: function () {
+            //alert("系统正在维护，请稍后再试.");
+        }
+    });
+}
+
+/*加载消息*/
+function loadMessageLayer() {
+
+    var url = "/Message/GetCount";
+    $.ajax({
+        url: url,
+        dataType: "json",
+        success: function (data, status) {
+            var dataJson = data;
+            var liMyMsg = $("#liMyMessage");
+
+            if (parseInt(dataJson.Id) > 0) {
+                //$("#ulMyMessage").show();
+                //var liList = $("#ulMyMessage>li");
+
+//                    var li1 = liList.eq(0).find("li").eq(0);
+//                    li1.css("width","47%").html("<b>"+dataJson.Id+"</b>条未读消息");
+//                    li1.next().css("width","40%");
+
+                var be = $("<b style='color:White;'>（" + dataJson.Id + "）</b>");
+                liMyMsg.parent("li").width("80px");
+                be.appendTo(liMyMsg);
+                liMyMsg.parent("li").next().find("marquee").html(dataJson.Name);
+
+                /*********弹出泡泡************/
+                //var a = $("<a href='Member.htm'/*tpa=http://b.tigerwing.cn/Message/List?type=1*/ class='barLink4'>您有"+dataJson.Id+"条新消息<br/>点击查看</a>");
+                //$("#divMsgItem").html(a);
+                //var l = liMyMsg.offset().left+liMyMsg.width()/2;
+                //var t = liMyMsg.height()+10;
+
+                //$("#divMsgCount").css({top:t,left:l}).show();
+
+                /*********end 弹出泡泡************/
+
+                //showTpopup($("#liMyMessage"), $("#ulMyMessage"));
+            } else {
+                var be = $("<b>（0）</b>");
+                liMyMsg.parent("li").width("80px");
+                be.appendTo(liMyMsg);
             }
-            echo $content;
-            ?>
+        }, error: function () {
+            //alert("系统正在维护，请稍后再试.");
+        }
+    });
+}
+
+/*关闭我的消息*/
+function closeTMessage(t) {
+    var pt = $(t).parent("li").parent("ul").parent("li");
+    if (pt.is(":visible")) {
+        pt.hide();
+    }
+    //if(pt.next().html()!=null&&!pt.next().is(":visible")){
+    hideTpopup("#ulMyMessage", "#liMyMessage");
+    //}else if(pt.prev().html()!=null&&!pt.prev().is(":visible")){
+    //    hideTpopup("#ulMyMessage", "#liMyMessage");
+    // }
+}
+
+function goLogOn() {
+
+    window.location = 'Member.htm'/*tpa=http://b.tigerwing.cn/Member*/;
+}
+
+$(function () {
+    $("#liMyHy").click(function () {
+        if (!isAuth) {
+            goLogOn();
+        } else {
+            hideAllTpopup();
+
+            showTpopup($(this), $("#ulMyHy"));
+        }
+        return false;
+    });
+
+    $("#liMyMessage").click(function () {
+        return;
+        if (!isAuth) {
+            goLogOn();
+        } else {
+            hideAllTpopup();
+            showTpopup($(this), $("#ulMyMessage"));
+            $("#ulMyMessage>li").show();
+        }
+        return false;
+    });
+
+    $("#liMyService").click(function () {
+        if (!isAuth) {
+            goLogOn();
+            return false;
+        } else {
+            hideAllTpopup();
+            showTpopup($(this), $("#ulMyService"));
+        }
+        return false;
+    });
+
+    $("#liVisaEntrance").click(function () {
+        hideAllTpopup();
+        //showTpopup($(this), $("#ulVisaEntrance"),6,"N");
+        //showTpopup($(this), $("#ulVisaEntrance"),18,"N");
+        var tThis = $(this);
+        var tTop = tThis.parent("span").offset().top + tThis.height() + 1;
+        var tLeft = tThis.parent("span").offset().left - 26;
+        $(".popupcountry").css({ "top": tTop, "left": tLeft }).show();
+        return false;
+    });
+
+    $("#liActive").click(function () {
+        return;
+        hideAllTpopup();
+        //showTpopup($(this), $("#ulActive"),6,"N");
+        showTpopup($(this), $("#ulActive"), 18, "N");
+        return false;
+    });
+
+    $("#aMyMessage").click(function () {
+        closeTMessage($(this));
+        return false;
+    });
+
+    $("#aSystemMessage").click(function () {
+        closeTMessage($(this));
+        return false;
+    });
+
+
+    $(document).click(function () {
+        hideAllTpopup();
+    });
+    $(window).load(function () {
+
+        //登录后加载客服
+        if (isAuth) {
+            //loadFloatLayer();
+            loadMessageLayer();
+            //setInterval("loadMessageLayer()",180000);
+        }
+    });
+
+});
+</script>
+<!--begin 我的宇通-->
+<ul id="ulMyHy" class="toppou">
+    <li><a href="<?php echo $this->createUrl('order/list'); ?>">订单管理</a></li>
+    <li><a href="<?php echo $this->createUrl('user/credit'); ?>">积分管理</a></li>
+    <li><a href="<?php echo $this->createUrl('user/profile'); ?>">修改资料</a></li>
+
+</ul>
+<!--end 我的宇通-->
+<!--begin 消息-->
+<ul id="ulMyMessage" class="toppou">
+    <li>
+        <ul class="tlul">
+            <li style="width: 20%;">消息</li>
+            <li style="width: 67%;"><a href="Member">
+                    查看消息</a></li>
+            <li style="width: 10%;"><a href="javascript:" id="aMyMessage" style="text-decoration: underline;"
+                                       title="关闭">X</a></li>
+        </ul>
+    </li>
+
+</ul>
+
+<!--end 我的客服-->
+<!--begin 签证-->
+<ul id="ulVisaEntrance" class="visaentrance">
+    <li><a href="Visa-ContinentId=1">
+            <img src="/static/yutong/img/new_a2.jpg"
+                 name="Image2" width="40" height="20" border="0"/></a></li>
+    <li><a href="Visa-ContinentId=2">
+            <img src="/static/yutong/img/new_a3.jpg"
+                 name="Image2" width="40" height="20" border="0"/></a></li>
+    <li><a href="Visa-ContinentId=3">
+            <img src="/static/yutong/img/new_a4.jpg"
+                 name="Image2" width="40" height="20" border="0"/></a></li>
+    <li style="margin-right: 10px;"><a href="Visa-ContinentId=4">
+            <img src="/static/yutong/img/new_a5.jpg"
+                 name="Image2" width="52" height="20" border="0"/></a></li>
+    <li><a href="Visa-ContinentId=5">
+            <img src="/static/yutong/img/new_a6.jpg"
+                 name="Image2" width="40" height="20" border="0"/></a></li>
+
+</ul>
+<!--end 签证-->
+<!--begin 活动-->
+<ul id="ulActive" class="visaentrance" style="width: 100px;">
+    <li><a href="Integral/List">
+            <img src="/static/yutong/img/new2_a5.jpg"
+                 name="Image2" width="40" height="20" border="0"/></a></li>
+    <li><a href="Train">
+            <img src="/static/yutong/img/new2_a6.jpg"
+                 name="Image2" width="40" height="20" border="0"/></a></li>
+</ul>
+<!--end 活动-->
+<!--begin top-->
+<!--begin float top-->
+<div class="newtopfloat">
+    <div class="newtop1">
+        <div id="divMsgCount">
+            <img src="/static/yutong/img/tip_h_big.png"
+                 border="0" usemap="#Map2" width="110" height="80"/>
+
+            <div id="divMsgItem">
+            </div>
+            <map name="Map2" id="Map2">
+                <area shape="rect" coords="8,4,36,17" href="Member"
+                      target="_blank" title="查看"/>
+            </map>
+        </div>
+        <ul class="nt1l">
+            <li class="cici4" style="width: 15%;"><a href="<?php echo $this->createUrl('user/login'); ?>"
+                                                     class="barLink4">
+                    <b>·</b>&nbsp;登录</a>&nbsp;&nbsp; <a href="<?php echo $this->createUrl('user/register'); ?>"
+                                                        class="barLink4">
+                    <b>·</b>&nbsp;注册</a></li>
+        </ul>
+        <ul class="nt1r" style="padding-left: 20px;">
+            <li><a href="<?php echo $this->createUrl('order/list'); ?>" class="barLink4" id="liMyHy">我的宇通</a></li>
+
+            <li><a href="OperateGuide-shi=1&rid=login1"
+                   class="barLink4">使用帮助</a></li>
+        </ul>
+        <style>
+            ul.nt1r li {
+                float: right;
+            }
+        </style>
+    </div>
+</div>
+<!--end float top-->
+<div class="newtop">
+    <div class="newtop2">
+        <ul class="nt2l">
+            <li><a href="<?php echo $this->createUrl('default/index'); ?>">
+                    <img src="/static/yutong/img/logonew2_01.jpg"
+                         width="292" height="86"
+                         style="margin-top:1px;"/>
+                    <span style="font-size:20px; font-weight:bold; text-align:center;">宇通签证同业采购平台</span>
+                </a>
+            </li>
+        </ul>
+        <div style="width: 50%; float: left; margin-top:15px; margin-left:80px;   height:28px;">
+
+
+                <span style=" width:11%; float:left; "><a href="index">
+                        <img src="/static/yutong/img/new2_a1.jpg"
+                             name="Image2" width="44"
+                             height="22" border="0"/></a></span>
+                 <span style=" width:11%; float:left; ">
+                    <div id="liVisaEntrance">
+                        <img src="/static/yutong/img/new2_a2.jpg"
+                             name="Image2" width="44"
+                             height="22" border="0" style="cursor:pointer"/>
+                    </div>
+                </span>
+
+            <!-- 过关名单 -->  <span style=" width:11%; float:left;"><a href="Member"
+                    >
+                    <img src="/static/yutong/img/new2_a9.jpg"
+                         name="Image2" width="44"
+                         height="22" border="0"/></a>
+
+</span>
+
+  <span style=" width:11%; float:left;"><a href="Integral/List"
+                                           id="liActive">
+          <img src="/static/yutong/img/new2_a13.jpg"
+               name="Image2" height="22" border="0" style=" "/></a>   <img src="/static/yutong/img/hotrr.jpg-type=1.jpg"
+
+                                                                           style="position:relative;top:-40px;left:30px"/>
+                </span>
+
+
+        </div>
+        <div style="float: left; width: 65%; margin-left:0px;">
+                <span class="li" style=" width:100%; margin-left:60px; float:left;">
+<form action="http://b.tigerwing.cn/Visa" method="get">
+    <ul class="tsetxt">
+        <li class="li1">
+            <img src="/static/yutong/img/new2_34_c.jpg"
+                 width="33" height="34"/></li>
+        <li class="li2"><span>
+                                <input name="KeyWordMaster" type="text" value="" class="cici3" id="KeyWordMaster"
+                                       style="width: 324px;COLOR:#656565;
+                                border: 0px;margin-top:7px;  background-color: #E3F0FB; height: 15px;"/>
+                            </span></li>
+        <li class="li3">
+            <img src="/static/yutong/img/new2_36_c.jpg"
+                 width="6" height="34"/></li>
+    </ul>
+    <ul class="tsetbtn">
+        <li>
+            <input name="search" id="search" type="image" src="/static/yutong/img/newssss.png"
+                /></li>
+    </ul>
+</form>                </span>
         </div>
     </div>
+</div>
+<!--end top-->
+<!--begin main-->
+<?php echo $content; ?>
+<!--end main-->
+<!--begin foot-->
+<div class="newfoot">
+    <div style=" float:left; width:100%">
+        <p class="cici3">
+            <a href="<?php echo $this->createUrl('site/help', array('view' => 'about')); ?>">关于宇通网</a> &nbsp;&nbsp;|
+            &nbsp;&nbsp;
+            <a href="<?php echo $this->createUrl('site/help', array('view' => 'opinion')); ?>">意见反馈</a> &nbsp;&nbsp;|
+            &nbsp;&nbsp;<a
+                href="<?php echo $this->createUrl('site/help', array('view' => 'coorperate')); ?>">商务合作</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp; <a
+                href="<?php echo $this->createUrl('site/help', array('view' => 'recuirment')); ?>"
+                target="_blank">招聘信息</a>&nbsp;&nbsp;| &nbsp;&nbsp;<a
+                href="<?php echo $this->createUrl('site/help', array('view' => 'copyright')); ?>"
+                >版权声明</a>
+            &nbsp;&nbsp;| &nbsp;&nbsp;<a
+                href="<?php echo $this->createUrl('site/help', array('view' => 'use_guide')); ?>"
+
+                title="网站使用指南下载">使用指南</a>
+        </p>
+
+        <p class="cici1">
+            联系地址：北京市东城区东中街元嘉国际A座407
+        </p>
+
+        <p class="cici1">
+            <a href="#"
+                >宇通</a>-<a
+                href="#"
+                >宇通网</a>-<a
+                href="#"
+                >宇通签证</a>-<a
+                href="#"
+                >宇通签证网</a>
+        </p>
+
+        <p class="cici1">
+            <script src="../s19.cnzz.com/stat.php-id=4312430&web_id=4312430&show=pic1.js"
+
+                    language="JavaScript"></script>
+            <a href="#"
+               target="_blank">京ICP备11059705号-1</a>
+
+        </p>
+
+        <!-- WPA Button Begin -->
+        <script charset="utf-8" type="text/javascript"
+                src="../wpa.b.qq.com/cgi/wpa.php-key=XzgwMDAwMTA5M184MjgwNF84MDAwMDEwOTNf.js"
+            ></script>
+        <!-- WPA Button End -->
+
+        <p class="cici1">
+            版权所有 &copy; 2014-2015 <a
+                href="#"
+                ><strong>宇通网</strong></a>
+        </p>
+    </div>
+    <div style=" float:left; width:30%">
+
+    </div>
+</div>
+<!--end foot-->
+<link href="/static/yutong/css/country.css-type=2.css"
+      rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+    $(function () {
+        var i = 1;
+        var ii = false;
+        $(".popupcountry .tab li").each(function () {
+            $(this).click(function () {
+                var regionId = $(this).find("input").val();
+
+                //如果当前层正显示
+                if ($("#item" + regionId).is(":visible")) return;
+
+                if (i == 1 && ii == true) return;
+
+                i = 1;
+                ii = true;
+
+                $(".popupcountry .tab li").each(function () {
+                    $(this).css({ "background-color": "#CBDEFE", "border-bottom": "1px solid #91B3E6" });
+                });
+                $(this).css({ "background-color": "#FFFFFF", "border-bottom": "0px" });
+
+                //隐藏所有Country层
+                $(".popupcountry .item").each(function () {
+                    $(this).hide();
+                });
+
+                //如果洲对应的层已经加载则显示
+                if ($("#item" + regionId).html() != null) {
+                    i = 2;
+                    $("#item" + regionId).show();
+                }
+
+                countryFocus = true; //true 表示单击国家层上时不隐藏国家层
+            });
+        });
+    });
+</script>
+<div class="popupcountry" id="popupcountry" style="z-index: 903">
+<div class="tab">
+    <ul>
+        <li style='background-color:#FFFFFF;border-bottom:0px; width:79px;'>
+            亚洲
+            <input id="RegionId" name="RegionId" type="hidden" value="1"/>
+        </li>
+        <li style=' width:80px;'>
+            欧洲
+            <input id="RegionId" name="RegionId" type="hidden" value="2"/>
+        </li>
+        <li style=' width:80px;'>
+            美洲
+            <input id="RegionId" name="RegionId" type="hidden" value="3"/>
+        </li>
+        <li style=' width:80px;'>
+            澳洲
+            <input id="RegionId" name="RegionId" type="hidden" value="4"/>
+        </li>
+        <li style=' width:80px;'>
+            非洲
+            <input id="RegionId" name="RegionId" type="hidden" value="5"/>
+        </li>
+        <li style="border-right: 0px; width: 91px;">
+            中东
+            <input id="RegionId" name="RegionId" type="hidden" value="6"/>
+        </li>
+    </ul>
+</div>
+<div class="item" id="item1" style="display:show">
+    <ul>
+        <li class="borderbottom" style="line-height:28px;">
+            <span style="font-weight: bolder; color: Red;">热门：</span>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="Visa-ContinentId=1"><span style="font-weight: bolder;
+                                color: Red;">所有国家</span></a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/泰国"
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">泰国</span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/马来西亚"
+
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">马来西亚</span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/新加坡"
+
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">新加坡</span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/越南"
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">越南</span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/日本"
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">日本</span> </a>
+        </li>
+        <li class="borderbottom" style="">
+            CFHJ
+        </li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/差额费用"
+                >差额费用</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/朝鲜"
+                >朝鲜</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/菲律宾"
+                >菲律宾</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/归国报告书"
+                >归国报告书</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/韩国"
+                >韩国</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/哈萨克斯坦"
+                >哈萨克斯坦</a></li>
+        <li class="borderbottom" style="">
+            LM
+        </li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/柬埔寨"
+                >柬埔寨</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/吉尔吉斯"
+                >吉尔吉斯</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/老挝"
+                >老挝</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/马来西亚"
+                >马来西亚</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/毛里求斯"
+                >毛里求斯</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/蒙古"
+                >蒙古</a></li>
+        <li class="borderbottom" style="">
+            NRST
+        </li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/孟加拉国"
+                >孟加拉国</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/缅甸"
+                >缅甸</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/尼泊尔"
+                >尼泊尔</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/日本"
+                >日本</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/斯里兰卡"
+                >斯里兰卡</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/台胞证"
+                >台胞证</a></li>
+        <li class="borderbottom" style="">
+            TWX
+        </li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/泰国"
+                >泰国</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/台湾省"
+                >台湾省</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/塔吉克斯坦"
+                >塔吉克斯坦</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/土库曼斯坦"
+                >土库曼斯坦</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/汶莱"
+                >汶莱</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/乌兹别克"
+                >乌兹别克</a></li>
+        <li class="borderbottom" style="">
+            YZ
+        </li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/新加坡"
+                >新加坡</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/洗照片"
+                >洗照片</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/印度"
+                >印度</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/印尼"
+                >印尼</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/越南"
+                >越南</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/中国"
+                >中国</a></li>
+    </ul>
+</div>
+<div class="item" id="item2" style="display:none">
+    <ul>
+        <li class="borderbottom" style="line-height:28px;">
+            <span style="font-weight: bolder; color: Red;">热门：</span>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="Visa-ContinentId=2"><span style="font-weight: bolder;
+                                color: Red;">所有国家</span></a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/英国"
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">英国</span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/意大利"
+
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">意大利</span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/法国"
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">法国</span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/德国"
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">德国</span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/西班牙"
+
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">西班牙</span> </a>
+        </li>
+        <li class="borderbottom" style="">
+            AB
+        </li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/爱尔兰"
+                >爱尔兰</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/奥地利"
+                >奥地利</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/阿塞拜疆"
+                >阿塞拜疆</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/白俄罗斯"
+                >白俄罗斯</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/保加利亚"
+                >保加利亚</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/比利时"
+                >比利时</a></li>
+        <li class="borderbottom" style="">
+            BDEF
+        </li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/波兰"
+                >波兰</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/丹麦"
+                >丹麦</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/德国"
+                >德国</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/俄罗斯"
+                >俄罗斯</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/法国"
+                >法国</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/芬兰"
+                >芬兰</a></li>
+        <li class="borderbottom" style="">
+            GHJKL
+        </li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/格鲁吉亚"
+                >格鲁吉亚</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/荷兰"
+                >荷兰</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/捷克"
+                >捷克</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/克罗地亚"
+                >克罗地亚</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/立陶宛"
+                >立陶宛</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/罗马尼亚"
+                >罗马尼亚</a></li>
+        <li class="borderbottom" style="">
+            MNPR
+        </li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/马耳他"
+                >马耳他</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/马其顿"
+                >马其顿</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/挪威"
+                >挪威</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/葡萄牙"
+                >葡萄牙</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/瑞士"
+                >瑞士</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/瑞典"
+                >瑞典</a></li>
+        <li class="borderbottom" style="">
+            SWX
+        </li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/塞浦路斯"
+                >塞浦路斯</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/斯洛文尼亚"
+                >斯洛文尼亚</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/乌克兰"
+                >乌克兰</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/西班牙"
+                >西班牙</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/希腊"
+                >希腊</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/匈牙利"
+                >匈牙利</a></li>
+        <li class="borderbottom" style="">
+            XY
+        </li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/亚美尼亚"
+                >亚美尼亚</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/意大利"
+                >意大利</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/英国"
+                >英国</a></li>
+    </ul>
+</div>
+<div class="item" id="item3" style="display:none">
+    <ul>
+        <li class="borderbottom" style="line-height:28px;">
+            <span style="font-weight: bolder; color: Red;">热门：</span>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="Visa-ContinentId=3"><span style="font-weight: bolder;
+                                color: Red;">所有国家</span></a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/美国"
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">美国</span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/加拿大"
+
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">加拿大</span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/巴西"
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">巴西</span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/墨西哥"
+
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">墨西哥</span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/哥伦比亚"
+
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">哥伦比亚</span> </a>
+        </li>
+        <li class="borderbottom" style="">
+            AB
+        </li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/阿根廷"
+                >阿根廷</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/巴哈马"
+                >巴哈马</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/巴拿马"
+                >巴拿马</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/巴西"
+                >巴西</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/秘鲁"
+                >秘鲁</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/玻利维亚"
+                >玻利维亚</a></li>
+        <li class="borderbottom" style="">
+            DEGHJ
+        </li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/多米尼克"
+                >多米尼克</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/厄瓜多尔"
+                >厄瓜多尔</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/哥伦比亚"
+                >哥伦比亚</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/古巴"
+                >古巴</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/海地"
+                >海地</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/加拿大"
+                >加拿大</a></li>
+        <li class="borderbottom" style="">
+            MWY
+        </li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/美国"
+                >美国</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/秘鲁"
+                >秘鲁</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/墨西哥"
+                >墨西哥</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/委内瑞拉"
+                >委内瑞拉</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/乌拉圭"
+                >乌拉圭</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/牙买加"
+                >牙买加</a></li>
+        <li class="borderbottom" style="">
+            Z
+        </li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/智利"
+                >智利</a></li>
+    </ul>
+</div>
+<div class="item" id="item4" style="display:none">
+    <ul>
+        <li class="borderbottom" style="line-height:28px;">
+            <span style="font-weight: bolder; color: Red;">热门：</span>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="Visa-ContinentId=4"><span style="font-weight: bolder;
+                                color: Red;">所有国家</span></a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/新西兰"
+
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">新西兰</span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/澳大利亚"
+
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">澳大利亚</span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <span style="height:29px;float:left;">&nbsp;</span> <a
+                href="http://www.jmlvyou.com/yutong/visa/search/keyword/ "
+                style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;"> </span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <span style="height:29px;float:left;">&nbsp;</span> <a
+                href="http://www.jmlvyou.com/yutong/visa/search/keyword/ "
+                style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;"> </span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <span style="height:29px;float:left;">&nbsp;</span> <a
+                href="http://www.jmlvyou.com/yutong/visa/search/keyword/ "
+                style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;"> </span> </a>
+        </li>
+        <li class="borderbottom" style="">
+            ABX
+        </li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/澳大利亚"
+                >澳大利亚</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/巴布亚新几内亚"
+                >巴布亚新几内亚</a>
+        </li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/新西兰"
+                >新西兰</a></li>
+    </ul>
+</div>
+<div class="item" id="item5" style="display:none">
+<ul>
+    <li class="borderbottom" style="line-height:28px;">
+        <span style="font-weight: bolder; color: Red;">热门：</span>
+    </li>
+    <li class="borderbottom" style="line-height:28px;">
+        <a href="Visa-ContinentId=5"><span style="font-weight: bolder;
+                                color: Red;">所有国家</span></a>
+    </li>
+    <li class="borderbottom" style="line-height:28px;">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/南非"
+           style="font-weight:bolder;color:Red; ">
+            <span style="color: Red;">南非</span> </a>
+    </li>
+    <li class="borderbottom" style="line-height:28px;">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/肯尼亚"
+
+           style="font-weight:bolder;color:Red; ">
+            <span style="color: Red;">肯尼亚</span> </a>
+    </li>
+    <li class="borderbottom" style="line-height:28px;">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/刚果布"
+
+           style="font-weight:bolder;color:Red; ">
+            <span style="color: Red;">刚果布</span> </a>
+    </li>
+    <li class="borderbottom" style="line-height:28px;">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/南苏丹"
+
+           style="font-weight:bolder;color:Red; ">
+            <span style="color: Red;">南苏丹</span> </a>
+    </li>
+    <li class="borderbottom" style="line-height:28px;">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/喀麦隆"
+
+           style="font-weight:bolder;color:Red; ">
+            <span style="color: Red;">喀麦隆</span> </a>
+    </li>
+    <li class="borderbottom" style="">
+        AB
+    </li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/阿尔及利亚"
+            >阿尔及利亚</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/埃及"
+            >埃及</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/埃塞俄比亚"
+            >埃塞俄比亚</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/安哥拉"
+            >安哥拉</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/贝宁"
+            >贝宁</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/博茨瓦纳"
+            >博茨瓦纳</a></li>
+    <li class="borderbottom" style="">
+        BCDFG
+    </li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/布隆迪"
+            >布隆迪</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/赤道几内亚"
+            >赤道几内亚</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/多哥"
+            >多哥</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/佛得角"
+            >佛得角</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/刚果布"
+            >刚果布</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/刚果金"
+            >刚果金</a></li>
+    <li class="borderbottom" style="">
+        JK
+    </li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/加纳"
+            >加纳</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/加蓬"
+            >加蓬</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/津巴布韦"
+            >津巴布韦</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/几内亚"
+            >几内亚</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/几内亚比绍"
+            >几内亚比绍</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/喀麦隆"
+            >喀麦隆</a></li>
+    <li class="borderbottom" style="">
+        KL
+    </li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/科摩罗"
+            >科摩罗</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/肯尼亚"
+            >肯尼亚</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/科特迪瓦"
+            >科特迪瓦</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/莱索托"
+            >莱索托</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/利比里亚"
+            >利比里亚</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/利比亚"
+            >利比亚</a></li>
+    <li class="borderbottom" style="">
+        LM
+    </li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/卢旺达"
+            >卢旺达</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/马达加斯加"
+            >马达加斯加</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/马拉维"
+            >马拉维</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/马里"
+            >马里</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/毛里塔尼亚"
+            >毛里塔尼亚</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/摩洛哥"
+            >摩洛哥</a></li>
+    <li class="borderbottom" style="">
+        MN
+    </li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/莫桑比克"
+            >莫桑比克</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/纳米比亚"
+            >纳米比亚</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/南非"
+            >南非</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/南苏丹"
+            >南苏丹</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/尼日尔"
+            >尼日尔</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/尼日利亚"
+            >尼日利亚</a></li>
+    <li class="borderbottom" style="">
+        STW
+    </li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/塞拉利昂"
+            >塞拉利昂</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/塞内加尔"
+            >塞内加尔</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/苏丹"
+            >苏丹</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/坦桑尼亚"
+            >坦桑尼亚</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/突尼斯"
+            >突尼斯</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/瓦努阿图"
+            >瓦努阿图</a></li>
+    <li class="borderbottom" style="">
+        WZ
+    </li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/乌干达"
+            >乌干达</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/赞比亚"
+            >赞比亚</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/乍得"
+            >乍得</a></li>
+    <li class="borderbottom" style="">
+        <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/中非"
+            >中非</a></li>
+</ul>
+</div>
+<div class="item" id="item6" style="display:none">
+    <ul>
+        <li class="borderbottom" style="line-height:28px;">
+            <span style="font-weight: bolder; color: Red;">热门：</span>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="Visa-ContinentId=6"><span style="font-weight: bolder;
+                                color: Red;">所有国家</span></a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/伊朗"
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">伊朗</span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/土耳其"
+
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">土耳其</span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/以色列"
+
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">以色列</span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/沙特"
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">沙特</span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/阿联酋"
+
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">阿联酋</span> </a>
+        </li>
+        <li class="borderbottom" style="">
+            ABK
+        </li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/阿曼"
+                >阿曼</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/阿富汗"
+                >阿富汗</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/阿联酋迪拜"
+                >阿联酋迪拜</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/巴林"
+                >巴林</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/巴基斯坦"
+                >巴基斯坦</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/卡塔尔"
+                >卡塔尔</a></li>
+        <li class="borderbottom" style="">
+            KLSTXY
+        </li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/科威特"
+                >科威特</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/黎巴嫩"
+                >黎巴嫩</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/沙特"
+                >沙特</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/土耳其"
+                >土耳其</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/叙利亚"
+                >叙利亚</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/也门"
+                >也门</a></li>
+        <li class="borderbottom" style="">
+            Y
+        </li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/伊朗"
+                >伊朗</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/以色列"
+                >以色列</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/约旦"
+                >约旦</a></li>
+    </ul>
+</div>
 </div>
 </body>
 </html>

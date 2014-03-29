@@ -32,7 +32,8 @@ return array(
 		),
 		'admin',
 		'portal',
-        'panel'
+        'panel',
+        'yutong'
 	),
 
 	// application components

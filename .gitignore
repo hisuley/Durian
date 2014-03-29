@@ -8,3 +8,4 @@ protected/runtime/*
 application.log*
 */.DS_Store
 trunk/.idea
+.idea
