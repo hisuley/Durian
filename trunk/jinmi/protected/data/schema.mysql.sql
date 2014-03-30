@@ -126,23 +126,66 @@ alter table order_source add(contact_name varchar(255) not null, contact_phone v
 
 CREATE TABLE yutong_visa_goods(
   id int primary key auto_increment,
+  author_id int not null,
   country_id int not null,
   type_id int not null,
-  workdays smallint not null,
+  workdays char(40) not null,
   market_price decimal(10,2) not null,
   price decimal(10,2) not null,
   valid_period char(80) not null,
   stay_period char(255) not null,
-  entry_times smallint not null,
+  entry_times char(80) not null,
+  need_interview char(40) not null,
+  consular_district char(255) not null,
+  material text not null,
+  update_time int not null,
+  create_time int not null,
+);
+
+CREATE TABLE yutong_user_address(
+  id int primary key auto_increment,
+  company_name char(80) not null,
+  contact_name char(40) not null,
+  contact_phone char(100) not null,
+  contact_address char(255) not null,
+  update_time int not null,
   create_time int not null,
 );
 
 CREATE TABLE yutong_visa_order_info(
   id int primary key auto_increment,
+  status char(20) not null,
   goods_id int not null,
   amount smallint not null,
   price decimal(10,2) not null,
+  single_price decimal(10,2) not null,
+  depart_date date not null,
+  group_sn char(100) not null,
+  visit_receive bool not null default false,
   comment char(255) not null,
+  company_name char(80) not null,
+  contact_name char(40) not null,
+  contact_address char(255) not null,
+  contact_phone char(100) not null,
   user_id int not null,
+  create_time int not null,
+  op_id int not null,
+  op_comment char(255) not null,
+  material_id int not null,
+  material_comment char(255) not null,
+  mverify_id int not null,
+  mverify_comment char(255) not null,
+  sent_id int not null,
+  sent_comment char(255) not null,
+  sent_time int not null,
+  sent_interview char(255) not null,
+  back_id int not null,
+  back_comment char(255) not null
+);
+
+CREATE TABLE yutong_visa_order_customers(
+  id int primary key auto_increment,
+  order_id int not null,
+  customer_name char(255) not null,
   create_time int not null,
 );
