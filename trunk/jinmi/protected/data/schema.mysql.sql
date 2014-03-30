@@ -126,6 +126,7 @@ alter table order_source add(contact_name varchar(255) not null, contact_phone v
 
 CREATE TABLE yutong_visa_goods(
   id int primary key auto_increment,
+  status char(20) not null,
   author_id int not null,
   country_id int not null,
   type_id int not null,
