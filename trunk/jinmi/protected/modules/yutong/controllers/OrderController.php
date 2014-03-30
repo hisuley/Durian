@@ -6,18 +6,22 @@
  * Time: 1:46 AM
  */
 
-class VisaController extends YutongController{
+class OrderController extends YutongController{
 
 
     public function actionSearch(){
 
     }
 
+    public function actionNew($goods_id){
+        $this->render('new');
+    }
+
     public function actionList(){
         $this->render('list');
     }
     public function actionView($id){
-        $this->render('view', array('goods_id'=>$id));
+        $this->render('view');
     }
 
     protected function performAjaxValidation($model)
