@@ -13,7 +13,7 @@ class OrderController extends YutongController{
 
     }
 
-    public function actionNew($goods_id){
+    public function actionNew($id){
         $this->render('new');
     }
 
