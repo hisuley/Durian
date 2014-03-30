@@ -1191,6 +1191,7 @@ li{
     margin:0 auto;
     min-height:450px;
     margin-bottom:20px;
+    margin-top:20px;
 }
 #main #ileft{
     width:225px;
@@ -1383,7 +1384,6 @@ li{
 .findc{
     overflow:hidden;
     padding:0 0 20px 0;
-    height:100%;
 }
 .findc li{
     float:left;
@@ -1414,7 +1414,6 @@ li{
     line-height:30px;
 }
 .visatitle1{
-    height:100%;
     overflow:hidden;
     padding:8px 0 8px 0;
     background-color:#507cd1;
@@ -1427,13 +1426,11 @@ li{
     line-height:30px;
 }
 .visaitem{
-    height:100%;
     overflow:hidden;
     padding:8px 0 8px 0;
     border-bottom:1px dashed #d9e4f7;
 }
 .visaitem:hover{
-    height:100%;
     overflow:hidden;
     padding:8px 0 8px 0;
     border-bottom:1px dashed #d9e4f7;
@@ -1449,13 +1446,11 @@ li{
     color:#FF6600;
 }
 .visaitem1{
-    height:100%;
     overflow:hidden;
     padding:8px 0 8px 0;
     border-bottom:1px dashed #d9e4f7;
 }
 .visaitem1:hover{
-    height:100%;
     overflow:hidden;
     padding:8px 0 8px 0;
     border-bottom:1px dashed #d9e4f7;
@@ -1570,7 +1565,6 @@ li{
     padding:8px 0 8px 0;
     background-color:#507cd1;
     color:#FFF;
-    height:100%;
 }
 .ordertitle2{
     overflow:hidden;
@@ -1586,13 +1580,11 @@ li{
 }
 .orderitem{
     overflow:hidden;
-    height:100%;
     padding:8px 0 8px 0;
     border-bottom:1px dashed #d9e4f7;
 }
 .orderitem:hover{
     overflow:hidden;
-    height:100%;
     padding:8px 0 8px 0;
     border-bottom:1px dashed #d9e4f7;
     background-color:#d3e6f7;
@@ -1605,7 +1597,6 @@ li{
     color:#FF6600;
 }
 .orderse{
-    height:100%;
     padding:5px 0 5px 0;
     overflow:hidden;
 }
@@ -1638,14 +1629,12 @@ li{
 }
 .orstep{
     border:1px solid #91b3e6;
-    height:100%;
     overflow:hidden;
     margin-top:10px;
 }
 .orstep .title{
     overflow:hidden;
     padding:5px;
-    height:100%;
     border-bottom:1px solid #91b3e6;
     background-color:#d9e4f7;
     margin-bottom:10px;
