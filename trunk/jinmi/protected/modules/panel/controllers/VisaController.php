@@ -15,7 +15,7 @@ class VisaController extends PanelController{
         return parent::beforeAction();
     }
     public function getLabel($labelName){
-        $label = array('new'=>'下单', 'list'=>'列表', 'update'=>'修改', 'view'=>'查看', 'stat'=>'统计', 'delete'=>'删除', 'verify'=>'审核', 'confirmCustomerIssued'=>'确认下单');
+        $label = array('new'=>'下单', 'list'=>'列表', 'update'=>'修改', 'view'=>'查看', 'stat'=>'统计', 'delete'=>'删除', 'verify'=>'审核', 'confirmCustomerIssued'=>'确认下单', 'confirmCustomerSent'=>'确认下单');
         if(in_array($labelName, $label)){
             return $label[$labelName];
         }
@@ -60,12 +60,13 @@ class VisaController extends PanelController{
             if(!empty($postData['memo'])){
                 $model->memo = User::getUserRealname(Yii::app()->user->id)."于".date("Y-m-d H:i")."说：".$postData['memo'];
             }
+            $model->total_price = $model->amount*$model->price;
             Yii::log('[VisaOrder]新下单:\n'.print_r($model->attributes, true), 'info', 'order_records');
             if($model->save()){
                 $errFlag = false;
                 if(!empty($_POST['VisaOrderCustomer'])){
                     foreach($_POST['VisaOrderCustomer']['name'] as $key=>$v){
-                        $tempData = array('name'=>$v, 'passport'=>$_POST['VisaOrderCustomer']['passport'][$key], 'visa_order_id'=>$model->id);
+                        $tempData = array('name'=>$v, 'passport'=>$_POST['VisaOrderCustomer']['passport'][$key], 'visa_order_id'=>$model->id, 'price'=>$model->price);
                         $customerModel = new VisaOrderCustomer();
                         $customerModel->attributes = $tempData;
                         Yii::log('[VisaOrder]Saving Customer Model Attributes:\n'.print_r($customerModel->attributes, true));
@@ -105,12 +106,17 @@ class VisaController extends PanelController{
             if(isset($postData['amount']) && $model->amount != $postData['amount']){
                 $memoStr .= "\n".User::getUserRealname(Yii::app()->user->id)."于".date("Y-m-d H:i")."更新了订单：订单人数从".$model->amount."人变成了".$postData['amount']."人";
             }
+            $priceUpdated = false;
             if(isset($postData['price']) && $model->price != $postData['price']){
+                $priceUpdated = true;
                 $memoStr .= "\n".User::getUserRealname(Yii::app()->user->id)."于".date("Y-m-d H:i")."更新了订单：订单价格从￥".$model->price."变成了￥".$postData['price'];
+            }
+            if(empty($postData['is_pay'])){
+                unset($postData['is_pay']);
             }
             $model->attributes = $postData;
             $model->memo = $memoStr;
-
+            $model->total_price = $model->amount*$model->price;
             $errFlag = false;
             if($model->save()){
                 $saveIds = array();
@@ -124,6 +130,7 @@ class VisaController extends PanelController{
                                 $customerModel = VisaOrderCustomer::model()->findByPk($_POST['VisaOrderCustomer']['id'][$key]);
                             }else{
                                 $customerModel = new VisaOrderCustomer();
+                                $customerModel->price = $model->price;
                                 $model->memo = $model->memo."\n".User::getUserRealname(Yii::app()->user->id)."于".date("Y-m-d H:i")."更新了订单：添加了客户：".$tempData['name']."(护照号：".$tempData['passport'].")";
                                 $model->save();
                             }
@@ -137,22 +144,25 @@ class VisaController extends PanelController{
                             $customerCounter++;
 
                         }
-                    }
-                    if(!empty($id)){
-                        $criteria = new CDbCriteria;
-                        $criteria->addCondition('visa_order_id = '.$id, 'AND');
-                        $criteria->addNotInCondition('id', $saveIds);
-                        $deleteRecords = VisaOrderCustomer::model()->findAll($criteria);
-                        VisaOrderCustomer::model()->deleteAll($criteria);
+                        if(!empty($id) && !empty($saveIds)){
+                            $criteria = new CDbCriteria;
+                            $criteria->addCondition('visa_order_id = '.$id, 'AND');
+                            $criteria->addCondition('is_pay_out = 0');
+                            $criteria->addCondition('is_pay = 0');
+                            $criteria->addNotInCondition('id', $saveIds);
+                            $deleteRecords = VisaOrderCustomer::model()->findAll($criteria);
+                            VisaOrderCustomer::model()->deleteAll($criteria);
 
-                        if(!empty($deleteRecords)){
-                            $model->memo = $model->memo."\n".User::getUserRealname(Yii::app()->user->id)."于".date("Y-m-d H:i")."更新了订单：删除了客户：";
-                            foreach($deleteRecords as $customer){
-                                $model->memo = $model->memo.$customer->name."(护照号：".$customer->passport.", 订单ID：".$customer->visa_order_id.")、";
+                            if(!empty($deleteRecords)){
+                                $model->memo = $model->memo."\n".User::getUserRealname(Yii::app()->user->id)."于".date("Y-m-d H:i")."更新了订单：删除了客户：";
+                                foreach($deleteRecords as $customer){
+                                    $model->memo = $model->memo.$customer->name."(护照号：".$customer->passport.", 订单ID：".$customer->visa_order_id."，成本价：".$customer->cost_price."，售价：".$customer->price.")";
+                                }
+                                $model->save();
                             }
-                            $model->save();
                         }
                     }
+
 
 
 
@@ -164,6 +174,12 @@ class VisaController extends PanelController{
                     }
 
                 }
+
+                //Update Prices
+                if($priceUpdated){
+                    VisaOrderCustomer::model()->updateAll(array("price"=>$model->price), "visa_order_id = :visa_order_id", array(':visa_order_id'=>$model->id));
+                }
+
 
             }
             //print_r($model->attributes);
@@ -214,8 +230,34 @@ class VisaController extends PanelController{
                 $opAttribute[$timeAttr] = strtotime($opAttribute[$timeAttr]);
             }
             $model->attributes = $opAttribute;
-            if(isset($_POST['VisaOrder']['sent_agency_source'])){
-                $model->sent_agency_source = $_POST['VisaOrder']['sent_agency_source'];
+            if(isset($_POST['VisaOrder']['agency_id'])){
+                $model->agency_id = $_POST['VisaOrder']['agency_id'];
+                foreach($model->customer as $customer){
+                    $customer->agency_id = $model->agency_id;
+                    $agencyModel = VisaTypeAgency::model()->findByPk($customer->agency_id);
+                    $customer->cost_price = $agencyModel->price;
+                    $customer->status = VisaOrderCustomer::STATUS_SENTOUT;
+                    $customer->save();
+                }
+            }
+            if(isset($_POST['VisaOrder']['issue_time'])){
+                foreach($model->customer as $customer){
+                    if($customer->status != VisaOrderCustomer::STATUS_REJECT && $customer->status != VisaOrderCustomer::STATUS_DELETED){
+                        $customer->status = VisaOrderCustomer::STATUS_ISSUED;
+                    }
+                    $customer->save();
+                }
+            }
+            if(!empty($_POST['VisaOrderCustomer']) && is_array($_POST['VisaOrderCustomer'])){
+                foreach($_POST['VisaOrderCustomer'] as $key=>$customer){
+                    $customerModel = VisaOrderCustomer::model()->findByPk($key);
+                    if(!empty($customerModel)){
+                        $customerModel->agency_id = $customer['agency_id'];
+                        $agencyModel = VisaTypeAgency::model()->findByPk($customerModel->agency_id);
+                        $customerModel->cost_price = $agencyModel->price;
+                        $customerModel->save();
+                    }
+                }
             }
             if($model->save()){
                 Yii::app()->user->setFlash('success', '审核成功，转到查看订单页面。');
@@ -283,7 +325,7 @@ class VisaController extends PanelController{
             foreach($models as $value) {
                 $row = array();
                 foreach($value->customer as $customer){
-                    $row = array($value->id, date('Y-m-d', $value->create_time), $customer->name, $customer->passport, $value->country_source->name, $value->order_type->name, $value->price, $value->order_source->name, $value->id);
+                    $row = array($value->id, date('Y-m-d', $value->create_time), $customer->name, $customer->passport, (empty($value->country_source) ? '':$value->country_source->name), (empty($value->order_type) ? '' : $value->order_type->name), $value->price, (empty($value->order_source->name) ? '':$value->order_source->name), $value->id);
                     foreach($row as $key=>$val){
                         $row[$key] = iconv('utf-8', 'GBK//IGNORE', $val);
                     }
@@ -302,15 +344,15 @@ class VisaController extends PanelController{
                         $info['countries'][$value->country]['types'][$value->type]['amount'] += $value->amount;
                         $info['countries'][$value->country]['types'][$value->type]['price'] += $value->amount*$value->price;
                     }else{
-                        $info['countries'][$value->country]['types'][$value->type]['name'] = $value->order_type->name;
+                        $info['countries'][$value->country]['types'][$value->type]['name'] = (empty($value->order_type) ? '' : $value->order_type->name);
                         $info['countries'][$value->country]['types'][$value->type]['amount'] = $value->amount;
                         $info['countries'][$value->country]['types'][$value->type]['price'] = $value->amount*$value->price;
                     }
                 }else{
-                    $info['countries'][$value->country] = array('name'=>$value->country_source->name);
+                    $info['countries'][$value->country] = array('name'=>(empty($value->country_source) ? '':$value->country_source->name));
                     $info['countries'][$value->country]['amount'] = $value->amount;
                     $info['countries'][$value->country]['price'] = $value->amount*$value->price;
-                    $info['countries'][$value->country]['types'][$value->type]['name'] = $value->order_type->name;
+                    $info['countries'][$value->country]['types'][$value->type]['name'] = (empty($value->order_type) ? '' : $value->order_type->name);
                     $info['countries'][$value->country]['types'][$value->type]['amount'] = $value->amount;
                     $info['countries'][$value->country]['types'][$value->type]['price'] = $value->amount*$value->price;
                 }
@@ -318,7 +360,7 @@ class VisaController extends PanelController{
                     $info['sources'][$value->source]['amount'] += $value->amount;
                     $info['sources'][$value->source]['price'] += $value->amount*$value->price;
                 }else{
-                    $info['sources'][$value->source] = array('name'=>$value->order_source->name);
+                    $info['sources'][$value->source] = array('name'=>(empty($value->order_source->name) ? '':$value->order_source->name));
                     $info['sources'][$value->source]['amount'] = $value->amount;
                     $info['sources'][$value->source]['price'] = $value->amount*$value->price;
                 }
@@ -536,6 +578,100 @@ class VisaController extends PanelController{
 
         $this->layout = false;
     }
+
+    public function actionConfirmCustomerReject(){
+        $customerId = intval($_POST['id']);
+        if(!empty($customerId)){
+            $model = VisaOrderCustomer::model()->findByPk($customerId);
+            $model->status = VisaOrderCustomer::STATUS_REJECT;
+            if($model->save()){
+                echo "OK with id".$customerId;
+            }
+        }else{
+            echo "Could not get ID value".$customerId;
+        }
+
+        $this->layout = false;
+    }
+
+    public function actionConfirmCustomerSent(){
+        $customerId = intval($_POST['id']);
+        $agencyId = intval($_POST['agency_id']);
+        if(!empty($customerId)){
+            $model = VisaOrderCustomer::model()->findByPk($customerId);
+            $agencyModel = VisaTypeAgency::model()->findByPk($agencyId);
+            $model->agency_id = $agencyId;
+            $model->cost_price = $agencyModel->price;
+            $model->status = VisaOrderCustomer::STATUS_SENTOUT;
+            if($model->save()){
+                echo "OK with id".$customerId;
+            }
+        }else{
+            echo "Could not get ID value".$customerId;
+        }
+
+        $this->layout = false;
+    }
+
+    public function actionStatCollection(){
+        $this->pageTitle = "收款报表";
+        $model = new VisaOrder;
+
+        if(isset($_GET['VisaOrder'])){
+            $model->attributes = $_GET['VisaOrder'];
+        }
+        $model->is_pay = 1;
+        $this->render('stat/collection', array('model'=>$model));
+    }
+
+    public function actionStatPay(){
+        $this->pageTitle = "付款报表";
+        $model = new VisaOrder;
+
+        if(isset($_GET['VisaOrder'])){
+            $model->attributes = $_GET['VisaOrder'];
+        }
+        $model->is_pay_out = 1;
+        $this->render('stat/pay', array('model'=>$model));
+    }
+
+    public function actionStatSent(){
+        $this->pageTitle = "送签报表";
+        $model = new VisaOrder;
+
+        if(isset($_GET['VisaOrder'])){
+            $model->attributes = $_GET['VisaOrder'];
+        }
+        $model->status = array(VisaOrder::STATUS_SENTOUT, VisaOrder::STATUS_SENTOUT, VisaOrder::STAUTS_ISSUE_VISA, VisaOrder::STATUS_COMPLETE, VisaOrder::STATUS_RECEIVED);
+        $model->agencyIdNotNull = true;
+        $this->render('stat/sent', array('model'=>$model));
+    }
+
+    public function actionStatOperate(){
+        $this->pageTitle = "运营报表";
+        $model = new VisaOrder;
+
+        if(isset($_GET['VisaOrder'])){
+            $model->attributes = $_GET['VisaOrder'];
+        }
+        $model->status = array(VisaOrder::STATUS_SENTOUT, VisaOrder::STATUS_SENTOUT, VisaOrder::STAUTS_ISSUE_VISA, VisaOrder::STATUS_COMPLETE, VisaOrder::STATUS_RECEIVED);
+        //$model->agencyIdNotNull = true;
+        $this->render('stat/operate', array('model'=>$model));
+    }
+
+    public function actionStatPredict(){
+        $this->pageTitle = "预测报表";
+        $model = new VisaOrder;
+
+        if(isset($_GET['VisaOrder'])){
+            $model->attributes = $_GET['VisaOrder'];
+        }
+        //$model->agencyIdNotNull = true;
+        $model->status = array(VisaOrder::STATUS_SENTOUT, VisaOrder::STATUS_SENTOUT, VisaOrder::STAUTS_ISSUE_VISA, VisaOrder::STATUS_COMPLETE, VisaOrder::STATUS_RECEIVED);
+        $this->render('stat/predict', array('model'=>$model));
+    }
+
+
     protected function performAjaxValidation($model)
     {
         if(isset($_POST['ajax']) && $_POST['ajax']==='order-form')

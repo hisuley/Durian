@@ -17,13 +17,15 @@ class Address extends CActiveRecord{
     }
     public function rules(){
         return array(
-          array('name, notes, parent_id, is_enabled', 'safe')
+          array('notes, parent_id, is_enabled', 'safe'),
+          array('name', 'unique')
         );
     }
 
     public function relations(){
         return array(
-            'type'=>array(self::HAS_MANY, 'VisaType', 'country_id')
+            'type'=>array(self::HAS_MANY, 'VisaType', 'country_id'),
+            'parent'=>array(self::BELONGS_TO, 'Address', 'parent_id')
         );
     }
     /**
@@ -70,6 +72,16 @@ class Address extends CActiveRecord{
     	return $data;
     }
 
+    public static function getSubData($id){
+        $returnArray = array();
+        if(isset($id)){
+            $subResult = self::model()->findAllByAttributes(array('parent_id'=>$id));
+            $returnArray  = CHtml::listData($subResult, 'id', 'id');
+        }
+        array_push($returnArray, $id);
+        return $returnArray;
+    }
+
     public static function addNewAddr($data, $parent_id = 0){
     	$model = new Address;
     	$model->attributes = $data;
@@ -90,7 +102,7 @@ class Address extends CActiveRecord{
     }
     public static function allLists(){
         //$criteria = new CDbCriteria;
-        return new CActiveDataProvider('Address', array());
+        return new CActiveDataProvider('Address', array('pagination'=>array('pageSize'=>25)));
     }
 
     public static function findCountry(){
@@ -102,6 +114,18 @@ class Address extends CActiveRecord{
         foreach($result as $value){
            $tempResult = CHtml::listData(self::model()->findAllByAttributes(array('parent_id'=>$value->id)), 'id', 'name');
            $resultArray = $resultArray + $tempResult;
+        }
+        return $resultArray;
+    }
+    public static function findCountryGroup(){
+        $criteria = new CDbCriteria;
+        $criteria->addCondition('is_enabled = 1', 'AND');
+        $criteria->addCondition('(parent_id IS NULL OR parent_id = 0)', 'AND');
+        $result = self::model()->findAll($criteria);
+        $resultArray = array();
+        foreach($result as $value){
+            $tempResult = CHtml::listData(self::model()->findAllByAttributes(array('parent_id'=>$value->id)), 'id', 'name');
+            $resultArray = $resultArray + $tempResult;
         }
         return $resultArray;
     }

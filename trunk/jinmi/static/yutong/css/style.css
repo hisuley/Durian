@@ -5,6 +5,7 @@ body{
     font-size: 12px;
     font-family: "宋体";
 }
+#KeyWordMaster{outline: none;padding-left:10px;}
 form
 {
     margin:0;
@@ -1189,7 +1190,7 @@ li{
     *width:970px;
     width:976px;
     margin:0 auto;
-    min-height:450px;
+    min-height:150px;
     margin-bottom:20px;
     margin-top:20px;
 }
@@ -1281,7 +1282,9 @@ li{
     height:25px;
     border:0;
     font-weight:bolder;
-    color:#883300
+    color:#883300;
+    display: inline-block;
+    line-height: 25px;
 }
 .smallbtn_1{
     background-image:url(../img/18_1.png)/*tpa=http://b.tigerwing.cn/Content/Images/18_1.png*/;
@@ -1468,6 +1471,7 @@ li{
     width:100%;
 }
 .visa table{
+    font-size:12px;
     width:100%;
     background-color:#B9CEF0;
 }
@@ -1481,6 +1485,7 @@ li{
     width:99%;
 }
 .visaIntegral table{
+    font-size:12px;
     width:100%;
     background-color:#B9CEF0;
 }
@@ -1615,6 +1620,7 @@ li{
 .order table{
     width:100%;
     background-color:#B9CEF0;
+    font-size:12px;
 }
 .order table td{
     width:16%;
@@ -3025,4 +3031,30 @@ li
 {
     text-decoration:underline;
     color:#ff6600;
+}
+
+.required{color:red;}
+
+
+/* 热门签证 */
+.hot_country_box {
+    padding: 10px 0;
+}
+.country img {
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+}
+.country a {
+    float: left;
+    width: 80px;
+    padding: 5px 10px;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+.country a:hover {
+    background-color: #FAFFF2;
+    color: #539022;
 }

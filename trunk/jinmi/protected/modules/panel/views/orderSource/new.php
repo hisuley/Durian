@@ -36,6 +36,20 @@ $form = $this->beginWidget('CActiveForm', array('id'=>'source-form')); ?>
         echo $form->textField($model,'contact_address');
         ?>
     </div>
-  <input type="submit" class="btn btn-default" value="提交" />
+<?php
+    $this->widget('bootstrap.widgets.TbButton', array(
+       'buttonType'=>'link',
+        'type'=>'primary',
+        'label'=>'添加账号',
+        'url'=>$this->createUrl('orderSource/newAccount', array('id'=>$model->id))
+    ));
+?>
+<div class="row" style="margin-left:30px;">
+    <?php $this->renderPartial('application.modules.panel.views.common.order_source_bank_list', array('data'=>$model->account)); ?>
+</div>
+<div class="form-actions">
+    <input type="submit" class="btn btn-default" value="提交" />
+</div>
+
 
 <?php $this->endWidget(); ?>

@@ -7,8 +7,18 @@
  */
 
 ?>
-<?php echo CHtml::link('添加订单', $this->createUrl('visa/new'), array('class'=>'alink-btn')); ?>
-<?php echo CHtml::link('导出数据', $this->createUrl('visa/export'), array('class'=>'alink-btn', 'id'=>'export-button')); ?>
+
+<form class="navbar-form navbar-right" role="search" type="GET" action="<?php echo $this->createUrl('visa/list'); ?>">
+
+    <div class="form-group">
+        <?php echo CHtml::link('添加订单', $this->createUrl('visa/new'), array('class'=>'btn btn-success alink-btn')); ?>
+        &nbsp;
+        <?php echo CHtml::link('导出数据', $this->createUrl('visa/export'), array('class'=>'btn btn-info alink-btn', 'id'=>'export-button')); ?>
+        <input type="text" name="customer_name" class="form-control" placeholder="输入客人姓名搜索">
+
+        <button type="submit" class="btn btn-default">搜索</button>
+    </div>
+</form>
 <?php
 $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider' => $model->search(),
@@ -58,7 +68,12 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'value'=> '($data->is_pay == 1) ? "是" : "否"',
             'filter'=> array('0'=>'否', '1'=>'是')
         ),
-
+        array(
+            'name'=>'is_pay_out',
+            'header'=>'支出状态',
+            'value'=> '($data->is_pay_out == 1) ? "已支" : (($data->is_pay_out == 2) ? "部分" : "未支")',
+            'filter'=> array('0'=>'未支', '1'=>'已支', '2'=>'部分')
+        ),
 
         array(
             'name'=>'status',
@@ -100,11 +115,17 @@ $this->widget('zii.widgets.grid.CGridView', array(
                     'defaultOptions' => array(  // (#3)
                         'showOn' => 'focus',
                         'dateFormat' => 'yy-mm-dd',
+                        'showOptions'=>array('direction'=>'down'),
+                        "direction"=>"down",
                         'showOtherMonths' => true,
                         'selectOtherMonths' => true,
                         'changeMonth' => true,
                         'changeYear' => true,
                         'showButtonPanel' => true,
+                    ),
+                    'options'=>array(
+                        "direction"=>"up",
+                        'showOptions'=>array('direction'=>'up'),
                     )
                 ), true). '<br> To <br> ' . $this->widget('zii.widgets.jui.CJuiDatePicker', array(
             'model'=>$model,
@@ -120,6 +141,8 @@ $this->widget('zii.widgets.grid.CGridView', array(
                 'changeMonth' => 'true',
                 'changeYear'=>'true',
                 'constrainInput' => 'false',
+                "direction"=>"down",
+                'showOptions'=>array('direction'=>'down'),
             ),
             'htmlOptions'=>array(
                 'style'=>'height:20px;width:130px',
@@ -191,3 +214,8 @@ function reinstallDatePicker(id, data) {
         return false;
     });
 </script>
+<style>
+    #page{width:1220px;}
+    #ui-datepicker-div{z-index:99999999}
+    .navbar-fixed-top, .navbar-fixed-bottom{z-index:1}
+</style>

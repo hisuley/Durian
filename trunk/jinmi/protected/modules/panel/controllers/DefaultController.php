@@ -5,7 +5,7 @@ class DefaultController extends PanelController
     public $label = "默认";
     public function getLabel($labelName){
         $label = array('index'=>'首页', 'login'=>'登录', 'logout'=>'注销', 'upload'=>'上传', 'changepass'=>'修改密码');
-        return $label[$labelName];
+        return isset($label[$labelName]) ? $label[$labelName] : '';
     }
     public $subMenu;
     public function beforeAction(){
@@ -72,9 +72,16 @@ class DefaultController extends PanelController
             $model=new LoginForm;
             $model->attributes=$_POST['LoginForm'];
             // validate user input and redirect to the previous page if valid
-            if($model->login())
-                $this->redirect(array('visa/list'));
-            else{
+            if($model->login()){
+                if(Yii::app()->user->role == 'finance'){
+                    $this->redirect(array('finance/requestList'));
+                }elseif(Yii::app()->user->role == 'purchase'){
+                    $this->redirect(array('agency/list'));
+                }
+                else{
+                    $this->redirect(array('visa/list'));
+                }
+            }else{
                 Yii::app()->user->setFlash('error', '登录失败，请检查用户名密码。');
             }
         }

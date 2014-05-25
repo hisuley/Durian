@@ -7,220 +7,86 @@ Yii::app()->clientScript->registerCoreScript('jquery');
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo CHtml::encode($this->pageTitle) . " - 宇通签证网"; ?></title>
-    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/static/yutong/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/static/yutong/css/style.css">
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/static/yutong/css/print.css"
           type="text/css" media="print"/>
-    <script type="text/javascript"
-            src="<?php echo Yii::app()->request->baseUrl; ?>/yutong/panel/js/bootstrap.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript">
+        $('document').ready(function () {
+            $(document).click(function(){
+               //$('#popupcountry:not(:hidden)').hide();
+            });
+            $('input[name="keyword"]').blur(function () {
+
+            });
+        });
+    </script>
 </head>
 <body>
 <script type="text/javascript">
-var isAuth = 'False' == 'True';
+    var isAuth = 'False' == 'True';
 
-/*显示顶部弹出层*/
-function showTpopup(ct, pt, negativeTop, iseb) {
-    var cte = $(ct);
-    var pte = $(pt);
+    /*显示顶部弹出层*/
+    function showTpopup(ct, pt, negativeTop, iseb) {
+        var cte = $(ct);
+        var pte = $(pt);
 
-    if (iseb != "N")
-        cte.css({ "background-color": "white", color: "Black", "border-left": "1px solid black" });
+        if (iseb != "N")
+            cte.css({ "background-color": "white", color: "Black", "border-left": "1px solid black" });
 
-    var tl = cte.offset().left;
-    var tt = cte.offset().top + 31 - $(document).scrollTop();
+        var tl = cte.offset().left;
+        var tt = cte.offset().top + 31 - $(document).scrollTop();
 
-    if (negativeTop != undefined) {
-        tt = tt - negativeTop;
+        if (negativeTop != undefined) {
+            tt = tt - negativeTop;
+        }
+
+        pte.css({ top: tt, left: tl }).show();
     }
 
-    pte.css({ top: tt, left: tl }).show();
-}
-
-/*隐藏顶部弹出层*/
-function hideTpopup(ct, pt) {
-    $(ct).hide();
-    $(pt).css({ "background-color": "black", color: "white" });
-}
-
-/*隐藏所有头部弹出层*/
-function hideAllTpopup() {
-    hideTpopup("#ulMyHy", "#liMyHy");
-    hideTpopup("#ulMyMessage", "#liMyMessage");
-    hideTpopup("#ulMyService", "#liMyService");
-    $("#ulActive").hide();
-    $("#ulVisaEntrance").hide();
-}
-
-/*加载客服层*/
-function loadFloatLayer() {
-
-    var url = "/Home/FloatService";
-    $.ajax({
-        url: url,
-        dataType: "json",
-        success: function (data, status) {
-
-            var li0Txt = "客服：" + data.Name;
-            var li1Txt = "电话：" + data.Phone;
-            /*var li2Txt = "Q&nbsp;&nbsp;Q：<a href='http://wpa.qq.com/msgrd?v=3&uin=%22+data.QQ+%22&site=qq&menu=yes' target='_blank'><img style='border: 0px; height: 20px; position: relative; top: 5px;' src='http://wpa.qq.com/pa?p=2:"+data.QQ+":41'alt='点击这里给我发消息' title='点击这里给我发消息'>&nbsp; </a>";*/
-            var li2Txt = "Q&nbsp;&nbsp;Q：" + data.QQ;
-            $("#ulMyService>li").eq(0).html(li0Txt);
-            $("#ulMyService>li").eq(1).html(li1Txt);
-            $("#ulMyService>li").eq(2).html(li2Txt);
-
-            $("#lisvName").html(li0Txt);
-            $("#lisvPhone").html(li1Txt);
-            $("#lisvQQ").html(li2Txt);
-
-        }, error: function () {
-            //alert("系统正在维护，请稍后再试.");
-        }
-    });
-}
-
-/*加载消息*/
-function loadMessageLayer() {
-
-    var url = "/Message/GetCount";
-    $.ajax({
-        url: url,
-        dataType: "json",
-        success: function (data, status) {
-            var dataJson = data;
-            var liMyMsg = $("#liMyMessage");
-
-            if (parseInt(dataJson.Id) > 0) {
-                //$("#ulMyMessage").show();
-                //var liList = $("#ulMyMessage>li");
-
-//                    var li1 = liList.eq(0).find("li").eq(0);
-//                    li1.css("width","47%").html("<b>"+dataJson.Id+"</b>条未读消息");
-//                    li1.next().css("width","40%");
-
-                var be = $("<b style='color:White;'>（" + dataJson.Id + "）</b>");
-                liMyMsg.parent("li").width("80px");
-                be.appendTo(liMyMsg);
-                liMyMsg.parent("li").next().find("marquee").html(dataJson.Name);
-
-                /*********弹出泡泡************/
-                //var a = $("<a href='Member.htm'/*tpa=http://b.tigerwing.cn/Message/List?type=1*/ class='barLink4'>您有"+dataJson.Id+"条新消息<br/>点击查看</a>");
-                //$("#divMsgItem").html(a);
-                //var l = liMyMsg.offset().left+liMyMsg.width()/2;
-                //var t = liMyMsg.height()+10;
-
-                //$("#divMsgCount").css({top:t,left:l}).show();
-
-                /*********end 弹出泡泡************/
-
-                //showTpopup($("#liMyMessage"), $("#ulMyMessage"));
-            } else {
-                var be = $("<b>（0）</b>");
-                liMyMsg.parent("li").width("80px");
-                be.appendTo(liMyMsg);
-            }
-        }, error: function () {
-            //alert("系统正在维护，请稍后再试.");
-        }
-    });
-}
-
-/*关闭我的消息*/
-function closeTMessage(t) {
-    var pt = $(t).parent("li").parent("ul").parent("li");
-    if (pt.is(":visible")) {
-        pt.hide();
+    /*隐藏顶部弹出层*/
+    function hideTpopup(ct, pt) {
+        $(ct).hide();
+        $(pt).css({ "background-color": "black", color: "white" });
     }
-    //if(pt.next().html()!=null&&!pt.next().is(":visible")){
-    hideTpopup("#ulMyMessage", "#liMyMessage");
-    //}else if(pt.prev().html()!=null&&!pt.prev().is(":visible")){
-    //    hideTpopup("#ulMyMessage", "#liMyMessage");
-    // }
-}
 
-function goLogOn() {
+    /*隐藏所有头部弹出层*/
+    function hideAllTpopup() {
+        hideTpopup("#ulMyHy", "#liMyHy");
+        hideTpopup("#ulMyMessage", "#liMyMessage");
+        hideTpopup("#ulMyService", "#liMyService");
+        $("#ulActive").hide();
+        $("#ulVisaEntrance").hide();
+    }
 
-    window.location = 'Member.htm'/*tpa=http://b.tigerwing.cn/Member*/;
-}
+    $(function () {
 
-$(function () {
-    $("#liMyHy").click(function () {
-        if (!isAuth) {
-            goLogOn();
-        } else {
+        $("#liVisaEntrance").click(function () {
             hideAllTpopup();
-
-            showTpopup($(this), $("#ulMyHy"));
-        }
-        return false;
-    });
-
-    $("#liMyMessage").click(function () {
-        return;
-        if (!isAuth) {
-            goLogOn();
-        } else {
-            hideAllTpopup();
-            showTpopup($(this), $("#ulMyMessage"));
-            $("#ulMyMessage>li").show();
-        }
-        return false;
-    });
-
-    $("#liMyService").click(function () {
-        if (!isAuth) {
-            goLogOn();
+            //showTpopup($(this), $("#ulVisaEntrance"),6,"N");
+            //showTpopup($(this), $("#ulVisaEntrance"),18,"N");
+            var tThis = $(this);
+            var tTop = tThis.parent("span").offset().top + tThis.height() + 1;
+            var tLeft = tThis.parent("span").offset().left - 26;
+            $(".popupcountry").css({ "top": tTop, "left": tLeft }).toggle();
             return false;
-        } else {
+        });
+
+
+
+        $(document).click(function () {
             hideAllTpopup();
-            showTpopup($(this), $("#ulMyService"));
-        }
-        return false;
+            //隐藏国家层
+            if ($(".popupcountry").is(":visible") && !countryFocus) $(".popupcountry").hide();
+            if ($(".popupcountryw").is(":visible") && !countryFocus) $(".popupcountryw").hide();
+            countryFocus = false;
+        });
+        $(window).load(function () {
+
+
+        });
+
     });
-
-    $("#liVisaEntrance").click(function () {
-        hideAllTpopup();
-        //showTpopup($(this), $("#ulVisaEntrance"),6,"N");
-        //showTpopup($(this), $("#ulVisaEntrance"),18,"N");
-        var tThis = $(this);
-        var tTop = tThis.parent("span").offset().top + tThis.height() + 1;
-        var tLeft = tThis.parent("span").offset().left - 26;
-        $(".popupcountry").css({ "top": tTop, "left": tLeft }).show();
-        return false;
-    });
-
-    $("#liActive").click(function () {
-        return;
-        hideAllTpopup();
-        //showTpopup($(this), $("#ulActive"),6,"N");
-        showTpopup($(this), $("#ulActive"), 18, "N");
-        return false;
-    });
-
-    $("#aMyMessage").click(function () {
-        closeTMessage($(this));
-        return false;
-    });
-
-    $("#aSystemMessage").click(function () {
-        closeTMessage($(this));
-        return false;
-    });
-
-
-    $(document).click(function () {
-        hideAllTpopup();
-    });
-    $(window).load(function () {
-
-        //登录后加载客服
-        if (isAuth) {
-            //loadFloatLayer();
-            loadMessageLayer();
-            //setInterval("loadMessageLayer()",180000);
-        }
-    });
-
-});
 </script>
 <!--begin 我的宇通-->
 <ul id="ulMyHy" class="toppou">
@@ -290,13 +156,23 @@ $(function () {
                       target="_blank" title="查看"/>
             </map>
         </div>
-        <ul class="nt1l">
-            <li class="cici4" style="width: 15%;"><a href="<?php echo $this->createUrl('user/login'); ?>"
-                                                     class="barLink4">
-                    <b>·</b>&nbsp;登录</a>&nbsp;&nbsp; <a href="<?php echo $this->createUrl('user/register'); ?>"
+        <?php if (Yii::app()->user->isGuest) { ?>
+            <ul class="nt1l">
+                <li class="cici4" style="min-width: 250px;"><a href="<?php echo $this->createUrl('user/login'); ?>"
+                                                               class="barLink4">
+                        <b>·</b>&nbsp;登录</a>&nbsp;&nbsp; <a href="<?php echo $this->createUrl('user/register'); ?>"
+                                                            class="barLink4">
+                        <b>·</b>&nbsp;注册</a></li>
+            </ul>
+        <?php } else { ?>
+            <ul class="nt1l">
+                <li class="cici4" style="width:auto; ">欢迎您，<?php echo Yii::app()->user->username; ?><strong
+                        style="color:White">(ID：<?php echo Yii::app()->user->id; ?>)</strong></li>
+                <li class="cici4" style="width: 15%"><a href="<?php echo $this->createUrl('user/logout'); ?>"
                                                         class="barLink4">
-                    <b>·</b>&nbsp;注册</a></li>
-        </ul>
+                        <b>·</b>&nbsp;安全退出</a></li>
+            </ul>
+        <?php } ?>
         <ul class="nt1r" style="padding-left: 20px;">
             <li><a href="<?php echo $this->createUrl('order/list'); ?>" class="barLink4" id="liMyHy">我的宇通</a></li>
 
@@ -325,7 +201,7 @@ $(function () {
         <div style="width: 50%; float: left; margin-top:15px; margin-left:80px;   height:28px;">
 
 
-                <span style=" width:11%; float:left; "><a href="index">
+                <span style=" width:11%; float:left; "><a href="<?php echo $this->createUrl('default/index'); ?>">
                         <img src="/static/yutong/img/new2_a1.jpg"
                              name="Image2" width="44"
                              height="22" border="0"/></a></span>
@@ -337,35 +213,19 @@ $(function () {
                     </div>
                 </span>
 
-            <!-- 过关名单 -->  <span style=" width:11%; float:left;"><a href="Member"
-                    >
-                    <img src="/static/yutong/img/new2_a9.jpg"
-                         name="Image2" width="44"
-                         height="22" border="0"/></a>
-
-</span>
-
-  <span style=" width:11%; float:left;"><a href="Integral/List"
-                                           id="liActive">
-          <img src="/static/yutong/img/new2_a13.jpg"
-               name="Image2" height="22" border="0" style=" "/></a>   <img src="/static/yutong/img/hotrr.jpg-type=1.jpg"
-
-                                                                           style="position:relative;top:-40px;left:30px"/>
-                </span>
-
-
         </div>
         <div style="float: left; width: 65%; margin-left:0px;">
                 <span class="li" style=" width:100%; margin-left:60px; float:left;">
-<form action="http://b.tigerwing.cn/Visa" method="get">
+<form action="<?php echo $this->createUrl('visa/search'); ?>" method="get">
     <ul class="tsetxt">
         <li class="li1">
             <img src="/static/yutong/img/new2_34_c.jpg"
                  width="33" height="34"/></li>
         <li class="li2"><span>
-                                <input name="KeyWordMaster" type="text" value="" class="cici3" id="KeyWordMaster"
+                                <input name="keyword" type="text" class="cici3" id="KeyWordMaster"
                                        style="width: 324px;COLOR:#656565;
-                                border: 0px;margin-top:7px;  background-color: #E3F0FB; height: 15px;"/>
+                                border: 0px;margin-top:7px;  background-color: #E3F0FB; height: 15px;"
+                                       value="<?php echo isset($_GET['keyword']) ? $_GET['keyword'] : ''; ?>" placeholder="请选择或者直接输入国家"/>
                             </span></li>
         <li class="li3">
             <img src="/static/yutong/img/new2_36_c.jpg"
@@ -387,7 +247,7 @@ $(function () {
 <!--begin foot-->
 <div class="newfoot">
     <div style=" float:left; width:100%">
-        <p class="cici3">
+        <p class="cici3" style="display:none;">
             <a href="<?php echo $this->createUrl('site/help', array('view' => 'about')); ?>">关于宇通网</a> &nbsp;&nbsp;|
             &nbsp;&nbsp;
             <a href="<?php echo $this->createUrl('site/help', array('view' => 'opinion')); ?>">意见反馈</a> &nbsp;&nbsp;|
@@ -420,24 +280,21 @@ $(function () {
         </p>
 
         <p class="cici1">
-            <script src="../s19.cnzz.com/stat.php-id=4312430&web_id=4312430&show=pic1.js"
 
-                    language="JavaScript"></script>
             <a href="#"
-               target="_blank">京ICP备11059705号-1</a>
+               target="_blank">京ICP备12050675号-2</a>
 
         </p>
 
-        <!-- WPA Button Begin -->
-        <script charset="utf-8" type="text/javascript"
-                src="../wpa.b.qq.com/cgi/wpa.php-key=XzgwMDAwMTA5M184MjgwNF84MDAwMDEwOTNf.js"
-            ></script>
-        <!-- WPA Button End -->
 
         <p class="cici1">
             版权所有 &copy; 2014-2015 <a
                 href="#"
                 ><strong>宇通网</strong></a>
+        </p>
+        <p>
+            <script language="javascript" type="text/javascript" src="http://js.users.51.la/17048844.js"></script>
+        <noscript><a href="http://www.51.la/?17048844" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/17048844.asp" style="border:none" /></a></noscript>
         </p>
     </div>
     <div style=" float:left; width:30%">
@@ -447,6 +304,29 @@ $(function () {
 <!--end foot-->
 <link href="/static/yutong/css/country.css-type=2.css"
       rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+    $(function () {
+        //搜索国家
+        $("#KeyWordMaster").keyup(function () {
+            var tThis = $(this);
+            $("#likeSearch").remove();
+            var valuess = tThis.val();
+        }).focus(function () {
+            countryFocus = true;
+            var tThis = $(this);
+            if (tThis.val() == "支持关键字和拼音模糊查询") {
+                tThis.val("");
+            }
+
+            var tTop = tThis.parent("span").offset().top + tThis.height() + 1;
+            var tLeft = tThis.parent("span").offset().left;
+            $(".popupcountry").css({ "top": tTop, "left": tLeft }).show();
+
+            return false;
+        });
+
+    });
+</script>
 <script type="text/javascript">
     $(function () {
         var i = 1;
@@ -519,13 +399,24 @@ $(function () {
             <span style="font-weight: bolder; color: Red;">热门：</span>
         </li>
         <li class="borderbottom" style="line-height:28px;">
-            <a href="Visa-ContinentId=1"><span style="font-weight: bolder;
+            <a href="<?php echo $this->createUrl('visa/list', array('country_id'=>1)); ?>"><span style="font-weight: bolder;
                                 color: Red;">所有国家</span></a>
         </li>
         <li class="borderbottom" style="line-height:28px;">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/泰国"
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/日本"
                style="font-weight:bolder;color:Red; ">
-                <span style="color: Red;">泰国</span> </a>
+                <span style="color: Red;">日本</span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/韩国"
+
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">韩国</span> </a>
+        </li>
+        <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/新加坡"
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">新加坡</span> </a>
         </li>
         <li class="borderbottom" style="line-height:28px;">
             <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/马来西亚"
@@ -533,115 +424,29 @@ $(function () {
                style="font-weight:bolder;color:Red; ">
                 <span style="color: Red;">马来西亚</span> </a>
         </li>
-        <li class="borderbottom" style="line-height:28px;">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/新加坡"
 
-               style="font-weight:bolder;color:Red; ">
-                <span style="color: Red;">新加坡</span> </a>
-        </li>
         <li class="borderbottom" style="line-height:28px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/泰国"
+               style="font-weight:bolder;color:Red; ">
+                <span style="color: Red;">泰国</span> </a>
+        </li>
+
+
+        <li class="borderbottom" style="">
             <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/越南"
-               style="font-weight:bolder;color:Red; ">
-                <span style="color: Red;">越南</span> </a>
-        </li>
-        <li class="borderbottom" style="line-height:28px;">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/日本"
-               style="font-weight:bolder;color:Red; ">
-                <span style="color: Red;">日本</span> </a>
-        </li>
-        <li class="borderbottom" style="">
-            CFHJ
-        </li>
-        <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/差额费用"
-                >差额费用</a></li>
-        <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/朝鲜"
-                >朝鲜</a></li>
-        <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/菲律宾"
-                >菲律宾</a></li>
-        <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/归国报告书"
-                >归国报告书</a></li>
-        <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/韩国"
-                >韩国</a></li>
-        <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/哈萨克斯坦"
-                >哈萨克斯坦</a></li>
-        <li class="borderbottom" style="">
-            LM
-        </li>
+                >越南</a></li>
         <li class="borderbottom" style="">
             <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/柬埔寨"
                 >柬埔寨</a></li>
         <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/吉尔吉斯"
-                >吉尔吉斯</a></li>
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/菲律宾"
+                >菲律宾</a></li>
         <li class="borderbottom" style="">
             <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/老挝"
                 >老挝</a></li>
         <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/马来西亚"
-                >马来西亚</a></li>
-        <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/毛里求斯"
-                >毛里求斯</a></li>
-        <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/蒙古"
-                >蒙古</a></li>
-        <li class="borderbottom" style="">
-            NRST
-        </li>
-        <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/孟加拉国"
-                >孟加拉国</a></li>
-        <li class="borderbottom" style="">
             <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/缅甸"
                 >缅甸</a></li>
-        <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/尼泊尔"
-                >尼泊尔</a></li>
-        <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/日本"
-                >日本</a></li>
-        <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/斯里兰卡"
-                >斯里兰卡</a></li>
-        <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/台胞证"
-                >台胞证</a></li>
-        <li class="borderbottom" style="">
-            TWX
-        </li>
-        <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/泰国"
-                >泰国</a></li>
-        <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/台湾省"
-                >台湾省</a></li>
-        <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/塔吉克斯坦"
-                >塔吉克斯坦</a></li>
-        <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/土库曼斯坦"
-                >土库曼斯坦</a></li>
-        <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/汶莱"
-                >汶莱</a></li>
-        <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/乌兹别克"
-                >乌兹别克</a></li>
-        <li class="borderbottom" style="">
-            YZ
-        </li>
-        <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/新加坡"
-                >新加坡</a></li>
-        <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/洗照片"
-                >洗照片</a></li>
         <li class="borderbottom" style="">
             <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/印度"
                 >印度</a></li>
@@ -649,11 +454,43 @@ $(function () {
             <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/印尼"
                 >印尼</a></li>
         <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/越南"
-                >越南</a></li>
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/尼泊尔"
+                >尼泊尔</a></li>
         <li class="borderbottom" style="">
-            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/中国"
-                >中国</a></li>
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/孟加拉国"
+                >孟加拉国</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/斯里兰卡"
+                >斯里兰卡</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/台湾"
+                >入台证</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/蒙古"
+                >蒙古</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/朝鲜"
+                >朝鲜</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/汶莱"
+                >汶莱</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/哈萨克斯坦"
+                >哈萨克斯坦</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/塔吉克斯坦"
+                >塔吉克斯坦</a></li>
+        <li class="borderbottom" style="">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/土库曼斯坦"
+                >土库曼斯坦</a></li>
+        <li class="borderbottom" style="width:80px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/乌兹别克斯坦"
+                >乌兹别克斯坦</a></li>
+        <li class="borderbottom" style="width:80px;">
+            <a href="http://www.jmlvyou.com/yutong/visa/search/keyword/吉尔吉斯斯坦"
+                >吉尔吉斯斯坦</a></li>
+
+
     </ul>
 </div>
 <div class="item" id="item2" style="display:none">
@@ -662,7 +499,7 @@ $(function () {
             <span style="font-weight: bolder; color: Red;">热门：</span>
         </li>
         <li class="borderbottom" style="line-height:28px;">
-            <a href="Visa-ContinentId=2"><span style="font-weight: bolder;
+            <a href="<?php echo $this->createUrl('visa/list', array('country_id'=>52)); ?>"><span style="font-weight: bolder;
                                 color: Red;">所有国家</span></a>
         </li>
         <li class="borderbottom" style="line-height:28px;">
@@ -817,7 +654,7 @@ $(function () {
             <span style="font-weight: bolder; color: Red;">热门：</span>
         </li>
         <li class="borderbottom" style="line-height:28px;">
-            <a href="Visa-ContinentId=3"><span style="font-weight: bolder;
+            <a href="<?php echo $this->createUrl('visa/list', array('country_id'=>55)); ?>"><span style="font-weight: bolder;
                                 color: Red;">所有国家</span></a>
         </li>
         <li class="borderbottom" style="line-height:28px;">
@@ -925,7 +762,7 @@ $(function () {
             <span style="font-weight: bolder; color: Red;">热门：</span>
         </li>
         <li class="borderbottom" style="line-height:28px;">
-            <a href="Visa-ContinentId=4"><span style="font-weight: bolder;
+            <a href="<?php echo $this->createUrl('visa/list', array('country_id'=>56)); ?>"><span style="font-weight: bolder;
                                 color: Red;">所有国家</span></a>
         </li>
         <li class="borderbottom" style="line-height:28px;">
@@ -979,7 +816,7 @@ $(function () {
         <span style="font-weight: bolder; color: Red;">热门：</span>
     </li>
     <li class="borderbottom" style="line-height:28px;">
-        <a href="Visa-ContinentId=5"><span style="font-weight: bolder;
+        <a href="<?php echo $this->createUrl('visa/list', array('country_id'=>51)); ?>"><span style="font-weight: bolder;
                                 color: Red;">所有国家</span></a>
     </li>
     <li class="borderbottom" style="line-height:28px;">
@@ -1181,7 +1018,7 @@ $(function () {
             <span style="font-weight: bolder; color: Red;">热门：</span>
         </li>
         <li class="borderbottom" style="line-height:28px;">
-            <a href="Visa-ContinentId=6"><span style="font-weight: bolder;
+            <a href="<?php echo $this->createUrl('visa/list', array('country_id'=>1)); ?>"><span style="font-weight: bolder;
                                 color: Red;">所有国家</span></a>
         </li>
         <li class="borderbottom" style="line-height:28px;">
@@ -1269,5 +1106,8 @@ $(function () {
     </ul>
 </div>
 </div>
+<iframe width="121" height="277" scrolling="no" frameborder="0" allowtransparency="true" src="<?php echo $this->createUrl('default/qqFrame', array('userId'=>Yii::app()->user->id)); ?>" style="display: block; position: fixed; z-index: 2147483646 !important; left: auto; right: 8px; margin-left: 0px; top: 200px;  margin-top: 0px;">
+
+</iframe>
 </body>
 </html>

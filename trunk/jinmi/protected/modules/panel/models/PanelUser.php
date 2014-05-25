@@ -1,6 +1,16 @@
 <?php
 
 class PanelUser extends User{
+    public static $privileges = array(
+        'operate'=> array('op_id','op_comment','op_time'),
+        'finance'=> array('is_pay','accountant_id','pay_cert', 'customer.is_pay', 'customer.status', 'customer.price'),
+        'sales'=> array('id','status','country','predict_date','type','amount','price','depart_date','source','contact_name','contact_phone','contact_address','memo','material','create_time','user_id', 'customer'),
+        'admin'=>array('agency_id', 'id','status','country','predict_date','type','amount','price','depart_date','source','contact_name','contact_phone','contact_address','memo','material','is_pay','create_time','user_id','accountant_id','pay_cert','op_id','op_comment','op_time','sent_id','sent_comment','sent_time','issue_id','issue_comment','issue_time','back_id','back_comment','back_time', 'customer','sent_agency_source'),
+        'owner'=> array('id','status','country','predict_date','type','amount','price','depart_date','source','contact_name','contact_phone','contact_address','memo','material','create_time','user_id', 'customer','sent_agency_source'),
+        'courier_sent'=> array('agency_id', 'sent_id','sent_comment','sent_time'),
+        'courier_issue'=> array('agency_id', 'issue_id','issue_comment','issue_time'),
+        'courier_back'=> array('agency_id','back_id','back_comment','back_time')
+    );
     public $initialPassword, $password2;
     public static function model($className = __CLASS__){
         return parent::model($className);
@@ -24,7 +34,7 @@ class PanelUser extends User{
 
     public function attributeLabels(){
         $attributes = parent::attributeLabels();
-        return array_merge($attributes, array('password2'=>'密码确认'));
+        return array_merge($attributes, array('password2'=>'密码确认', 'initial_password'=>'初始密码'));
     }
 
     public function beforeSave(){
@@ -60,13 +70,13 @@ class PanelUser extends User{
 
         $privileges = array(
            'operate'=> array('op_id','op_comment','op_time'),
-           'finance'=> array('is_pay','accountant_id','pay_cert'),
+           'finance'=> array('is_pay','accountant_id','pay_cert', 'customer.is_pay', 'customer.status', 'customer.price'),
            'sales'=> array('id','status','country','predict_date','type','amount','price','depart_date','source','contact_name','contact_phone','contact_address','memo','material','create_time','user_id', 'customer'),
-           'admin'=>array('id','status','country','predict_date','type','amount','price','depart_date','source','contact_name','contact_phone','contact_address','memo','material','is_pay','create_time','user_id','accountant_id','pay_cert','op_id','op_comment','op_time','sent_id','sent_comment','sent_time','issue_id','issue_comment','issue_time','back_id','back_comment','back_time', 'customer','sent_agency_source'),
+           'admin'=>array('agency_id', 'id','status','country','predict_date','type','amount','price','depart_date','source','contact_name','contact_phone','contact_address','memo','material','is_pay','create_time','user_id','accountant_id','pay_cert','op_id','op_comment','op_time','sent_id','sent_comment','sent_time','issue_id','issue_comment','issue_time','back_id','back_comment','back_time', 'customer','sent_agency_source'),
            'owner'=> array('id','status','country','predict_date','type','amount','price','depart_date','source','contact_name','contact_phone','contact_address','memo','material','create_time','user_id', 'customer','sent_agency_source'),
-           'courier_sent'=> array('sent_id','sent_comment','sent_time'),
-           'courier_issue'=> array('issue_id','issue_comment','issue_time'),
-           'courier_back'=> array('back_id','back_comment','back_time')
+           'courier_sent'=> array('agency_id', 'sent_id','sent_comment','sent_time'),
+           'courier_issue'=> array('agency_id', 'issue_id','issue_comment','issue_time'),
+           'courier_back'=> array('agency_id','back_id','back_comment','back_time')
         );
         foreach($roles as $role){
             if(!empty($role) && array_key_exists($role, $privileges)){
@@ -80,12 +90,44 @@ class PanelUser extends User{
         return true;
     }
 
+
+    public static function checkAccessToFunction($name){
+        $roles = Yii::app()->user->role;
+        $roles = explode(',', $roles);
+        $privileges = array(
+          'finance'=>array('finance'),
+          'admin'=>array('*'),
+          'operate'=>array('visa'),
+          'sales'=>array('visa'),
+          'courier'=>array('visa'),
+          'purchase'=>array('admin')
+        );
+        foreach($roles as $role){
+            if($role == 'admin'){
+                return true;
+            }else{
+                if(array_key_exists($role, $privileges)){
+                    if(in_array($name, $privileges[$role])){
+                        return true;
+                    }
+                }
+            }
+        }
+
+        return false;
+    }
+
+
     public static function getListOp(){
         if(in_array('admin', explode(',',Yii::app()->user->role))){
             return '{view}{update}{delete}';
         }else{
             return '{view}{update}';
         }
+    }
+
+    public static function findAccountant(){
+        return 6;
     }
 }
 ?>

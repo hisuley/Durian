@@ -20,6 +20,32 @@ class DefaultController extends YutongController
         $this->render('changepass', array('model'=>$model));
     }
 
+    public function actionQQFrame($userId = 0){
+        //$qqList = array(1437092985, 2912100133, 364617731);
+        $qqList = array(364617731);
+        $serviceInfo = array('is_guest'=>true);
+        if(empty($userId)){
+            $serviceInfo['is_guest'] = true;
+            //$serviceInfo['QQ'] = Yii::app()->user->getState('service_qq');
+            if(empty($serviceInfo['QQ'])){
+                $serviceInfo['QQ'] = $qqList[array_rand($qqList)];
+                Yii::app()->user->setState('service_qq', $serviceInfo['QQ']);
+            }
+        }else{
+            $userModel = YutongUser::model()->findByPk(Yii::app()->user->id);
+            if(!empty($userModel->address->handler) && !empty($userModel->address->handler->qq)){
+                $serviceInfo['QQ'] = $userModel->address->handler->qq;
+                $serviceInfo['realname'] = $userModel->address->handler->realname;
+                $serviceInfo['phone'] = $userModel->address->handler->phone;
+                $serviceInfo['is_guest'] = false;
+            }else{
+                $serviceInfo['QQ'] = $qqList[array_rand($qqList)];
+                $serviceInfo['is_guest'] = true;
+            }
+        }
+        $this->renderPartial('qq', array('serviceInfo'=>$serviceInfo));
+    }
+
     public function actionUpload()
     {
             Yii::import("application.extensions.EAjaxUpload.qqFileUploader");
@@ -38,7 +64,32 @@ class DefaultController extends YutongController
 	public function actionIndex()
 	{
         $this->pageTitle = "欢迎使用宇通签证系统";
-		$this->render('index');
+        $model = YutongUser::model()->findByPk(Yii::app()->user->id);
+        $indexVisas = YutongConfig::model()->findByAttributes(array('meta_name'=>'index_visa'));
+        $criteria = new CDbCriteria();
+        $criteria->limit = 6;
+        if(!empty($indexVisas->meta_value)){
+            $visaIds = explode(',', $indexVisas->meta_value);
+            if(is_array($visaIds)){
+                foreach($visaIds as $key=>$val){
+                    if($key < 7){
+                        if(!empty($val)){
+                            $indexVisaModels[$key] = YutongVisaGoods::model()->findByPk($val);
+                            if(empty($indexVisaModels[$key])){
+                                unset($indexVisaModels[$key]);
+                            }
+                        }
+
+                    }
+
+                }
+            }
+
+        }else{
+            $indexVisaModels = YutongVisaGoods::model()->findAll($criteria);
+        }
+
+		$this->render('index', array('usersModel'=>$model, 'indexVisaModels'=>$indexVisaModels));
 	}
 	public function actionLogin(){
         $this->pageTitle = "登录";
@@ -65,6 +116,7 @@ class DefaultController extends YutongController
 		$this->redirect('login');
 	}
 	public function actionRegister(){
+        $this->pageTitle = "注册";
 		$this->render('register');
 	}
     public function actionError(){

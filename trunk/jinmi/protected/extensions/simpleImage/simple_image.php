@@ -5,7 +5,7 @@ class simple_image {
    var $image_type;
  	var $image_info;
    function __construct($filename) {
-      $this->image_info = $image_info = getimagesize($filename);
+      $this->image_info = $image_info = @getimagesize($filename);
       $this->image_type = $image_info[2];
       if( $this->image_type == IMAGETYPE_JPEG ) {
          $this->image = imagecreatefromjpeg($filename);
@@ -38,10 +38,19 @@ class simple_image {
       }   
    }
    function getWidth() {
-      return imagesx($this->image);
+      if(empty($this->image)){
+          return 0;
+      }else{
+          return imagesx($this->image);
+      }
+
    }
    function getHeight() {
-      return imagesy($this->image);
+       if(empty($this->image)){
+           return 0;
+       }else{
+           return imagesy($this->image);
+       }
    }
    function resizeToHeight($height) {
       $ratio = $height / $this->getHeight();
@@ -49,7 +58,12 @@ class simple_image {
       $this->resize($width,$height);
    }
    function resizeToWidth($width) {
-      $ratio = $width / $this->getWidth();
+       if($this->getWidth() == 0){
+           $ratio = 0;
+       }else{
+           $ratio = $width / $this->getWidth();
+       }
+
       $height = $this->getheight() * $ratio;
       $this->resize($width,$height);
    }

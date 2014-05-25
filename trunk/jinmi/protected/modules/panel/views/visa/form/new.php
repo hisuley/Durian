@@ -52,12 +52,8 @@ $form=$this->beginWidget('CActiveForm', array(
         <tr>
             <td><?php echo $form->labelEx($model,'is_pay'); ?></td>
             <td><?php
-                if(PanelUser::checkAttributesAccess('is_pay', $model)){
-                    echo $model->is_pay ? '已支付' : '未支付';
-                }else{
-                    echo $form->radioButtonList($model, 'is_pay', array(0=>'未支付', 1=>'已支付'), array('disabled'=> PanelUser::checkAttributesAccess('is_pay', $model, ($model->is_pay) ? true : false))) ;
-                }
 
+                    echo $model->is_pay ? '已支付' : '未支付';
 
                 ?></td>
             <td><?php echo $form->labelEx($model,'accountant_id'); ?></td>
@@ -72,56 +68,15 @@ $form=$this->beginWidget('CActiveForm', array(
             <td><?php echo $form->labelEx($model,'pay_cert'); ?></td>
             <td>
                 <?php
-
-                if(!empty($model->pay_cert)){
-                    $img = "upload/panel/".$model->pay_cert;
-                    if(!empty($img) && 0){
-                        $this->beginWidget('application.extensions.thumbnailer.Thumbnailer', array(
-                                'thumbsDir' => 'upload/panel/thumbs',
-                                'thumbWidth' => 50,// Optional
-                            )
-                        ); ?>
-
-                        <img src="<?php echo str_replace(Yii::getPathOfAlias('webroot'), '', $img); ?>" />
-
-                        <?php $this->endWidget();
-                    }else{
-                        echo "已上传，<a href='".Yii::app()->request->baseUrl."/".$img."' target='_BLANK'>查看</a>";
-                    }
-                }else{
-                    echo '未上传';
-
-                }
-                if(!PanelUser::checkAttributesAccess('pay_cert', $model)){
-                    $postUrl = $this->createUrl('default/update');
-                    $this->widget('application.extensions.EAjaxUpload.EAjaxUpload',
-                        array(
-                            'id'=>'uploadFile',
-                            'config'=>array(
-                                'action'=>Yii::app()->createUrl('panel/default/upload'),
-                                'allowedExtensions'=>array("jpg","jpeg","gif","png","bmp"),//array("jpg","jpeg","gif","exe","mov" and etc...
-                                'sizeLimit'=>1000*1024*1024,// maximum file size in bytes
-                                'minSizeLimit'=>1*1024,
-                                'auto'=>true,
-                                'multiple' => true,
-                                'onComplete'=> "js:function(id, fileName, responseJSON){
-                                    $('input[name=\'VisaOrder[pay_cert]\']').val(responseJSON['filename']);
-                                 }",
-                                'messages'=>array(
-                                    'typeError'=>"{file} has invalid extension. Only {extensions} are allowed.",
-                                    'sizeError'=>"{file} is too large, maximum file size is {sizeLimit}.",
-                                    'minSizeError'=>"{file} is too small, minimum file size is {minSizeLimit}.",
-                                    'emptyError'=>"{file} is empty, please select files again without it.",
-                                    'onLeave'=>"The files are being uploaded, if you leave now the upload will be cancelled."
-                                ),
-                                'showMessage'=>"js:function(message){ alert(message); }"
-                            )
-
-                        ));
+                if(!empty($model->financeRecord) && !empty($model->financeRecord->record->pay_file)){
+                    $this->widget('ext.lyiightbox.LyiightBox2', array(
+                        'thumbnail' => GlobalHelper::getThumbnail("/panel/".$model->financeRecord->record->pay_file, 60),
+                        'image' => GlobalHelper::getThumbnail("/panel/".$model->financeRecord->record->pay_file, 800, 'width'),
+                        'title' => '水单.'
+                    ));
                 }
 
                 ?>
-                <?php echo $form->hiddenField($model, 'pay_cert'); ?>
             </td>
         </tr>
         <tr>
@@ -133,10 +88,10 @@ $form=$this->beginWidget('CActiveForm', array(
                     echo $model->country_source->name;
                 }else{
                     echo $form->dropDownList($model, 'country',
-                        Address::findCountry(), array('readonly'=> PanelUser::checkAttributesAccess('country', $model))
+                        CHtml::listData(Address::model()->findAll('parent_id > 0'), 'id', 'name', 'parent.name'), array('readonly'=> PanelUser::checkAttributesAccess('country', $model))
                     );
                 }
-                     ?>
+                ?>
 
             </td>
             <td><?php echo $form->labelEx($model,'type'); ?></td>
@@ -147,22 +102,28 @@ $form=$this->beginWidget('CActiveForm', array(
                 }else{
                     echo $form->dropDownList($model, 'type',
                         array('0'=>'请选择国家'), array('readonly'=> PanelUser::checkAttributesAccess('type', $model))
-                );} ?>
-            </td>
-            <td><?php echo $form->labelEx($model,'order_type'); ?></td>
-            <td>
-
-                价格：<span id='type_price'> <?php if(!empty($model->order_type)){ ?><?php echo $model->order_type->price; ?><?php } ?></span>
-                <br />
-                备注：<span id='type_notes'> <?php if(!empty($model->order_type)){ ?><?php echo $model->order_type->notes; ?><?php } ?></span>
-
+                    );} ?>
             </td>
         </tr>
+        <?php if(!PanelUser::checkAttributesAccess('agency_id', $model)){ ?>
+        <tr>
+            <td>
+                <label>送签渠道</label>
+            </td>
+            <td><?php echo empty($model->agency->agency->name) ? '' : $model->agency->agency->name; ?></td>
+            <td><label for="">参考价格</label></td>
+            <td><?php echo empty($model->agency->price) ? '' : $model->agency->price; ?></td>
+            <td><label for="">备注</label></td>
+            <td>
+                <?php echo empty($model->agency->notes) ? '' : $model->agency->notes; ?>
+            </td>
+        </tr>
+    <?php } ?>
         <tr>
             <td><?php echo $form->labelEx($model,'amount'); ?></td>
             <td>
                 <?php
-                if(PanelUser::checkAttributesAccess('amount', $model)){
+                if(PanelUser::checkAttributesAccess('amount', $model) || $model->is_pay || $model->is_pay_out){
                     echo $model->amount;
                 }else{
                     echo $form->textfield($model, 'amount', array('readonly'=> true));
@@ -174,22 +135,11 @@ $form=$this->beginWidget('CActiveForm', array(
             <td><?php echo $form->labelEx($model,'price'); ?></td>
             <td>
                 <?php
-                if(PanelUser::checkAttributesAccess('price', $model)){
+                if(PanelUser::checkAttributesAccess('price', $model) || $model->is_pay){
                     echo $model->price;
                 }else{
                     echo $form->textfield($model, 'price', array('readonly'=> PanelUser::checkAttributesAccess('price', $model)));
                     echo $form->error($model,'price');
-                }
-                    ?>
-            </td>
-            <td><?php echo $form->labelEx($model,'predict_date'); ?></td>
-            <td>
-                <?php
-                if(PanelUser::checkAttributesAccess('predict_date', $model)){
-                    echo $model->predict_date;
-                }else{
-                     echo $form->textfield($model, 'predict_date', array('readonly'=> PanelUser::checkAttributesAccess('predict_date', $model, true)));
-                    echo $form->error($model,'predict_date');
                 }
                     ?>
             </td>
@@ -244,9 +194,35 @@ $form=$this->beginWidget('CActiveForm', array(
 
         <?php
             if(isset($model->customer)){
-                if(PanelUser::checkAttributesAccess('customer', $model)){
+                if(PanelUser::checkAttributesAccess('customer', $model)  || $model->status == VisaOrder::STATUS_SALES_ORDER){
                     foreach($model->customer as $key=>$v){
-                        echo '<tr><td><label>客人'.($key+1).'姓名：</label></td><td>'.$v->name.'</td><td><label>护照号：</label></td><td>'.$v->passport.'</td></tr>';
+                        echo '<tr><td><label>客人'.($key+1).'姓名：</label></td><td>'.$v->name.'</td><td><label>护照号：</label></td><td>'.$v->passport.'</td>';
+                        echo "<td>";
+                        echo empty($v->agencyType->agency->name) ? "" : "出签渠道：".$v->agencyType->agency->name;
+                        echo "</td>";
+                        /*
+                        if($v->status == VisaOrderCustomer::STATUS_DEFAULT){
+                            echo '<td><a href="#" data-customer-id="'.$v->id.'" class="btn btn-default btn-xs btn-info confirmIssued">出签</a></td>';
+                        }else{
+                            echo '<td>已出签</td>';
+                        }*/
+                        echo "<td>";
+                        switch($v->status){
+                            case VisaOrderCustomer::STATUS_DEFAULT:
+                                echo "未送签";
+                                break;
+                            case VisaOrderCustomer::STATUS_SENTOUT:
+                                echo "已送签";
+                                break;
+                            case VisaOrderCustomer::STATUS_REJECT:
+                                echo "已拒签";
+                                break;
+                            case VisaOrderCustomer::STATUS_ISSUED:
+                                echo "已出签";
+                                break;
+                        }
+                        echo "</td>";
+                        echo '</tr>';
                     }
                 }else{
                     foreach($model->customer as $key=>$v){
@@ -260,10 +236,26 @@ $form=$this->beginWidget('CActiveForm', array(
                         }
                         echo 'value="'.$v->passport.'"></td>';
                         if(!PanelUser::checkAttributesAccess('customer', $model)){
-                            echo '<td><a href="#" class="btn btn-default btn-xs btn-danger deleteThis">删除</a></td>';
+                            echo '<td>出签渠道：';
+                            echo empty($v->agencyType) ? ''.(CHtml::dropDownList('VisaOrderCustomer['.$v->id.'][agency_id]', 0,
+                                    CHtml::listData(VisaTypeAgency::model()->findAllByAttributes(array('type_id'=>$model->type)), 'id', 'agency.name'))) : $v->agencyType->agency->name;
+                            echo '</td>';
                             if($v->status == VisaOrderCustomer::STATUS_DEFAULT){
-                                echo '<td><a href="#" data-customer-id="'.$v->id.'" class="btn btn-default btn-xs btn-info confirmIssued">出签</a></td>';
-                            }else{
+                                if(empty($v->is_pay_out) && empty($v->is_pay)){
+                                    echo '<td><a href="#" class="btn btn-default btn-xs btn-danger deleteThis">删除</a>&nbsp;<a href="#" data-customer-id="'.$v->id.'" class="btn btn-default btn-xs btn-info sentVisa">送签</a></td>';
+                                }else{
+                                    echo '<a href="#" data-customer-id="'.$v->id.'" class="btn btn-default btn-xs btn-info sentVisa">送签</a></td>';
+                                }
+
+                            }elseif($v->status == VisaOrderCustomer::STATUS_SENTOUT){
+                                if(empty($v->is_pay_out) && empty($v->is_pay)){
+                                    echo '<td><a href="#" class="btn btn-default btn-xs btn-danger deleteThis">删除</a>&nbsp;<a href="#" data-customer-id="'.$v->id.'" class="btn btn-default btn-xs btn-info confirmIssued">出签</a>&nbsp;<a href="#" data-customer-id="'.$v->id.'" class="btn btn-default btn-xs btn-danger rejectVisa">拒签</a></td>';
+                                }else{
+                                    echo '<td><a href="#" data-customer-id="'.$v->id.'" class="btn btn-default btn-xs btn-info confirmIssued">出签</a>&nbsp;<a href="#" data-customer-id="'.$v->id.'" class="btn btn-default btn-xs btn-danger rejectVisa">拒签</a></td>';
+                                }
+                            }elseif($v->status == VisaOrderCustomer::STATUS_REJECT){
+                                echo '<td class="error">已拒签</td>';
+                            }elseif($v->status == VisaOrderCustomer::STATUS_ISSUED){
                                 echo '<td>已出签</td>';
                             }
 
@@ -280,7 +272,7 @@ $form=$this->beginWidget('CActiveForm', array(
         <tr class="add-visa-before">
             <td colspan="6">
                 <?php
-                if(!PanelUser::checkAttributesAccess('customer', $model)){
+                if(!PanelUser::checkAttributesAccess('customer', $model) || $model->is_pay || $model->is_pay_out){
                     echo ' <a href="#" class="btn btn-default btn-xs add-visa-person">添加</a>';
                 }
                 ?>
@@ -339,7 +331,7 @@ $form=$this->beginWidget('CActiveForm', array(
                         echo $materialLabel[$v]."<br />";
                     }
                 }else{
-                    echo $form->checkBoxList($model, 'material', array('photo'=>'照片', 'passport'=>'护照', 'residence'=>'户口本', 'financeproof'=>'财力证明', 'id'=>'身份证'), array('disabled'=> PanelUser::checkAttributesAccess('material', $model)));
+                    echo $form->checkBoxList($model, 'material', array('photo'=>'照片', 'passport'=>'护照', 'residence'=>'户口本', 'financeproof'=>'财力证明', 'id'=>'身份证'), array('readonly'=> PanelUser::checkAttributesAccess('material', $model)));
                     echo $form->error($model,'material');
                 }
                 ?>
@@ -347,7 +339,7 @@ $form=$this->beginWidget('CActiveForm', array(
         </tr>
         <?php if(!empty($model->id)){ ?>
         <tr>
-            <td colspan="6" align="center">操作审核[<?php
+            <td colspan="6" align="center" style="text-align:center;" >操作审核[<?php
 
                 if(empty($model->op_id)){
                     if($model->status == VisaOrder::STATUS_SALES_ORDER && !PanelUser::checkAttributesAccess('op_id', $model)){
@@ -367,11 +359,13 @@ $form=$this->beginWidget('CActiveForm', array(
 
         </tr>
         <tr>
-            <td colspan="6" align="center">送签确认[
+            <td colspan="6" align="center" style="text-align:center;" >送签确认[
                 <?php
                 if(empty($model->sent_id)){
                     if($model->status == VisaOrder::STATUS_OP_CONFIRM && !PanelUser::checkAttributesAccess('sent_id', $model)){
                         echo CHtml::link('审核', $this->createUrl('visa/verify', array('id'=>$model->id, 'type'=>'sent_comment')), array('class'=>'btn btn-default btn-xs verify-button'));
+                    }elseif($model->status == VisaOrder::STATUS_PARTIAL_SENT){
+                        echo "部分送签";
                     }
                 }else{
                     echo "送签员：".User::getUserRealname($model->sent_id);
@@ -388,11 +382,11 @@ $form=$this->beginWidget('CActiveForm', array(
             <td><?php echo $form->labelEx($model,'sent_comment'); ?></td>
             <td colspan="3" id="sent_container">
                 <?php echo !empty($model->sent_comment) ? $model->sent_comment : ''; ?>
-                <?php echo !empty($model->agency_source) ? "<br />送签旅行社：".$model->agency_source->name : ''; ?>
+                <?php echo !empty($model->agency) ? "<br />送签渠道：".$model->agency->agency->name : ''; ?>
             </td>
         </tr>
         <tr>
-            <td colspan="6" align="center">出签确认[
+            <td colspan="6" align="center" style="text-align:center;" >出签确认[
                 <?php
                 if(empty($model->issue_id)){
                     if($model->status == VisaOrder::STATUS_SENTOUT && !PanelUser::checkAttributesAccess('issue_id', $model)){
@@ -416,7 +410,7 @@ $form=$this->beginWidget('CActiveForm', array(
             </td>
         </tr>
         <tr>
-            <td colspan="6" align="center">寄回确认[
+            <td colspan="6" align="center" style="text-align:center;" >寄回确认[
                 <?php
                 if(empty($model->back_id)){
                     if($model->status == VisaOrder::STAUTS_ISSUE_VISA && !PanelUser::checkAttributesAccess('back_id', $model)){
@@ -479,7 +473,7 @@ $form=$this->beginWidget('CActiveForm', array(
             updateType();
         });
         $('select[name="VisaOrder[type]"]').change(function(){
-            updateTypeAttr();
+            //updateTypeAttr();
         });
         <?php
         if(!PanelUser::checkAttributesAccess('contact_name', $model)){ ?>
@@ -507,7 +501,42 @@ $form=$this->beginWidget('CActiveForm', array(
             return false;
         });
 
+        $('.sentVisa').click(function(){
+            var customerId = $(this).data('customer-id');
+            var thisObj = $(this);
+            var agencyTypeId = $("#VisaOrderCustomer_"+customerId+"_agency_id").val();
+            if(isNaN(agencyTypeId) || agencyTypeId <= 0){
+                alert("请选择出签渠道再使用出签功能！");
+                return false;
+            }
+            var selected =  $("#VisaOrderCustomer_"+customerId+"_agency_id").find("option:selected").text();
+            $.ajax({
+                type : "POST",
+                url : '<?php echo $this->createUrl('visa/confirmCustomerSent'); ?>',
+                data : {id:customerId, agency_id:agencyTypeId}
+            }).done(function(msg){
+                console.log(msg);
+                thisObj.parent().prev().text("送签渠道："+selected);
+                thisObj.parent().text('已送签');
+            });
+            return false;
+        });
 
+        $('.rejectVisa').click(function(){
+            var customerId = $(this).data('customer-id');
+            var thisObj = $(this);
+            $.ajax({
+                type : "POST",
+                url : '<?php echo $this->createUrl('visa/confirmCustomerReject'); ?>',
+                data : {id:customerId}
+            }).done(function(msg){
+                console.log(msg);
+                thisObj.parent().text('已被拒签');
+            });
+            return false;
+        });
+
+        updateType();
     });
     var chooseType;
     function updateType(){
@@ -531,10 +560,11 @@ $form=$this->beginWidget('CActiveForm', array(
                     optionHtml += ">"+data[i].name+"</option>";
                 }
                 $('select[name="VisaOrder[type]"]').html(optionHtml);
-                updateTypeAttr();
+                /*updateTypeAttr();*/
             })
         })
     }
+    /*
     function updateTypeAttr(){
         var type_id = $('select[name="VisaOrder[type]"]').val();
         for(i in chooseType){
@@ -546,8 +576,8 @@ $form=$this->beginWidget('CActiveForm', array(
                 $('span#type_notes').text(chooseType[i].notes);
             }
         }
-    }
-    updateType();
+    }*/
+
     var sourceList = {};
     <?php foreach($sourceModel as $source){
         echo 'sourceList['.$source->id.'] = {"contact_name":"'.$source->contact_name.'","contact_phone":"'.$source->contact_phone.'","contact_address":"'.$source->contact_address.'"};';
