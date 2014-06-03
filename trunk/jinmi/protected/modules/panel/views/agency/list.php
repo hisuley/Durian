@@ -1,5 +1,6 @@
 <?php
 echo CHtml::link('添加',$this->createUrl('agency/new'), array('class'=>'alink-btn'));
+echo "&nbsp;".CHtml::link('导出',$this->createUrl('agency/export'), array('class'=>'btn btn-info'));
 $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider' => OrderSource::agencyList(),
     'pager' => array(

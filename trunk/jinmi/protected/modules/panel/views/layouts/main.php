@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/static/panel/css/style.css">
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/static/panel/css/print.css" type="text/css" media="print" />
     <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/static/panel/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 <div class="container-wrapper">

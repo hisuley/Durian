@@ -1,0 +1,676 @@
+a:link {
+	font-weight: normal;
+	color: #666666;
+	font-size: 12px;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+a:visited {
+	font-weight: normal;
+	color: #666666;
+	font-size: 12px;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+a:hover {
+	font-weight: normal;
+	color: #FF6600;
+	font-size: 12px;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.cici1{
+	font-size: 12px;
+	color: #999999;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.cici2{
+	font-size: 12px;
+	color: #30629E;
+	font-family: Arial, Helvetica, sans-serif;
+	vertical-align: middle;
+}
+.cici3{
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	text-decoration: none;
+	color: #1C62A8;
+}
+.cici4{
+	font-size: 12px;
+	font-family: "宋体";
+	font-weight: normal;
+	text-decoration: none;
+	color: #cccccc;
+}
+a.barLink2:link {
+	font-family: Arial, Helvetica, sans-serif;
+	color : #999999;
+	text-decoration : none;
+	font-size: 12px;
+	font-weight: normal;
+}
+a.barLink2:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	color : #999999;
+	text-decoration : none;
+	font-size: 12px;
+	font-weight: normal;
+}
+a.barLink2:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	color : #FF6600;
+	text-decoration : none;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+
+a.barLink3:link {
+	font-family: Arial, Helvetica, sans-serif;
+	color : #30629E;
+	text-decoration : none;
+	font-size: 14px;
+	font-weight: normal;
+}
+a.barLink3:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	color : #30629E;
+	text-decoration : none;
+	font-size: 14px;
+	font-weight: normal;
+}
+a.barLink3:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	color : #FF6600;
+	text-decoration : underline;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+a.barLink4:link {
+	font-family: "宋体";
+	color : #ffffff;
+	text-decoration : none;
+	font-size: 12px;
+	font-weight: normal;
+}
+a.barLink4:visited {
+	font-family: "宋体";
+	color : #ffffff;
+	text-decoration : none;
+	font-size: 12px;
+	font-weight: normal;
+}
+a.barLink4:hover {
+	font-family: "宋体";
+	color : #FFCC00;
+	text-decoration : none;
+	font-size: 12px;
+	font-weight: normal;
+}
+a.barLink5:link {
+	font-family: "宋体";
+	color : #ffffff;
+	text-decoration : none;
+	font-size: 12px;
+	font-weight: normal;
+}
+a.barLink5:visited {
+	font-family: "宋体";
+	color : #ffffff;
+	text-decoration : none;
+	font-size: 12px;
+	font-weight: normal;
+}
+a.barLink5:hover {
+	font-family: "宋体";
+	color : #666666;
+	text-decoration : none;
+	font-size: 12px;
+	font-weight: normal;
+}
+.newtop
+{
+	background:url(../Images/new2_back.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/new2_back.jpg*/ repeat-x  top;
+	height:90px;
+	overflow:hidden;
+	width:100%;
+	padding-top:32px;
+	_padding-top:0px;
+	_background-position:0 -32px;
+}
+.newtop ul{
+	list-style-type:none;
+	margin:0;
+}
+.newtopfloat ul{
+	list-style-type:none;
+	margin:0;
+}
+.newtopfloat
+{
+    width:100%;
+    position:fixed;
+    _position:none;
+    background:url(../Images/new2_back.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/new2_back.jpg*/ repeat-x  top;
+	height:32px;
+	overflow:hidden;
+	top:0;
+	left:0;
+	z-index:1;
+}
+
+.newtop1
+{
+	line-height:32px;
+	width:976px;
+	margin:0 auto;
+	font-size: 12px;
+	font-family: "宋体";
+	font-weight: normal;
+	text-decoration: none;
+	color: #cccccc;
+}
+
+.newtop1 ul
+{
+    margin:auto;
+    padding:auto;
+    overflow:hidden;
+    height:32px;
+}
+.newtop1 .nt1l{
+	float:left;
+	width:70%;
+	overflow:hidden;
+}
+.nt1l li{
+	list-style-type:none;
+	float:left;
+	height:32px;
+    line-height:32px;
+}
+.newtop1 .nt1r{
+	float:right;
+	width:240px;
+	*width:250px;
+	overflow:hidden;
+}
+.nt1r li
+{
+    height:32px;
+    line-height:32px;
+	list-style-type:disc;
+	width:80px;
+	float:left;
+	_width:80px;	
+	
+}
+.nt1l3 a:link {
+	font-family: "宋体";
+	color : #ffffff;
+	text-decoration : none;
+	font-size: 12px;
+	font-weight: normal;
+}
+.nt1l3 a:visited {
+	font-family: "宋体";
+	color : #ffffff;
+	text-decoration : none;
+	font-size: 12px;
+	font-weight: normal;
+}
+.nt1l3 a:hover {
+	font-family: "宋体";
+	color : #FFCC00;
+	text-decoration : none;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.nt1r li a
+{
+    display:inline-block;
+    padding:0 5px 0 5px;
+}
+
+
+.nt1r li a:hover
+{
+    color:Black;
+    background-color:White;
+}
+
+
+.newtop2
+{
+	height:85px;
+	width:976px;
+	margin:0 auto;
+}
+.newtop2 ul,li{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+.newtop2 .nt2l{
+	float:left;
+	width:30%;
+}
+.newtop2 .nt2r
+{
+	float:right;
+	width:66%;
+	margin-top:50px;
+}
+.newtop2 .nt2r .li{
+	float:right;
+	width:8%;
+}
+.newtop2 .tsetxt
+{
+	width:400px;
+	float:left;
+	height:34px;
+	background-image:url(../Images/new2_35_c.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/new2_35_c.jpg*/;
+	overflow:hidden;
+}
+.newtop2 .tsetxt .li1{
+	width:26px;
+	float:left;
+}
+.newtop2 .tsetxt .li2{
+	margin-top:3px;
+	width:368px;
+	float:left;
+}
+.newtop2 .tsetxt .li3{
+	width:4px;
+	float:left;
+}
+.newtop2 .tsetbtn{
+	float:left;
+	width:44px;
+	margin-left:10px;
+}
+/*copy newtop2 begin*/
+.topntd
+{
+    overflow:hidden;
+}
+.topntd li
+{
+    float:left;
+    width:60px;
+}
+.newtop2 .nt2r1{
+	float:right;
+	width:60%;
+	margin-top:22px;
+}
+.newtop2 .tsetxt1
+{
+	width:362px;
+	float:left;
+	height:34px;
+	background-image:url(../Images/new2_35_c.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/new2_35_c.jpg*/;
+	overflow:hidden;
+}
+.newtop2 .tsetxt1 .li1{
+	width:26px;
+	float:left;
+}
+.newtop2 .tsetxt1 .li2{
+	margin-top:3px;
+	width:330px;
+	float:left;
+}
+.newtop2 .tsetxt1 .li3{
+	width:4px;
+	float:left;
+}
+/*copy newtop2 end*/
+
+.newcontainer ul,li{
+	margin:0;
+	padding:0;
+}
+.newcontainer{
+	background-position:0 -120px;
+}
+.newcontainer .hctop{
+	width:100%;
+	height:400px;
+}
+.newcontainer .hcbottom{
+	width:976px;
+	margin:0 auto;
+	margin-top:30px;
+	margin-bottom:30px;
+	overflow:hidden;
+}
+
+.newcontainer .nhlayer
+{
+	float:right;
+	margin-top:15px;
+	margin-right:20px;
+	width:250px;
+	_width:253px;
+	padding:10px;
+	overflow:hidden;
+	background-color:#a3a8aa;	
+}
+
+.newcontainer .nhlayer .nhlogin{
+	border:1px solid #fff;
+	width:220px;
+	padding:0 15px 0 15px;
+	background-color:#FFF;
+}
+
+/*模板套用*/
+.newcontainer2{
+	background-position:0 -120px;
+}
+.newcontainer2 .hctop{
+	width:976px;
+	margin:0 auto;
+	height:380px;
+	background-image:url(../Images/99h.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/99h.jpg*/;
+	background-position:0 -1px;
+	background-repeat:no-repeat;
+}
+.newcontainer2 .hcbottom{
+	width:976px;
+	margin:0 auto;
+	margin-top:40px;
+	overflow:hidden;
+}
+
+.newcontainer2 .nhlayer
+{
+	float:right;
+	margin-top:15px;
+	margin-right:20px;
+	width:250px;
+	_width:253px;
+	padding:10px;
+	overflow:hidden;
+	background-color:#a3a8aa;	
+}
+
+.newcontainer2 .nhlayer .nhlogin{
+	border:1px solid #fff;
+	width:220px;
+	padding:0 15px 0 15px;
+	background-color:#FFF;
+}
+
+
+
+.nhlogin li{
+    margin-bottom:10px;
+    color: #666666; 
+    font-size:14px;
+}
+.sdflk{
+	float:left;
+	width:50%;
+}
+.hcbottom .hcbl{
+	float:left;
+	width:285px;
+	height:305px;
+	overflow:hidden;
+	background:url(../Images/new2_17.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/new2_17.jpg*/ no-repeat;
+	padding:15px;
+}
+.hcbl ul,li{
+	margin:0;
+	padding:0;
+}
+.hcaso {
+	
+}
+.hcbottom .hcbr{
+	float:right;
+	width:650px;
+}
+.hcaso li{
+	width:100%;
+	line-height:21px;
+}
+.hcaso .mcmore{
+	background-image:url(../Images/new2_22.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/new2_22.jpg*/;
+	background-repeat:repeat-x;
+	text-align:right;
+	width:100%;
+	overflow:hidden;
+	line-height:10px;
+}
+.hcaso .mcmore1
+{
+    overflow:hidden;
+	background-image:url(../Images/new2_28.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/new2_28.jpg*/;
+	background-repeat:repeat-x;
+	text-align:right;
+	width:100%;
+	line-height:15px;
+}
+.hcaso .mcmore2{
+	background-image:url(../Images/new2_22.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/new2_22.jpg*/;
+	background-repeat:repeat-x;
+	background-position:bottom;
+	width:100%;
+	overflow:hidden;
+	line-height:30px;
+}
+.hcaso .mcmore2 .moa{
+	float:right;
+	margin-right:10px;
+}
+.newfoot
+{
+	text-align:center;
+	width:100%;
+	padding:20px 0 20px 0;
+	background:url(../Images/new2_38.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/new2_38.jpg*/ top repeat-x #F2F2F2
+}
+.toppou
+{
+    position:fixed;
+    _position:absolute;
+    background-color:White;
+    border:1px solid black;
+    border-top:0;
+    width:180px;
+    overflow:hidden;
+    padding:5px;
+    display:none;
+    z-index:3;
+}
+.toppou .tlul
+{
+    overflow:hidden;
+}
+.toppou .tlul li
+{
+    padding:0;
+    float:left;
+}
+.toppou .tlul:hover
+{
+    background-color:#e8e9ea;
+}
+.toppou li
+{
+    line-height:30px;
+    font-size:12px;
+    padding-left:5px;
+    color:#666666;
+}
+.toppou a
+{
+    color:#ff6600
+}
+.toppou a:hover
+{
+    text-decoration:underline;
+}
+.toppou li:hover
+{
+    background-color:#e8e9ea;
+}
+
+.visaentrance
+{
+    position:absolute;
+    background-color:#edf4fe;
+    border:1px solid #2964b4;
+    border-top:0;
+    overflow:hidden;
+    padding:5px;
+    display:none;
+    z-index:3;
+    width:260px;
+}
+.visaentrance li
+{
+    float:left;
+    width:50px;
+}
+.appointment
+{
+    overflow:hidden;
+    width:100%;
+}
+.appointment li
+{
+    color: #666666;
+    width:33%;
+    float:left;
+    line-height:22px;
+}
+.svcss
+{
+    font-size:14px;
+    padding-left:10px;
+}
+.mnv
+{
+    font-size:x-large;
+    color:#1c62a8;
+    font-weight:bolder;
+    padding:20px 0 10px 0;
+    border-bottom: 2px solid #91B3E6;
+}
+.mctr
+{
+    margin-bottom:50px;
+    overflow:hidden;
+}
+.mct
+{
+    overflow:hidden;
+}
+.mct .li1
+{
+    font-size:14px;
+    margin:3px 0 3px 0;
+    width:100%;
+    color:#1c62a8;
+    height:30px;
+    cursor:pointer;
+}
+.noread
+{
+    background:url(../Images/nm1.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/nm1.jpg*/ no-repeat;
+}
+.readed
+{
+    background:url(../Images/nm2.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/nm2.jpg*/ no-repeat;
+}
+
+.mct .li1
+{
+    width: 100%; 
+    overflow: hidden;
+}
+.mct .li1 .li11
+{
+    float:left;
+    width:65%;
+    padding-left:35px;
+    line-height:30px;
+}
+.mct .li1 .li12
+{
+    float:left;
+    width:22%;
+    line-height:30px;
+}
+.mct .li1 .li13
+{
+    float:left;
+    text-align:center;
+    width:5%;
+}
+.mct .li1 .li13 img
+{
+    position:relative;
+    top:5px;
+    height:18px;
+    width:20px;
+}
+.mct .li2
+{
+    width:98%;
+    font-size:12px;
+    color:#666666;
+    padding-left:10px;
+    line-height:200%;
+}
+.mct .li3
+{
+    text-align:right;
+    color:#999999;
+}
+.loading
+{
+    text-align:center;
+    padding:10px 0 10px 0;
+    display:none;
+}
+.msgnull
+{
+    font-size:x-large;
+    color:#1c62a8;
+    font-weight:bolder;
+    padding:20px 0 10px 0;
+    text-align:center;
+}
+#divMsgCount
+{
+    position:fixed;
+    _position:absolute;
+    width:110px;
+    height:80px;
+    z-index:2;
+    display:none;
+}
+#divMsgCount div
+{
+    width:100px;
+    height:10px;
+    position:absolute;
+    left:3px;
+    top:30px;
+    text-align:center;
+}
+#divMsgCount div a
+{
+    font-size:12px;
+}

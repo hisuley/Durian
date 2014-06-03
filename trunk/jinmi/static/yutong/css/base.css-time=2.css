@@ -1,0 +1,294 @@
+body{
+	margin:0;
+	padding:0;
+	margin:0 auto;
+	font-size: 12px;
+	font-family: "宋体";
+}
+form
+{
+    margin:0;
+    padding:0;
+    display:inline;
+}
+p{
+	line-height:20px;
+	margin:0;
+	padding:0;
+}
+div{
+	margin:0;
+	padding:0;
+}
+.infobox
+{
+    background-color: #fff9d7;
+    border: 1px solid #e2c822;
+    color: #333333;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    width: 500px;
+    text-align: left;
+    margin:5px;
+}
+.errorbox
+{
+    background-color: #ffebe8;
+    border: 1px solid #dd3c10;
+    color: #333333;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    width: 500px;
+    margin:5px;
+}
+a{
+	font-weight: normal;
+	color: #006699;
+	font-size: 12px;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+a:hover {
+	font-weight: normal;
+	color: #006699;
+	font-size: 12px;
+	text-decoration:underline;
+	font-family: Arial, Helvetica, sans-serif;
+}
+a img
+{
+    border:0;
+    }
+ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+li{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+.mtop{
+	overflow:hidden;
+	/*background-color:#60b91f;*/
+	background-color:#507cd1;
+}
+.mtop .md1{
+	height:100%;
+	overflow:hidden;
+	line-height:50px;
+	padding:0 20px 0 20px;
+	color:#ffffff;
+}
+.mtop .md1 .md1l{
+	text-align:center;
+	width:100%;
+	font-size:22px;
+	font-weight:bold;
+	FONT-FAMILY: "微软雅黑";
+	margin-top:10px;
+	line-height:30px;
+	color:#ffffff;
+}
+.mtop .md1 .md1r{
+	float:right;
+	width:30%;
+	text-align:right;
+}
+.mtop .md1 .md1r a{
+	color:#ffffff;
+}
+.mtop .md1 .md1r label{
+	color:#ffffff
+}
+.mtop .md2{
+	padding:0 20px 0 20px;
+	height:100%;
+	overflow:hidden;
+}
+.mtop .md2 li{
+	float:left;
+	width:65px;
+	text-align:center;
+	margin-right:5px;
+	line-height:30px;
+	/*background-color:#2d9121;*/
+	background-color:#195997;
+}
+.mtop .md2 li a{
+	display:block;
+	width:100%;
+	height:100%;
+	color:#ffffff;
+}
+.mtop .md2 li .seled{
+	display:block;
+	width:100%;
+	height:100%;
+	color:#006699;
+	background-color:#FFF;
+}
+.mcontent{
+	padding:10px;
+	overflow:hidden;
+}
+.mcontent .mcd1{
+	float:left;
+	width:150px;
+	border:1px solid #c4d5df;
+	padding:5px;
+	min-height:500px;
+	_height:500px;
+}
+.mcontent .mcd1 li{
+	line-height:28px;
+}
+.mcontent .mcd1 .nv1{
+	color:#fff;
+	font-size:14px;
+	font-weight:bold;
+	padding-left:10px;
+	/*background-color:#60b91f;*/
+	background-color:#507cd1;
+}
+.mcontent .mcd1 a{
+	display:block;
+	height:100%;
+	padding-left:10px;
+}
+.mcontent .mcd1 .seled{
+	margin-top:2px;	
+	background:url(../Images/icon_next.png)/*tpa=http://b.tigerwing.cn/Content/Images/icon_next.png*/ 135px 5px no-repeat #eeeeee;
+}
+.mcontent .mcd2{
+	margin-left:170px;
+	border:1px solid #c4d5df;
+	padding:5px;
+	min-height: 500px; 
+	_height: 500px
+	
+}
+.mcontent .mcd2 .nv2{
+	color:#fff;
+	font-size:14px;
+	font-weight:bold;
+	line-height:28px;
+	padding-left:10px;
+	/*background-color:#60b91f;*/
+	background-color:#507cd1;
+}
+.mcontent .mcd2 .content{
+	padding:0 10px 10px 10px;
+}
+.mcontent .mcd2 .content p{
+	color:#333333;
+}
+.mcontent .mcd2 .content h4{
+	border-bottom:1px solid #dedede;
+	padding-bottom:10px;
+}
+.boot{
+	color:#666666;
+	line-height:40px;
+	text-align:center;
+	font-size:12px;
+}
+.input_public
+{
+	border:#dedede 1px solid;
+	font-size:12px;
+	padding:3px;
+	line-height:20px;
+	height:20px;
+	color:#333333;
+}
+.form-data{
+	margin-left:10px;
+}
+.btn{
+	float:right;
+	margin-right:10px;
+}
+.btn input{
+	border:1px solid #0d5a8e;
+	*border:0;
+	background-image:url(../Images/all_nav_bg_blue.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/all_nav_bg_blue.jpg*/;
+	padding:0px 10px 0px 10px;
+	line-height:25px;
+	font-size:14px;
+	font-weight:bold;
+	color:#fff;
+	cursor:pointer;
+}
+.display-none
+{
+    display:none
+}
+.display-block
+{
+    display:block
+}
+.form input[class=bigsubmit]{
+	background-image:url(../Images/17.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/17.jpg*/;
+	width:110px;
+	height:26px;
+	font-size:14px;
+	font-weight:bolder;
+	margin-top:10px;
+	border:0;
+}
+.lc
+{
+    height: 100%; padding: 10px; text-align: center; font-size: 16px;
+}
+.lc div
+{
+    line-height:22px;
+    text-align:left;
+}
+.lc ul
+{
+    text-align:left;
+ }
+.lc ul li
+{
+    line-height:20px;
+}
+.lc .tl
+{
+     background-color:#eef4ea;
+}
+.lc .tl .remind
+{
+    color:Red
+}
+.lc .dbn
+{
+    text-align:center; 
+    margin-top:15px;   
+}
+.lc .dbn input
+{
+    margin-right:10px;    
+}
+.lc .lw
+{
+    width:110px;
+    display:inline-block;
+}
+.input_btn1{
+	border:0;
+	*border:0;
+	width:78px;
+	height:26px;
+	background-image:url(../Images/bnt1.gif)/*tpa=http://b.tigerwing.cn/Content/Images/bnt1.gif*/;
+	padding:0px 5px 0px 5px;
+	line-height:25px;
+	font-size:12px;
+	font-weight:bold;
+	color:#404040;
+	cursor:pointer;
+}

@@ -81,6 +81,7 @@ table.visa-order .danger-button:hover{
     line-height: 1.5;
     border-radius: 3px;
     text-decoration: none;
+    margin-right:5px;
 }
 .alink-btn:hover{
     background-color: rgb(99, 179, 222);
@@ -170,3 +171,8 @@ div.container{max-width: 2000px;}
 table.table {font-size:0.9em;}
 
 div.sent_visa_table{width:90%;margin-left:5%;}
+div.form-actions{margin-top:20px;}
+
+/* Header */
+
+h1,h2,h3{font-family:"微软雅黑";font-weight: normal}

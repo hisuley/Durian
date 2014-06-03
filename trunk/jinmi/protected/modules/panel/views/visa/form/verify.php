@@ -21,13 +21,14 @@ $form = $this->beginWidget('CActiveForm', array(
             </td>
         </tr>
         <?php if($inputName == 'sent_comment'){
-           echo "<tr><td><label>送签旅行社：</label></td><td>";
-           echo $form->dropDownList(VisaOrder::model()->findByPk(CHttpRequest::getParam('id')), 'sent_agency_source',
-                    CHtml::listData(OrderSource::model()->findAll('type = :type', array(':type'=>OrderSource::TYPE_AGENCY)), 'id', 'name'), array('readonly'=> PanelUser::checkAttributesAccess('sent_agency_source', $model))
+           echo "<tr><td><label>送签渠道：</label></td><td id='sent-by-all-wrapper'>";
+           echo $form->dropDownList($model, 'agency_id',
+                    CHtml::listData(VisaTypeAgency::model()->findAllByAttributes(array('type_id'=>$model->type)), 'id', 'agency.name')
                 );
-           echo "</td></tr>";
-        }?>
-        <tr>
+           echo "</td><td><a href='#' class='sent-by-customer-btn' data-type='all'>按客户选择出签渠道</a></td></tr>";
+              }?>
+
+        <tr id="main-verify-body">
             <td><label><?php if($inputName == 'sent_comment'){ echo "送签"; } ?>时间：</label></td>
             <td>
                 <?php
@@ -71,3 +72,41 @@ $form = $this->beginWidget('CActiveForm', array(
 </form>
 
 <?php $this->endWidget(); ?>
+
+<?php if($inputName == 'sent_comment'){
+    echo "<table id='sent-by-customer' style='display:none;'><tbody>";
+    foreach($model->customer as $key=>$customer){
+        echo '<tr class="customer-item"><td><label>客人姓名：'.$customer->name.'</label></td><td><label style="float:left">送签渠道：</label>';
+        echo $form->dropDownList($customer, "[$customer->id]agency_id",
+            CHtml::listData(VisaTypeAgency::model()->findAllByAttributes(array('type_id'=>$model->type)), 'id', 'agency.name'));
+        echo "</td></tr>";
+    }
+    echo "</tbody></table>";
+    echo "<div id='sent-by-all-bak' style='display:none;'>";
+    echo $form->dropDownList($model, 'agency_id',
+        CHtml::listData(VisaTypeAgency::model()->findAllByAttributes(array('type_id'=>$model->type)), 'agency.id', 'agency.name')
+    );
+    echo "</div>";
+    ?>
+
+    <script type="text/javascript">
+        $('document').ready(function(){
+           $('.sent-by-customer-btn').click(function(){
+               if($(this).data('type') == 'all'){
+                   $('#sent-by-all-wrapper').html(' ');
+                   var htmlStr = $('#sent-by-customer tbody').html();
+                   $('#main-verify-body').before(htmlStr);
+                   $(this).text('批量设置出签渠道');
+                   $(this).data('type', 'customer');
+               }else{
+                   $('table.visa-order').find('tr.customer-item').remove();
+                   $('#sent-by-all-wrapper').html($('#sent-by-all-bak').html());
+                   $(this).text('按客户设置出签渠道');
+                   $(this).data('type', 'all');
+               }
+           });
+        });
+    </script>
+<?php
+}
+?>

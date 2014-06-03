@@ -15,7 +15,7 @@ class User extends CActiveRecord{
 	}
 	public function relations(){
 		return array(
-			'role' => array(self::HAS_MANY, 'UserRole', 'user_id')
+			//'role' => array(self::HAS_MANY, 'UserRole', 'user_id')
 			);
 	}
     public function afterFind(){

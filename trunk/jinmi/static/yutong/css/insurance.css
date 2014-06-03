@@ -1,0 +1,883 @@
+select
+{
+    font-size: 12px;
+}
+.insurance_container
+{
+    width: 735px;
+}
+.insurance_container .intle
+{
+    width:100%;
+    background-color:Black;
+}
+.insurance_container .intle tr
+{
+    background-color:white;
+    line-height:20px;
+    text-align:center;
+}
+.insurance_container .intle .xx
+{
+    background-image:url(../Images/xx.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/xx.jpg*/;
+    background-repeat:no-repeat;
+}
+.insurance_container .intle .mep
+{
+    font-weight:900;
+    color:#1c62a8;
+}
+.insurance_container input[type=text], select
+{
+    padding: 3px;
+    width: 110px;
+    border: 1px solid #abadb3;
+    font-size: 12px;
+    color: #333333;
+}
+.ic_imgnv
+{
+    margin: 0 0 5px 0;
+    width: 100%;
+    overflow: hidden;
+}
+.ic_txtnv
+{
+    margin: 0 0 10px 0;
+    background-image: url(../Images/insurance_17.gif)/*tpa=http://b.tigerwing.cn/Content/Images/insurance_17.gif*/;
+    padding: 0 0 0 10px;
+    line-height: 35px;
+    font-weight: bolder;
+    font-size: 15px;
+    color: #333333;
+    _width: 725px;
+    overflow:hidden;
+}
+.ic_txtnv li
+{
+    padding:7px 0 7px 0;
+            }
+.ic_list
+{
+    width: 100%;
+    overflow: hidden;
+}
+.ic_item
+{
+    width: 360px;
+    float: left;
+    margin-bottom: 10px;
+}
+.ic_title
+{
+    background-color: #e0f1ff;
+    padding: 10px;
+    margin-bottom: 5px;
+    color: #0051a1;
+}
+.ic_title a
+{
+    font-weight: bolder;
+    font-size: 15px;
+    color: #f86c17;
+    text-decoration: none;
+}
+.ic_title a:hover
+{
+    text-decoration: underline;
+    color: #ea5504;
+}
+.ic_allcn
+{
+    width: 100%;
+    overflow: hidden;
+}
+.img_cn
+{
+    width: 160px;
+    height: 160px;
+    float: left;
+}
+.img_cn img
+{
+    width: 160px;
+    height: 160px;
+    border: 0;
+}
+.ic_cn
+{
+    width: 195px;
+    padding: 0 0 0 5px;
+    float: left;
+}
+.tody_priced
+{
+    line-height: 25px;
+    font-weight: bolder;
+    font-size: 14px;
+    color: #42a820;
+}
+.high_priced
+{
+    line-height: 25px;
+    font-weight: bolder;
+    font-size: 14px;
+    color: #ff732e;
+}
+.ic_char
+{
+    line-height: 25px;
+    font-weight: bolder;
+    font-size: 14px;
+    color: #333333;
+}
+.icchar_txt
+{
+    color: #666666;
+    line-height: 20px;
+    font-size: 12px;
+    padding: 10px 0 10px 0;
+}
+.icchar_txt ul
+{
+    margin: 0;
+    padding: 0;
+}
+.icchar_txt li
+{
+    margin-left: 20px;
+    list-style-type: decimal;
+}
+.ic_btn
+{
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+    clear: both;
+}
+.ic_btn .button
+{
+    background-image: url(../Images/insurance_26.gif)/*tpa=http://b.tigerwing.cn/Content/Images/insurance_26.gif*/;
+    border: 0;
+    width: 88px;
+    height: 28px;
+}
+.ic_txtdnv
+{
+    background-image: url(../Images/details_03.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/details_03.jpg*/;
+    padding: 0 0 0 10px;
+    line-height: 24px;
+    font-weight: bolder;
+    font-size: 14px;
+    color: #333333;
+}
+.ic_dt
+{
+    border: 1px solid #bfd8f0;
+    font-size: 12px;
+    color: #333333;
+    padding: 30px;
+    line-height: 30px;
+    overflow:hidden;
+}
+.ic_dt .btncn
+{
+    margin-top: 15px;
+    text-align:center;
+}
+.ic_dt .btncn .button
+{
+    background-image: url(../Images/details_07.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/details_07.jpg*/;
+    border: 0;
+    width: 181px;
+    height: 28px;
+}
+.ic_notice .title
+{
+    font-size: 14px;
+    font-weight: bolder;
+}
+.ic_notice
+{
+    margin: 30px 0 30px 0;
+    font-size: 12px;
+    color: #333333;
+    line-height: 30px;
+}
+.ic_notice .cn
+{
+    font-size: 12px;
+}
+.idbtn
+{
+    margin: 30px 0 0 0;
+    text-align: center;
+}
+.idbtn .button
+{
+    background-image: url(../Images/details_21.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/details_21.jpg*/;
+    border: 0;
+    width: 138px;
+    height: 28px;
+}
+.ic_price
+{
+    margin: 10px 0 10px 0;
+    font-size: 12px;
+    color: #333333;
+    width: 100%;
+    overflow: hidden;
+}
+.icc
+{
+    border: 1px solid #bfd8f0;
+    padding: 10px;
+    width: 713px;
+}
+.icc_c1
+{
+    font-size: 12px;
+    line-height: 20px;
+    border-bottom: 1px dotted #999999;
+}
+.icc_c1 .icc_c11
+{
+    margin: 10px 0 30px 10px;
+    color: #666666;
+}
+.icc_c1 .icc_c12
+{
+    color: #333333;
+}
+.icc_c1 .icc_c12 .ibtn
+{
+    background-image: url(../Images/button_bg_on_blue.gif)/*tpa=http://b.tigerwing.cn/Content/Images/button_bg_on_blue.gif*/;
+    border: 0;
+    width: 108px;
+    height: 28px;
+    font-size:14px;
+    color:#ffffff;
+}
+.icc_c1 .icc_c12 .con
+{
+    text-align:center;
+}
+.icc_c1 .icc_c12 div
+{
+    margin: 0 0 10px 10px;
+}
+.icc_c1 .icc_c12 div .label
+{
+    color: #1c62a8;
+    font-size: 13px;
+}
+.margint
+{
+    margin: 10px 0 0 0;
+}
+.marginb
+{
+    margin: 0 0 10px 0;
+}
+.icc_c2f
+{
+    line-height: 30px;
+}
+.icc_c2f table
+{
+    width: 100%;
+}
+.icc_c2f table td
+{
+    width: 33%;
+    line-height: 35px;
+}
+.icc_c2f table td label
+{
+    display: inline-block;
+    width: 65px;
+    color: #333333;
+}
+.ic_total
+{
+    color: #1c62a8;
+    font-size: 14px;
+}
+.ic_create
+{
+    padding: 30px 0 20px 0;
+    overflow: hidden;
+    text-align: center;
+}
+.ic_create .button
+{
+    background-image: url(../Images/order_19.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/order_19.jpg*/;
+    border: 0;
+    width: 138px;
+    height: 28px;
+}
+
+.ic_c3summarize
+{
+    margin: 10px 0 10px 10px;
+    color: #666666;
+}
+.ic_c3summarize a
+{
+       color: red;
+ }
+.ic_addinsurancenum
+{
+    color: #333333;
+    margin: 0 0 10px 10px;
+}
+
+.ic_addinsurancenum .addbtn
+{
+    padding-left: 10px;
+    line-height: 38px;
+    margin-bottom: 10px;
+    background-color: #ffe4aa;
+    background-image: url(../Images/bg.gif)/*tpa=http://b.tigerwing.cn/Content/Images/bg.gif*/;
+}
+
+.addbtn .button
+{
+    background-image: url(../Images/button_18.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/button_18.jpg*/;
+    border: 0;
+    width: 93px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.ic_cform
+{
+    color: #333333;
+    line-height: 28px;
+}
+
+.ic_cform .item
+{
+    width: 98%;
+    background-color: #f4f4f4;
+    margin: 10px 0 0 10px;
+    overflow: hidden;
+    padding: 2px;
+}
+.ic_cform .item label
+{
+    display: inline-block;
+    width: 55px;
+}
+.ic_cform .item a
+{
+    color: red;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.ic_cform .item a:hover
+{
+    color: red;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+.ic_fristt
+{
+    background-image: url(../Images/safety_26.gif)/*tpa=http://b.tigerwing.cn/Content/Images/safety_26.gif*/;
+    color: #336799;
+    font-weight: bolder;
+    font-size: 14px;
+    line-height: 34px;
+}
+.ic_fristt .title
+{
+    background-image: url(../Images/num_01.gif)/*tpa=http://b.tigerwing.cn/Content/Images/num_01.gif*/;
+    background-repeat: no-repeat;
+    background-position: 0 8px;
+    padding-left: 25px;
+    margin-left: 10px;
+    height: 24px;
+}
+.ic_fristt .title a
+{
+    margin-left: 500px;
+    font-weight: 100;
+}
+.ic_fristc
+{
+    border: 1px solid #d6dfe3;
+    border-top: 0;
+    padding: 20px 0 20px 25px;
+    font-size: 12px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+.ic_fristc span
+{
+    margin-left: 10px;
+}
+.ic_secondt
+{
+    background-image: url(../Images/safety_26.gif)/*tpa=http://b.tigerwing.cn/Content/Images/safety_26.gif*/;
+    color: #336799;
+    font-weight: bolder;
+    font-size: 14px;
+    line-height: 34px;
+}
+.ic_secondt .title
+{
+    background-image: url(../Images/num_02.gif)/*tpa=http://b.tigerwing.cn/Content/Images/num_02.gif*/;
+    background-repeat: no-repeat;
+    background-position: 0 8px;
+    padding-left: 25px;
+    margin-left: 10px;
+}
+.ic_secondt .title a
+{
+    margin-left: 565px;
+    font-weight: 100;
+}
+.ic_secondc
+{
+    border: 1px solid #d6dfe3;
+    border-top: 0;
+    padding: 20px 0 20px 25px;
+    font-size: 12px;
+    color: #333333;
+    line-height: 25px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.ic_secondc li
+{
+    list-style-type: none;
+    float: left;
+    width: 40%;
+    margin-left: 10px;
+}
+.ic_secondc li label
+{
+    color: #ff825a;
+}
+
+.ic_secondcPrint
+{
+   
+    border-top: 0;
+    padding: 20px 0 20px 25px;
+    font-size: 12px;
+    color: #333333;
+    line-height: 25px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.ic_secondcPrint li
+{
+    list-style-type: none;
+    float: left;
+    width: 40%;
+    margin-left: 10px;
+}
+
+
+.ic_statementt
+{
+    color: #666666;
+    font-weight: bolder;
+    font-size: 14px;
+    line-height: 34px;
+    padding-left: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #d6dfe3;
+}
+.ic_statementt .tilte
+{
+    background-image: url(../Images/num_02.gif)/*tpa=http://b.tigerwing.cn/Content/Images/num_02.gif*/;
+    background-repeat: no-repeat;
+    background-position: 0 8px;
+    padding-left: 25px;
+    margin-left: 10px;
+}
+.ic_statementc
+{
+    border: 1px solid #d6dfe3;
+    border-top: 0;
+    padding: 20px 0 20px 25px;
+    font-size: 12px;
+    color: #333333;
+    line-height: 25px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.ic_statementc li
+{
+    list-style-type: none;
+    margin-left: 10px;
+}
+.ic_statementc li label
+{
+    color: #ff825a;
+}
+.ic_calc
+{
+    padding: 10px 0 10px 0;
+    border-left: 1px solid #d6dfe3;
+    border-right: 1px solid #d6dfe3;
+    text-align: center;
+    color: #333333;
+    font-size: 14px;
+    font-weight: bolder;
+    width: 712px;
+}
+.ic_calc label
+{
+    color: #ff6d3d;
+}
+.ic_submit
+{
+    text-align: center;
+    margin: 30px 0 30px 0;
+}
+.ic_submit input[type=submit]
+{
+    width: 136px;
+    height: 33px;
+    border: 0;
+    background-image: url(../Images/cft_quest_18.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/cft_quest_18.jpg*/;
+}
+
+.ic_submit .submit
+{
+    width: 136px;
+    height: 33px;
+    border: 0;
+    background-image: url(../Images/cft_quest_18.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/cft_quest_18.jpg*/;
+}
+.ic_submit a
+{
+    margin-left: 10px;
+}
+.ic_submit .goback
+{
+    font-size:16px;
+    text-decoration:underline;
+}
+.selinsnrancenew
+{
+    width: 95%;
+    border: 1px solid #bfd8f0;
+    margin: 10px 0 0 0;
+    overflow: hidden;
+    padding: 5px;
+}
+.smallbtn_insurance{
+	background-image:url(../Images/insurance_1.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/insurance_1.jpg*/;
+	background-repeat:no-repeat;
+	text-align:center;
+	font-size:12px;
+	width:157px;
+	height:63px;
+	border:0;
+	font-weight:bolder;
+	color:#883300;
+	cursor:pointer;
+}
+.selinsnrancenew ul
+{
+    overflow: hidden;
+    padding: 0 5px 0 5px;
+    border-bottom: 1px dotted #999999;
+}
+.selinsnrancenew ul:hover
+{
+    background-color: #f4f4f4;
+}
+.selinsnrancenew li
+{
+    line-height: 25px;
+    float: left;
+    text-align: center;
+}
+.selinsnrancenew ul, li
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.divBorder
+{
+    border-left: 1px solid #91b3e6;
+    border-right: 1px solid #91b3e6;
+    border-bottom: 1px solid #91b3e6;
+    width: 730px;
+    margin: 0;
+    padding: 0;
+}
+.divBorder li
+{
+    padding-left: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 1px solid #bfbfbf;
+    width: 90%;
+}
+.divBorder .show_li
+{
+    display:none;
+}
+.gblist .info
+{
+    display: block;
+    margin: 0 0 8px 0;
+}
+.info .wt
+{
+    width: 32%;
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+}
+.info .wt .price
+{
+    text-decoration: line-through;
+    font-weight: bolder;
+}
+/*entrance new*/
+.ic_itemn
+{
+    width: 100%;
+    margin-bottom: 10px;
+    overflow:hidden;
+}
+.img_cnn
+{
+    width: 160px;
+    height: 160px;
+    float: left;
+}
+.img_cnn2
+{
+    width: 300px;
+    height: 160px;
+    float: left;
+}
+.img_cnn2 img
+{
+    width: 300px;
+    height: 160px;
+    border: 0;
+}
+.img_cnn img
+{
+    width: 160px;
+    height: 160px;
+    border: 0;
+}
+.ic_contn
+{
+    margin-left:10px;
+    width: 380px;
+    float: left;
+}
+.ic_contn2
+{
+    margin-left:10px;
+    width: 200px;
+    float: left;
+}
+.prasso
+{
+    width:100%;
+    overflow:hidden;
+    line-height:25px;
+    margin-top:10px;
+}
+.prasso li
+{
+    width:33%;
+    float:left;
+    color:#b8d100;
+    font-size:larger;
+    font-weight:bolder;
+}
+.prassov
+{
+    width:100%;
+    overflow:hidden;
+    line-height:25px;
+}
+.prassov li
+{
+    width:33%;
+    float:left;
+    color:#fb0000;
+    font-size:large;
+    font-weight:bolder;
+}
+.ic_btnn
+{
+    float:right;
+    width:130px;
+    text-align:left;
+    line-height:160px;
+}
+.ic_btnn .button
+{
+    background-image: url(../Images/insurance_26.gif)/*tpa=http://b.tigerwing.cn/Content/Images/insurance_26.gif*/;
+    border: 0;
+    width: 88px;
+    height: 28px;
+    line-height:18px;
+    font-size:14px;
+    font-weight:bolder;
+    color:White;
+    text-align:center;
+}
+.intb table
+{
+    width:100%;
+}
+.intpt td
+{
+    font-weight:bolder;
+}
+.btop
+{
+    height:9px;
+}
+
+.initm
+{
+    overflow:hidden;
+    width:100%;
+    color:#666666;
+    margin-bottom:10px;
+}
+.initm .inleft
+{
+    float:left;
+    width:78%;
+}
+.initm .inleft .d1
+{
+    border:1px solid #d7d7d7;
+    border-left:0;
+    border-right:0;
+    line-height:25px;
+    padding-left:10px;
+}
+.initm .inleft .d2
+{
+    border-bottom:1px solid #d7d7d7;
+    line-height:25px;
+    padding-left:10px;
+}
+.initm .inright
+{
+    float:right;
+    width:152px;
+    height:152px;
+    text-align:center;
+    background-image: url(../Images/untitled.bmp)/*tpa=http://b.tigerwing.cn/Content/Images/untitled.bmp*/;
+}
+.initm .inright ul
+{
+    overflow:hidden;
+}
+.initm .inright .inli1
+{
+    margin-top:45px;
+}
+.initm .inright .inli2
+{
+}
+.initm .inright .ljin
+{
+    background-image: url(../Images/ljin.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/ljin.jpg*/;
+    border: 0;
+    width: 102px;
+    height: 34px;
+    cursor:pointer;
+}
+.initm .inright .lbl1
+{
+    font-size:25px;
+    font-weight:bolder;
+}
+.initm .inright .lbl2
+{
+    
+    font-size:25px;
+    color:#f86c17;
+    font-weight:bolder;
+}
+.initm .inright .lbl3
+{
+    color:#f86c17;
+    font-size:14px;
+}
+.innv{
+	height:32px;
+	line-height:32px;
+	border-bottom:4px solid #dadada	;
+	width:100%;
+	overflow:hidden;
+}
+.innv li{
+	float:left;
+	width:120px;
+	height:32px;
+	color:#959595;
+	font-size:15px;
+	line-height:32px;
+	font-weight:bolder;
+	text-align:center;
+	cursor:pointer;
+}
+.innv .more
+{
+    float:right;
+}
+.innv .seled{
+	background-image:url(../Images/i08.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/i08.jpg*/;
+	background-repeat:no-repeat;
+	color:#000000;
+}
+/*entrance new*/
+
+
+.intle
+{
+    width:100%;
+   
+    font-size:14px;
+}
+.intle td
+{
+    text-align:center;
+	padding:5px;
+}
+.itdrb
+{
+    border-right:1px solid black;
+    border-bottom:1px solid black;
+}
+.itdb
+{
+    border-bottom:1px solid black;
+}
+.itdr
+{
+    border-right:1px solid black;
+}
+
+.indexBtn
+{
+    background-image: url(../Images/button_bg_on_blue.gif)/*tpa=http://b.tigerwing.cn/Content/Images/button_bg_on_blue.gif*/;
+    border: 0;
+    width: 128px;
+    height: 30px;
+    font-size:18px;
+    color:#ffffff;
+}

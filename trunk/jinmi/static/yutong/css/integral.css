@@ -1,0 +1,221 @@
+
+.itlt{
+	overflow:hidden;
+	width:100%;
+	margin:20px 0 20px 0;
+}
+.itlt .itelct1{
+	width:654px;
+	float:left;
+}
+.itlt .itelct1 img{
+	width:100%;
+	height:298px;
+}
+.itlt .itelct2{
+	width:320px;
+	float:right;
+}
+.itlt .itelct2 img{
+	width:100%;
+}
+.itlcl{
+	background-color:#f2f2f2;
+}
+.itlcl .iak{
+	overflow:hidden;
+	width:185px;
+	margin:0 auto;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.itlcl .iak .title{
+	border-bottom:1px solid #d9d9d9;
+	padding: 0 0 7px 0px;
+	font-weight:bolder;
+	color:#646464;
+	font-size:14px;
+	line-height:15px;
+}
+.itlcl .iak .tl1{
+	font-weight:bolder;
+	color:#989898;
+}
+.itlcl .iak li{
+	color:#959595;
+	line-height:30px;
+}
+.itlcl .iak2{
+	overflow:hidden;
+	width:185px;
+	margin:0 auto;
+	margin-top:0px;
+	margin-bottom:0px;
+	color:#676767;
+}
+.itlcl .iak2 .tl2{
+	border-bottom:1px solid #d9d9d9;
+	height:10px;
+	_line-height:18px;
+	margin-bottom:14px;
+}
+.itlcl .iak2 li{
+	line-height:28px;
+}
+.itlcl .iak2 .tl3
+{
+    height:175px;
+    overflow:hidden;
+}
+.itlcl .iak2 .tl3 img
+{
+    width:100%;
+    height:100%;
+}
+.innv{
+	height:32px;
+	line-height:32px;
+	border-bottom:4px solid #dadada	;
+	width:100%;
+	overflow:hidden;
+}
+.innv li{
+	float:left;
+	width:120px;
+	height:32px;
+	color:#959595;
+	font-size:15px;
+	line-height:32px;
+	font-weight:bolder;
+	text-align:center;
+	cursor:pointer;
+}
+.innv .more
+{
+    float:right;
+}
+.innv .seled{
+	background-image:url(../Images/i08.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/i08.jpg*/;
+	background-repeat:no-repeat;
+	color:#000000;
+}
+
+.inprod{
+	overflow:hidden;
+	width:96%;
+	margin:0 auto;
+	margin-top:10px;
+	color:#6b6b6b;
+}
+.inprod .title a{
+	line-height:25px;
+	font-weight:bolder;
+	font-size:14px;
+}
+.inprod .cimt{
+	height:9px;
+}
+.inprod .ccon{
+	background-color:#f7f7f7;
+	padding:15px 0 15px 15px;
+	border:1px solid #e0e0e0;
+	border-top:0;
+}
+.inprod .ccon ul{
+	overflow:hidden;
+	width:100%;
+}
+.inprod .ccon .li1{
+	margin-right:15px;
+	float:left;
+	width:190px;
+}
+ .inprod .ccon .li1 .img{
+	width:200px;
+	height:160px;
+    }
+	
+.inprod .ccon .li2{
+	width:254px;
+	float:left;
+	margin-right:8px;
+}
+.inprod .ccon .li3{
+	width:221px;
+	float:right;
+}
+.inprod .ccon .li3 .li3t{
+	margin-bottom:10px;
+	width:100%;
+}
+.inprod .ccon .li3 .li3t .li1{
+	width:75px;
+	margin-left:30px;
+	_margin-left:15px;
+}
+.inprod .ccon .li3 .li3t .li2{
+	width:40px;
+	text-align:center;
+}
+.inprod .ccon .li3 .li3t .li2 img{
+	margin-top:25px;
+	_margin-top:20px;
+}
+.inprod .ccon .li3 .li3t .li3{
+	width:75px;
+}
+.inprod .ccon .li3 .li3t li{
+	float:left;
+	margin-right:0;
+	
+}
+.inprod .ccon .li3 .li3t .part{
+	margin-bottom:5px;
+}
+.inprod .ccon .li3 .li3t .symbol{
+	width:20px;
+	display:inline-block;
+	line-height:25px;
+	font-size:18px;
+	font-weight:bolder;
+	color:#fe721a;
+}
+.inprod .ccon .li3 .li3t .price{
+	font-size:20px;
+	font-weight:bolder;
+	color:#c90c10;
+}
+.inprod .ccon .li3 .li3t .sco{
+	width:10px;
+	display:inline-block;
+	line-height:15px;
+	font-size:12px;
+	font-weight:bolder;
+	color:#fe721a;
+}
+
+.inprod .ccon .li3 .li3m{
+	height:75px;
+	background-image:url(../Images/i15.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/i15.jpg*/;
+}
+.inprod .ccon .li3 .li3m li{
+	float:left;
+}
+.inprod .ccon .li3 .li3m .mli1{
+	padding:6px 0 0 50px;
+	width:36%;
+	line-height:25px;
+}
+.inprod .ccon .li3 .li3m .mli2{
+	padding:10px 0 0 15px;
+	width:30%;
+}
+.inprod .ccon .li3 .li3m .oripri{
+	text-decoration:line-through;
+	font-size:12px;
+	color:#FFF;
+}
+.inprod .ccon .li3 .li3m .pri{
+	font-size:12px;
+	color:#ffcf00;
+}

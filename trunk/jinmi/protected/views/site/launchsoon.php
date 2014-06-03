@@ -1,4 +1,5 @@
 <html class=""><head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <title>金米旅游 | 发现更广阔的世界</title>
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css">
 <meta name="keywords" content="金米旅游,智慧旅游,大数据旅游">

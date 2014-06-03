@@ -7,7 +7,7 @@
  * @copyright
  **/
 class OrderSource extends CActiveRecord{
-    public $name, $notes, $type, $parent_id, $is_enabled, $contact_name, $contact_phone, $contact_address;
+    public $name, $notes, $type, $source_id, $parent_id, $is_enabled, $contact_name, $contact_phone, $contact_address;
     public $create_time;
     const TYPE_SOURCE = 1;
     const TYPE_AGENCY = 2;
@@ -19,15 +19,18 @@ class OrderSource extends CActiveRecord{
     }
     public function rules(){
         return array(
-            array('name, notes, type, parent_id, is_enabled, contact_name, contact_phone, contact_address', 'safe')
+            array('name, source_id, notes, type, parent_id, is_enabled, contact_name, contact_phone, contact_address', 'safe')
         );
     }
     public function relations(){
         return array(
             'order'=>array(self::HAS_MANY, 'VisaOrder', 'source'),
-            'parent' => array(self::BELONGS_TO, 'OrderSource', 'parent_id')
+            'parent' => array(self::BELONGS_TO, 'OrderSource', 'parent_id'),
+            'account'=>array(self::HAS_MANY, 'OrderSourceBankAccount', 'order_source_id')
         );
     }
+
+
     /**
      * Some useful action before saving the data
      *
@@ -131,4 +134,18 @@ class OrderSource extends CActiveRecord{
             return '无法识别';
         }
     }
+
+    public static function getMultipleSource($model){
+        $agencyId = array();
+        if(isset($model->customer)){
+            foreach($model->customer as $customer){
+                if(!empty($customer->agencyType->agency->id) && !in_array($customer->agencyType->agency->id,$agencyId)){
+
+                    array_push($agencyId, $customer->agencyType->agency->id);
+                }
+            }
+        }
+        return (count($agencyId) == 1) ? self::getSourceName($agencyId[0]) : (count($agencyId) == 0 ? "没有选择送签渠道":"多个送签渠道");
+    }
+
 }

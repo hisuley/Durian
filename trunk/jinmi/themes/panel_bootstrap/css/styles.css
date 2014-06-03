@@ -1,0 +1,19 @@
+#page {
+    padding-top: 60px;
+}
+div.orstep li{list-style-type: none;}
+
+a.read-message-close{
+    padding: 3px 5px 3px 5px;
+}
+a.read-message-close:hover {
+    background-color: #0088cc;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+p.msg-nav-list{border-bottom: 1px dotted #ccc;padding-top: 10px;padding-bottom: 5px;}
+.ke-content{font-family: "宋体"}
+/* Header */
+
+h1,h2,h3{font-family:"微软雅黑";font-weight: normal}

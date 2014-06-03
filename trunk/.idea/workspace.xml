@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74b6f384-8cb4-4801-86d7-b859aeaa5c85" name="Default" comment="F">
+    <list default="true" id="74b6f384-8cb4-4801-86d7-b859aeaa5c85" name="Default" comment="add placing order page.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/AgencyController.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/AgencyController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/models/PanelUser.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/models/PanelUser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/VisaController.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/VisaController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/models/VisaOrder.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/models/VisaOrder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/views/site/launchsoon.php" afterPath="$PROJECT_DIR$/jinmi/protected/views/site/launchsoon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/agency/list.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/agency/list.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/form/new.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/form/new.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/view.php" afterPath="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/static/panel/css/style.css" afterPath="$PROJECT_DIR$/jinmi/static/panel/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jinmi/themes/panel_bootstrap/css/styles.css" afterPath="$PROJECT_DIR$/jinmi/themes/panel_bootstrap/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
+    <list id="cc852c23-a1f7-4ed4-b048-3142e86425c6" name="IGNORE" comment="" />
     <ignored path="trunk.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,100 +34,200 @@
     <favorites_list name="trunk" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="new.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/form/new.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="201" column="26" selection-start="8723" selection-end="8723" vertical-scroll-proportion="-4.75" vertical-offset="3591" max-vertical-offset="10355">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="26" selection-start="1894" selection-end="1894" vertical-scroll-proportion="0.5966981" vertical-offset="748" max-vertical-offset="3192">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/layouts/main.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="25" selection-start="2501" selection-end="2501" vertical-scroll-proportion="0.0" vertical-offset="760" max-vertical-offset="1748">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/list.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="10" selection-start="1462" selection-end="1462" vertical-scroll-proportion="-7.464286" vertical-offset="627" max-vertical-offset="2717">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="m140218_030547_add_sent_visa_travel_agency_column.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/migrations/m140218_030547_add_sent_visa_travel_agency_column.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="58" selection-start="151" selection-end="169" vertical-scroll-proportion="-4.071429" vertical-offset="0" max-vertical-offset="570">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CDbConnection.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/framework/db/CDbConnection.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="377" column="13" selection-start="14160" selection-end="14160" vertical-scroll-proportion="-8.035714" vertical-offset="6805" max-vertical-offset="15390">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/config/main.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="10" selection-start="1753" selection-end="1943" vertical-scroll-proportion="-11.535714" vertical-offset="969" max-vertical-offset="2128">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/config/console.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="13" selection-start="529" selection-end="529" vertical-scroll-proportion="-11.535714" vertical-offset="0" max-vertical-offset="874">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VisaOrder.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/VisaOrder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="21" selection-start="3689" selection-end="3689" vertical-scroll-proportion="-1.5090909" vertical-offset="1342" max-vertical-offset="3705">
-              <folding>
-                <marker date="1392696464703" expanded="true" signature="7701:7758" placeholder="SELECT sum(p..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PanelUser.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/PanelUser.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="33" selection-start="3078" selection-end="3078" vertical-scroll-proportion="-15.357142" vertical-offset="900" max-vertical-offset="1748">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.52625155">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/jinmi/protected/config/main.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="111" column="40" selection-start="3727" selection-end="3727" vertical-scroll-proportion="0.0" vertical-offset="1723" max-vertical-offset="2502">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/jinmi/protected/views/site/index.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="launchsoon.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/jinmi/protected/views/site/launchsoon.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="9" column="24" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="1944">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="new.php" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/form/new.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="98" column="92" selection-start="3430" selection-end="3430" vertical-scroll-proportion="0.39130434" vertical-offset="1404" max-vertical-offset="11070">
+                  <folding>
+                    <marker date="1401425319620" expanded="true" signature="1148:1628" placeholder="..." />
+                    <marker date="1401425319620" expanded="true" signature="1161:1628" placeholder="..." />
+                    <marker date="1401425319620" expanded="true" signature="1460:1628" placeholder="..." />
+                    <marker date="1401425319620" expanded="true" signature="2044:2896" placeholder="..." />
+                    <marker date="1401425319620" expanded="true" signature="2634:2896" placeholder="..." />
+                    <marker date="1401425319620" expanded="true" signature="4637:4844" placeholder="..." />
+                    <marker date="1401425319620" expanded="true" signature="6341:7386" placeholder="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="list.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/agency/list.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="2" column="94" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="846">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AgencyController.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/AgencyController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="56" column="5" selection-start="1934" selection-end="1934" vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="1656">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CHtml.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/framework/web/helpers/CHtml.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="480" column="27" selection-start="17575" selection-end="17575" vertical-scroll-proportion="0.0" vertical-offset="8640" max-vertical-offset="42246">
+                  <folding>
+                    <marker date="1388983932000" expanded="true" signature="9895:9908" placeholder="/*...*/" />
+                    <marker date="1388983932000" expanded="true" signature="9919:9926" placeholder="/*...*/" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/jinmi/static/panel/css/style.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="174" column="0" selection-start="5603" selection-end="5667" vertical-scroll-proportion="0.0" vertical-offset="2569" max-vertical-offset="3312">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/jinmi/themes/panel_bootstrap/css/styles.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="8" column="28" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="450">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="schema.mysql.sql" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/jinmi/protected/data/schema.mysql.sql">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="125" column="32" selection-start="3353" selection-end="3353" vertical-scroll-proportion="0.0" vertical-offset="694" max-vertical-offset="7326">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="VisaOrder.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/VisaOrder.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="616" column="17" selection-start="25600" selection-end="25600" vertical-scroll-proportion="-16.703703" vertical-offset="10547" max-vertical-offset="11376">
+                  <folding>
+                    <marker date="1401337371553" expanded="true" signature="22460:22517" placeholder="SELECT sum(p..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="PanelUser.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/PanelUser.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="118" column="0" selection-start="5609" selection-end="5609" vertical-scroll-proportion="-78.666664" vertical-offset="0" max-vertical-offset="2682">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="VisaOrderCustomer.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/VisaOrderCustomer.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="95" column="14" selection-start="4473" selection-end="4473" vertical-scroll-proportion="0.0" vertical-offset="1710" max-vertical-offset="1962">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="VisaTypeAgency.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/VisaTypeAgency.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="36" column="18" selection-start="980" selection-end="985" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="864">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="FinanceItems.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/FinanceItems.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="22" column="28" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="990">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="VisaController.php" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/VisaController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="106" column="124" selection-start="4544" selection-end="4544" vertical-scroll-proportion="0.28878647" vertical-offset="1828" max-vertical-offset="13806">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Finance.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/Finance.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="58" column="73" selection-start="2209" selection-end="2217" vertical-scroll-proportion="0.0" vertical-offset="1044" max-vertical-offset="5238">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="FinanceController.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/FinanceController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="12" column="24" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="7776">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="FinanceCancelRequest.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/FinanceCancelRequest.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="32" column="18" selection-start="890" selection-end="890" vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="1530">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -147,57 +252,57 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/components/OrderHelper.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/view.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderReviewHistory.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/components/UserIdentity.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/models/PortalLogin.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/components/views/review.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/DefaultController.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/list.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/VisaController.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/config/main.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/views/default/forgot.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/views/layouts/main.php" />
-        <option value="$PROJECT_DIR$/jinmi/static/portal/css/style.css" />
-        <option value="$PROJECT_DIR$/jinmi/js/tree.js" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/components/CommonHelper.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/views/visa/visa_form.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/MetaController.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/messages/zh_CN/portal.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrder.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/models/FinanceRecord.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/models/Finance.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/models/DefinedOrderAttribute.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderAttribute.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/models/PreDefinedAttribute.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/portal/models/PreDefinedAttributeValue.php" />
-        <option value="$PROJECT_DIR$/jinmi/css/topcoat-desktop-light.css" />
-        <option value="$PROJECT_DIR$/jinmi/protected/data/schema.mysql.sql" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/orderSource/new.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/AddressController.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/OrderSourceController.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/models/OrderSource.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/finance/pay/step1.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/finance/list/list.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/models/Address.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/yutong/models/YutongVisaGoods.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/yutong/controllers/VisaController.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/yutong/views/visa/list.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/components/PanelController.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/address/list.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/orderSource/list.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/address/new.php" />
-        <option value="$PROJECT_DIR$/jinmi/static/panel/css/style.css" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/VisaController.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/form/verify.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/models/User.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/default/login.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/layouts/login.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/default/changepass.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/DefaultController.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/layouts/main.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/migrations/m140218_030547_add_sent_visa_travel_agency_column.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/config/console.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/yutong/views/order/new.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/yutong/models/YutongUser.php" />
+        <option value="$PROJECT_DIR$/jinmi/static/yutong/css/style.css" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/yutong/controllers/OrderController.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/yutong/merchant/list.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/yutong/merchant/update.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/yutong/models/YutongConfig.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/YutongController.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/models/FinanceItems.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/extensions/simpleImage/simple_image.php" />
+        <option value="$PROJECT_DIR$/jinmi/themes/panel_bootstrap/js/main.js" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/yutong/config/indexGoods.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/yutong/controllers/DefaultController.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/components/GlobalHelper.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/yutong/views/default/index.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/yutong/views/default/qq.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/list.php" />
+        <option value="$PROJECT_DIR$/jinmi/themes/panel_bootstrap/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/stat/predict.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/stat/collection.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/stat/operate.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/stat/pay.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/stat/sent.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/yutong/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/models/VisaOrderCustomer.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/models/FinanceCancelRequest.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/finance/pay/step2.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/data/schema.mysql.sql" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/finance/collection/step2.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/finance/review/payReview.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/finance/view/pay.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/finance/view/collection.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/FinanceController.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/models/Finance.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/finance/review/collectionReview.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/views/site/launchsoon.php" />
+        <option value="$PROJECT_DIR$/jinmi/static/panel/css/style.css" />
+        <option value="$PROJECT_DIR$/jinmi/themes/panel_bootstrap/css/styles.css" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/agency/list.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/AgencyController.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/models/VisaOrder.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/models/PanelUser.php" />
         <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/form/new.php" />
-        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/view.php" />
+        <option value="$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/VisaController.php" />
       </list>
     </option>
   </component>
@@ -208,9 +313,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="27" />
-    <option name="width" value="1920" />
-    <option name="height" value="1053" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1060" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -302,6 +408,172 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panel_bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panel_bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panel_bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panel_bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yutong" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="protected" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -325,6 +597,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jinmi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -405,10 +703,6 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="visa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -440,11 +734,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="visa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="form" />
+              <option name="myItemId" value="agency" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -466,15 +756,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="panel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -496,51 +778,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jinmi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jinmi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -551,33 +789,36 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.pluginManager" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../dms/trunk" />
+    <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GitHub/Protein" />
     <property name="FullScreen" value="false" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="recentsLimit" value="5" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="235" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="228" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="245" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="238" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="250" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="243" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1160" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1126" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="235" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="230" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="245" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="240" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="250" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="245" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1160" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1133" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
-    <property name="SearchEverywhereHistory" value="fi" />
+    <property name="SearchEverywhereHistory" value="&#10;-&#10;、&#10;“&#10;&gt;&#10;别人&#10;in&#10;fi" />
+    <property name="LayoutCode.rearrangeEntriesPHP" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Suley\Code\Durian\trunk\jinmi\protected\modules\panel\views\visa\stat" />
+      <recent name="C:\Users\Suley\Code\Durian\trunk\jinmi\protected\modules" />
       <recent name="$PROJECT_DIR$/jinmi/static/panel/css" />
       <recent name="$PROJECT_DIR$/jinmi/static/panel/js" />
       <recent name="$PROJECT_DIR$/jinmi/static/panel" />
@@ -624,6 +865,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="74b6f384-8cb4-4801-86d7-b859aeaa5c85" name="Default" comment="" />
+      <changelist id="cc852c23-a1f7-4ed4-b048-3142e86425c6" name="IGNORE" comment="" />
       <created>1381411641192</created>
       <updated>1381411641192</updated>
     </task>
@@ -647,61 +889,89 @@
       <created>1392696220121</created>
       <updated>1392696220121</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update database shema, add yutong module schema.">
+      <created>1396149464442</created>
+      <updated>1396149464442</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fix the table style">
+      <created>1396149519453</created>
+      <updated>1396149519453</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add status to yutong goods table.">
+      <created>1396149560906</created>
+      <updated>1396149560906</updated>
+    </task>
+    <task id="LOCAL-00010" summary="delete several useless controller in yutong visa.">
+      <created>1396149586009</created>
+      <updated>1396149586009</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add order/visa's list/view pages.">
+      <created>1396149605787</created>
+      <updated>1396149605787</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add placing order page.">
+      <created>1396151052408</created>
+      <updated>1396151052408</updated>
+    </task>
+    <task id="LOCAL-00013" summary="import tinymce">
+      <created>1397023354667</created>
+      <updated>1397023354667</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1053" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28864864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14737992" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23202614" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13258786" sideWeight="0.7413793" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913843" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.32901832" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913843" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17750533" sideWeight="0.67098165" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13258786" sideWeight="0.7413793" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12779553" sideWeight="0.67098165" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.32901832" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14737992" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897604" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286638" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40065503" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32694355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28910464" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14737992" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23202614" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286638" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40065503" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13258786" sideWeight="0.7413793" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.32928678" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913843" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913843" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.32901832" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897604" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32694355" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6707132" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17944622" sideWeight="0.67098165" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USERS">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
     </option>
   </component>
@@ -721,296 +991,327 @@
     <MESSAGE value="Create database migrations files&#10;" />
     <MESSAGE value="Change console db configuration files" />
     <MESSAGE value="Fix visa order list style&#10;Add search filter order source" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix visa order list style&#10;Add search filter order source" />
+    <MESSAGE value="Fix Bugs:&#10;1. Add form validation before submit and prevent the submit&#10;2. Record all changes to delete/add to customer/prices/amount" />
+    <MESSAGE value="Update database shema, add yutong module schema." />
+    <MESSAGE value="Fix the table style" />
+    <MESSAGE value="add status to yutong goods table." />
+    <MESSAGE value="delete several useless controller in yutong visa." />
+    <MESSAGE value="add order/visa's list/view pages." />
+    <MESSAGE value="add placing order page." />
+    <MESSAGE value="import tinymce" />
+    <option name="LAST_COMMIT_MESSAGE" value="import tinymce" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/MetaController.php">
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/yutong/models/YutongConfig.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="14" selection-start="1878" selection-end="1878" vertical-scroll-proportion="-26.925926" vertical-offset="101" max-vertical-offset="1080" />
+        <state line="12" column="57" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="630" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/messages/zh_CN/portal.php">
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/yutong/controllers/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="2" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="360" />
+        <state line="47" column="0" selection-start="2036" selection-end="2036" vertical-scroll-proportion="0.0" vertical-offset="805" max-vertical-offset="2502" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/Visa.php">
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/components/GlobalHelper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="5" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="396" />
+        <state line="45" column="64" selection-start="1903" selection-end="1903" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1422" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/controllers/VisaController.php">
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/yutong/views/default/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="124" selection-end="124" vertical-scroll-proportion="-1.7084639" vertical-offset="1743" max-vertical-offset="2700" />
+        <state line="143" column="41" selection-start="6735" selection-end="6735" vertical-scroll-proportion="0.0" vertical-offset="2574" max-vertical-offset="3258" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrder.php">
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/yutong/views/default/qq.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="0" selection-start="2821" selection-end="2821" vertical-scroll-proportion="0.47803882" vertical-offset="756" max-vertical-offset="5706" />
+        <state line="21" column="45" selection-start="26199" selection-end="26199" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="918" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/components/OrderHelper.php">
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/models/Post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1006" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/OfflineOrderAttribute.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="70" selection-start="1675" selection-end="1675" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1260" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/Address.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="28" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1458" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/PreDefinedAttributeValue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="666" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/css/topcoat-desktop-light.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1851" column="16" selection-start="44813" selection-end="44813" vertical-scroll-proportion="-11.702127" vertical-offset="34619" max-vertical-offset="66975" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/PreDefinedAttribute.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="5" selection-start="319" selection-end="319" vertical-scroll-proportion="-8.821428" vertical-offset="0" max-vertical-offset="722" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/FinanceRecord.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="2" selection-start="309" selection-end="309" vertical-scroll-proportion="-9.5" vertical-offset="0" max-vertical-offset="380" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/components/CommonHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="641" selection-end="641" vertical-scroll-proportion="-4.535714" vertical-offset="196" max-vertical-offset="1045" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/models/Finance.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="2" selection-start="384" selection-end="384" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="456" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../gds/changes.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="46" selection-start="7510" selection-end="7510" vertical-scroll-proportion="0.44051826" vertical-offset="2514" max-vertical-offset="3363" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/data/schema.mysql.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="25" selection-start="2804" selection-end="2804" vertical-scroll-proportion="0.0" vertical-offset="1605" max-vertical-offset="2470" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/orderSource/new.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="8" selection-start="444" selection-end="444" vertical-scroll-proportion="-8.142858" vertical-offset="0" max-vertical-offset="874" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/AddressController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="5" selection-start="480" selection-end="480" vertical-scroll-proportion="5.428571" vertical-offset="399" max-vertical-offset="2413" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/Address.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="4" selection-start="2637" selection-end="2777" vertical-scroll-proportion="-1.4909091" vertical-offset="1628" max-vertical-offset="2147" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/OrderSourceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="31" selection-start="508" selection-end="508" vertical-scroll-proportion="-11.535714" vertical-offset="0" max-vertical-offset="1558" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/OrderSource.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="57" selection-start="352" selection-end="352" vertical-scroll-proportion="-3.392857" vertical-offset="114" max-vertical-offset="2128" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/static/panel/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="13775" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/static/panel/js/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="988" selection-start="1109" selection-end="1110" vertical-scroll-proportion="0.1513083" vertical-offset="0" max-vertical-offset="3781" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/static/panel/css/bootstrap-theme.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.021615472" vertical-offset="19" max-vertical-offset="2299" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/static/portal/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="203" selection-end="764" vertical-scroll-proportion="0.0" vertical-offset="1078" max-vertical-offset="1957" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/portal/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="7" selection-start="1332" selection-end="1332" vertical-scroll-proportion="-12.892858" vertical-offset="0" max-vertical-offset="2071" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/address/list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="80" selection-start="86" selection-end="86" vertical-scroll-proportion="-0.6785714" vertical-offset="0" max-vertical-offset="931" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/orderSource/list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="15" selection-start="588" selection-end="588" vertical-scroll-proportion="-10.857142" vertical-offset="0" max-vertical-offset="874" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/address/new.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="29" selection-start="886" selection-end="886" vertical-scroll-proportion="-6.642857" vertical-offset="327" max-vertical-offset="1178" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/zii/widgets/CBreadcrumbs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="20" selection-start="2158" selection-end="2167" vertical-scroll-proportion="19.142857" vertical-offset="1619" max-vertical-offset="2470" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/static/panel/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="25" selection-start="4024" selection-end="4024" vertical-scroll-proportion="12.074074" vertical-offset="2454" max-vertical-offset="3306" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/controllers/VisaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="879" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/default/error.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="879" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/form/verify.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="26" selection-start="1416" selection-end="1416" vertical-scroll-proportion="-13.571428" vertical-offset="342" max-vertical-offset="1254" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/VisaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="5" selection-start="939" selection-end="939" vertical-scroll-proportion="0.0" vertical-offset="665" max-vertical-offset="3496" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/default/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="27" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="304" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/layouts/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="25" selection-start="760" selection-end="760" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="684">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="707">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/models/User.php">
+    <entry file="file://$PROJECT_DIR$/jinmi/themes/panel_bootstrap/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="41" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="1083">
+        <state line="98" column="47" selection-start="6297" selection-end="6297" vertical-scroll-proportion="0.0" vertical-offset="1764" max-vertical-offset="4014" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/stat/collection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="1" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0" vertical-offset="522" max-vertical-offset="3816" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/stat/operate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="1" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="3924" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/stat/pay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="1" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0" vertical-offset="522" max-vertical-offset="3870" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/stat/predict.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="2" selection-start="464" selection-end="652" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="4014" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/yutong/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="301" column="10" selection-start="11701" selection-end="11701" vertical-scroll-proportion="0.0" vertical-offset="5418" max-vertical-offset="20124" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/PanelModule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="34" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1116" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/form/verify.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="13" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="2106" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/themes/panel_bootstrap/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="18" selection-start="420" selection-end="420" vertical-scroll-proportion="0.43509272" vertical-offset="37" max-vertical-offset="900" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0" vertical-offset="309" max-vertical-offset="16866" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/VisaTypeAgency.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="18" selection-start="980" selection-end="985" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="864">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/stat/sent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="6" selection-start="886" selection-end="886" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="2790" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="47" selection-start="2812" selection-end="2812" vertical-scroll-proportion="-12.0" vertical-offset="1134" max-vertical-offset="3978" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/FinanceCancelRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="18" selection-start="890" selection-end="890" vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="1530">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/finance/collection/step1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4572" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/finance/collection/success.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="6" selection-start="255" selection-end="255" vertical-scroll-proportion="-5.3333335" vertical-offset="0" max-vertical-offset="252" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/finance/pay/step1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="18" selection-start="1236" selection-end="1236" vertical-scroll-proportion="44.666668" vertical-offset="1674" max-vertical-offset="5598" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/finance/collection/step2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="20" selection-start="995" selection-end="1441" vertical-scroll-proportion="-7.3333335" vertical-offset="270" max-vertical-offset="2538" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/finance/pay/step2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="81" selection-start="4721" selection-end="4721" vertical-scroll-proportion="0.0" vertical-offset="2700" max-vertical-offset="4194" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/finance/view/pay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="11" selection-start="1508" selection-end="2913" vertical-scroll-proportion="0.0" vertical-offset="666" max-vertical-offset="2664" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/finance/view/collection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="18" selection-start="1603" selection-end="3012" vertical-scroll-proportion="0.0" vertical-offset="1152" max-vertical-offset="2970" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/finance/review/payReview.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="86" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="2034" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/FinanceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="24" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="7776">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/data/schema.mysql.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="32" selection-start="3353" selection-end="3353" vertical-scroll-proportion="0.0" vertical-offset="694" max-vertical-offset="7326">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/finance/review/collectionReview.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="37" selection-start="1946" selection-end="1946" vertical-scroll-proportion="0.0" vertical-offset="756" max-vertical-offset="2916" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/themes/panel_bootstrap/views/layouts/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="23" selection-start="0" selection-end="1095" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="648" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/default/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="7" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="288">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="67" selection-start="980" selection-end="980" vertical-scroll-proportion="0.0" vertical-offset="251" max-vertical-offset="2071">
-          <folding />
-        </state>
+        <state line="71" column="33" selection-start="2638" selection-end="2638" vertical-scroll-proportion="0.0" vertical-offset="972" max-vertical-offset="2088" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/default/changepass.php">
+    <entry file="file://$PROJECT_DIR$/jinmi/css/portal-login.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="3" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="1007">
-          <folding />
-        </state>
+        <state line="19" column="1" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5058" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/components/PanelController.php">
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/VisaOrderCustomer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="14" selection-start="1442" selection-end="1442" vertical-scroll-proportion="0.0" vertical-offset="627" max-vertical-offset="1045">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="25" selection-start="2501" selection-end="2501" vertical-scroll-proportion="0.0" vertical-offset="760" max-vertical-offset="1748">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/db/CDbConnection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="377" column="13" selection-start="14160" selection-end="14160" vertical-scroll-proportion="-8.035714" vertical-offset="6805" max-vertical-offset="15390">
+        <state line="95" column="14" selection-start="4473" selection-end="4473" vertical-scroll-proportion="0.0" vertical-offset="1710" max-vertical-offset="1962">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jinmi/protected/config/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="10" selection-start="1753" selection-end="1943" vertical-scroll-proportion="-11.535714" vertical-offset="969" max-vertical-offset="2128">
+        <state line="111" column="40" selection-start="3727" selection-end="3727" vertical-scroll-proportion="0.0" vertical-offset="1723" max-vertical-offset="2502">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/config/console.php">
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/views/site/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="529" selection-end="529" vertical-scroll-proportion="-11.535714" vertical-offset="0" max-vertical-offset="874">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="806">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/list.php">
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/views/site/launchsoon.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="10" selection-start="1462" selection-end="1462" vertical-scroll-proportion="-7.464286" vertical-offset="627" max-vertical-offset="2717">
+        <state line="9" column="24" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="1944">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/FinanceItems.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="28" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/Finance.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="73" selection-start="2209" selection-end="2217" vertical-scroll-proportion="0.0" vertical-offset="1044" max-vertical-offset="5238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/static/panel/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="174" column="0" selection-start="5603" selection-end="5667" vertical-scroll-proportion="0.0" vertical-offset="2569" max-vertical-offset="3312">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/themes/panel_bootstrap/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="28" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/web/helpers/CHtml.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="480" column="27" selection-start="17575" selection-end="17575" vertical-scroll-proportion="0.0" vertical-offset="8640" max-vertical-offset="42246">
+          <folding>
+            <marker date="1388983932000" expanded="true" signature="9895:9908" placeholder="/*...*/" />
+            <marker date="1388983932000" expanded="true" signature="9919:9926" placeholder="/*...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/agency/list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="94" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/AgencyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="5" selection-start="1934" selection-end="1934" vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="1656">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/themes/panel_bootstrap/views/visa/form/new.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="144" column="67" selection-start="6218" selection-end="6218" vertical-scroll-proportion="-2.6666667" vertical-offset="2430" max-vertical-offset="9990" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/PanelUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="0" selection-start="5609" selection-end="5609" vertical-scroll-proportion="-78.666664" vertical-offset="0" max-vertical-offset="2682">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/VisaOrder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="21" selection-start="3689" selection-end="3689" vertical-scroll-proportion="-1.5090909" vertical-offset="1342" max-vertical-offset="3705">
+        <state line="616" column="17" selection-start="25600" selection-end="25600" vertical-scroll-proportion="-16.703703" vertical-offset="10547" max-vertical-offset="11376">
           <folding>
-            <marker date="1392696464703" expanded="true" signature="7701:7758" placeholder="SELECT sum(p..." />
+            <marker date="1401337371553" expanded="true" signature="22460:22517" placeholder="SELECT sum(p..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/models/PanelUser.php">
+    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/controllers/VisaController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="33" selection-start="3078" selection-end="3078" vertical-scroll-proportion="-15.357142" vertical-offset="900" max-vertical-offset="1748">
+        <state line="106" column="124" selection-start="4544" selection-end="4544" vertical-scroll-proportion="0.28878647" vertical-offset="1828" max-vertical-offset="13806">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/form/new.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="201" column="26" selection-start="8723" selection-end="8723" vertical-scroll-proportion="-4.75" vertical-offset="3591" max-vertical-offset="10355">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/migrations/m140218_030547_add_sent_visa_travel_agency_column.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="58" selection-start="151" selection-end="169" vertical-scroll-proportion="-4.071429" vertical-offset="0" max-vertical-offset="570">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jinmi/protected/modules/panel/views/visa/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="26" selection-start="1894" selection-end="1894" vertical-scroll-proportion="0.5966981" vertical-offset="748" max-vertical-offset="3192">
-          <folding />
+        <state line="98" column="92" selection-start="3430" selection-end="3430" vertical-scroll-proportion="0.39130434" vertical-offset="1404" max-vertical-offset="11070">
+          <folding>
+            <marker date="1401425319620" expanded="true" signature="1148:1628" placeholder="..." />
+            <marker date="1401425319620" expanded="true" signature="1161:1628" placeholder="..." />
+            <marker date="1401425319620" expanded="true" signature="1460:1628" placeholder="..." />
+            <marker date="1401425319620" expanded="true" signature="2044:2896" placeholder="..." />
+            <marker date="1401425319620" expanded="true" signature="2634:2896" placeholder="..." />
+            <marker date="1401425319620" expanded="true" signature="4637:4844" placeholder="..." />
+            <marker date="1401425319620" expanded="true" signature="6341:7386" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -76,4 +76,12 @@ class AgencyController extends PanelController
         }
     }
 
+    public function actionExport(){
+        $models = OrderSource::model()->findAllByAttributes(array('type'=>OrderSource::TYPE_AGENCY));
+        $agencyWayData = array();
+        foreach($models as $key=>$model){
+           $agencyWayData[$key]['name'] = 
+        }
+    }
+
 }

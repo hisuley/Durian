@@ -5,6 +5,9 @@
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
+Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
+$currentDomain = $_SERVER['SERVER_NAME'];
+
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'金米旅游',
@@ -18,7 +21,10 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+        'application.extensions.*',
 		'application.extensions.EAjaxUpload.*',
+        'application.modules.nfy.components.*',
+        'application.modules.nfy.models.*',
 	),
 
 	'modules'=>array(
@@ -32,11 +38,16 @@ return array(
 		),
 		'admin',
 		'portal',
-        'panel'
+        'panel',
+        'yutong',
+        'nfy'
 	),
 
 	// application components
 	'components'=>array(
+        'bootstrap'=>array(
+            'class'=>'bootstrap.components.Bootstrap',
+        ),
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
@@ -44,7 +55,7 @@ return array(
 		),
         'session' => array(
             'class' => 'CDbHttpSession',
-            'cookieParams' => array('domain' => '.jmlvyou.com'),
+            'cookieParams' => array('domain' => $currentDomain),
             'timeout' => 3600,
             'connectionID' => 'db',
             'sessionName' => 'session',
@@ -55,6 +66,13 @@ return array(
 			'urlFormat'=>'path',
 			'showScriptName' => false,
 			'rules'=>array(
+                'http://panel.jmlvyou.com' => 'panel/default/index',
+                'http://panel.jmlvyou.com/nfy/<controller:\w+>/<action:\w+>' => 'nfy/<controller>/<action>',
+                'http://panel.jmlvyou.com/<controller:\w+>/<action:\w+>' => 'panel/<controller>/<action>',
+                'http://panel.jmlvyou.com/<controller:\w+>/<action:\w+>/<id:\d+>' => 'panel/<controller>/<action>',
+                'http://www.yutongvisa.com/' => 'yutong/default/index',
+                'http://www.yutongvisa.com/<controller:\w+>/<action:\w+>' => 'yutong/<controller>/<action>',
+                //'http://yutongvisa.com/<controller:\w+>/<action:\w+>' => 'yutong/<controller>/<action>',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
@@ -74,6 +92,7 @@ return array(
 			'username' => 'jinmi',
 			'password' => 'yanslwangss',
 			'charset' => 'utf8',
+            'enableParamLogging'=>true
 		),
 		
 		'errorHandler'=>array(
