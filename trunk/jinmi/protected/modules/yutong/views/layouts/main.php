@@ -240,6 +240,27 @@ Yii::app()->clientScript->registerCoreScript('jquery');
         </div>
     </div>
 </div>
+<?php
+
+    if(Yii::app()->user->hasFlash('success')){ ?>
+        <div style="width: 300px;
+margin-left: auto;
+margin-right: auto;
+background-color: #dff0d8;
+border-color: #d6e9c6;
+color: #3c763d;
+padding: 5px;
+margin-top: 10px;
+border: 1px solid transparent;
+border-radius: 4px;
+text-align: center;
+font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+font-size: 14px;
+">
+            <?php echo Yii::app()->user->getFlash('success'); ?>
+        </div>
+    <?php }
+?>
 <!--end top-->
 <!--begin main-->
 <?php echo $content; ?>

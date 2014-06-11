@@ -90,10 +90,10 @@
 
                         <ul>
                             <div style="z-index: 10; position: absolute; margin: -12px 0px 0px 163px;">
-                                <img src="http://b.tigerwing.cn/Content/Images/Home/offer_icon.png" width="82" height="82">
+                                <img src="<?php echo Yii::app()->request->baseUrl; ?>/static/yutong/img/offer_icon.png" width="82" height="82">
                             </div>
                             <li style="margin: 0 0 20px 0; width: 250px; margin-left: -15px; background-color: #edf4fe;">
-                                <img src="http://b.tigerwing.cn/Content/Images/Home/top_offer.jpg" width="134" height="35">
+                                <img src="<?php echo Yii::app()->request->baseUrl; ?>/static/yutong/img/top_offer.jpg" width="134" height="35">
                             </li>
 
                             <li style="float: left; width: 30%; background: #efefef; border-bottom: 2px solid #cccccc;

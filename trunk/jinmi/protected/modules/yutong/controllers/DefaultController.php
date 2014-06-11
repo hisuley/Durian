@@ -128,6 +128,10 @@ class DefaultController extends YutongController
                 $this->render('error', $error);
         }
     }
+    public function actionTest(){
+        Yii::app()->user->setFlash('success', "注册成功！");
+        $this->render("test");
+    }
     public function actionErrorTest(){
         throw new CHttpException(404, '错误');
     }

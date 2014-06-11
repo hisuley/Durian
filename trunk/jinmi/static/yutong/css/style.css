@@ -2112,7 +2112,7 @@ li{
 }
 .consult .title
 {
-    background-image: url(../img/08.jpg)/*tpa=http://b.tigerwing.cn/Content/Images/08.jpg*/;
+    background-image: url(../img/08.jpg);
     border-bottom: 1px solid #91B3E6;
     overflow: hidden;
     padding: 5px 5px 5px 10px;

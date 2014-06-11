@@ -15,7 +15,9 @@
 
 <body>
 
-<?php $this->widget('bootstrap.widgets.TbNavbar',array(
+<?php
+
+$this->widget('bootstrap.widgets.TbNavbar',array(
     'brand'=>"宇通业务处理平台",
     'items'=>array(
         array(
@@ -50,19 +52,7 @@
                     array('label'=>'收款历史', 'url'=>array('/panel/finance/requestList', 'status'=>Finance::STATUS_APPROVED, 'who'=>'me', 'type'=>Finance::TYPE_ORDER)),
                     '---',
                     array('label'=>'全部记录', 'url'=>array('/panel/finance/requestList', 'who'=>'me')),
-                    /*
-                    '---',
-                    array('label'=>'申请列表', 'url'=>array('/panel/finance/requestList', array('who'=>'me'))),
-                    array('label'=>'待审批申请', 'url'=>array('/panel/finance/waitingList')),
-                    array('label'=>'我的统计', 'url'=>array('/panel/finance/stat', array('who'=>'me'))),
-                    '---',
-                    array('label'=>'财务记账', 'url'=>array('/panel/finance/new')),
-                    '---',
-                    array('label'=>'流水明细', 'url'=>array('/panel/finance/list')),
-                    array('label'=>'财务报表', 'url'=>array('/panel/finance/report')),
-                    array('label'=>'盈利分析', 'url'=>array('/panel/finance/profitAnalyse')),
-                    array('label'=>'应收账款', 'url'=>array('/panel/finance/receiveList')),
-                    */
+
 
                 )),
                 array('label'=>'财务', 'icon'=>'info-sign', 'url'=>'#', 'visible'=>PanelUser::checkAccessToFunction('finance'),  'items'=>array(
@@ -123,12 +113,7 @@
                     array('label'=>'操作日志', 'url'=>array('/panel/history/log')),
 
                 )),
-                /*
-                array('label'=>'用户管理', 'url'=>"#", 'icon'=>'user', 'visible'=>!Yii::app()->user->isGuest, 'items'=>array(
-                    array('label'=>'用户列表', 'url'=>array('/panel/user/list')),
-                    array('label'=>'新增账号', 'url'=>array('/panel/user/new'))
 
-                )),*/
 
                 array('label'=>Yii::app()->controller->widget('bootstrap.widgets.TbButton', array(
                         'label'=>'<i class="icon-envelope"></i>&nbsp;'.$this->widget('bootstrap.widgets.TbBadge', array(
@@ -159,9 +144,10 @@
             ),
         ),
     ),
-)); ?>
+));
+?>
 
-<div class="<?php if(isset($this->fluid)){ echo 'container-fluid';}else{ echo 'container';} ?>" id="page">
+<div class="container" id="page">
 
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php
@@ -190,23 +176,7 @@
 	</div><!-- footer -->
 
 </div><!-- page -->
-<?php
-/*
-$this->widget('ext.stickyPage.StickyPage', array(
-    'height' => '300px',  // height of containter
-    'width' => '300px',  // width of containter
-    'data' => array(
-        // **message**: message to be shown
-        // **x**: x-coordinate
-        // **y**: y-coordinate
-        // **degree**: rotation angle
-        // **footer**: bottom text like date
-        // **height**: height of single stick-note
-        // **width**: width of single stick-note
-        array('message' => 'Happy New Year! ', 'x' => 130, 'y' => 100, 'footer' => '10/5/2014', 'height' => '400px'),
-    ),
-));*/
-?>
+
 <style>
     .popover{width:300px;}
     input[type="radio"], input[type="checkbox"] {

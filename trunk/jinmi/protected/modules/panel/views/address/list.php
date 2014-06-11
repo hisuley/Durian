@@ -1,5 +1,7 @@
 <?php
 echo CHtml::link('添加',$this->createUrl('address/new'), array('class'=>'alink-btn', 'style'=>'margin-bottom:-30px;'));
+
+echo "&nbsp;".CHtml::link('导出',$this->createUrl('agency/exportByCountries'), array('class'=>'btn btn-info'));
 $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider' => Address::allLists(),
     'pager' => array(

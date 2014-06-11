@@ -66,7 +66,9 @@ class OrderController extends YutongController{
                         $tempNewCustomer->save();
                     }
                 }
+                Yii::app()->user->setFlash("success", "下单成功！");
                 if(Yii::app()->user->isGuest){
+
                     $this->redirect(array('order/view', 'id'=>$model->id));
                 }else{
                     $this->redirect(array('order/list'));

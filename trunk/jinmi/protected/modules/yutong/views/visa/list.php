@@ -75,15 +75,15 @@
 </form>
 <ul class="visatitle1">
     <li style="padding-left: 5px; width: 11%; "><strong style="color:White; font-size:14px;">国家</strong></li>
-    <li style="width: 13%"><strong style="color:White; font-size:14px;">签证种类</strong></li>
-    <li style="width:8%;"><strong style="color:White; font-size:14px;">工作日</strong></li>
-    <li style="width: 9%"><strong style="color:White; font-size:14px;">市场价</strong></li>
-    <li style="width: 9%"><strong style="color:White; font-size:14px;">同行价</strong></li>
-    <li style="width: 10%;"><strong style="color:White; font-size:14px;">有效期</strong></li>
-    <li style="width: 10%;"><strong style="color:White; font-size:14px;">停留期</strong></li>
-    <li style="width: 10%;"><strong style="color:White; font-size:14px;">入境次数</strong></li>
+    <li style="width: 16%"><strong style="color:White; font-size:14px;">签证种类</strong></li>
+    <li style="width: 10%;"><strong style="color:White; font-size:14px;">工作日</strong></li>
+    <li style="width: 11%"><strong style="color:White; font-size:14px;">市场价</strong></li>
+    <li style="width: 11%"><strong style="color:White; font-size:14px;">同行价</strong></li>
+    <li style="width: 8%;"><strong style="color:White; font-size:14px;">有效期</strong></li>
+    <li style="width: 8%;"><strong style="color:White; font-size:14px;">停留期</strong></li>
+    <li style="width: 9%;"><strong style="color:White; font-size:14px;">入境次数</strong></li>
     <li style="width: 7%;"><strong style="color:White; font-size:14px;">资料</strong></li>
-    <li style="width: 8%;"><strong style="color:White; font-size:14px;">下单</strong></li>
+    <li style="width: 7%;"><strong style="color:White; font-size:14px;">下单</strong></li>
 </ul>
 
 <?php
@@ -93,16 +93,16 @@ $data = $search->getData();
 foreach($data as $item){ ?>
     <ul class="visaitem1">
         <li style="padding-left: 5px; width: 11%"><?php echo $item->country->name; ?></li>
-        <li style="width: 13%">
+        <li style="width: 18%">
             <?php echo empty($item->type->name) ? '未知': $item->type->name; ?>
         </li>
-        <li style="font-family:Arial, '宋体'; width:8%"><?php echo $item->workdays; ?></li>
-        <li style="width:9%">￥<?php echo $item->market_price; ?></li>
-        <li style="width:9%">￥<?php echo $item->price; ?></li>
-        <li style="font-family:Arial, '宋体';width: 10%;" ><?php echo $item->valid_period; ?>&nbsp;</li>
-        <li style="font-family:Arial, '宋体';width: 10%;"><?php echo $item->stay_period; ?>&nbsp;</li>
-        <li style="font-family:Arial, '宋体';width: 10%; text-align:center;"><?php echo $item->entry_times; ?>&nbsp;</li>
-        <li style="width: 7%;margin-right:3px;">
+        <li style="font-family:Arial, '宋体'; width:7%"><?php echo $item->workdays; ?></li>
+        <li style="width:11%">￥<?php echo $item->market_price; ?></li>
+        <li style="width:12%">￥<?php echo $item->price; ?></li>
+        <li style="font-family:Arial, '宋体';width: 8%;" ><?php echo $item->valid_period; ?>&nbsp;</li>
+        <li style="font-family:Arial, '宋体';width: 6%;"><?php echo $item->stay_period; ?>&nbsp;</li>
+        <li style="font-family:Arial, '宋体';width: 11%; text-align:center;"><?php echo $item->entry_times; ?>&nbsp;</li>
+        <li style="width: 6%;margin-right:3px;">
             <a href="<?php echo $this->createUrl('visa/view', array('id'=>$item->id)); ?>" style="text-decoration:underline"
                target="_blank">详细</a>
         </li>

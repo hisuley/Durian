@@ -66,6 +66,7 @@ class UserController extends YutongController
                 $addressModel->attributes = $_POST['YutongUserAddress'];
                 $addressModel->user_id = $model->id;
                 if($addressModel->save()) {
+                    Yii::app()->user->setFlash("success", "注册成功！欢迎您，尊敬的".$model->username."，祝您使用愉快！");
                     $this->redirect(array('default/index'));
                 }
             } else {

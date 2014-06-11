@@ -9,7 +9,7 @@
 
 echo "<h2>";
 if(empty($model->isNewRecord)){
-    echo "订单#".$model->id."-".$model->country_source->name."-".$model->amount."人-".$model->order_source->name."&nbsp;<small><a class='btn btn-info' href=\"".$this->createUrl("visa/list")."\">返回</a>";
+    echo "订单#".$model->id."-".$model->country_source->name."-".$model->amount."人-".$model->order_source->name."&nbsp;<small><a class='btn btn-info' href=\"".$this->createUrl("visa/list")."\">返回</a></small>";
 }else{
     echo "添加订单";
 }
@@ -248,11 +248,11 @@ $form=$this->beginWidget('CActiveForm', array(
                         if(PanelUser::checkAttributesAccess('customer', $model)){
                             echo ' readonly=readonly ';
                         }
-                        echo 'value="'.$v->name.'"></td><td><label>护照号：</label></td><td><input type="text"  name="VisaOrderCustomer[passport][]"';
+                        echo ' value="'.$v->name.'" /></td><td><label>护照号：</label></td><td><input type="text"  name="VisaOrderCustomer[passport][]"';
                         if(PanelUser::checkAttributesAccess('customer', $model)){
                             echo ' readonly=readonly ';
                         }
-                        echo 'value="'.$v->passport.'"></td>';
+                        echo ' value="'.$v->passport.'" /></td>';
                         if(!PanelUser::checkAttributesAccess('customer', $model)){
                             echo '<td>出签渠道：';
                             echo empty($v->agencyType) ? ''.(CHtml::dropDownList('VisaOrderCustomer['.$v->id.'][agency_id]', 0,
@@ -262,7 +262,7 @@ $form=$this->beginWidget('CActiveForm', array(
                                 if(empty($v->is_pay_out) && empty($v->is_pay)){
                                     echo '<td><a href="#" class="btn btn-default btn-small btn-danger deleteThis">删除</a>&nbsp;<a href="#" data-customer-id="'.$v->id.'" class="btn btn-default btn-small btn-info sentVisa">送签</a></td>';
                                 }else{
-                                    echo '<a href="#" data-customer-id="'.$v->id.'" class="btn btn-default btn-small btn-info sentVisa">送签</a></td>';
+                                    echo '<td><a href="#" data-customer-id="'.$v->id.'" class="btn btn-default btn-small btn-info sentVisa">送签</a></td>';
                                 }
 
                             }elseif($v->status == VisaOrderCustomer::STATUS_SENTOUT){
@@ -280,7 +280,7 @@ $form=$this->beginWidget('CActiveForm', array(
                         }else{
                             echo "<td></td>";
                         }
-                        echo '<input type="hidden" name="VisaOrderCustomer[id][]" value="'.$v->id.'"/>';
+                        echo '<td style="display:none;" ><input type="hidden" name="VisaOrderCustomer[id][]" value="'.$v->id.'"/></td>';
                         echo "</tr>";
                     }
                 }
@@ -291,7 +291,7 @@ $form=$this->beginWidget('CActiveForm', array(
             <td colspan="6">
                 <?php
                 if(!PanelUser::checkAttributesAccess('customer', $model) || $model->is_pay || $model->is_pay_out){
-                    echo ' <a href="#" class="btn btn-default btn-small add-visa-person">添加</a>';
+                    echo '<a href="#" class="btn btn-default btn-small add-visa-person">添加</a>';
                 }
                 ?>
             </td>
@@ -465,58 +465,61 @@ $form=$this->beginWidget('CActiveForm', array(
         </tr>
         </tbody>
     </table>
+
+<?php $this->endWidget(); ?>
 <script type="text/javascript">
-    $(document).ready(function(){
-        $('.add-visa-person').click(function(){
-            var personCount = $('.visa-person-item').length+1;
+    jQuery.noConflict();
+    jQuery('document').ready(function(){
+        jQuery('.add-visa-person').click(function(){
+            var personCount = jQuery('.visa-person-item').length+1;
             var visaHtml = '<tr class="visa-person-item"><td><label>客人'+personCount+'姓名：</label></td><td><input type="text" name="VisaOrderCustomer[name][]"></td><td><label>护照号：</label></td><td><input type="text"  name="VisaOrderCustomer[passport][]"></td><td><a href="#" class="btn btn-default btn-small btn-danger deleteThis">删除</a><input type="hidden" name="VisaOrderCustomer[id][]" value="0"/></td></tr>';
-            $('.add-visa-before').before(visaHtml);
-            $('#VisaOrder_amount').val(personCount);
+            jQuery('.add-visa-before').before(visaHtml);
+            jQuery('#VisaOrder_amount').val(personCount);
             return false;
         });
-        $('table.table').delegate('a.deleteThis', 'click', function(){
+        jQuery('table.table').delegate('a.deleteThis', 'click', function(){
             var personCount = 0;
-            $(this).parent().parent().remove();
-            $('tr.visa-person-item').each(function(index,element){
+            jQuery(this).parent().parent().remove();
+            jQuery('tr.visa-person-item').each(function(index,element){
                 personCount++;
-                $(this).children('td').first().html('<label>客人'+(index+1)+'姓名：</label>');
+                jQuery(this).children('td').first().html('<label>客人'+(index+1)+'姓名：</label>');
             });
-            //var personCount = $('visa-person-item').length+1;
-            $('#VisaOrder_amount').val(personCount);
+            //var personCount = jQuery('visa-person-item').length+1;
+            jQuery('#VisaOrder_amount').val(personCount);
             return false;
         });
-        $('input.unlock-amount').click(function(){
-            if($(this).prop('checked') == true){
-                $('input#VisaOrder_amount').attr('readonly', false);
-                $('a.add-visa-person').hide();
+        jQuery('input.unlock-amount').click(function(){
+            if(jQuery(this).prop('checked') == true){
+                jQuery('input#VisaOrder_amount').attr('readonly', false);
+                jQuery('a.add-visa-person').hide();
             }else{
-                $('input#VisaOrder_amount').val('0');
-                $('input#VisaOrder_amount').attr('readonly', true);
-                $('a.add-visa-person').show();
+                jQuery('input#VisaOrder_amount').val('0');
+                jQuery('input#VisaOrder_amount').attr('readonly', true);
+                jQuery('a.add-visa-person').show();
             }
         });
-        $('select[name="VisaOrder[country]"]').change(function(){
+        jQuery('select[name="VisaOrder[country]"]').change(function(){
             updateType();
         });
-        $('select[name="VisaOrder[type]"]').change(function(){
+        jQuery('select[name="VisaOrder[type]"]').change(function(){
             //updateTypeAttr();
         });
         <?php
         if(!PanelUser::checkAttributesAccess('contact_name', $model)){ ?>
-            $('#setSourceAsContactBtn').click(function(){
-                var sourceId = $('select[name="VisaOrder[source]"]').val();
+            jQuery('#setSourceAsContactBtn').click(function(){
+                var sourceId = jQuery('select[name="VisaOrder[source]"]').val();
                 var sourceContact = sourceList[sourceId];
-                $('input[name="VisaOrder[contact_name]"]').val(sourceContact.contact_name);
-                $('input[name="VisaOrder[contact_phone]"]').val(sourceContact.contact_phone);
-                $('input[name="VisaOrder[contact_address]"]').val(sourceContact.contact_address);
+                jQuery('input[name="VisaOrder[contact_name]"]').val(sourceContact.contact_name);
+                jQuery('input[name="VisaOrder[contact_phone]"]').val(sourceContact.contact_phone);
+                jQuery('input[name="VisaOrder[contact_address]"]').val(sourceContact.contact_address);
                 return false;
             });
         <?php } ?>
 
-        $('.confirmIssued').click(function(){
-           var customerId = $(this).data('customer-id');
-           var thisObj = $(this);
-            $.ajax({
+        jQuery('.confirmIssued').click(function(){
+           var customerId = jQuery(this).data('customer-id');
+           var thisObj = jQuery(this);
+            jQuery.ajax({
                 type : "POST",
                 url : '<?php echo $this->createUrl('visa/confirmCustomerIssued'); ?>',
                 data : {id:customerId}
@@ -527,16 +530,16 @@ $form=$this->beginWidget('CActiveForm', array(
             return false;
         });
 
-        $('.sentVisa').click(function(){
-            var customerId = $(this).data('customer-id');
-            var thisObj = $(this);
-            var agencyTypeId = $("#VisaOrderCustomer_"+customerId+"_agency_id").val();
+        jQuery('.sentVisa').click(function(){
+            var customerId = jQuery(this).data('customer-id');
+            var thisObj = jQuery(this);
+            var agencyTypeId = jQuery("#VisaOrderCustomer_"+customerId+"_agency_id").val();
             if(isNaN(agencyTypeId) || agencyTypeId <= 0){
                 alert("请选择出签渠道再使用出签功能！");
                 return false;
             }
-            var selected =  $("#VisaOrderCustomer_"+customerId+"_agency_id").find("option:selected").text();
-            $.ajax({
+            var selected =  jQuery("#VisaOrderCustomer_"+customerId+"_agency_id").find("option:selected").text();
+            jQuery.ajax({
                 type : "POST",
                 url : '<?php echo $this->createUrl('visa/confirmCustomerSent'); ?>',
                 data : {id:customerId, agency_id:agencyTypeId}
@@ -548,10 +551,10 @@ $form=$this->beginWidget('CActiveForm', array(
             return false;
         });
 
-        $('.rejectVisa').click(function(){
-            var customerId = $(this).data('customer-id');
-            var thisObj = $(this);
-            $.ajax({
+        jQuery('.rejectVisa').click(function(){
+            var customerId = jQuery(this).data('customer-id');
+            var thisObj = jQuery(this);
+            jQuery.ajax({
                 type : "POST",
                 url : '<?php echo $this->createUrl('visa/confirmCustomerReject'); ?>',
                 data : {id:customerId}
@@ -566,8 +569,8 @@ $form=$this->beginWidget('CActiveForm', array(
     });
     var chooseType;
     function updateType(){
-        var country_id = $('select[name="VisaOrder[country]"]').val();
-        $.ajax({
+        var country_id = jQuery('select[name="VisaOrder[country]"]').val();
+        jQuery.ajax({
             type: "POST",
             url: "<?php echo $this->createUrl('address/getTypesUnderCountry'); ?>",
             data: "country_id="+country_id,
@@ -580,36 +583,19 @@ $form=$this->beginWidget('CActiveForm', array(
                     optionHtml += "<option value='"+data[i].id+"' data-price='"+data[i].price+"'  data-predict_date='"+data[i].predict_date+"'";
                     if(data[i].id == parseInt('<?php echo $model->type; ?>')){
                         optionHtml += " selected='selected'";
-                        $('span#type_price').text(data[i].price);
-                        $('span#type_notes').text(data[i].notes);
+                        jQuery('span#type_price').text(data[i].price);
+                        jQuery('span#type_notes').text(data[i].notes);
                     }
                     optionHtml += ">"+data[i].name+"</option>";
                 }
-                $('select[name="VisaOrder[type]"]').html(optionHtml);
+                jQuery('select[name="VisaOrder[type]"]').html(optionHtml);
                 /*updateTypeAttr();*/
             })
         })
     }
-    /*
-    function updateTypeAttr(){
-        var type_id = $('select[name="VisaOrder[type]"]').val();
-        for(i in chooseType){
-            if(chooseType[i].id == type_id){
-                $('input[name="VisaOrder[predict_date]"]').val(chooseType[i].predict_date);
-                $('span#type_price').text(' ');
-                $('span#type_notes').text(' ');
-                $('span#type_price').text(chooseType[i].price);
-                $('span#type_notes').text(chooseType[i].notes);
-            }
-        }
-    }*/
 
     var sourceList = {};
     <?php foreach($sourceModel as $source){
-        echo 'sourceList['.$source->id.'] = {"contact_name":"'.$source->contact_name.'","contact_phone":"'.$source->contact_phone.'","contact_address":"'.$source->contact_address.'"};';
+        echo 'sourceList['.$source->id.'] = {"contact_name":"'.$source->contact_name.'","contact_phone":"'.$source->contact_phone.'","contact_address":"'.$source->contact_address.'"};'."\n";
     }?>
-
-
 </script>
-
-<?php $this->endWidget(); ?>

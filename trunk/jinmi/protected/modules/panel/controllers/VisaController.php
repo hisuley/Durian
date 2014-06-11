@@ -104,13 +104,20 @@ class VisaController extends PanelController{
             }
             // Detect type and country changes.
             $statusRollback = false;
-            if($postData['type'] != $model->type && VisaOrder::compareStatus($model->status, VisaOrder::STATUS_PARTIAL_SENT)){
+            if(!empty($postData['type']) && $postData['type'] != $model->type && VisaOrder::compareStatus($model->status, VisaOrder::STATUS_PARTIAL_SENT)){
                 $model->status = VisaOrder::STATUS_OP_CONFIRM;
                 $memoStr .= "\n".User::getUserRealname(Yii::app()->user->id)."于".date("Y-m-d H:i")."变更了签证类型，签证类型从【".VisaType::getTypeName($model->type)."】改变为【".VisaType::getTypeName($postData['type'])."】，订单状态已经恢复到待送签状态。";
                 $model->sent_id = 0;
                 $model->sent_comment = "";
                 $model->sent_time = 0;
                 $model->agency_id = 0;
+                $model->issue_id = 0;
+                $model->issue_time = 0;
+                $model->issue_comment = '';
+                $model->back_id = 0;
+                $model->back_time = 0;
+                $model->back_comment = "";
+
                 $statusRollback = true;
             }
             $oldAmount = $model->amount;
