@@ -14,10 +14,10 @@
             <img src="<?php echo Yii::app()->request->baseUrl; ?>/static/yutong/img/tiger_success.gif">
         </div>
         <div class="hm" style="width: 60%; margin-left:200px; margin-top:30px;">
-            <div style=" position:absolute; margin-top:-25px; ">
-                <img width="60px;" height="60px" src="<?php echo Yii::app()->request->baseUrl; ?>/static/yutong/img/register-succeed.png">
+            <div style="line-height:60px">
+                <img width="60px;" height="60px" style="vertical-align:middle;margin-right:10px" src="<?php echo Yii::app()->request->baseUrl; ?>/static/yutong/img/register-succeed.png">
+                <h2 style="display:inline;">您注册宇通签证采购平台已成功</h2>
             </div>
-            &nbsp; &nbsp; &nbsp; 您注册宇通签证采购平台已成功
         </div>
         <div style="width: 60%;margin:0 auto;margin-left:200px ">
             <h3 style="line-height:25px;color:#f56a05">
