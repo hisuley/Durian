@@ -176,3 +176,14 @@ div.form-actions{margin-top:20px;}
 /* Header */
 
 h1,h2,h3{font-family:"微软雅黑";font-weight: normal}
+
+/* Reset */
+table.visa-form label {
+font-size: 1em;
+padding: 0;
+margin: 0;
+}
+.visa-form th, .table td {
+padding: 4px;
+font-size: 0.9em;
+}

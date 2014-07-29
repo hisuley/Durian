@@ -36,13 +36,17 @@ $form=$this->beginWidget('CActiveForm', array(
 ));
 ?>
 <?php echo $form->errorSummary($model); ?>
-    <table class="table table-bordered">
+    <table class="table table-bordered visa-form">
         <tbody>
         <tr>
-            <td><?php echo $form->labelEx($model,'user_id'); ?></td>
+            <td colspan="6" style="border:0;border-bottom:1px solid #dddddd;"><h3 class='section-title'>基本信息</h3></td>
+
+        </tr>
+        <tr>
+            <td ><?php echo $form->labelEx($model,'user_id'); ?></td>
             <td><?php
                 echo empty($model->user_id) ? Yii::app()->user->username : User::getUserRealname($model->user_id); ?></td>
-            <td><?php echo $form->labelEx($model,'status'); ?></td>
+            <td ><?php echo $form->labelEx($model,'status'); ?></td>
             <td>
                 <?php if(!empty($model->status)){
                     echo VisaOrder::translateStatus($model->status);
@@ -51,7 +55,7 @@ $form=$this->beginWidget('CActiveForm', array(
                 }
                 ?>
             </td>
-            <td><?php echo $form->labelEx($model,'create_time'); ?></td>
+            <td ><?php echo $form->labelEx($model,'create_time'); ?></td>
             <td>
                 <?php if(!empty($model->create_time)){
                     echo date('Y-m-d H:i', $model->create_time);
@@ -62,13 +66,13 @@ $form=$this->beginWidget('CActiveForm', array(
             </td>
         </tr>
         <tr>
-            <td><?php echo $form->labelEx($model,'is_pay'); ?></td>
+            <td ><?php echo $form->labelEx($model,'is_pay'); ?></td>
             <td><?php
 
                     echo $model->is_pay ? '已支付' : '未支付';
 
                 ?></td>
-            <td><?php echo $form->labelEx($model,'accountant_id'); ?></td>
+            <td ><?php echo $form->labelEx($model,'accountant_id'); ?></td>
             <td>
                 <?php if(!empty($model->accountant_id)){
                     echo User::getUserRealname($model->accountant_id);
@@ -77,7 +81,7 @@ $form=$this->beginWidget('CActiveForm', array(
                 }
                 ?>
             </td>
-            <td><?php echo $form->labelEx($model,'pay_cert'); ?></td>
+            <td ><?php echo $form->labelEx($model,'pay_cert'); ?></td>
             <td>
                 <?php
                 if(!empty($model->financeRecord) && !empty($model->financeRecord->record->pay_file)){
@@ -92,7 +96,7 @@ $form=$this->beginWidget('CActiveForm', array(
             </td>
         </tr>
         <tr>
-            <td><?php echo $form->labelEx($model,'country'); ?></td>
+            <td ><?php echo $form->labelEx($model,'country'); ?></td>
             <td>
                 <?php
 
@@ -106,7 +110,7 @@ $form=$this->beginWidget('CActiveForm', array(
                 ?>
 
             </td>
-            <td><?php echo $form->labelEx($model,'type'); ?></td>
+            <td ><?php echo $form->labelEx($model,'type'); ?></td>
             <td>
                 <?php
                 if($model->is_pay_out || (PanelUser::checkAttributesAccess('type', $model) && VisaOrder::compareStatus($model->status, VisaOrder::STATUS_PARTIAL_SENT))){
@@ -119,20 +123,20 @@ $form=$this->beginWidget('CActiveForm', array(
         </tr>
         <?php if(!PanelUser::checkAttributesAccess('agency_id', $model)){ ?>
         <tr>
-            <td>
+            <td >
                 <label>送签渠道</label>
             </td>
             <td><?php echo empty($model->agency->agency->name) ? '' : $model->agency->agency->name; ?></td>
-            <td><label for="">参考价格</label></td>
+            <td ><label for="">参考价格</label></td>
             <td><?php echo empty($model->agency->price) ? '' : $model->agency->price; ?></td>
-            <td><label for="">备注</label></td>
+            <td ><label for="">备注</label></td>
             <td>
                 <?php echo empty($model->agency->notes) ? '' : $model->agency->notes; ?>
             </td>
         </tr>
     <?php } ?>
         <tr>
-            <td><?php echo $form->labelEx($model,'amount'); ?></td>
+            <td ><?php echo $form->labelEx($model,'amount'); ?></td>
             <td>
                 <?php
                 if(PanelUser::checkAttributesAccess('amount', $model) || $model->is_pay || $model->is_pay_out){
@@ -144,7 +148,7 @@ $form=$this->beginWidget('CActiveForm', array(
                 ?>
 
             </td>
-            <td><?php echo $form->labelEx($model,'price'); ?></td>
+            <td ><?php echo $form->labelEx($model,'price'); ?></td>
             <td>
                 <?php
                 if(PanelUser::checkAttributesAccess('price', $model) || $model->is_pay){
@@ -155,7 +159,7 @@ $form=$this->beginWidget('CActiveForm', array(
                 }
                     ?>
             </td>
-            <td>
+            <td >
                 <label>总价</label>
             </td>
             <td>
@@ -163,7 +167,7 @@ $form=$this->beginWidget('CActiveForm', array(
             </td>
             </tr>
         <tr>
-            <td><?php echo $form->labelEx($model,'depart_date'); ?></td>
+            <td ><?php echo $form->labelEx($model,'depart_date'); ?></td>
             <td>
                 <?php
                 if(PanelUser::checkAttributesAccess('depart_date', $model)){
@@ -186,7 +190,7 @@ $form=$this->beginWidget('CActiveForm', array(
 
                 ?>
             </td>
-            <td><?php echo $form->labelEx($model,'source'); ?></td>
+            <td ><?php echo $form->labelEx($model,'source'); ?></td>
             <td colspan="3">
                 <?php
                 if(PanelUser::checkAttributesAccess('source', $model)){
@@ -206,7 +210,17 @@ $form=$this->beginWidget('CActiveForm', array(
 
         </tr>
         <tr>
-            <td colspan="6"><?php echo $form->labelEx($model,'customer'); ?></td>
+            <td colspan="6" style="border:0;border-top:1px solid #dddddd;">
+                <h3 class='section-title'>
+                客户信息
+                <?php if(isset($model->customer)){
+                    ?>
+                <small>
+                    共有<?php echo count($model->customer); ?>位客户
+                </small>
+                <?php } ?>
+                </h3>
+            </td>
 
         </tr>
 
@@ -297,7 +311,7 @@ $form=$this->beginWidget('CActiveForm', array(
             </td>
         </tr>
         <tr>
-           <td><?php echo $form->labelEx($model,'contact_name'); ?></td>
+           <td ><?php echo $form->labelEx($model,'contact_name'); ?></td>
             <td><?php
                 if(PanelUser::checkAttributesAccess('contact_name', $model)){
                     echo $model->contact_name;
@@ -307,7 +321,7 @@ $form=$this->beginWidget('CActiveForm', array(
                 }
 
                 ?></td>
-           <td><?php echo $form->labelEx($model,'contact_phone'); ?></td>
+           <td ><?php echo $form->labelEx($model,'contact_phone'); ?></td>
             <td><?php
                 if(PanelUser::checkAttributesAccess('contact_phone', $model)){
                     echo $model->contact_phone;
@@ -316,7 +330,7 @@ $form=$this->beginWidget('CActiveForm', array(
                     echo $form->error($model,'contact_phone');
                 }
                 ?></td>
-            <td><?php echo $form->labelEx($model,'contact_address'); ?></td>
+            <td ><?php echo $form->labelEx($model,'contact_address'); ?></td>
             <td colspan="3">
                 <?php
                 if(PanelUser::checkAttributesAccess('contact_address', $model)){
@@ -329,7 +343,7 @@ $form=$this->beginWidget('CActiveForm', array(
             </td>
         </tr>
         <tr>
-            <td><?php echo $form->labelEx($model,'memo'); ?></td>
+            <td ><?php echo $form->labelEx($model,'memo'); ?></td>
             <td colspan="5">
                 <?php
 
@@ -340,7 +354,7 @@ $form=$this->beginWidget('CActiveForm', array(
             </td>
         </tr>
         <tr>
-            <td><?php echo $form->labelEx($model,'material'); ?></td>
+            <td ><?php echo $form->labelEx($model,'material'); ?></td>
             <td colspan="5">
                 <?php
                 if(PanelUser::checkAttributesAccess('material', $model)){
@@ -355,7 +369,16 @@ $form=$this->beginWidget('CActiveForm', array(
                 ?>
             </td>
         </tr>
+        
         <?php if(!empty($model->id)){ ?>
+        <tr>
+            <td colspan="6" style="border:0;border-top:1px solid #dddddd;"><h3 class='section-title'>操作
+            <small>
+                    当前状态【<?php echo VisaOrder::translateStatus($model->status); ?>】，等待进行下一步操作
+                </small>
+            </h3></td>
+
+        </tr>
         <tr>
             <td colspan="6" align="center" style="text-align:center;" >操作审核[<?php
 
@@ -370,7 +393,7 @@ $form=$this->beginWidget('CActiveForm', array(
                 ?>]</td>
         </tr>
         <tr>
-            <td><?php echo $form->labelEx($model,'op_comment'); ?></td>
+            <td ><?php echo $form->labelEx($model,'op_comment'); ?></td>
             <td colspan="5" id="op_container">
                 <?php echo !empty($model->op_comment) ? $model->op_comment : ''; ?>
             </td>
@@ -393,11 +416,11 @@ $form=$this->beginWidget('CActiveForm', array(
                 ]</td>
         </tr>
         <tr>
-            <td><?php echo $form->labelEx($model,'sent_time'); ?></td>
+            <td ><?php echo $form->labelEx($model,'sent_time'); ?></td>
             <td>
                 <?php echo !empty($model->sent_time) ? date('Y-m-d',$model->sent_time) : ''; ?>
             </td>
-            <td><?php echo $form->labelEx($model,'sent_comment'); ?></td>
+            <td ><?php echo $form->labelEx($model,'sent_comment'); ?></td>
             <td colspan="3" id="sent_container">
                 <?php echo !empty($model->sent_comment) ? $model->sent_comment : ''; ?>
                 <?php echo !empty($model->agency) ? "<br />送签渠道：".$model->agency->agency->name : ''; ?>
@@ -418,11 +441,11 @@ $form=$this->beginWidget('CActiveForm', array(
                 ]</td>
         </tr>
         <tr>
-            <td><?php echo $form->labelEx($model,'issue_time'); ?></td>
+            <td ><?php echo $form->labelEx($model,'issue_time'); ?></td>
             <td>
                 <?php echo !empty($model->issue_time) ? date('Y-m-d',$model->issue_time) : ''; ?>
             </td>
-            <td><?php echo $form->labelEx($model,'issue_comment'); ?></td>
+            <td ><?php echo $form->labelEx($model,'issue_comment'); ?></td>
             <td colspan="3">
                 <?php echo !empty($model->issue_comment) ? $model->issue_comment : ''; ?>
             </td>
@@ -442,17 +465,26 @@ $form=$this->beginWidget('CActiveForm', array(
                 ]</td>
         </tr>
         <tr>
-            <td><?php echo $form->labelEx($model,'back_time'); ?></td>
+            <td ><?php echo $form->labelEx($model,'back_time'); ?></td>
             <td>
                 <?php echo !empty($model->back_time) ? date('Y-m-d',$model->back_time) : ''; ?>
             </td>
-            <td><?php echo $form->labelEx($model,'back_comment'); ?></td>
+            <td ><?php echo $form->labelEx($model,'back_comment'); ?></td>
             <td colspan="3">
                 <?php echo !empty($model->back_comment) ? $model->back_comment : ''; ?>
             </td>
         </tr>
+        <tr>
+            <td colspan="6" style="border:0;border-top:1px solid #dddddd;"><h3 class='section-title'>财务记录</h3></td>
+
+        </tr>
             <?php
                 if(!empty($model->financeRecord)){
+
+
+                    ?>
+                
+                    <?php
                     echo "<tr>";
                     echo "<td>收款记录</td>";
                     echo "<td colspan='3'>时间：".date("Y-m-d h:i", $model->financeRecord->create_time)."&nbsp;操作人：".User::getUserRealname($model->financeRecord->record->handler)."&nbsp;审批人：".User::getUserRealname($model->financeRecord->record->reviewer)."&nbsp;金额：".$model->financeRecord->transaction_value."&nbsp;".CHtml::link("申请撤销", array("finance/cancel", "id"=>$model->financeRecord->id))."&nbsp;".CHtml::link("查看", array("finance/view", "id"=>$model->financeRecord->record->id))."</td>";
@@ -461,7 +493,7 @@ $form=$this->beginWidget('CActiveForm', array(
             ?>
         <?php } ?>
         <tr>
-            <td colspan='6' align="center"><?php echo CHtml::submitButton($model->isNewRecord ? '创建' : '保存',array('class'=>'btn btn-primary')); ?></td>
+            <td colspan='6' style="border:0;" align="center"><?php echo CHtml::submitButton($model->isNewRecord ? '创建' : '保存',array('class'=>'btn btn-primary')); ?></td>
         </tr>
         </tbody>
     </table>

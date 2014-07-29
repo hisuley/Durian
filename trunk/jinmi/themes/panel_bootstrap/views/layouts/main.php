@@ -11,6 +11,7 @@
     <script type="text/javascript">
         var ajax_read_url = "<?php echo $this->createUrl('message/ajax'); ?>";
     </script>
+   
 </head>
 
 <body>

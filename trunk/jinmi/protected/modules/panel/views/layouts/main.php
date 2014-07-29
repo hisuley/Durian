@@ -52,7 +52,7 @@
 
                 <form class="navbar-form navbar-right" role="search" type="GET" action="<?php echo $this->createUrl('visa/list'); ?>">
                     <div class="form-group">
-                        <input type="text" name="customer_name" class="form-control" placeholder="输入客人姓名搜索">
+                        <input type="text" name="customer_name" class="form-control" placeholder="输入客人姓名或护照号搜索">
                     </div>
                     <button type="submit" class="btn btn-default">搜索</button>
                 </form>

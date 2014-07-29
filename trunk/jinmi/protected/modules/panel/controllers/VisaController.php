@@ -314,7 +314,8 @@ class VisaController extends PanelController{
             '类型',
             'price',
             '旅行社',
-            '订单编号'
+            '联系人',
+            '联系人电话'
         );
 
         $row = array();
@@ -346,7 +347,7 @@ class VisaController extends PanelController{
             foreach($models as $value) {
                 $row = array();
                 foreach($value->customer as $customer){
-                    $row = array($value->id, date('Y-m-d', $value->create_time), $customer->name, $customer->passport, (empty($value->country_source) ? '':$value->country_source->name), (empty($value->order_type) ? '' : $value->order_type->name), $value->price, (empty($value->order_source->name) ? '':$value->order_source->name), $value->id);
+                    $row = array($value->id, date('Y-m-d', $value->create_time), $customer->name, $customer->passport, (empty($value->country_source) ? '':$value->country_source->name), (empty($value->order_type) ? '' : $value->order_type->name), $value->price, (empty($value->order_source->name) ? '':$value->order_source->name), $value->contact_name, $value->contact_phone);
                     foreach($row as $key=>$val){
                         $row[$key] = iconv('utf-8', 'GBK//IGNORE', $val);
                     }

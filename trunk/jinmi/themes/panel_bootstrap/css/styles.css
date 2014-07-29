@@ -17,3 +17,26 @@ p.msg-nav-list{border-bottom: 1px dotted #ccc;padding-top: 10px;padding-bottom: 
 /* Header */
 
 h1,h2,h3{font-family:"微软雅黑";font-weight: normal}
+/* Reset */
+table.visa-form label {
+font-size: 1em;
+padding: 0;
+margin: 0;
+}
+.visa-form th, .table td {
+padding: 4px;
+font-size: 0.9em;
+}
+
+.visa-form .section-title{
+
+font-size: 18px;
+border-left: 5px solid green;
+padding-left: 10px;
+height: 30px;
+line-height: 30px;
+}
+.visa-form .section-title small{
+	margin-left:20px;
+}
+.visa-form{border-top:0;border-bottom: 0;}

@@ -197,10 +197,12 @@ class YutongVisaOrder extends CActiveRecord{
         return $this->commandBuilder->createFindCommand($this->getTableSchema(),$criteria)->queryScalar();
     }
 
-    public function search($params = array('order'=>'order.create_time DESC', 'pagination'=>array('pageSize'=>'25')), $returnType = 'CActiveDataProvider', $meOnly = true){
+    public function search($params = array('order'=>'order.create_time DESC', 'pagination'=>array('pageSize'=>'100')), $returnType = 'CActiveDataProvider', $meOnly = true){
         $criteria = new CDbCriteria;
         if($meOnly){
             $criteria->addCondition('user_id = '.Yii::app()->user->id, 'AND');
+            $criteria->with = array('visa'=>array('select'=>'visa.*', 'together'=>true), 'user');
+
         }
         /*
         $criteria->alias = 'order';
@@ -227,8 +229,7 @@ class YutongVisaOrder extends CActiveRecord{
             //$criteria->join = 'visa_order_customer';
         }
         */
-        $criteria->with = array('visa'=>array('select'=>'visa.*', 'together'=>true), 'user');
-        if($returnType == 'CActiveDataProvider'){
+                if($returnType == 'CActiveDataProvider'){
             return new CActiveDataProvider('YutongVisaOrder', array(
                 'criteria' => $criteria,
                 'sort' => array(

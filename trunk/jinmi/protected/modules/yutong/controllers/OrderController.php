@@ -9,7 +9,7 @@
 class OrderController extends YutongController{
     public function beforeAction($action){
         if(Yii::app()->user->isGuest){
-            //$this->redirect(array('user/login'));
+            $this->redirect(array('user/login'));
         }
         return parent::beforeAction($action);
     }

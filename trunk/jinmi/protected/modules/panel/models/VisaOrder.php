@@ -23,6 +23,7 @@ class VisaOrder extends CActiveRecord{
     const STATUS_RECEIVED = 'received';
     const STATUS_COMPLETE = 'complete';
     const STATUS_DELETE = 'delete';
+    //Status Decode
     public static $statusIntl = array(
         self::STATUS_SALES_ORDER => '操作待确认',
         self::STATUS_OP_CONFIRM => '待送签',
@@ -181,11 +182,11 @@ class VisaOrder extends CActiveRecord{
         $criteria->compare('order.user_id', $this->user_id);
         $criteria->compare('order.source', $this->source);
         if(empty($this->status)){
-            $criteria->compare('order.status !', VisaOrder::STATUS_DELETE);
+            $criteria->addNotInCondition('order.status', array(VisaOrder::STATUS_DELETE));
         }elseif(is_array($this->status)){
             $criteria->addInCondition('order.status', $this->status);
         }else{
-            $criteria->compare('order.status', $this->status);
+            $criteria->addInCondition('order.status', array($this->status));
         }
         if(!empty($this->start_time) && !empty($this->end_time)){
             $criteria->addBetweenCondition('order.create_time', strtotime($this->start_time), strtotime($this->end_time." +1 days"));
@@ -214,7 +215,7 @@ class VisaOrder extends CActiveRecord{
         }
         if(is_array($this->customer_ids)){
             $criteria->addInCondition('customer.id', $this->customer_ids);
-            $criteria->with = array('customer'=>array('select'=>'customer.*','together'=>true));
+            $criteria->with = array('customer'=>array('select'=>'customer.*','together'=>false));
         }
 
         return $criteria;
@@ -348,7 +349,6 @@ class VisaOrder extends CActiveRecord{
 
     public function search($params = array('order'=>'order.create_time DESC', 'pagination'=>array('pageSize'=>'25'))){
         $criteria = new CDbCriteria;
-
         $criteria->alias = 'order';
         $criteria->compare('order.id', $this->id);
         if(!empty($this->notInList) && is_array($this->notInList)){
@@ -360,23 +360,25 @@ class VisaOrder extends CActiveRecord{
         $criteria->compare('order.amount', $this->amount);
         $criteria->compare('order.user_id', $this->user_id);
         $criteria->compare('order.source', $this->source);
+        
         if(empty($this->status)){
-            $criteria->compare('order.status !', VisaOrder::STATUS_DELETE);
+            $criteria->addNotInCondition('order.status', array(VisaOrder::STATUS_DELETE));
         }elseif(is_array($this->status)){
             $criteria->addInCondition('order.status', $this->status);
         }else{
-            $criteria->compare('order.status', $this->status);
+            $criteria->addInCondition('order.status', array($this->status));
         }
         if(!empty($this->start_time) && !empty($this->end_time)){
             $criteria->addBetweenCondition('order.create_time', strtotime($this->start_time), strtotime($this->end_time." +1 days"));
         }
 
-
         if(!empty($_GET['customer_name'])){
             $this->search_customer = trim($_GET['customer_name']);
-            $criteria->compare('customer.name', $this->search_customer, true);
-            $criteria->with = array('customer'=>array('select'=>'customer.name','together'=>true));
-            //$criteria->join = 'visa_order_customer';
+            $mergeCriteria = new CDbCriteria;
+            $mergeCriteria->compare('customer.name', $this->search_customer, true, "OR");
+            $mergeCriteria->compare("customer.passport", $this->search_customer, true, "OR");
+            $mergeCriteria->with = array('customer'=>array('select'=>'customer.name','together'=>true));
+            $criteria->mergeWith($mergeCriteria);
         }
 
         if(!empty($this->customer_agency_id)){
@@ -389,13 +391,21 @@ class VisaOrder extends CActiveRecord{
             }
             $criteria->addInCondition('customer.agency_id', $agencyKeys);
             $criteria->addNotInCondition('customer.status', array(VisaOrderCustomer::STATUS_DELETED, VisaOrderCustomer::STATUS_DEFAULT));
-            $criteria->with = array('customer'=>array('select'=>'customer.*','together'=>true));
-            //$criteria->join = 'visa_order_customer';
+            if(!isset($criteria->with['customer'])){
+                $criteria->with = array('customer'=>array('select'=>'customer.*','together'=>true));
+            }
         }
-        if(is_array($this->customer_ids)){
+        
+        if(count($this->customer_ids) >= 1 && is_array($this->customer_ids)){
             $criteria->addInCondition('customer.id', $this->customer_ids);
-            $criteria->with = array('customer'=>array('select'=>'customer.*','together'=>true));
+            if(!isset($criteria->with['customer'])){
+                $criteria->with = array('customer'=>array('select'=>'customer.*','together'=>true));
+            }
+            
         }
+
+        $pagination = empty($params['pagination']) ? false : array('pageSize'=>25);
+
 
         if($this->agencyIdNotNull){
             $result = VisaOrder::model()->findAll($criteria);
@@ -411,7 +421,7 @@ class VisaOrder extends CActiveRecord{
                 'sort' => array(
                     'defaultOrder'=>$params['order']
                 ),
-                'pagination' => $params['pagination']
+                'pagination' => $pagination
             ));
         }
 
@@ -524,7 +534,8 @@ class VisaOrder extends CActiveRecord{
     public static function joinCustomer($data){
         $cutomer = array();
         foreach($data as $v){
-            array_push($cutomer, $v->name."(".$v->passport.")");
+            $customerInstance = VisaOrderCustomer::model()->findByPk($v->id);
+            array_push($cutomer, $v->name."(".$customerInstance->passport.")");
         }
         return implode('<br />', $cutomer);
     }
